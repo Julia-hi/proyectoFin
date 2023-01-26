@@ -17,10 +17,7 @@
         <div class="mt-4">
             <x-input-label for="password" :value="__('Contraseña')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
@@ -33,16 +30,26 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="d-flex items-center justify-content-between my-4">
             @if (Route::has('password.request'))
+            <div>
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                     {{ __('¿Olvidado contraseña?') }}
                 </a>
+            </div>
             @endif
+            <div>
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                    {{ __('¿No estas registrado?') }}
+                </a>
+            </div>
 
-            <x-primary-button class="ml-3">
-                {{ __('Entrar') }}
-            </x-primary-button>
+        </div>
+        <div class="d-flex items-center justify-content-between my-4">
+        <x-primary-button class="ml-3">
+            {{ __('Entrar') }}
+        </x-primary-button>
+       
         </div>
     </form>
 </x-guest-layout>
