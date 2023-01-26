@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Oferta;
 
-class AnuncioController extends Controller
+class OfertasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class AnuncioController extends Controller
      */
     public function index($area)
     {
-        return view('of-lista', ['area'=>$area]);
+        $ofertas=Oferta::all();
+        return view('of-lista', ['area'=>$area], $ofertas);
     }
 
     /**
@@ -23,7 +25,7 @@ class AnuncioController extends Controller
      */
     public function create()
     {
-         return view('anuncios.crear');
+        //
     }
 
     /**
@@ -56,7 +58,7 @@ class AnuncioController extends Controller
      */
     public function edit($id)
     {
-        return view('anuncios.edit', ['anuncio'=>$id]);
+        //
     }
 
     /**
@@ -68,7 +70,7 @@ class AnuncioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // aqui update db and redirect to usuarios area
+        //
     }
 
     /**
