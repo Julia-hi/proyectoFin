@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('anuncdemanda', function (Blueprint $table) {
             $table->foreignId('id')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('titulo')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('description')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('descripcion')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

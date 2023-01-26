@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('anuncoferta', function (Blueprint $table) {
             $table->foreignId('id')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('titulo')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('description')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('descripcion')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->string('rasa', 10);
-            $table->string('sexo', 10);
+            $table->string('genero', 10);
             $table->date('fecha_nac');
             $table->string('com_autonoma');
             $table->string('provincia');

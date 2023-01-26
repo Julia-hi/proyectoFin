@@ -16,11 +16,12 @@ return new class extends Migration
         Schema::create('anuncios', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->mediumText('description');
+            $table->mediumText('descripcion');
             $table->unsignedBigInteger('id_usuario');
             $table->foreign('id_usuario')->references('id')->on('users');
             $table->date('fecha');
             $table->string('estado');
+            $table->string('tipo'); //oferta o demanda
             $table->timestamps();
         });
     }
