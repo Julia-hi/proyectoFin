@@ -28,13 +28,14 @@ $calendarStyle = Storage::url('css/calendar.css'); ?>
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
         <!-- Page Heading - resources/views/components/header.blade.php -->
-        
         <header>
             <x-header />
         </header>
 
         @auth
-        @include('layouts.navigation')
+            
+                @include('layouts.navigation')
+            
         @endauth
 
         <!-- Page Content -->
@@ -42,6 +43,7 @@ $calendarStyle = Storage::url('css/calendar.css'); ?>
             @if (isset($slot))
             {{ $slot }}
             @endif
+
         </main>
     </div>
 </body>

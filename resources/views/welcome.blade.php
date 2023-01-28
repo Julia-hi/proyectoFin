@@ -413,7 +413,7 @@ $scriptUrl = Storage::url('welcome.js') ?>
 </head>
 
 <body class="antialiased">
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900  py-4 sm:pt-0">
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             <button type="button" class="mr-2 p-2" onclick="window.location.href='{{ url('/anuncio/crear')}}'">Publicar anuncio</button>
@@ -427,14 +427,14 @@ $scriptUrl = Storage::url('welcome.js') ?>
             @endauth
         </div>
         @endif
-        <div class="container">
+        <div class="container ">
             <div class="justify-center sm:px-6 lg:px-8">
                 <div class="text-center pt-8 sm:justify-start sm:pt-0">
                     <a href="/">
                         <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                     </a>
                 </div>
-                <div class="m-2">
+                <div class="m-2 ">
                     <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                         <h2 class="p-2 my-4 text-center">Espacio para amantes de loros</h2>
                         <p class="text-center">Aquí puedes encontrar crías de loros venditos en toda España!
@@ -442,7 +442,7 @@ $scriptUrl = Storage::url('welcome.js') ?>
                         <div class="justify-center ">
                             <div class="align-items-center d-flex justify-content-center p-3">
                                 <div class="btn-group border d-flex justify-content-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" id="ofertas">OFERTAS</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary active" id="ofertas">OFERTAS</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary" id="demandas">DEMANDAS</button>
                                 </div>
                             </div>
@@ -451,8 +451,8 @@ $scriptUrl = Storage::url('welcome.js') ?>
                 </div>
                 <div class="m-2">
                     <!-- Anuncios oferta -->
-                    <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg" id="ofertas-block">
-                        <!-- <h3 class="text-center">Ofertas</h3> -->
+                    <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " id="ofertas-block">
+                        
                         <div class="row d-flex justify-content-center align-content-center m-3">
                             <button type="button" class="btn btn-sm btn-outline-secondary w-50" onclick="window.location.href='{{ url('/ofertas/lista/todo')}}'" >FILTRAR OFERTAS</button>
                         </div>
@@ -493,8 +493,9 @@ $scriptUrl = Storage::url('welcome.js') ?>
                             </div>
                         </div>
                     </div>
+                    
                     <!-- Anuncios demanda -->
-                    <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg" id="demandas-block">
+                    <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg d-none" id="demandas-block">
                         <h3 class="text-center">Demandas</h3>
                         <div class="row">
                             <div class="col-md-6">

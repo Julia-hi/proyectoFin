@@ -1,3 +1,11 @@
+@auth
+    @if(Auth::user()->rol=="admin")
+       <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
+        <?php echo "I am admin"; 
+      //  return redirect()->route('admin/dashboard');
+         ?>
+    @else            
+   
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -15,3 +23,5 @@
         </div>
     </div>
 </x-app-layout>
+@endif
+@endauth
