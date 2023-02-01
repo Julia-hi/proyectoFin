@@ -1,3 +1,9 @@
+<?php
+use App\Models\Municipio;
+use Illuminate\Support\Facades\Storage;
+?>
+
+
 <x-app-layout>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
 
@@ -14,10 +20,7 @@
             @endauth
         </div>
         @endif
-
-
         <div class="container">
-
             <div class="justify-center sm:px-6 lg:px-8">
 
                 <div class="m-2">
@@ -32,8 +35,58 @@
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 10.986c0 4.628-4.972 8.753-7.525 10.567a2.528 2.528 0 0 1-2.95 0C7.972 19.739 3 15.613 3 10.986 3 5.576 7.03 2 12 2s9 3.576 9 8.986Zm-2 0c0 1.613-.886 3.348-2.328 5.043-1.411 1.659-3.144 3.034-4.355 3.893a.529.529 0 0 1-.634 0c-1.21-.86-2.944-2.234-4.354-3.893C5.886 14.334 5 12.599 5 10.986 5 6.748 8.065 4 12 4s7 2.748 7 6.986Z"></path>
                                             </svg>
                                         </div>
-                                        <select name="" id="" class="col-10 border-0" aria-label=".form-select-lg example">
-                                            <option value="todo">toda España</option>
+                                        <select name="comunidad" id="comunidad" class="col-10 border-0" aria-label=".form-select-lg example">
+                                            <option value="todo">Seleccione Región ...</option>
+                                            <option value="andalucia">Andalucía</option>
+                                            <option value="aragon">Aragón</option>
+                                            <option value="asturias">Asturias</option>
+                                            <option value="canarias">Canarias</option>
+                                            <option value="cantabria">Cantabria</option>
+                                            <option value="castilla-la-mancha">Castilla La Mancha</option>
+                                            <option value="castilla-leon">Castilla León</option>
+                                            <option value="catalunya">Catalunya</option>
+                                            <option value="ceuta-y-melilla">Ceuta y Melilla</option>
+                                            <option value="extremadura">Extremadura</option>
+                                            <option value="galicia">Galicia</option>
+                                            <option value="islas-baleares">Islas Baleares</option>
+                                            <option value="rioja">La Rioja</option>
+                                            <option value="madrid">Madrid</option>
+                                            <option value="murcia">Murcia</option>
+                                            <option value="navarra">Navarra</option>
+                                            <option value="pais-vasco">País Vasco</option>
+                                            <option value="valencia">Valencia</option>
+                                        </select>
+
+                                        <script>
+                                            function myFunc(myObj) {
+                                                let capa;
+                                                let selectComunidad = document.getElementById("comunidad");
+                                                myObj.foreach(createOption);
+                                            }
+
+                                            function createOption(op) {
+                                                capa = document.createElement("option");
+                                                selectComunidad.appendChild(capa);
+                                            }
+                                        </script>
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="row border rounded h-100">
+                                        <select name="provincia" id="provincia" class="border-0" aria-label=".form-select-lg example">
+                                            <option value="provincia">provincia</option>
+                                            <?php
+                                            $opcion = (new Municipio())->getArrayFromJson();
+                                            echo $opcion;
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row border rounded h-100">
+                                        <select name="poblacion" id="poblacion" class="border-0" aria-label=".form-select-lg example">
+                                            <option value="poblacion">poblacion</option>
                                         </select>
                                     </div>
                                 </div>
@@ -104,7 +157,7 @@
                                 <div class="card mb-4 box-shadow">
                                     <img class="card-img-top" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
                                     <div class="card-body">
-                                    <h3>Cariñoso pollito</h3>
+                                        <h3>Cariñoso pollito</h3>
                                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
@@ -126,4 +179,7 @@
         </div>
     </div>
 
-    </x-app-layout>
+</x-app-layout>
+<script src="<?php echo Storage::url('jquery-3.6.0.min.js'); ?>"></script>
+<script src="<?php echo Storage::url('sweetalert2.all.min.js'); ?>"></script>
+<script src="<?php echo Storage::url('of-lista.js'); ?>"></script>
