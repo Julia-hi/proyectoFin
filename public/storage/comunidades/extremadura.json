@@ -1,0 +1,3074 @@
+[
+    {
+        "Badajoz": [
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Acedera",
+                "Latitud": 39.0766,
+                "Longitud": -5.572279,
+                "Altitud": 308.0381
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Aceuchal",
+                "Latitud": 38.64706,
+                "Longitud": -6.487179,
+                "Altitud": 307
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Ahillones",
+                "Latitud": 38.26235,
+                "Longitud": -5.861972,
+                "Altitud": 579.7605
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Alange",
+                "Latitud": 38.78708,
+                "Longitud": -6.243493,
+                "Altitud": 322.5832
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Albuera (La)",
+                "Latitud": 38.71612,
+                "Longitud": -6.822261,
+                "Altitud": 249.9245
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Alburquerque",
+                "Latitud": 39.21936,
+                "Longitud": -7.001317,
+                "Altitud": 442.164
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Alconchel",
+                "Latitud": 38.51668,
+                "Longitud": -7.070871,
+                "Altitud": 284.3204
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Alconera",
+                "Latitud": 38.39647,
+                "Longitud": -6.476881,
+                "Altitud": 518.1642
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Aljucén",
+                "Latitud": 39.04591,
+                "Longitud": -6.33166,
+                "Altitud": 249.3199
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Almendral",
+                "Latitud": 38.61327,
+                "Longitud": -6.822295,
+                "Altitud": 329.3619
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Almendralejo",
+                "Latitud": 38.68982,
+                "Longitud": -6.405679,
+                "Altitud": 336.7314
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Arroyo de San Servan",
+                "Latitud": 38.85286,
+                "Longitud": -6.455208,
+                "Altitud": 225.0338
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Atalaya",
+                "Latitud": 38.3359,
+                "Longitud": -6.472773,
+                "Altitud": 503.989
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Azuaga",
+                "Latitud": 38.25962,
+                "Longitud": -5.677916,
+                "Altitud": 588.9749
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Badajoz",
+                "Latitud": 38.8786,
+                "Longitud": -6.970284,
+                "Altitud": 192.0375
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Barcarrota",
+                "Latitud": 38.51441,
+                "Longitud": -6.849041,
+                "Altitud": 488.5576
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Baterno",
+                "Latitud": 38.95633,
+                "Longitud": -4.911456,
+                "Altitud": 561.4879
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Benquerencia de la Serena",
+                "Latitud": 38.69917,
+                "Longitud": -5.49442,
+                "Altitud": 668.4374
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Berlanga",
+                "Latitud": 38.28272,
+                "Longitud": -5.829181,
+                "Altitud": 567.5744
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Bienvenida",
+                "Latitud": 38.29828,
+                "Longitud": -6.21055,
+                "Altitud": 610.3852
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Bodonal de la Sierra",
+                "Latitud": 38.1479,
+                "Longitud": -6.560087,
+                "Altitud": 611.0769
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Burguillos del Cerro",
+                "Latitud": 38.37848,
+                "Longitud": -6.589302,
+                "Altitud": 404.4514
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Cabeza del Buey",
+                "Latitud": 38.72123,
+                "Longitud": -5.219465,
+                "Altitud": 536.211
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Cabeza la Vaca",
+                "Latitud": 38.08687,
+                "Longitud": -6.422567,
+                "Altitud": 759.3353
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Calamonte",
+                "Latitud": 38.88998,
+                "Longitud": -6.385029,
+                "Altitud": 225.6309
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Calera de Leon",
+                "Latitud": 38.10712,
+                "Longitud": -6.336793,
+                "Altitud": 698.5616
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Calzadilla de los Barros",
+                "Latitud": 38.30002,
+                "Longitud": -6.316763,
+                "Altitud": 560.012
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Campanario",
+                "Latitud": 38.86335,
+                "Longitud": -5.617795,
+                "Altitud": 399.8418
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Campillo de Llerena",
+                "Latitud": 38.50023,
+                "Longitud": -5.831132,
+                "Altitud": 499.8665
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Capilla",
+                "Latitud": 38.82045,
+                "Longitud": -5.08428,
+                "Altitud": 494.1088
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Carmonita",
+                "Latitud": 39.15389,
+                "Longitud": -6.338521,
+                "Altitud": 380.518
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Carrascalejo (El)",
+                "Latitud": 39.02259,
+                "Longitud": -6.337111,
+                "Altitud": 298.9797
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Casas de Don Pedro",
+                "Latitud": 39.10563,
+                "Longitud": -5.328635,
+                "Altitud": 386.5399
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Casas de Reina",
+                "Latitud": 38.20173,
+                "Longitud": -5.969779,
+                "Altitud": 633.2156
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Castilblanco",
+                "Latitud": 39.28229,
+                "Longitud": -5.091,
+                "Altitud": 503.2614
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Castuera",
+                "Latitud": 38.72257,
+                "Longitud": -5.545517,
+                "Altitud": 507.8511
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Cheles",
+                "Latitud": 38.51247,
+                "Longitud": -7.281178,
+                "Altitud": 196.9729
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Codosera (La)",
+                "Latitud": 39.20667,
+                "Longitud": -7.169003,
+                "Altitud": 317.7365
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Cordobilla de Lacara",
+                "Latitud": 39.14813,
+                "Longitud": -6.436437,
+                "Altitud": 304.6748
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Coronada (La)",
+                "Latitud": 38.9172,
+                "Longitud": -5.669852,
+                "Altitud": 361.9379
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Corte de Peleas",
+                "Latitud": 38.72504,
+                "Longitud": -6.67092,
+                "Altitud": 242.0632
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Cristina",
+                "Latitud": 38.83703,
+                "Longitud": -6.100307,
+                "Altitud": 292.6012
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Don alvaro",
+                "Latitud": 38.84887,
+                "Longitud": -6.275146,
+                "Altitud": 261.4249
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Don Benito",
+                "Latitud": 38.9543,
+                "Longitud": -5.861752,
+                "Altitud": 286.0323
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Entrín Bajo",
+                "Latitud": 38.71845,
+                "Longitud": -6.713396,
+                "Altitud": 243.4635
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Esparragalejo",
+                "Latitud": 38.94225,
+                "Longitud": -6.439241,
+                "Altitud": 221.896
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Esparragosa de la Serena",
+                "Latitud": 38.6495,
+                "Longitud": -5.607008,
+                "Altitud": 454.5637
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Esparragosa de Lares",
+                "Latitud": 38.97508,
+                "Longitud": -5.270102,
+                "Altitud": 471.0262
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Feria",
+                "Latitud": 38.51197,
+                "Longitud": -6.564341,
+                "Altitud": 558.8891
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Fregenal de la Sierra",
+                "Latitud": 38.16476,
+                "Longitud": -6.651353,
+                "Altitud": 563.0306
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Fuenlabrada de los Montes",
+                "Latitud": 39.13128,
+                "Longitud": -4.935597,
+                "Altitud": 544.9579
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Fuente de Cantos",
+                "Latitud": 38.24661,
+                "Longitud": -6.309231,
+                "Altitud": 583.8423
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Fuente del Arco",
+                "Latitud": 38.15202,
+                "Longitud": -5.896564,
+                "Altitud": 698.8098
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Fuente del Maestre",
+                "Latitud": 38.52863,
+                "Longitud": -6.449848,
+                "Altitud": 445.575
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Fuentes de Leon",
+                "Latitud": 38.06809,
+                "Longitud": -6.538614,
+                "Altitud": 759.8053
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Garbayuela",
+                "Latitud": 39.04953,
+                "Longitud": -5.000564,
+                "Altitud": 487.4009
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Garlitos",
+                "Latitud": 38.87967,
+                "Longitud": -5.04805,
+                "Altitud": 538.7179
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Garrovilla (La)",
+                "Latitud": 38.92122,
+                "Longitud": -6.475953,
+                "Altitud": 207.8057
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Granja de Torrehermosa",
+                "Latitud": 38.31067,
+                "Longitud": -5.597606,
+                "Altitud": 590.6907
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Guareña",
+                "Latitud": 38.86047,
+                "Longitud": -6.104637,
+                "Altitud": 285.5005
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Haba (La)",
+                "Latitud": 38.91763,
+                "Longitud": -5.801109,
+                "Altitud": 311.9093
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Helechosa de los Montes",
+                "Latitud": 39.31137,
+                "Longitud": -4.909214,
+                "Altitud": 441.6037
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Herrera del Duque",
+                "Latitud": 39.16891,
+                "Longitud": -5.051313,
+                "Altitud": 459.3652
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Higuera de la Serena",
+                "Latitud": 38.64634,
+                "Longitud": -5.741075,
+                "Altitud": 476.8962
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Higuera de Llerena",
+                "Latitud": 38.37675,
+                "Longitud": -5.999552,
+                "Altitud": 517.9836
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Higuera de Vargas",
+                "Latitud": 38.44587,
+                "Longitud": -6.973897,
+                "Altitud": 361.537
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Higuera la Real",
+                "Latitud": 38.14108,
+                "Longitud": -6.689744,
+                "Altitud": 623.5339
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Hinojosa del Valle",
+                "Latitud": 38.48338,
+                "Longitud": -6.184557,
+                "Altitud": 441.5001
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Hornachos",
+                "Latitud": 38.55511,
+                "Longitud": -6.069669,
+                "Altitud": 484.8826
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Jerez de los Caballeros",
+                "Latitud": 38.31935,
+                "Longitud": -6.771007,
+                "Altitud": 486.1686
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Lapa (La)",
+                "Latitud": 38.45348,
+                "Longitud": -6.522162,
+                "Altitud": 467.7335
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Llera",
+                "Latitud": 38.44814,
+                "Longitud": -6.057196,
+                "Altitud": 488.1218
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Llerena",
+                "Latitud": 38.23769,
+                "Longitud": -6.015329,
+                "Altitud": 644.6722
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Lobon",
+                "Latitud": 38.84752,
+                "Longitud": -6.625467,
+                "Altitud": 242.9643
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Magacela",
+                "Latitud": 38.89587,
+                "Longitud": -5.73411,
+                "Altitud": 473.8124
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Maguilla",
+                "Latitud": 38.36658,
+                "Longitud": -5.837015,
+                "Altitud": 527.6955
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Malcocinado",
+                "Latitud": 38.12186,
+                "Longitud": -5.693144,
+                "Altitud": 625.1129
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Malpartida de la Serena",
+                "Latitud": 38.67442,
+                "Longitud": -5.640807,
+                "Altitud": 483.3142
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Manchita",
+                "Latitud": 38.81499,
+                "Longitud": -6.022654,
+                "Altitud": 335.4408
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Medellín",
+                "Latitud": 38.96302,
+                "Longitud": -5.957706,
+                "Altitud": 250.0114
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Medina de las Torres",
+                "Latitud": 38.34339,
+                "Longitud": -6.411753,
+                "Altitud": 526.7921
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Mengabril",
+                "Latitud": 38.93616,
+                "Longitud": -5.933055,
+                "Altitud": 253
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Mérida",
+                "Latitud": 38.91586,
+                "Longitud": -6.345606,
+                "Altitud": 227.433
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Mirandilla",
+                "Latitud": 39.0017,
+                "Longitud": -6.289864,
+                "Altitud": 294.3425
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Monesterio",
+                "Latitud": 38.08678,
+                "Longitud": -6.274293,
+                "Altitud": 754.8566
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Montemolín",
+                "Latitud": 38.15512,
+                "Longitud": -6.214543,
+                "Altitud": 617.7222
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Monterrubio de la Serena",
+                "Latitud": 38.5892,
+                "Longitud": -5.443485,
+                "Altitud": 553.7913
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Montijo",
+                "Latitud": 38.90995,
+                "Longitud": -6.617333,
+                "Altitud": 203.0528
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Morera (La)",
+                "Latitud": 38.54596,
+                "Longitud": -6.654481,
+                "Altitud": 426.6002
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Nava de Santiago (La)",
+                "Latitud": 39.06277,
+                "Longitud": -6.50497,
+                "Altitud": 265.6057
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Navalvillar de Pela",
+                "Latitud": 39.09064,
+                "Longitud": -5.469171,
+                "Altitud": 349.6248
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Nogales",
+                "Latitud": 38.58658,
+                "Longitud": -6.749022,
+                "Altitud": 372.3395
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Oliva de la Frontera",
+                "Latitud": 38.27606,
+                "Longitud": -6.91992,
+                "Altitud": 376.0301
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Oliva de Mérida",
+                "Latitud": 38.79173,
+                "Longitud": -6.126723,
+                "Altitud": 322.3082
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Olivenza",
+                "Latitud": 38.68164,
+                "Longitud": -7.101516,
+                "Altitud": 258.1104
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Orellana de la Sierra",
+                "Latitud": 39.03048,
+                "Longitud": -5.497543,
+                "Altitud": 398.1514
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Orellana la Vieja",
+                "Latitud": 39.00505,
+                "Longitud": -5.534274,
+                "Altitud": 359.3995
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Palomas",
+                "Latitud": 38.69216,
+                "Longitud": -6.134156,
+                "Altitud": 322.4935
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Parra (La)",
+                "Latitud": 38.5215,
+                "Longitud": -6.6244,
+                "Altitud": 521.9587
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Peñalsordo",
+                "Latitud": 38.81918,
+                "Longitud": -5.114106,
+                "Altitud": 431.0298
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Peraleda del Zaucejo",
+                "Latitud": 38.47416,
+                "Longitud": -5.565681,
+                "Altitud": 542.9088
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Puebla de Alcocer",
+                "Latitud": 38.98521,
+                "Longitud": -5.257938,
+                "Altitud": 534.4778
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Puebla de la Calzada",
+                "Latitud": 38.89429,
+                "Longitud": -6.624558,
+                "Altitud": 191.7965
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Puebla de la Reina",
+                "Latitud": 38.66394,
+                "Longitud": -6.103811,
+                "Altitud": 375.599
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Puebla de Obando",
+                "Latitud": 39.17762,
+                "Longitud": -6.628193,
+                "Altitud": 380.0834
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Puebla de Sancho Pérez",
+                "Latitud": 38.39765,
+                "Longitud": -6.399928,
+                "Altitud": 522.9659
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Puebla del Maestre",
+                "Latitud": 38.08456,
+                "Longitud": -6.07957,
+                "Altitud": 554.0134
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Puebla del Prior",
+                "Latitud": 38.5709,
+                "Longitud": -6.197352,
+                "Altitud": 381.7524
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Pueblonuevo del Guadiana",
+                "Latitud": 38.92309,
+                "Longitud": -6.755604,
+                "Altitud": 181.9205
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Quintana de la Serena",
+                "Latitud": 38.74163,
+                "Longitud": -5.672316,
+                "Altitud": 409.9685
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Reina",
+                "Latitud": 38.18746,
+                "Longitud": -5.949533,
+                "Altitud": 717.8853
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Rena",
+                "Latitud": 39.05318,
+                "Longitud": -5.808552,
+                "Altitud": 261.9456
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Retamal de Llerena",
+                "Latitud": 38.57788,
+                "Longitud": -5.838177,
+                "Altitud": 464.8723
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Ribera del Fresno",
+                "Latitud": 38.55236,
+                "Longitud": -6.241587,
+                "Altitud": 398.8069
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Risco",
+                "Latitud": 38.91041,
+                "Longitud": -5.123031,
+                "Altitud": 493.8158
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Roca de la Sierra (La)",
+                "Latitud": 39.10997,
+                "Longitud": -6.689936,
+                "Altitud": 248.0425
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Salvaleon",
+                "Latitud": 38.50986,
+                "Longitud": -6.786355,
+                "Altitud": 529.4485
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Salvatierra de los Barros",
+                "Latitud": 38.49078,
+                "Longitud": -6.685156,
+                "Altitud": 625.0818
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "San Pedro de Mérida",
+                "Latitud": 38.94798,
+                "Longitud": -6.186302,
+                "Altitud": 281.0936
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "San Vicente de Alcantara",
+                "Latitud": 39.36045,
+                "Longitud": -7.13695,
+                "Altitud": 502.4301
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Sancti-Spíritus",
+                "Latitud": 38.92467,
+                "Longitud": -5.14595,
+                "Altitud": 486.562
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Santa Amalia",
+                "Latitud": 39.01209,
+                "Longitud": -6.01155,
+                "Altitud": 255.474
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Santa Marta",
+                "Latitud": 38.61237,
+                "Longitud": -6.629105,
+                "Altitud": 345.2148
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Santos de Maimona (Los)",
+                "Latitud": 38.44897,
+                "Longitud": -6.383959,
+                "Altitud": 534.4554
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Segura de Leon",
+                "Latitud": 38.12104,
+                "Longitud": -6.528532,
+                "Altitud": 681.7979
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Siruela",
+                "Latitud": 38.97767,
+                "Longitud": -5.051702,
+                "Altitud": 512.6407
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Solana de los Barros",
+                "Latitud": 38.72629,
+                "Longitud": -6.538014,
+                "Altitud": 266.4142
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Talarrubias",
+                "Latitud": 39.03328,
+                "Longitud": -5.236056,
+                "Altitud": 439.8815
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Talavera la Real",
+                "Latitud": 38.8765,
+                "Longitud": -6.77358,
+                "Altitud": 187.5183
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Taliga",
+                "Latitud": 38.52709,
+                "Longitud": -7.014642,
+                "Altitud": 304.307
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Tamurejo",
+                "Latitud": 38.99115,
+                "Longitud": -4.94776,
+                "Altitud": 546.1544
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Torre de Miguel Sesmero",
+                "Latitud": 38.61896,
+                "Longitud": -6.796033,
+                "Altitud": 323.1891
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Torremayor",
+                "Latitud": 38.90372,
+                "Longitud": -6.536332,
+                "Altitud": 195.9215
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Torremejía",
+                "Latitud": 38.78965,
+                "Longitud": -6.381672,
+                "Altitud": 291.6581
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Trasierra",
+                "Latitud": 38.19107,
+                "Longitud": -5.995481,
+                "Altitud": 700.4008
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Trujillanos",
+                "Latitud": 38.9516,
+                "Longitud": -6.259639,
+                "Altitud": 257.3852
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Usagre",
+                "Latitud": 38.35719,
+                "Longitud": -6.164374,
+                "Altitud": 561.4595
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valdecaballeros",
+                "Latitud": 39.24578,
+                "Longitud": -5.191957,
+                "Altitud": 383.3043
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valdelacalzada",
+                "Latitud": 38.88985,
+                "Longitud": -6.701389,
+                "Altitud": 184.8226
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valdetorres",
+                "Latitud": 38.91568,
+                "Longitud": -6.068682,
+                "Altitud": 244.8665
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valencia de las Torres",
+                "Latitud": 38.405,
+                "Longitud": -6.003782,
+                "Altitud": 514.027
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valencia del Mombuey",
+                "Latitud": 38.24256,
+                "Longitud": -7.119643,
+                "Altitud": 295.6457
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valencia del Ventoso",
+                "Latitud": 38.265,
+                "Longitud": -6.474613,
+                "Altitud": 496.0627
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valle de la Serena",
+                "Latitud": 38.70062,
+                "Longitud": -5.799649,
+                "Altitud": 429.2383
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valle de Matamoros",
+                "Latitud": 38.3796,
+                "Longitud": -6.802888,
+                "Altitud": 588.3872
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valle de Santa Ana",
+                "Latitud": 38.36528,
+                "Longitud": -6.788002,
+                "Altitud": 492.5686
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valverde de Burguillos",
+                "Latitud": 38.32713,
+                "Longitud": -6.537829,
+                "Altitud": 412.0819
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valverde de Leganés",
+                "Latitud": 38.67241,
+                "Longitud": -6.981911,
+                "Altitud": 291.0059
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valverde de Llerena",
+                "Latitud": 38.21376,
+                "Longitud": -5.822106,
+                "Altitud": 575.8016
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Valverde de Mérida",
+                "Latitud": 38.91176,
+                "Longitud": -6.221605,
+                "Altitud": 271.6688
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villafranca de los Barros",
+                "Latitud": 38.5623,
+                "Longitud": -6.337831,
+                "Altitud": 424.6475
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villagarcía de la Torre",
+                "Latitud": 38.29387,
+                "Longitud": -6.080569,
+                "Altitud": 592.4898
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villagonzalo",
+                "Latitud": 38.86309,
+                "Longitud": -6.196941,
+                "Altitud": 238.0459
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villalba de los Barros",
+                "Latitud": 38.61292,
+                "Longitud": -6.509777,
+                "Altitud": 310.169
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villanueva de la Serena",
+                "Latitud": 38.97399,
+                "Longitud": -5.800302,
+                "Altitud": 298.9061
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villanueva del Fresno",
+                "Latitud": 38.37597,
+                "Longitud": -7.168993,
+                "Altitud": 255.68
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villar de Rena",
+                "Latitud": 39.07669,
+                "Longitud": -5.811779,
+                "Altitud": 268.562
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villar del Rey",
+                "Latitud": 39.13239,
+                "Longitud": -6.847796,
+                "Altitud": 247.6167
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Villarta de los Montes",
+                "Latitud": 39.21384,
+                "Longitud": -4.792194,
+                "Altitud": 546.1343
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Zafra",
+                "Latitud": 38.4258,
+                "Longitud": -6.416446,
+                "Altitud": 517.2546
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Zahínos",
+                "Latitud": 38.33017,
+                "Longitud": -6.955032,
+                "Altitud": 345.8639
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Zalamea de la Serena",
+                "Latitud": 38.64977,
+                "Longitud": -5.656967,
+                "Altitud": 482.5517
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Zarza-Capilla",
+                "Latitud": 38.80047,
+                "Longitud": -5.169444,
+                "Altitud": 533.903
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Badajoz",
+                "Poblacion": "Zarza (La)",
+                "Latitud": 38.81807,
+                "Longitud": -6.217914,
+                "Altitud": 285.378
+            }
+        ]
+    },
+    {
+        "Cáceres": [
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Abadía",
+                "Latitud": 40.26001,
+                "Longitud": -5.977147,
+                "Altitud": 452.6463
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Abertura",
+                "Latitud": 39.24395,
+                "Longitud": -5.814705,
+                "Altitud": 401.0113
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Acebo",
+                "Latitud": 40.2028,
+                "Longitud": -6.716342,
+                "Altitud": 514.3077
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Acehúche",
+                "Latitud": 39.80257,
+                "Longitud": -6.633866,
+                "Altitud": 338.1039
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aceituna",
+                "Latitud": 40.14967,
+                "Longitud": -6.332445,
+                "Altitud": 484.0965
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Ahigal",
+                "Latitud": 40.1902,
+                "Longitud": -6.185196,
+                "Altitud": 389.4077
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Albala",
+                "Latitud": 39.25652,
+                "Longitud": -6.18479,
+                "Altitud": 499.4348
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Alcantara",
+                "Latitud": 39.71918,
+                "Longitud": -6.886507,
+                "Altitud": 230.2392
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Alcollarín",
+                "Latitud": 39.24476,
+                "Longitud": -5.738991,
+                "Altitud": 314.6408
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Alcuéscar",
+                "Latitud": 39.18246,
+                "Longitud": -6.228958,
+                "Altitud": 473.301
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aldea del Cano",
+                "Latitud": 39.28899,
+                "Longitud": -6.318822,
+                "Altitud": 397.4777
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aldea del Obispo (La)",
+                "Latitud": 39.56373,
+                "Longitud": -5.908606,
+                "Altitud": 436.7204
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aldeacentenera",
+                "Latitud": 39.52736,
+                "Longitud": -5.628981,
+                "Altitud": 566.658
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aldeanueva de la Vera",
+                "Latitud": 40.1274,
+                "Longitud": -5.701673,
+                "Altitud": 652.1578
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aldeanueva del Camino",
+                "Latitud": 40.25998,
+                "Longitud": -5.928072,
+                "Altitud": 527.226
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aldehuela de Jerte",
+                "Latitud": 40.00964,
+                "Longitud": -6.239311,
+                "Altitud": 260.1803
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Alía",
+                "Latitud": 39.44883,
+                "Longitud": -5.217654,
+                "Altitud": 578.4503
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Aliseda",
+                "Latitud": 39.42412,
+                "Longitud": -6.691398,
+                "Altitud": 325.5008
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Almaraz",
+                "Latitud": 39.81441,
+                "Longitud": -5.676382,
+                "Altitud": 272.2951
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Almoharín",
+                "Latitud": 39.17651,
+                "Longitud": -6.045032,
+                "Altitud": 305.6157
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Arroyo de la Luz",
+                "Latitud": 39.48631,
+                "Longitud": -6.581785,
+                "Altitud": 348.1518
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Arroyomolinos",
+                "Latitud": 39.18561,
+                "Longitud": -6.161489,
+                "Altitud": 397.1799
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Arroyomolinos de la Vera",
+                "Latitud": 40.05341,
+                "Longitud": -5.852002,
+                "Altitud": 608.2899
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Baños de Montemayor",
+                "Latitud": 40.31583,
+                "Longitud": -5.859305,
+                "Altitud": 700.7947
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Barrado",
+                "Latitud": 40.0849,
+                "Longitud": -5.881955,
+                "Altitud": 776.6094
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Belvís de Monroy",
+                "Latitud": 39.81759,
+                "Longitud": -5.607221,
+                "Altitud": 391.3559
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Benquerencia",
+                "Latitud": 39.31013,
+                "Longitud": -6.08435,
+                "Altitud": 444.9597
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Berrocalejo",
+                "Latitud": 39.81955,
+                "Longitud": -5.350197,
+                "Altitud": 375.8121
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Berzocana",
+                "Latitud": 39.43724,
+                "Longitud": -5.462021,
+                "Altitud": 718.6393
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Bohonal de Ibor",
+                "Latitud": 39.78432,
+                "Longitud": -5.48418,
+                "Altitud": 349.8538
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Botija",
+                "Latitud": 39.34631,
+                "Longitud": -6.07199,
+                "Altitud": 424.9815
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Brozas",
+                "Latitud": 39.61208,
+                "Longitud": -6.777935,
+                "Altitud": 410.4544
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cabañas del Castillo",
+                "Latitud": 39.54757,
+                "Longitud": -5.511646,
+                "Altitud": 760.3389
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cabezabellosa",
+                "Latitud": 40.13789,
+                "Longitud": -6.001263,
+                "Altitud": 855.8938
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cabezuela del Valle",
+                "Latitud": 40.19462,
+                "Longitud": -5.807104,
+                "Altitud": 514.3602
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cabrero",
+                "Latitud": 40.11537,
+                "Longitud": -5.893142,
+                "Altitud": 739.8882
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cáceres",
+                "Latitud": 39.47618,
+                "Longitud": -6.37076,
+                "Altitud": 434.6162
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cachorrilla",
+                "Latitud": 39.91569,
+                "Longitud": -6.668756,
+                "Altitud": 316.3804
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cadalso",
+                "Latitud": 40.23775,
+                "Longitud": -6.541749,
+                "Altitud": 448.0928
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Calzadilla",
+                "Latitud": 40.06121,
+                "Longitud": -6.531847,
+                "Altitud": 359.1857
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Caminomorisco",
+                "Latitud": 40.32347,
+                "Longitud": -6.290466,
+                "Altitud": 467.3217
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Campillo de Deleitosa",
+                "Latitud": 39.70359,
+                "Longitud": -5.572512,
+                "Altitud": 491.2502
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Campo Lugar",
+                "Latitud": 39.19566,
+                "Longitud": -5.770979,
+                "Altitud": 303.4392
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cañamero",
+                "Latitud": 39.3801,
+                "Longitud": -5.388996,
+                "Altitud": 609.7376
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cañaveral",
+                "Latitud": 39.78916,
+                "Longitud": -6.394412,
+                "Altitud": 353.1965
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Carbajo",
+                "Latitud": 39.60311,
+                "Longitud": -7.195372,
+                "Altitud": 336.2229
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Carcaboso",
+                "Latitud": 40.04923,
+                "Longitud": -6.213867,
+                "Altitud": 275.1561
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Carrascalejo",
+                "Latitud": 39.64698,
+                "Longitud": -5.215979,
+                "Altitud": 591.9044
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casar de Cáceres",
+                "Latitud": 39.56156,
+                "Longitud": -6.416811,
+                "Altitud": 366.4607
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casar de Palomero",
+                "Latitud": 40.29464,
+                "Longitud": -6.256925,
+                "Altitud": 524.2137
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casares de las Hurdes",
+                "Latitud": 40.44009,
+                "Longitud": -6.287865,
+                "Altitud": 688.3028
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casas de Don Antonio",
+                "Latitud": 39.23449,
+                "Longitud": -6.290927,
+                "Altitud": 390.6183
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casas de Don Gomez",
+                "Latitud": 40.00901,
+                "Longitud": -6.602018,
+                "Altitud": 322.1144
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casas de Millan",
+                "Latitud": 39.81559,
+                "Longitud": -6.330875,
+                "Altitud": 456.3329
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casas de Miravete",
+                "Latitud": 39.72628,
+                "Longitud": -5.745224,
+                "Altitud": 442.9554
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casas del Castañar",
+                "Latitud": 40.10815,
+                "Longitud": -5.906427,
+                "Altitud": 662.9862
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casas del Monte",
+                "Latitud": 40.20384,
+                "Longitud": -5.961104,
+                "Altitud": 578.4438
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casatejada",
+                "Latitud": 39.88761,
+                "Longitud": -5.683491,
+                "Altitud": 273.4576
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Casillas de Coria",
+                "Latitud": 39.96584,
+                "Longitud": -6.635832,
+                "Altitud": 244.7277
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Castañar de Ibor",
+                "Latitud": 39.6278,
+                "Longitud": -5.416543,
+                "Altitud": 663.5353
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Ceclavín",
+                "Latitud": 39.82228,
+                "Longitud": -6.770211,
+                "Altitud": 329.5323
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cedillo",
+                "Latitud": 39.64955,
+                "Longitud": -7.499236,
+                "Altitud": 265.7721
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cerezo",
+                "Latitud": 40.23718,
+                "Longitud": -6.225346,
+                "Altitud": 394.5923
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cilleros",
+                "Latitud": 40.11362,
+                "Longitud": -6.792156,
+                "Altitud": 448.878
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Collado",
+                "Latitud": 40.05756,
+                "Longitud": -5.72031,
+                "Altitud": 449.8956
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Conquista de la Sierra",
+                "Latitud": 39.35096,
+                "Longitud": -5.734497,
+                "Altitud": 441.5334
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Coria",
+                "Latitud": 39.98358,
+                "Longitud": -6.539727,
+                "Altitud": 239.4233
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cuacos de Yuste",
+                "Latitud": 40.10612,
+                "Longitud": -5.722965,
+                "Altitud": 527.3668
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Cumbre (La)",
+                "Latitud": 39.4049,
+                "Longitud": -5.977319,
+                "Altitud": 480.9445
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Deleitosa",
+                "Latitud": 39.6431,
+                "Longitud": -5.645743,
+                "Altitud": 566.3511
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Descargamaría",
+                "Latitud": 40.30398,
+                "Longitud": -6.487017,
+                "Altitud": 509.1357
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Eljas",
+                "Latitud": 40.21554,
+                "Longitud": -6.84604,
+                "Altitud": 578.0947
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Escurial",
+                "Latitud": 39.16914,
+                "Longitud": -5.885627,
+                "Altitud": 322.175
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Fresnedoso de Ibor",
+                "Latitud": 39.68388,
+                "Longitud": -5.506371,
+                "Altitud": 518.2465
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Galisteo",
+                "Latitud": 39.97344,
+                "Longitud": -6.2659,
+                "Altitud": 281.1528
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Garciaz",
+                "Latitud": 39.41329,
+                "Longitud": -5.627286,
+                "Altitud": 663.9293
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Garganta (La)",
+                "Latitud": 40.32863,
+                "Longitud": -5.823368,
+                "Altitud": 1132.181
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Garganta la Olla",
+                "Latitud": 40.11181,
+                "Longitud": -5.77565,
+                "Altitud": 587.8572
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Gargantilla",
+                "Latitud": 40.24803,
+                "Longitud": -5.920274,
+                "Altitud": 641.0802
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Gargüera",
+                "Latitud": 40.06156,
+                "Longitud": -5.928524,
+                "Altitud": 526.4066
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Garrovillas de Alconétar",
+                "Latitud": 39.70975,
+                "Longitud": -6.54906,
+                "Altitud": 326.4898
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Garvín",
+                "Latitud": 39.71982,
+                "Longitud": -5.345633,
+                "Altitud": 501.7299
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Gata",
+                "Latitud": 40.23882,
+                "Longitud": -6.595838,
+                "Altitud": 665.3049
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Gordo (El)",
+                "Latitud": 39.86602,
+                "Longitud": -5.343741,
+                "Altitud": 321.6666
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Granja (La)",
+                "Latitud": 40.23901,
+                "Longitud": -5.994181,
+                "Altitud": 416.166
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Guadalupe",
+                "Latitud": 39.45216,
+                "Longitud": -5.330024,
+                "Altitud": 616.1213
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Guijo de Coria",
+                "Latitud": 40.1011,
+                "Longitud": -6.463475,
+                "Altitud": 446.9364
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Guijo de Galisteo",
+                "Latitud": 40.09397,
+                "Longitud": -6.409966,
+                "Altitud": 428.5826
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Guijo de Granadilla",
+                "Latitud": 40.1938,
+                "Longitud": -6.163253,
+                "Altitud": 390.9599
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Guijo de Santa Barbara",
+                "Latitud": 40.1547,
+                "Longitud": -5.654811,
+                "Altitud": 865.0514
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Herguijuela",
+                "Latitud": 39.37516,
+                "Longitud": -5.759802,
+                "Altitud": 464.2786
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Hernan-Pérez",
+                "Latitud": 40.21267,
+                "Longitud": -6.464512,
+                "Altitud": 440.8669
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Herrera de Alcantara",
+                "Latitud": 39.63796,
+                "Longitud": -7.40579,
+                "Altitud": 255.0923
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Herreruela",
+                "Latitud": 39.46328,
+                "Longitud": -6.906601,
+                "Altitud": 324.7979
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Hervas",
+                "Latitud": 40.2739,
+                "Longitud": -5.866045,
+                "Altitud": 664.4932
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Higuera",
+                "Latitud": 39.72699,
+                "Longitud": -5.666839,
+                "Altitud": 466.6335
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Hinojal",
+                "Latitud": 39.70812,
+                "Longitud": -6.357864,
+                "Altitud": 348.0721
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Holguera",
+                "Latitud": 39.89969,
+                "Longitud": -6.349081,
+                "Altitud": 280.2364
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Hoyos",
+                "Latitud": 40.17185,
+                "Longitud": -6.721882,
+                "Altitud": 525.2888
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Huélaga",
+                "Latitud": 40.05581,
+                "Longitud": -6.615004,
+                "Altitud": 283.5962
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Ibahernando",
+                "Latitud": 39.32561,
+                "Longitud": -5.917909,
+                "Altitud": 536.6814
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Jaraicejo",
+                "Latitud": 39.66704,
+                "Longitud": -5.812926,
+                "Altitud": 504.3943
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Jaraíz de la Vera",
+                "Latitud": 40.06082,
+                "Longitud": -5.757348,
+                "Altitud": 568.9706
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Jarandilla de la Vera",
+                "Latitud": 40.12643,
+                "Longitud": -5.658391,
+                "Altitud": 604.6482
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Jarilla",
+                "Latitud": 40.17308,
+                "Longitud": -6.002533,
+                "Altitud": 480.6181
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Jerte",
+                "Latitud": 40.21983,
+                "Longitud": -5.755953,
+                "Altitud": 593.6707
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Ladrillar",
+                "Latitud": 40.46568,
+                "Longitud": -6.224111,
+                "Altitud": 709.2778
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Logrosan",
+                "Latitud": 39.33704,
+                "Longitud": -5.486933,
+                "Altitud": 482.4496
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Losar de la Vera",
+                "Latitud": 40.12332,
+                "Longitud": -5.605157,
+                "Altitud": 533.0191
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Madrigal de la Vera",
+                "Latitud": 40.14826,
+                "Longitud": -5.369092,
+                "Altitud": 407.2852
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Madrigalejo",
+                "Latitud": 39.13836,
+                "Longitud": -5.628703,
+                "Altitud": 294.8462
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Madroñera",
+                "Latitud": 39.42639,
+                "Longitud": -5.754245,
+                "Altitud": 591.7178
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Majadas",
+                "Latitud": 39.94258,
+                "Longitud": -5.748076,
+                "Altitud": 260.0658
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Malpartida de Cáceres",
+                "Latitud": 39.44617,
+                "Longitud": -6.505743,
+                "Altitud": 374.2109
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Malpartida de Plasencia",
+                "Latitud": 39.97929,
+                "Longitud": -6.048531,
+                "Altitud": 442.2609
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Marchagaz",
+                "Latitud": 40.26732,
+                "Longitud": -6.275044,
+                "Altitud": 516.7504
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Mata de Alcantara",
+                "Latitud": 39.71692,
+                "Longitud": -6.81734,
+                "Altitud": 344.6729
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Membrío",
+                "Latitud": 39.52709,
+                "Longitud": -7.056417,
+                "Altitud": 327.1987
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Mesas de Ibor",
+                "Latitud": 39.75625,
+                "Longitud": -5.54389,
+                "Altitud": 488.5139
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Miajadas",
+                "Latitud": 39.15122,
+                "Longitud": -5.907261,
+                "Altitud": 299.2762
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Millanes",
+                "Latitud": 39.85034,
+                "Longitud": -5.580376,
+                "Altitud": 361.245
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Mirabel",
+                "Latitud": 39.86226,
+                "Longitud": -6.23199,
+                "Altitud": 504.2706
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Mohedas de Granadilla",
+                "Latitud": 40.26815,
+                "Longitud": -6.202794,
+                "Altitud": 448.7007
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Monroy",
+                "Latitud": 39.63814,
+                "Longitud": -6.213188,
+                "Altitud": 378.6369
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Montanchez",
+                "Latitud": 39.22698,
+                "Longitud": -6.146751,
+                "Altitud": 696.2783
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Montehermoso",
+                "Latitud": 40.08851,
+                "Longitud": -6.348759,
+                "Altitud": 397.063
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Moraleja",
+                "Latitud": 40.06754,
+                "Longitud": -6.657399,
+                "Altitud": 261.4155
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Morcillo",
+                "Latitud": 40.01879,
+                "Longitud": -6.397771,
+                "Altitud": 272.8168
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Navaconcejo",
+                "Latitud": 40.17633,
+                "Longitud": -5.829202,
+                "Altitud": 477.2957
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Navalmoral de la Mata",
+                "Latitud": 39.88757,
+                "Longitud": -5.560554,
+                "Altitud": 315.4144
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Navalvillar de Ibor",
+                "Latitud": 39.58443,
+                "Longitud": -5.414059,
+                "Altitud": 667.4202
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Navas del Madroño",
+                "Latitud": 39.62302,
+                "Longitud": -6.651073,
+                "Altitud": 434.7237
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Navezuelas",
+                "Latitud": 39.51123,
+                "Longitud": -5.438606,
+                "Altitud": 941.8161
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Nuñomoral",
+                "Latitud": 40.40713,
+                "Longitud": -6.246152,
+                "Altitud": 496.7727
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Oliva de Plasencia",
+                "Latitud": 40.11187,
+                "Longitud": -6.086882,
+                "Altitud": 408.5221
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Palomero",
+                "Latitud": 40.24598,
+                "Longitud": -6.276446,
+                "Altitud": 453.1881
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Pasaron de la Vera",
+                "Latitud": 40.05243,
+                "Longitud": -5.820242,
+                "Altitud": 600.1179
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Pedroso de Acim",
+                "Latitud": 39.824,
+                "Longitud": -6.41306,
+                "Altitud": 470.9969
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Peraleda de la Mata",
+                "Latitud": 39.85395,
+                "Longitud": -5.461355,
+                "Altitud": 334.5811
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Peraleda de San Roman",
+                "Latitud": 39.74103,
+                "Longitud": -5.386428,
+                "Altitud": 472.4771
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Perales del Puerto",
+                "Latitud": 40.15448,
+                "Longitud": -6.68132,
+                "Altitud": 434.3814
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Pescueza",
+                "Latitud": 39.91832,
+                "Longitud": -6.64637,
+                "Altitud": 333.9729
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Pesga (La)",
+                "Latitud": 40.32642,
+                "Longitud": -6.176128,
+                "Altitud": 436.7784
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Piedras Albas",
+                "Latitud": 39.78506,
+                "Longitud": -6.926807,
+                "Altitud": 362.7316
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Pinofranqueado",
+                "Latitud": 40.30349,
+                "Longitud": -6.332713,
+                "Altitud": 457.8624
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Piornal",
+                "Latitud": 40.11704,
+                "Longitud": -5.850621,
+                "Altitud": 1169.494
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Plasencia",
+                "Latitud": 40.0305,
+                "Longitud": -6.088251,
+                "Altitud": 366.9232
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Plasenzuela",
+                "Latitud": 39.38169,
+                "Longitud": -6.047251,
+                "Altitud": 426.8089
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Portaje",
+                "Latitud": 39.918,
+                "Longitud": -6.561548,
+                "Altitud": 377.8726
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Portezuelo",
+                "Latitud": 39.81164,
+                "Longitud": -6.475103,
+                "Altitud": 361.0681
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Pozuelo de Zarzon",
+                "Latitud": 40.14914,
+                "Longitud": -6.415245,
+                "Altitud": 465.7742
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Puerto de Santa Cruz",
+                "Latitud": 39.31549,
+                "Longitud": -5.859532,
+                "Altitud": 450.3737
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Rebollar",
+                "Latitud": 40.15337,
+                "Longitud": -5.898876,
+                "Altitud": 610.1049
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Riolobos",
+                "Latitud": 39.92095,
+                "Longitud": -6.304895,
+                "Altitud": 267.9027
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Robledillo de Gata",
+                "Latitud": 40.32271,
+                "Longitud": -6.470017,
+                "Altitud": 607.127
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Robledillo de la Vera",
+                "Latitud": 40.10108,
+                "Longitud": -5.589018,
+                "Altitud": 453.7922
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Robledillo de Trujillo",
+                "Latitud": 39.26907,
+                "Longitud": -5.981236,
+                "Altitud": 500.2191
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Robledollano",
+                "Latitud": 39.61113,
+                "Longitud": -5.510137,
+                "Altitud": 708.3437
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Romangordo",
+                "Latitud": 39.74132,
+                "Longitud": -5.699617,
+                "Altitud": 419.6048
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Rosalejo",
+                "Latitud": 39.99511,
+                "Longitud": -5.458256,
+                "Altitud": 278.185
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Ruanes",
+                "Latitud": 39.32804,
+                "Longitud": -6.014173,
+                "Altitud": 482.6433
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Salorino",
+                "Latitud": 39.47884,
+                "Longitud": -7.00886,
+                "Altitud": 328.6313
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Salvatierra de Santiago",
+                "Latitud": 39.30373,
+                "Longitud": -6.032602,
+                "Altitud": 438.1557
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "San Martín de Trevejo",
+                "Latitud": 40.21355,
+                "Longitud": -6.795899,
+                "Altitud": 617.9815
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santa Ana",
+                "Latitud": 39.30836,
+                "Longitud": -5.991424,
+                "Altitud": 488.676
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santa Cruz de la Sierra",
+                "Latitud": 39.33632,
+                "Longitud": -5.846525,
+                "Altitud": 453.5517
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santa Cruz de Paniagua",
+                "Latitud": 40.19156,
+                "Longitud": -6.341215,
+                "Altitud": 478.2463
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santa Marta de Magasca",
+                "Latitud": 39.51199,
+                "Longitud": -6.099321,
+                "Altitud": 376.2589
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santiago de Alcantara",
+                "Latitud": 39.60579,
+                "Longitud": -7.244205,
+                "Altitud": 346.0968
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santiago del Campo",
+                "Latitud": 39.62868,
+                "Longitud": -6.362584,
+                "Altitud": 344.4483
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santibañez el Alto",
+                "Latitud": 40.18597,
+                "Longitud": -6.546609,
+                "Altitud": 645.5109
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Santibañez el Bajo",
+                "Latitud": 40.17627,
+                "Longitud": -6.223605,
+                "Altitud": 374.1523
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Saucedilla",
+                "Latitud": 39.85294,
+                "Longitud": -5.677233,
+                "Altitud": 261.0471
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Segura de Toro",
+                "Latitud": 40.22353,
+                "Longitud": -5.948384,
+                "Altitud": 636.4227
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Serradilla",
+                "Latitud": 39.83054,
+                "Longitud": -6.138085,
+                "Altitud": 408.8365
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Serrejon",
+                "Latitud": 39.81802,
+                "Longitud": -5.802053,
+                "Altitud": 338.5384
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Sierra de Fuentes",
+                "Latitud": 39.43762,
+                "Longitud": -6.275741,
+                "Altitud": 439.375
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Talavan",
+                "Latitud": 39.71327,
+                "Longitud": -6.283558,
+                "Altitud": 402.4283
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Talaveruela de la Vera",
+                "Latitud": 40.12172,
+                "Longitud": -5.519372,
+                "Altitud": 574.3057
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Talayuela",
+                "Latitud": 39.98579,
+                "Longitud": -5.609766,
+                "Altitud": 287.0548
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Tejeda de Tiétar",
+                "Latitud": 40.02016,
+                "Longitud": -5.868539,
+                "Altitud": 446.3588
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Toril",
+                "Latitud": 39.89747,
+                "Longitud": -5.779137,
+                "Altitud": 258.9532
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Tornavacas",
+                "Latitud": 40.25297,
+                "Longitud": -5.69185,
+                "Altitud": 863.4183
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torno (El)",
+                "Latitud": 40.13552,
+                "Longitud": -5.94529,
+                "Altitud": 771.9241
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torre de Don Miguel",
+                "Latitud": 40.22451,
+                "Longitud": -6.576208,
+                "Altitud": 555.9983
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torre de Santa María",
+                "Latitud": 39.25404,
+                "Longitud": -6.115738,
+                "Altitud": 490.2715
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torrecilla de los angeles",
+                "Latitud": 40.24807,
+                "Longitud": -6.418326,
+                "Altitud": 466.4605
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torrecillas de la Tiesa",
+                "Latitud": 39.56844,
+                "Longitud": -5.742724,
+                "Altitud": 501.9348
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torrejon el Rubio",
+                "Latitud": 39.77169,
+                "Longitud": -6.014256,
+                "Altitud": 304.923
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torrejoncillo",
+                "Latitud": 39.89564,
+                "Longitud": -6.466379,
+                "Altitud": 323.6587
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torremenga",
+                "Latitud": 40.04737,
+                "Longitud": -5.773284,
+                "Altitud": 528.885
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torremocha",
+                "Latitud": 39.34707,
+                "Longitud": -6.170862,
+                "Altitud": 444.2932
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torreorgaz",
+                "Latitud": 39.38263,
+                "Longitud": -6.247857,
+                "Altitud": 430.9886
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Torrequemada",
+                "Latitud": 39.36641,
+                "Longitud": -6.220093,
+                "Altitud": 441.6732
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Trujillo",
+                "Latitud": 39.45842,
+                "Longitud": -5.881428,
+                "Altitud": 529.2547
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valdastillas",
+                "Latitud": 40.13248,
+                "Longitud": -5.879483,
+                "Altitud": 615.739
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valdecañas de Tajo",
+                "Latitud": 39.75895,
+                "Longitud": -5.619759,
+                "Altitud": 368.6411
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valdefuentes",
+                "Latitud": 39.27539,
+                "Longitud": -6.12266,
+                "Altitud": 478.5953
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valdehúncar",
+                "Latitud": 39.83708,
+                "Longitud": -5.522842,
+                "Altitud": 372.1376
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valdelacasa de Tajo",
+                "Latitud": 39.72631,
+                "Longitud": -5.281958,
+                "Altitud": 453.4802
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valdemorales",
+                "Latitud": 39.20615,
+                "Longitud": -6.067852,
+                "Altitud": 440.133
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valdeobispo",
+                "Latitud": 40.08203,
+                "Longitud": -6.247542,
+                "Altitud": 334.7701
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valencia de Alcantara",
+                "Latitud": 39.41135,
+                "Longitud": -7.246899,
+                "Altitud": 462.1811
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valverde de la Vera",
+                "Latitud": 40.1233,
+                "Longitud": -5.494221,
+                "Altitud": 504.3288
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Valverde del Fresno",
+                "Latitud": 40.22512,
+                "Longitud": -6.877804,
+                "Altitud": 492.8723
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Viandar de la Vera",
+                "Latitud": 40.12193,
+                "Longitud": -5.537332,
+                "Altitud": 548.8549
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villa del Campo",
+                "Latitud": 40.14024,
+                "Longitud": -6.426996,
+                "Altitud": 469.004
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villa del Rey",
+                "Latitud": 39.66001,
+                "Longitud": -6.820529,
+                "Altitud": 338.1065
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villamesías",
+                "Latitud": 39.24479,
+                "Longitud": -5.872935,
+                "Altitud": 363.7874
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villamiel",
+                "Latitud": 40.18649,
+                "Longitud": -6.785113,
+                "Altitud": 745.9667
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villanueva de la Sierra",
+                "Latitud": 40.20169,
+                "Longitud": -6.406775,
+                "Altitud": 500.2086
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villanueva de la Vera",
+                "Latitud": 40.12963,
+                "Longitud": -5.4642,
+                "Altitud": 512.8276
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villar de Plasencia",
+                "Latitud": 40.13834,
+                "Longitud": -6.029376,
+                "Altitud": 450.0623
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villar del Pedroso",
+                "Latitud": 39.70632,
+                "Longitud": -5.196259,
+                "Altitud": 495.528
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Villasbuenas de Gata",
+                "Latitud": 40.1794,
+                "Longitud": -6.625679,
+                "Altitud": 424.338
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Zarza de Granadilla",
+                "Latitud": 40.23764,
+                "Longitud": -6.047421,
+                "Altitud": 398.6644
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Zarza de Montanchez",
+                "Latitud": 39.25694,
+                "Longitud": -6.033668,
+                "Altitud": 452.4351
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Zarza la Mayor",
+                "Latitud": 39.87599,
+                "Longitud": -6.86481,
+                "Altitud": 303.9268
+            },
+            {
+                "Comunidad": "Extremadura",
+                "Provincia": "Cáceres",
+                "Poblacion": "Zorita",
+                "Latitud": 39.28505,
+                "Longitud": -5.700322,
+                "Altitud": 429.6986
+            }
+        ]
+    }
+]

@@ -57,36 +57,21 @@ use Illuminate\Support\Facades\Storage;
                                             <option value="valencia">Valencia</option>
                                         </select>
 
-                                        <script>
-                                            function myFunc(myObj) {
-                                                let capa;
-                                                let selectComunidad = document.getElementById("comunidad");
-                                                myObj.foreach(createOption);
-                                            }
-
-                                            function createOption(op) {
-                                                capa = document.createElement("option");
-                                                selectComunidad.appendChild(capa);
-                                            }
-                                        </script>
+                                        
                                     </div>
 
                                 </div>
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="provincia" id="provincia" class="border-0" aria-label=".form-select-lg example">
-                                            <option value="provincia">provincia</option>
-                                            <?php
-                                            $opcion = (new Municipio())->getArrayFromJson();
-                                            echo $opcion;
-                                            ?>
+                                           <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="poblacion" id="poblacion" class="border-0" aria-label=".form-select-lg example">
-                                            <option value="poblacion">poblacion</option>
+                                            <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
                                     </div>
                                 </div>
@@ -180,6 +165,7 @@ use Illuminate\Support\Facades\Storage;
     </div>
 
 </x-app-layout>
-<script src="<?php echo Storage::url('jquery-3.6.0.min.js'); ?>"></script>
-<script src="<?php echo Storage::url('sweetalert2.all.min.js'); ?>"></script>
-<script src="<?php echo Storage::url('of-lista.js'); ?>"></script>
+ <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
+<script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
+<script src="{{asset('storage/js/of-lista.js')}}"></script>
+

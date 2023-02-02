@@ -1,0 +1,822 @@
+[
+    {
+        "Cantabria": [
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Alfoz de Lloredo",
+                "Latitud": 43.36666,
+                "Longitud": -4.166667,
+                "Altitud": 191.1736
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Ampuero",
+                "Latitud": 43.34346,
+                "Longitud": -3.41566,
+                "Altitud": 14.41542
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Anievas",
+                "Latitud": 43.2,
+                "Longitud": -4,
+                "Altitud": 307.6791
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Arenas de Iguña",
+                "Latitud": 43.18615,
+                "Longitud": -4.050034,
+                "Altitud": 175.7548
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Argoños",
+                "Latitud": 43.45803,
+                "Longitud": -3.485922,
+                "Altitud": 7.686848
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Arnuero",
+                "Latitud": 43.47295,
+                "Longitud": -3.562917,
+                "Altitud": 58.03693
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Arredondo",
+                "Latitud": 43.27427,
+                "Longitud": -3.601528,
+                "Altitud": 162.1712
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Astillero (El)",
+                "Latitud": 43.40158,
+                "Longitud": -3.818161,
+                "Altitud": 15.58059
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Barcena de Cicero",
+                "Latitud": 43.41996,
+                "Longitud": -3.505684,
+                "Altitud": 8.115047
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Barcena de Pie de Concha",
+                "Latitud": 43.12004,
+                "Longitud": -4.046467,
+                "Altitud": 341.4135
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Bareyo",
+                "Latitud": 43.47031,
+                "Longitud": -3.596607,
+                "Altitud": 74.22401
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Cabezon de la Sal",
+                "Latitud": 43.3074,
+                "Longitud": -4.232392,
+                "Altitud": 126.715
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Cabezon de Liébana",
+                "Latitud": 43.13258,
+                "Longitud": -4.576035,
+                "Altitud": 368.491
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Cabuérniga",
+                "Latitud": 43.20371,
+                "Longitud": -4.30376,
+                "Altitud": 279.0297
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Camaleño",
+                "Latitud": 43.15001,
+                "Longitud": -4.693898,
+                "Altitud": 442.6653
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Camargo",
+                "Latitud": 43.40667,
+                "Longitud": -3.883333,
+                "Altitud": 27.12142
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Campoo de Enmedio",
+                "Latitud": 42.96667,
+                "Longitud": -4.15,
+                "Altitud": 878.4844
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Campoo de Yuso",
+                "Latitud": 43.01667,
+                "Longitud": -4,
+                "Altitud": 854.9267
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Cartes",
+                "Latitud": 43.32322,
+                "Longitud": -4.069758,
+                "Altitud": 34.01722
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Castañeda",
+                "Latitud": 43.31572,
+                "Longitud": -3.95332,
+                "Altitud": 51.33138
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Castro-Urdiales",
+                "Latitud": 43.38277,
+                "Longitud": -3.21957,
+                "Altitud": 13.48153
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Cieza",
+                "Latitud": 43.21667,
+                "Longitud": -4.083333,
+                "Altitud": 238.8728
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Cillorigo de Liébana",
+                "Latitud": 43.16667,
+                "Longitud": -4.583333,
+                "Altitud": 491.4029
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Colindres",
+                "Latitud": 43.39538,
+                "Longitud": -3.449363,
+                "Altitud": 7.550448
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Comillas",
+                "Latitud": 43.38564,
+                "Longitud": -4.291507,
+                "Altitud": 24.99873
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Corrales de Buelna (Los)",
+                "Latitud": 43.25957,
+                "Longitud": -4.068241,
+                "Altitud": 92.81157
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Corvera de Toranzo",
+                "Latitud": 43.2129,
+                "Longitud": -3.957237,
+                "Altitud": 317.1393
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Entrambasaguas",
+                "Latitud": 43.37997,
+                "Longitud": -3.6846,
+                "Altitud": 44.69009
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Escalante",
+                "Latitud": 43.43679,
+                "Longitud": -3.514102,
+                "Altitud": 8.192403
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Guriezo",
+                "Latitud": 43.35442,
+                "Longitud": -3.325467,
+                "Altitud": 13.48724
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Hazas de Cesto",
+                "Latitud": 43.39733,
+                "Longitud": -3.588164,
+                "Altitud": 66.35742
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Hermandad de Campoo de Suso",
+                "Latitud": 43.01667,
+                "Longitud": -4.216667,
+                "Altitud": 912.019
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Herrerías",
+                "Latitud": 43.3088,
+                "Longitud": -4.486163,
+                "Altitud": 193.9438
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Lamason",
+                "Latitud": 43.25,
+                "Longitud": -4.466667,
+                "Altitud": 315.1235
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Laredo",
+                "Latitud": 43.41148,
+                "Longitud": -3.412477,
+                "Altitud": 13.43072
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Liendo",
+                "Latitud": 43.39421,
+                "Longitud": -3.382125,
+                "Altitud": 29.383
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Liérganes",
+                "Latitud": 43.34212,
+                "Longitud": -3.742174,
+                "Altitud": 87.95516
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Limpias",
+                "Latitud": 43.36872,
+                "Longitud": -3.398698,
+                "Altitud": 305.4288
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Luena",
+                "Latitud": 43.09888,
+                "Longitud": -3.896081,
+                "Altitud": 495.1068
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Marina de Cudeyo",
+                "Latitud": 43.41667,
+                "Longitud": -3.75,
+                "Altitud": 16.28183
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Mazcuerras",
+                "Latitud": 43.29861,
+                "Longitud": -4.206666,
+                "Altitud": 133.059
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Medio Cudeyo",
+                "Latitud": 43.38139,
+                "Longitud": -3.731667,
+                "Altitud": 37.2541
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Meruelo",
+                "Latitud": 43.45694,
+                "Longitud": -3.573889,
+                "Altitud": 35.97668
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Miengo",
+                "Latitud": 43.42711,
+                "Longitud": -3.99526,
+                "Altitud": 14.39486
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Miera",
+                "Latitud": 43.27555,
+                "Longitud": -3.711944,
+                "Altitud": 338.0346
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Molledo",
+                "Latitud": 43.15285,
+                "Longitud": -4.042275,
+                "Altitud": 248.2709
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Noja",
+                "Latitud": 43.47997,
+                "Longitud": -3.52139,
+                "Altitud": 24.97051
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Penagos",
+                "Latitud": 43.35154,
+                "Longitud": -3.81413,
+                "Altitud": 129.0727
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Peñarrubia",
+                "Latitud": 43.25583,
+                "Longitud": -4.578611,
+                "Altitud": 475.7796
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Pesaguero",
+                "Latitud": 43.07704,
+                "Longitud": -4.538978,
+                "Altitud": 608.4185
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Pesquera",
+                "Latitud": 43.08223,
+                "Longitud": -4.079455,
+                "Altitud": 614.1819
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Piélagos",
+                "Latitud": 43.38657,
+                "Longitud": -3.957237,
+                "Altitud": 39.58884
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Polaciones",
+                "Latitud": 43.10194,
+                "Longitud": -4.413055,
+                "Altitud": 887.2664
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Polanco",
+                "Latitud": 43.385,
+                "Longitud": -4.016194,
+                "Altitud": 52.85626
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Potes",
+                "Latitud": 43.15347,
+                "Longitud": -4.6227,
+                "Altitud": 309.7742
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Puente Viesgo",
+                "Latitud": 43.29906,
+                "Longitud": -3.964917,
+                "Altitud": 70.55008
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Ramales de la Victoria",
+                "Latitud": 43.25792,
+                "Longitud": -3.465148,
+                "Altitud": 86.5575
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Rasines",
+                "Latitud": 43.30417,
+                "Longitud": -3.428978,
+                "Altitud": 88.65132
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Reinosa",
+                "Latitud": 43.00071,
+                "Longitud": -4.139154,
+                "Altitud": 853.8888
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Reocín",
+                "Latitud": 43.34273,
+                "Longitud": -4.095572,
+                "Altitud": 115.7464
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Ribamontan al Mar",
+                "Latitud": 43.45555,
+                "Longitud": -3.67,
+                "Altitud": 29.16733
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Ribamontan al Monte",
+                "Latitud": 43.40805,
+                "Longitud": -3.661389,
+                "Altitud": 59.71571
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Rionansa",
+                "Latitud": 43.25472,
+                "Longitud": -4.4025,
+                "Altitud": 210.4719
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Riotuerto",
+                "Latitud": 43.34002,
+                "Longitud": -3.664777,
+                "Altitud": 126.3817
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Rozas de Valdearroyo (Las)",
+                "Latitud": 42.97274,
+                "Longitud": -4.028184,
+                "Altitud": 854.1373
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Ruente",
+                "Latitud": 43.25963,
+                "Longitud": -4.265683,
+                "Altitud": 189.9705
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Ruesga",
+                "Latitud": 43.2825,
+                "Longitud": -3.56,
+                "Altitud": 149.2516
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Ruiloba",
+                "Latitud": 43.38167,
+                "Longitud": -4.250834,
+                "Altitud": 44.85384
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "San Felices de Buelna",
+                "Latitud": 43.27528,
+                "Longitud": -4.048611,
+                "Altitud": 105.392
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "San Miguel de Aguayo",
+                "Latitud": 43.05291,
+                "Longitud": -4.026556,
+                "Altitud": 839.2117
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "San Pedro del Romeral",
+                "Latitud": 43.11516,
+                "Longitud": -3.819026,
+                "Altitud": 755.9124
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "San Roque de Riomiera",
+                "Latitud": 43.23583,
+                "Longitud": -3.700278,
+                "Altitud": 378.2011
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "San Vicente de la Barquera",
+                "Latitud": 43.38593,
+                "Longitud": -4.398091,
+                "Altitud": 3.441201
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Santa Cruz de Bezana",
+                "Latitud": 43.44282,
+                "Longitud": -3.904777,
+                "Altitud": 42.96122
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Santa María de Cayon",
+                "Latitud": 43.31036,
+                "Longitud": -3.854225,
+                "Altitud": 94.75117
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Santander",
+                "Latitud": 43.46096,
+                "Longitud": -3.807934,
+                "Altitud": 4.1
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Santillana del Mar",
+                "Latitud": 43.38897,
+                "Longitud": -4.10918,
+                "Altitud": 84.16537
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Santiurde de Reinosa",
+                "Latitud": 43.06131,
+                "Longitud": -4.081068,
+                "Altitud": 647.917
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Santiurde de Toranzo",
+                "Latitud": 43.23869,
+                "Longitud": -3.940012,
+                "Altitud": 122.0352
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Santoña",
+                "Latitud": 43.44215,
+                "Longitud": -3.453193,
+                "Altitud": 8.660443
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Saro",
+                "Latitud": 43.26129,
+                "Longitud": -3.829885,
+                "Altitud": 162.4471
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Selaya",
+                "Latitud": 43.21114,
+                "Longitud": -3.804945,
+                "Altitud": 242.945
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Soba",
+                "Latitud": 43.18806,
+                "Longitud": -3.517222,
+                "Altitud": 320.8042
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Solorzano",
+                "Latitud": 43.37978,
+                "Longitud": -3.586886,
+                "Altitud": 89.04234
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Suances",
+                "Latitud": 43.42658,
+                "Longitud": -4.041966,
+                "Altitud": 90.53543
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Tojos (Los)",
+                "Latitud": 43.15514,
+                "Longitud": -4.253353,
+                "Altitud": 623.6432
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Torrelavega",
+                "Latitud": 43.35146,
+                "Longitud": -4.047017,
+                "Altitud": 24.9647
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Tresviso",
+                "Latitud": 43.25784,
+                "Longitud": -4.666776,
+                "Altitud": 888.7922
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Tudanca",
+                "Latitud": 43.15389,
+                "Longitud": -4.375278,
+                "Altitud": 420.3354
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Udías",
+                "Latitud": 43.33833,
+                "Longitud": -4.246944,
+                "Altitud": 169.41
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Val de San Vicente",
+                "Latitud": 43.3775,
+                "Longitud": -4.483611,
+                "Altitud": 32.28376
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Valdaliga",
+                "Latitud": 43.32917,
+                "Longitud": -4.349167,
+                "Altitud": 46.15511
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Valdeolea",
+                "Latitud": 42.87778,
+                "Longitud": -4.162222,
+                "Altitud": 930.1546
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Valdeprado del Río",
+                "Latitud": 42.87528,
+                "Longitud": -4.092881,
+                "Altitud": 914.2877
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Valderredible",
+                "Latitud": 42.80722,
+                "Longitud": -3.939167,
+                "Altitud": 725.1385
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Valle de Villaverde",
+                "Latitud": 43.24528,
+                "Longitud": -3.260278,
+                "Altitud": 194.6136
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Vega de Liébana",
+                "Latitud": 43.06046,
+                "Longitud": -4.665703,
+                "Altitud": 1232.006
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Vega de Pas",
+                "Latitud": 43.15893,
+                "Longitud": -3.782012,
+                "Altitud": 357.8255
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Villacarriedo",
+                "Latitud": 43.23019,
+                "Longitud": -3.805764,
+                "Altitud": 213.2215
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Villaescusa",
+                "Latitud": 43.37305,
+                "Longitud": -3.850833,
+                "Altitud": 22.27066
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Villafufre",
+                "Latitud": 43.26608,
+                "Longitud": -3.89347,
+                "Altitud": 224.6329
+            },
+            {
+                "Comunidad": "Cantabria",
+                "Provincia": "Cantabria",
+                "Poblacion": "Voto",
+                "Latitud": 43.35583,
+                "Longitud": -3.495556,
+                "Altitud": 30.99223
+            }
+        ]
+    }
+]

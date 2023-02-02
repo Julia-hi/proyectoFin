@@ -1,0 +1,2538 @@
+[
+    {
+        "A Coruña": [
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Abegondo",
+                "Latitud": 43.21667,
+                "Longitud": -8.283333,
+                "Altitud": 99.71806
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Ames",
+                "Latitud": 42.9,
+                "Longitud": -8.633333,
+                "Altitud": 216.3797
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Aranga",
+                "Latitud": 43.23333,
+                "Longitud": -8.016667,
+                "Altitud": 275.3901
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Ares",
+                "Latitud": 43.4263,
+                "Longitud": -8.247746,
+                "Altitud": 9.654655
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Arteixo",
+                "Latitud": 43.30451,
+                "Longitud": -8.511387,
+                "Altitud": 36.12324
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Arzúa",
+                "Latitud": 42.92717,
+                "Longitud": -8.164196,
+                "Altitud": 385.5346
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Baña (A)",
+                "Latitud": 42.80187,
+                "Longitud": -8.842805,
+                "Altitud": 132.5069
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Bergondo",
+                "Latitud": 43.31667,
+                "Longitud": -8.233334,
+                "Altitud": 111.32
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Betanzos",
+                "Latitud": 43.28106,
+                "Longitud": -8.211315,
+                "Altitud": 30.77564
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Boimorto",
+                "Latitud": 43.008,
+                "Longitud": -8.127,
+                "Altitud": 486.9221
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Boiro",
+                "Latitud": 42.65,
+                "Longitud": -8.9,
+                "Altitud": 39.57637
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Boqueixon",
+                "Latitud": 42.817,
+                "Longitud": -8.417,
+                "Altitud": 295.4394
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Brion",
+                "Latitud": 42.867,
+                "Longitud": -8.678,
+                "Altitud": 113.9952
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cabana de Bergantiños",
+                "Latitud": 43.21917,
+                "Longitud": -8.98,
+                "Altitud": 91.22826
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cabanas",
+                "Latitud": 43.41724,
+                "Longitud": -8.16521,
+                "Altitud": 14.01326
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Camariñas",
+                "Latitud": 43.12862,
+                "Longitud": -9.184929,
+                "Altitud": 8.057896
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cambre",
+                "Latitud": 43.29416,
+                "Longitud": -8.34498,
+                "Altitud": 59.3171
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Capela (A)",
+                "Latitud": 42.69293,
+                "Longitud": -8.792709,
+                "Altitud": 69.87862
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Carballo",
+                "Latitud": 43.21217,
+                "Longitud": -8.691041,
+                "Altitud": 108.2141
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cariño",
+                "Latitud": 43.73265,
+                "Longitud": -7.877766,
+                "Altitud": 9.662794
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Carnota",
+                "Latitud": 42.82107,
+                "Longitud": -9.0871,
+                "Altitud": 39.35276
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Carral",
+                "Latitud": 43.2297,
+                "Longitud": -8.355897,
+                "Altitud": 143.3725
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cedeira",
+                "Latitud": 43.66142,
+                "Longitud": -8.05547,
+                "Altitud": 9.32181
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cee",
+                "Latitud": 42.95541,
+                "Longitud": -9.18975,
+                "Altitud": 5.529384
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cerceda",
+                "Latitud": 43.16024,
+                "Longitud": -8.473271,
+                "Altitud": 340.3528
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cerdido",
+                "Latitud": 43.62384,
+                "Longitud": -7.994961,
+                "Altitud": 127.0117
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Cesuras",
+                "Latitud": 43.17367,
+                "Longitud": -8.197223,
+                "Altitud": 380.5045
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Coiros",
+                "Latitud": 43.25033,
+                "Longitud": -8.164351,
+                "Altitud": 214.9906
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Corcubion",
+                "Latitud": 42.94464,
+                "Longitud": -9.19431,
+                "Altitud": 12.05067
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Coristanco",
+                "Latitud": 43.19048,
+                "Longitud": -8.760949,
+                "Altitud": 121.6658
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Coruña (A)",
+                "Latitud": 43.37087,
+                "Longitud": -8.395835,
+                "Altitud": 16.76067
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Culleredo",
+                "Latitud": 43.31584,
+                "Longitud": -8.384923,
+                "Altitud": 60.64721
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Curtis",
+                "Latitud": 43.12437,
+                "Longitud": -8.146308,
+                "Altitud": 524.2576
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Dodro",
+                "Latitud": 42.7175,
+                "Longitud": -8.714723,
+                "Altitud": 8.638529
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Dumbría",
+                "Latitud": 43.00933,
+                "Longitud": -9.11521,
+                "Altitud": 196.8048
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Fene",
+                "Latitud": 43.47521,
+                "Longitud": -8.165961,
+                "Altitud": 31.51714
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Ferrol",
+                "Latitud": 43.48839,
+                "Longitud": -8.222509,
+                "Altitud": 17.92745
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Fisterra",
+                "Latitud": 42.90507,
+                "Longitud": -9.264338,
+                "Altitud": 26.53479
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Frades",
+                "Latitud": 43.04,
+                "Longitud": -8.277223,
+                "Altitud": 330.4912
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Irixoa",
+                "Latitud": 43.28474,
+                "Longitud": -8.058925,
+                "Altitud": 362.8766
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Laracha (A)",
+                "Latitud": 43.25232,
+                "Longitud": -8.584469,
+                "Altitud": 165.5166
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Laxe",
+                "Latitud": 43.21975,
+                "Longitud": -9.005163,
+                "Altitud": 10.11361
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Lousame",
+                "Latitud": 42.75896,
+                "Longitud": -8.846885,
+                "Altitud": 76.47759
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Malpica de Bergantiños",
+                "Latitud": 43.32416,
+                "Longitud": -8.809312,
+                "Altitud": 18.54621
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Mañon",
+                "Latitud": 43.7692,
+                "Longitud": -7.685581,
+                "Altitud": 122.7509
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Mazaricos",
+                "Latitud": 42.93893,
+                "Longitud": -8.992199,
+                "Altitud": 309.7912
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Melide",
+                "Latitud": 42.91393,
+                "Longitud": -8.014727,
+                "Altitud": 456.2325
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Mesía",
+                "Latitud": 43.11592,
+                "Longitud": -8.244491,
+                "Altitud": 396.5716
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Miño",
+                "Latitud": 43.3475,
+                "Longitud": -8.206388,
+                "Altitud": 35.12242
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Moeche",
+                "Latitud": 43.55053,
+                "Longitud": -7.991225,
+                "Altitud": 124.2339
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Monfero",
+                "Latitud": 43.32491,
+                "Longitud": -8.054685,
+                "Altitud": 313.0533
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Mugardos",
+                "Latitud": 43.46075,
+                "Longitud": -8.253842,
+                "Altitud": 26.80462
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Muros",
+                "Latitud": 42.77432,
+                "Longitud": -9.057509,
+                "Altitud": 13.47934
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Muxía",
+                "Latitud": 43.10466,
+                "Longitud": -9.218463,
+                "Altitud": 10.06232
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Naron",
+                "Latitud": 43.53705,
+                "Longitud": -8.180766,
+                "Altitud": 54.86041
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Neda",
+                "Latitud": 43.50128,
+                "Longitud": -8.156269,
+                "Altitud": 17.3906
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Negreira",
+                "Latitud": 42.90954,
+                "Longitud": -8.736245,
+                "Altitud": 165.9285
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Noia",
+                "Latitud": 42.78525,
+                "Longitud": -8.888309,
+                "Altitud": 14.17139
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Oleiros",
+                "Latitud": 43.3335,
+                "Longitud": -8.313619,
+                "Altitud": 121.4051
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Ordes",
+                "Latitud": 43.07674,
+                "Longitud": -8.407746,
+                "Altitud": 287.7448
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Oroso",
+                "Latitud": 42.99442,
+                "Longitud": -8.434846,
+                "Altitud": 265.2925
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Ortigueira",
+                "Latitud": 43.68634,
+                "Longitud": -7.851941,
+                "Altitud": 12.5302
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Outes",
+                "Latitud": 42.85127,
+                "Longitud": -8.926455,
+                "Altitud": 155.6038
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Oza dos Ríos",
+                "Latitud": 43.21533,
+                "Longitud": -8.186943,
+                "Altitud": 234.9048
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Paderne",
+                "Latitud": 43.28677,
+                "Longitud": -8.176355,
+                "Altitud": 151.441
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Padron",
+                "Latitud": 42.73898,
+                "Longitud": -8.660538,
+                "Altitud": 12.52071
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Pino (O)",
+                "Latitud": 42.98462,
+                "Longitud": -8.313807,
+                "Altitud": 325.1911
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Pobra do Caramiñal (A)",
+                "Latitud": 42.6033,
+                "Longitud": -8.938943,
+                "Altitud": 10.39054
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Ponteceso",
+                "Latitud": 43.24269,
+                "Longitud": -8.900965,
+                "Altitud": 9.338658
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Pontedeume",
+                "Latitud": 43.40258,
+                "Longitud": -8.152691,
+                "Altitud": 52.01764
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Pontes de García Rodríguez (As)",
+                "Latitud": 43.44582,
+                "Longitud": -7.849446,
+                "Altitud": 346.5103
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Porto do Son",
+                "Latitud": 42.72468,
+                "Longitud": -9.006695,
+                "Altitud": 13.61645
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Rianxo",
+                "Latitud": 42.65199,
+                "Longitud": -8.81842,
+                "Altitud": 12.18667
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Ribeira",
+                "Latitud": 42.57627,
+                "Longitud": -9.023945,
+                "Altitud": 9.570827
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Rois",
+                "Latitud": 42.76181,
+                "Longitud": -8.706309,
+                "Altitud": 91.43814
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Sada",
+                "Latitud": 43.35093,
+                "Longitud": -8.254611,
+                "Altitud": 8.367744
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "San Sadurniño",
+                "Latitud": 43.56245,
+                "Longitud": -8.054992,
+                "Altitud": 235.7317
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Santa Comba",
+                "Latitud": 43.0477,
+                "Longitud": -8.814226,
+                "Altitud": 357.9261
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Santiago de Compostela",
+                "Latitud": 42.88045,
+                "Longitud": -8.546304,
+                "Altitud": 250.5518
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Santiso",
+                "Latitud": 42.85,
+                "Longitud": -8.05,
+                "Altitud": 395.2911
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Sobrado",
+                "Latitud": 43.042,
+                "Longitud": -8.027381,
+                "Altitud": 531.1628
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Somozas (As)",
+                "Latitud": 43.53605,
+                "Longitud": -7.924339,
+                "Altitud": 365.4666
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Teo",
+                "Latitud": 42.80227,
+                "Longitud": -8.586169,
+                "Altitud": 210.1551
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Toques",
+                "Latitud": 42.96787,
+                "Longitud": -7.988449,
+                "Altitud": 550.1306
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Tordoia",
+                "Latitud": 43.088,
+                "Longitud": -8.56,
+                "Altitud": 372.4156
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Touro",
+                "Latitud": 42.86709,
+                "Longitud": -8.306829,
+                "Altitud": 322.1459
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Trazo",
+                "Latitud": 43.01667,
+                "Longitud": -8.533333,
+                "Altitud": 308.1545
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Val do Dubra",
+                "Latitud": 43.0225,
+                "Longitud": -8.638333,
+                "Altitud": 308.1521
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Valdoviño",
+                "Latitud": 43.6,
+                "Longitud": -8.133056,
+                "Altitud": 168.3914
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Vedra",
+                "Latitud": 42.78234,
+                "Longitud": -8.467377,
+                "Altitud": 230.7933
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Vilarmaior",
+                "Latitud": 43.34461,
+                "Longitud": -8.15395,
+                "Altitud": 195.4239
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Vilasantar",
+                "Latitud": 43.06667,
+                "Longitud": -8.1,
+                "Altitud": 442.1523
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Vimianzo",
+                "Latitud": 43.1103,
+                "Longitud": -9.033895,
+                "Altitud": 131.8647
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "A Coruña",
+                "Poblacion": "Zas",
+                "Latitud": 43.09975,
+                "Longitud": -8.916149,
+                "Altitud": 221.0706
+            }
+        ]
+    },
+    {
+        "Lugo": [
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Abadín",
+                "Latitud": 43.36666,
+                "Longitud": -7.483333,
+                "Altitud": 475.1587
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Alfoz",
+                "Latitud": 43.52817,
+                "Longitud": -7.414435,
+                "Altitud": 56.10721
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Antas de Ulla",
+                "Latitud": 42.78225,
+                "Longitud": -7.891078,
+                "Altitud": 558.4615
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Baleira",
+                "Latitud": 43.00167,
+                "Longitud": -7.239167,
+                "Altitud": 661.8257
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Baralla",
+                "Latitud": 42.89286,
+                "Longitud": -7.253127,
+                "Altitud": 488.2265
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Barreiros",
+                "Latitud": 43.53333,
+                "Longitud": -7.233333,
+                "Altitud": 193.2786
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Becerrea",
+                "Latitud": 42.85341,
+                "Longitud": -7.162147,
+                "Altitud": 641.6993
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Begonte",
+                "Latitud": 43.14534,
+                "Longitud": -7.680204,
+                "Altitud": 416.7638
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Boveda",
+                "Latitud": 42.62622,
+                "Longitud": -7.479327,
+                "Altitud": 358.4192
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Burela",
+                "Latitud": 43.65594,
+                "Longitud": -7.363514,
+                "Altitud": 62.66413
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Carballedo",
+                "Latitud": 42.51667,
+                "Longitud": -7.833333,
+                "Altitud": 556.9655
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Castro de Rei",
+                "Latitud": 43.20859,
+                "Longitud": -7.400369,
+                "Altitud": 431.6718
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Castroverde",
+                "Latitud": 43.03097,
+                "Longitud": -7.327102,
+                "Altitud": 589.1481
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Cervantes",
+                "Latitud": 42.86984,
+                "Longitud": -7.060073,
+                "Altitud": 648.1846
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Cervo",
+                "Latitud": 43.68209,
+                "Longitud": -7.44769,
+                "Altitud": 59.01057
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Chantada",
+                "Latitud": 42.60867,
+                "Longitud": -7.773468,
+                "Altitud": 491.9615
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Corgo (O)",
+                "Latitud": 42.93829,
+                "Longitud": -7.415542,
+                "Altitud": 423.9196
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Cospeito",
+                "Latitud": 43.23597,
+                "Longitud": -7.558825,
+                "Altitud": 426.1127
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Folgoso do Courel",
+                "Latitud": 42.58882,
+                "Longitud": -7.195468,
+                "Altitud": 597.0881
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Fonsagrada (A)",
+                "Latitud": 43.12375,
+                "Longitud": -7.06791,
+                "Altitud": 957.5945
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Foz",
+                "Latitud": 43.56639,
+                "Longitud": -7.25667,
+                "Altitud": 6.783125
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Friol",
+                "Latitud": 43.02889,
+                "Longitud": -7.79354,
+                "Altitud": 483.822
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Guitiriz",
+                "Latitud": 43.18174,
+                "Longitud": -7.900185,
+                "Altitud": 448.572
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Guntín",
+                "Latitud": 42.88778,
+                "Longitud": -7.697222,
+                "Altitud": 465.0538
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Incio (O)",
+                "Latitud": 42.64861,
+                "Longitud": -7.33,
+                "Altitud": 733.6429
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Lancara",
+                "Latitud": 42.86206,
+                "Longitud": -7.348236,
+                "Altitud": 409.2137
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Lourenza",
+                "Latitud": 43.4711,
+                "Longitud": -7.297891,
+                "Altitud": 56.24402
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Lugo",
+                "Latitud": 43.01208,
+                "Longitud": -7.555851,
+                "Altitud": 468.2347
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Meira",
+                "Latitud": 43.2131,
+                "Longitud": -7.294944,
+                "Altitud": 488.5347
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Mondoñedo",
+                "Latitud": 43.4281,
+                "Longitud": -7.362851,
+                "Altitud": 132.6622
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Monforte de Lemos",
+                "Latitud": 42.5185,
+                "Longitud": -7.510688,
+                "Altitud": 299.166
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Monterroso",
+                "Latitud": 42.79319,
+                "Longitud": -7.836526,
+                "Altitud": 542.8273
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Muras",
+                "Latitud": 43.46788,
+                "Longitud": -7.723003,
+                "Altitud": 486.4558
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Navia de Suarna",
+                "Latitud": 42.96486,
+                "Longitud": -7.003865,
+                "Altitud": 324.8547
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Negueira de Muñiz",
+                "Latitud": 43.13335,
+                "Longitud": -6.893023,
+                "Altitud": 358.476
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Nogais (As)",
+                "Latitud": 42.80933,
+                "Longitud": -7.109268,
+                "Altitud": 512.5035
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Ourol",
+                "Latitud": 43.55678,
+                "Longitud": -7.636109,
+                "Altitud": 253.6125
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Outeiro de Rei",
+                "Latitud": 43.10213,
+                "Longitud": -7.615168,
+                "Altitud": 410.7439
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Palas de Rei",
+                "Latitud": 42.87424,
+                "Longitud": -7.868907,
+                "Altitud": 558.8809
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Panton",
+                "Latitud": 42.51667,
+                "Longitud": -7.6,
+                "Altitud": 304.506
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Paradela",
+                "Latitud": 42.76667,
+                "Longitud": -7.6,
+                "Altitud": 559.2864
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Paramo (O)",
+                "Latitud": 42.8396,
+                "Longitud": -7.535555,
+                "Altitud": 376.2073
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Pastoriza (A)",
+                "Latitud": 43.30063,
+                "Longitud": -7.351371,
+                "Altitud": 545.8884
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Pedrafita do Cebreiro",
+                "Latitud": 42.72624,
+                "Longitud": -7.021226,
+                "Altitud": 1110.924
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Pobra do Brollon (A)",
+                "Latitud": 42.55704,
+                "Longitud": -7.392418,
+                "Altitud": 384.0419
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Pol",
+                "Latitud": 43.15272,
+                "Longitud": -7.330053,
+                "Altitud": 530.1712
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Pontenova (A)",
+                "Latitud": 43.34803,
+                "Longitud": -7.192536,
+                "Altitud": 84.54995
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Portomarín",
+                "Latitud": 42.80775,
+                "Longitud": -7.615518,
+                "Altitud": 387.5597
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Quiroga",
+                "Latitud": 42.47597,
+                "Longitud": -7.271719,
+                "Altitud": 268.3575
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Rabade",
+                "Latitud": 43.12088,
+                "Longitud": -7.621819,
+                "Altitud": 404.1569
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Ribadeo",
+                "Latitud": 43.53735,
+                "Longitud": -7.043029,
+                "Altitud": 41.25553
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Ribas de Sil",
+                "Latitud": 42.44611,
+                "Longitud": -7.297662,
+                "Altitud": 532.9442
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Ribeira de Piquín",
+                "Latitud": 43.19055,
+                "Longitud": -7.189803,
+                "Altitud": 616.5509
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Riotorto",
+                "Latitud": 43.35972,
+                "Longitud": -7.254445,
+                "Altitud": 393.7881
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Samos",
+                "Latitud": 42.73054,
+                "Longitud": -7.325293,
+                "Altitud": 542.352
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Sarria",
+                "Latitud": 42.77766,
+                "Longitud": -7.414474,
+                "Altitud": 447.6552
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Saviñao (O)",
+                "Latitud": 42.64709,
+                "Longitud": -7.654811,
+                "Altitud": 450.5526
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Sober",
+                "Latitud": 42.46107,
+                "Longitud": -7.586344,
+                "Altitud": 398.1687
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Taboada",
+                "Latitud": 42.71615,
+                "Longitud": -7.762904,
+                "Altitud": 542.3445
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Trabada",
+                "Latitud": 43.44833,
+                "Longitud": -7.194592,
+                "Altitud": 214.7123
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Triacastela",
+                "Latitud": 42.75665,
+                "Longitud": -7.240443,
+                "Altitud": 671.5583
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Valadouro (O)",
+                "Latitud": 43.56673,
+                "Longitud": -7.459773,
+                "Altitud": 262.7564
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Vicedo (O)",
+                "Latitud": 43.73336,
+                "Longitud": -7.672058,
+                "Altitud": 13.50312
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Vilalba",
+                "Latitud": 43.29541,
+                "Longitud": -7.684412,
+                "Altitud": 452.9068
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Viveiro",
+                "Latitud": 43.66143,
+                "Longitud": -7.594532,
+                "Altitud": 21.87932
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Xermade",
+                "Latitud": 43.35552,
+                "Longitud": -7.813554,
+                "Altitud": 468.3652
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Lugo",
+                "Poblacion": "Xove",
+                "Latitud": 43.68557,
+                "Longitud": -7.512421,
+                "Altitud": 61.07624
+            }
+        ]
+    },
+    {
+        "Ourense": [
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Allariz",
+                "Latitud": 42.19012,
+                "Longitud": -7.801597,
+                "Altitud": 460.7867
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Amoeiro",
+                "Latitud": 42.40992,
+                "Longitud": -7.954321,
+                "Altitud": 442.1121
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Arnoia (A)",
+                "Latitud": 42.25028,
+                "Longitud": -8.133056,
+                "Altitud": 159.5033
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Avion",
+                "Latitud": 42.37632,
+                "Longitud": -8.250866,
+                "Altitud": 446.5516
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Baltar",
+                "Latitud": 41.94975,
+                "Longitud": -7.716806,
+                "Altitud": 823.1027
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Bande",
+                "Latitud": 42.03019,
+                "Longitud": -7.976335,
+                "Altitud": 723.6759
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Baños de Molgas",
+                "Latitud": 42.24161,
+                "Longitud": -7.672231,
+                "Altitud": 513.4908
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Barbadas",
+                "Latitud": 42.29916,
+                "Longitud": -7.887585,
+                "Altitud": 241.3901
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Barco de Valdeorras (O)",
+                "Latitud": 42.41542,
+                "Longitud": -6.98196,
+                "Altitud": 324.8651
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Beade",
+                "Latitud": 42.33477,
+                "Longitud": -8.145673,
+                "Altitud": 202.2736
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Beariz",
+                "Latitud": 42.4678,
+                "Longitud": -8.273106,
+                "Altitud": 641.1476
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Blancos (Os)",
+                "Latitud": 41.99734,
+                "Longitud": -7.752397,
+                "Altitud": 801.8071
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Boboras",
+                "Latitud": 42.43336,
+                "Longitud": -8.142965,
+                "Altitud": 432.1264
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Bola (A)",
+                "Latitud": 42.152,
+                "Longitud": -7.915448,
+                "Altitud": 479.8777
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Bolo (O)",
+                "Latitud": 42.4406,
+                "Longitud": -8.006111,
+                "Altitud": 501.6701
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Calvos de Randín",
+                "Latitud": 41.94423,
+                "Longitud": -7.897644,
+                "Altitud": 910.7596
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Carballeda de Avia",
+                "Latitud": 42.32087,
+                "Longitud": -8.164418,
+                "Altitud": 250.0053
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Carballeda de Valdeorras",
+                "Latitud": 42.37857,
+                "Longitud": -6.880474,
+                "Altitud": 587.8499
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Carballiño (O)",
+                "Latitud": 42.42981,
+                "Longitud": -8.077559,
+                "Altitud": 401.1974
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Cartelle",
+                "Latitud": 42.24883,
+                "Longitud": -8.070292,
+                "Altitud": 366.1181
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Castrelo de Miño",
+                "Latitud": 42.28333,
+                "Longitud": -8.116667,
+                "Altitud": 198.8711
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Castrelo do Val",
+                "Latitud": 41.9929,
+                "Longitud": -7.42577,
+                "Altitud": 433.7377
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Castro Caldelas",
+                "Latitud": 42.37637,
+                "Longitud": -7.411907,
+                "Altitud": 625.1702
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Celanova",
+                "Latitud": 42.15223,
+                "Longitud": -7.958191,
+                "Altitud": 525.2849
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Cenlle",
+                "Latitud": 42.34312,
+                "Longitud": -8.087995,
+                "Altitud": 406.6471
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Chandrexa de Queixa",
+                "Latitud": 42.26029,
+                "Longitud": -7.379771,
+                "Altitud": 990.6727
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Coles",
+                "Latitud": 42.40143,
+                "Longitud": -7.836892,
+                "Altitud": 356.0888
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Cortegada",
+                "Latitud": 42.20771,
+                "Longitud": -8.169045,
+                "Altitud": 144.2422
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Cualedro",
+                "Latitud": 41.99015,
+                "Longitud": -7.595024,
+                "Altitud": 842.0068
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Entrimo",
+                "Latitud": 41.93333,
+                "Longitud": -8.116667,
+                "Altitud": 501.8381
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Esgos",
+                "Latitud": 42.32457,
+                "Longitud": -7.695685,
+                "Altitud": 579.329
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Gomesende",
+                "Latitud": 42.16586,
+                "Longitud": -8.103775,
+                "Altitud": 403.7807
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Gudiña (A)",
+                "Latitud": 42.06117,
+                "Longitud": -7.138263,
+                "Altitud": 980.4539
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Irixo (O)",
+                "Latitud": 42.52346,
+                "Longitud": -8.107206,
+                "Altitud": 561.9305
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Larouco",
+                "Latitud": 42.34745,
+                "Longitud": -7.159348,
+                "Altitud": 533.1442
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Laza",
+                "Latitud": 42.06162,
+                "Longitud": -7.461647,
+                "Altitud": 479.0535
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Leiro",
+                "Latitud": 42.36928,
+                "Longitud": -8.123707,
+                "Altitud": 88.74213
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Lobeira",
+                "Latitud": 41.99889,
+                "Longitud": -8.043056,
+                "Altitud": 605.1371
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Lobios",
+                "Latitud": 41.89356,
+                "Longitud": -8.068343,
+                "Altitud": 477.3125
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Maceda",
+                "Latitud": 42.27217,
+                "Longitud": -7.650074,
+                "Altitud": 582.2949
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Manzaneda",
+                "Latitud": 42.31055,
+                "Longitud": -7.235425,
+                "Altitud": 642.83
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Maside",
+                "Latitud": 42.41143,
+                "Longitud": -8.025622,
+                "Altitud": 379.7209
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Melon",
+                "Latitud": 42.25759,
+                "Longitud": -8.217762,
+                "Altitud": 482.1991
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Merca (A)",
+                "Latitud": 42.22276,
+                "Longitud": -7.904709,
+                "Altitud": 488.3453
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Mezquita (A)",
+                "Latitud": 42.00964,
+                "Longitud": -7.04605,
+                "Altitud": 991.7155
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Montederramo",
+                "Latitud": 42.27694,
+                "Longitud": -7.502669,
+                "Altitud": 906.4658
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Monterrei",
+                "Latitud": 41.94715,
+                "Longitud": -7.449487,
+                "Altitud": 511.1087
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Muíños",
+                "Latitud": 41.95426,
+                "Longitud": -7.985605,
+                "Altitud": 585.7645
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Nogueira de Ramuín",
+                "Latitud": 42.41308,
+                "Longitud": -7.726115,
+                "Altitud": 613.3605
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Oímbra",
+                "Latitud": 41.88543,
+                "Longitud": -7.47204,
+                "Altitud": 389.4346
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Ourense",
+                "Latitud": 42.34001,
+                "Longitud": -7.864641,
+                "Altitud": 144.5574
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Paderne de Allariz",
+                "Latitud": 42.2775,
+                "Longitud": -7.745833,
+                "Altitud": 440.9869
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Padrenda",
+                "Latitud": 42.13334,
+                "Longitud": -8.15,
+                "Altitud": 273.543
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Parada de Sil",
+                "Latitud": 42.38281,
+                "Longitud": -7.568525,
+                "Altitud": 662.7356
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Pereiro de Aguiar (O)",
+                "Latitud": 42.34643,
+                "Longitud": -7.801086,
+                "Altitud": 321.2264
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Peroxa (A)",
+                "Latitud": 42.43982,
+                "Longitud": -7.795459,
+                "Altitud": 498.0891
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Petín",
+                "Latitud": 42.38257,
+                "Longitud": -7.125877,
+                "Altitud": 300.702
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Piñor",
+                "Latitud": 42.49816,
+                "Longitud": -8.004752,
+                "Altitud": 553.8872
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Pobra de Trives (A)",
+                "Latitud": 42.33931,
+                "Longitud": -7.2539,
+                "Altitud": 745.8318
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Pontedeva",
+                "Latitud": 42.16861,
+                "Longitud": -8.139167,
+                "Altitud": 144.9253
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Porqueira",
+                "Latitud": 42.01787,
+                "Longitud": -7.839515,
+                "Altitud": 640.7926
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Punxín",
+                "Latitud": 42.37028,
+                "Longitud": -8.011945,
+                "Altitud": 320.7976
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Quintela de Leirado",
+                "Latitud": 42.13896,
+                "Longitud": -8.102153,
+                "Altitud": 365.5756
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Rairiz de Veiga",
+                "Latitud": 42.08272,
+                "Longitud": -7.833268,
+                "Altitud": 620
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Ramiras",
+                "Latitud": 42.18779,
+                "Longitud": -8.022355,
+                "Altitud": 364.6565
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Ribadavia",
+                "Latitud": 42.28755,
+                "Longitud": -8.143497,
+                "Altitud": 103.0358
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Rios",
+                "Latitud": 41.97426,
+                "Longitud": -7.282634,
+                "Altitud": 805.391
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Rúa (A)",
+                "Latitud": 42.39249,
+                "Longitud": -7.120533,
+                "Altitud": 297.6577
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Rubia",
+                "Latitud": 42.44963,
+                "Longitud": -6.948192,
+                "Altitud": 548.2453
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "San Amaro",
+                "Latitud": 42.37314,
+                "Longitud": -8.071692,
+                "Altitud": 482.8099
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "San Cibrao das Viñas",
+                "Latitud": 42.29727,
+                "Longitud": -7.873343,
+                "Altitud": 271.6895
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "San Cristovo de Cea",
+                "Latitud": 42.4728,
+                "Longitud": -7.985322,
+                "Altitud": 510.0587
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "San Xoan de Río",
+                "Latitud": 42.3706,
+                "Longitud": -7.29888,
+                "Altitud": 879.6433
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Sandias",
+                "Latitud": 42.11305,
+                "Longitud": -7.756991,
+                "Altitud": 639.2228
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Sarreaus",
+                "Latitud": 42.08629,
+                "Longitud": -7.603325,
+                "Altitud": 650.4904
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Taboadela",
+                "Latitud": 42.2409,
+                "Longitud": -7.825325,
+                "Altitud": 387.0332
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Teixeira (A)",
+                "Latitud": 42.38874,
+                "Longitud": -7.266197,
+                "Altitud": 846.8474
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Toén",
+                "Latitud": 42.31652,
+                "Longitud": -7.954854,
+                "Altitud": 375.3269
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Trasmiras",
+                "Latitud": 42.02463,
+                "Longitud": -7.616568,
+                "Altitud": 644.9832
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Veiga (A)",
+                "Latitud": 42.2506,
+                "Longitud": -7.02599,
+                "Altitud": 882.0123
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Verea",
+                "Latitud": 42.1,
+                "Longitud": -7.95,
+                "Altitud": 727.3734
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Verín",
+                "Latitud": 41.94045,
+                "Longitud": -7.439122,
+                "Altitud": 387.786
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Viana do Bolo",
+                "Latitud": 42.17919,
+                "Longitud": -7.112754,
+                "Altitud": 703.6934
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Vilamarín",
+                "Latitud": 42.46451,
+                "Longitud": -7.892807,
+                "Altitud": 504.0667
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Vilamartín de Valdeorras",
+                "Latitud": 42.41521,
+                "Longitud": -7.059831,
+                "Altitud": 319.5154
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Vilar de Barrio",
+                "Latitud": 42.16056,
+                "Longitud": -7.612335,
+                "Altitud": 665.1714
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Vilar de Santos",
+                "Latitud": 42.0871,
+                "Longitud": -7.794695,
+                "Altitud": 638.7435
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Vilardevos",
+                "Latitud": 41.90748,
+                "Longitud": -7.314034,
+                "Altitud": 741.3065
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Vilariño de Conso",
+                "Latitud": 42.17825,
+                "Longitud": -7.171638,
+                "Altitud": 796.0936
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Xinzo de Limia",
+                "Latitud": 42.06366,
+                "Longitud": -7.724412,
+                "Altitud": 624.355
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Xunqueira de Ambía",
+                "Latitud": 42.20422,
+                "Longitud": -7.734962,
+                "Altitud": 541.0165
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Ourense",
+                "Poblacion": "Xunqueira de Espadanedo",
+                "Latitud": 42.31957,
+                "Longitud": -7.629323,
+                "Altitud": 688.6356
+            }
+        ]
+    },
+    {
+        "Pontevedra": [
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Agolada",
+                "Latitud": 42.76227,
+                "Longitud": -8.019424,
+                "Altitud": 583.5956
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Arbo",
+                "Latitud": 42.1145,
+                "Longitud": -8.319313,
+                "Altitud": 150.7691
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Baiona",
+                "Latitud": 42.11809,
+                "Longitud": -8.84958,
+                "Altitud": 21.20054
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Barro",
+                "Latitud": 42.525,
+                "Longitud": -8.647223,
+                "Altitud": 66.8885
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Bueu",
+                "Latitud": 42.31977,
+                "Longitud": -8.790135,
+                "Altitud": 44.66146
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Caldas de Reis",
+                "Latitud": 42.6055,
+                "Longitud": -8.643308,
+                "Altitud": 27.27038
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Cambados",
+                "Latitud": 42.5138,
+                "Longitud": -8.812893,
+                "Altitud": 14.76714
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Campo Lameiro",
+                "Latitud": 42.54222,
+                "Longitud": -8.542778,
+                "Altitud": 243.4357
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Cangas",
+                "Latitud": 42.26471,
+                "Longitud": -8.782845,
+                "Altitud": 10.73197
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Cañiza (A)",
+                "Latitud": 42.21304,
+                "Longitud": -8.27567,
+                "Altitud": 568.6797
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Catoira",
+                "Latitud": 42.66665,
+                "Longitud": -8.722511,
+                "Altitud": 18.32608
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Cerdedo",
+                "Latitud": 42.53204,
+                "Longitud": -8.391931,
+                "Altitud": 356.6336
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Cotobade",
+                "Latitud": 42.46667,
+                "Longitud": -8.466667,
+                "Altitud": 447.3216
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Covelo",
+                "Latitud": 42.23195,
+                "Longitud": -8.363334,
+                "Altitud": 380.7574
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Crecente",
+                "Latitud": 42.15374,
+                "Longitud": -8.223059,
+                "Altitud": 197.8595
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Cuntis",
+                "Latitud": 42.63263,
+                "Longitud": -8.563463,
+                "Altitud": 160.0568
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Dozon",
+                "Latitud": 42.57058,
+                "Longitud": -8.04944,
+                "Altitud": 748.7759
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Estrada (A)",
+                "Latitud": 42.68958,
+                "Longitud": -8.491302,
+                "Altitud": 302.9033
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Forcarei",
+                "Latitud": 42.59233,
+                "Longitud": -8.350904,
+                "Altitud": 592.3196
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Fornelos de Montes",
+                "Latitud": 42.34055,
+                "Longitud": -8.453166,
+                "Altitud": 331.3943
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Gondomar",
+                "Latitud": 42.11078,
+                "Longitud": -8.761466,
+                "Altitud": 17.18025
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Grove (O)",
+                "Latitud": 42.49366,
+                "Longitud": -8.865339,
+                "Altitud": 14.24437
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Guarda (A)",
+                "Latitud": 41.90252,
+                "Longitud": -8.873672,
+                "Altitud": 41.92845
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Illa de Arousa (A)",
+                "Latitud": 42.56406,
+                "Longitud": -8.873684,
+                "Altitud": 0
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Lalín",
+                "Latitud": 42.66137,
+                "Longitud": -8.110957,
+                "Altitud": 557.2646
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Lama (A)",
+                "Latitud": 42.11277,
+                "Longitud": -8.302681,
+                "Altitud": 97.33536
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Marín",
+                "Latitud": 42.39147,
+                "Longitud": -8.699853,
+                "Altitud": 19.78863
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Meaño",
+                "Latitud": 42.45,
+                "Longitud": -8.783333,
+                "Altitud": 118.3362
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Meis",
+                "Latitud": 42.51667,
+                "Longitud": -8.7,
+                "Altitud": 58.83432
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Moaña",
+                "Latitud": 42.28551,
+                "Longitud": -8.749413,
+                "Altitud": 129.5525
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Mondariz",
+                "Latitud": 42.23425,
+                "Longitud": -8.455334,
+                "Altitud": 117.1311
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Mondariz-Balneario",
+                "Latitud": 42.22697,
+                "Longitud": -8.465821,
+                "Altitud": 62.12397
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Moraña",
+                "Latitud": 42.56186,
+                "Longitud": -8.560328,
+                "Altitud": 381.2427
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Mos",
+                "Latitud": 42.19545,
+                "Longitud": -8.654388,
+                "Altitud": 212.5747
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Neves (As)",
+                "Latitud": 42.08818,
+                "Longitud": -8.415079,
+                "Altitud": 162.8347
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Nigran",
+                "Latitud": 42.1452,
+                "Longitud": -8.807062,
+                "Altitud": 56.04147
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Oia",
+                "Latitud": 42.00307,
+                "Longitud": -8.875215,
+                "Altitud": 24.84615
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Pazos de Borbén",
+                "Latitud": 42.29383,
+                "Longitud": -8.531596,
+                "Altitud": 236.8124
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Poio",
+                "Latitud": 42.44446,
+                "Longitud": -8.715083,
+                "Altitud": 195.026
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Ponte Caldelas",
+                "Latitud": 42.38924,
+                "Longitud": -8.503109,
+                "Altitud": 292.4084
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Ponteareas",
+                "Latitud": 42.17637,
+                "Longitud": -8.502382,
+                "Altitud": 41.39864
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Pontecesures",
+                "Latitud": 42.71667,
+                "Longitud": -8.65,
+                "Altitud": 19.25962
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Pontevedra",
+                "Latitud": 42.43362,
+                "Longitud": -8.648053,
+                "Altitud": 18.60786
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Porriño (O)",
+                "Latitud": 42.16036,
+                "Longitud": -8.619299,
+                "Altitud": 40.00508
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Portas",
+                "Latitud": 42.58333,
+                "Longitud": -8.666667,
+                "Altitud": 129.5794
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Redondela",
+                "Latitud": 42.28379,
+                "Longitud": -8.607425,
+                "Altitud": 15.94175
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Ribadumia",
+                "Latitud": 42.51466,
+                "Longitud": -8.757588,
+                "Altitud": 26.51637
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Rodeiro",
+                "Latitud": 42.64951,
+                "Longitud": -7.949817,
+                "Altitud": 630.3114
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Rosal (O)",
+                "Latitud": 41.93539,
+                "Longitud": -8.83549,
+                "Altitud": 28.4151
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Salceda de Caselas",
+                "Latitud": 42.10196,
+                "Longitud": -8.558377,
+                "Altitud": 75.80363
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Salvaterra de Miño",
+                "Latitud": 42.08197,
+                "Longitud": -8.499002,
+                "Altitud": 32.76922
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Sanxenxo",
+                "Latitud": 42.39948,
+                "Longitud": -8.806928,
+                "Altitud": 7.093974
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Silleda",
+                "Latitud": 42.69791,
+                "Longitud": -8.248382,
+                "Altitud": 483.7768
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Soutomaior",
+                "Latitud": 42.333,
+                "Longitud": -8.567,
+                "Altitud": 118.3894
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Tomiño",
+                "Latitud": 41.98744,
+                "Longitud": -8.745583,
+                "Altitud": 40.81437
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Tui",
+                "Latitud": 42.04621,
+                "Longitud": -8.643768,
+                "Altitud": 43.46014
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Valga",
+                "Latitud": 42.69431,
+                "Longitud": -8.639425,
+                "Altitud": 45.98117
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Vigo",
+                "Latitud": 42.23136,
+                "Longitud": -8.712447,
+                "Altitud": 104.1391
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Vila de Cruces",
+                "Latitud": 42.79403,
+                "Longitud": -8.170012,
+                "Altitud": 476.3511
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Vilaboa",
+                "Latitud": 42.34724,
+                "Longitud": -8.646326,
+                "Altitud": 72.6324
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Vilagarcía de Arousa",
+                "Latitud": 42.59387,
+                "Longitud": -8.765963,
+                "Altitud": 11.04834
+            },
+            {
+                "Comunidad": "Galicia",
+                "Provincia": "Pontevedra",
+                "Poblacion": "Vilanova de Arousa",
+                "Latitud": 42.56221,
+                "Longitud": -8.82772,
+                "Altitud": 5.737418
+            }
+        ]
+    }
+]

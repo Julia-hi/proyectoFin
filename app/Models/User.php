@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -21,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'telefono',
     ];
 
     /**
@@ -41,4 +43,27 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $guard = 'admin';
+
+
+    function isAdmin(){
+
+        if(Auth::user()->rol=="admin") {
+            return true;
+        } else {
+            return false;
+        }
+
+
+       /*  if (Auth::attempt([
+            'email' => $email,
+            'password' => $password,
+            fn ($query) => $query->has('activeSubscription'),
+        ])) {
+            // Authentication was successful...
+            Auth::guard('admin')->login($user);
+        } */
+
+    }
 }

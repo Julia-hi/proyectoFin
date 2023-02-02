@@ -1,0 +1,92 @@
+{
+	"Andalucía":
+		{"Almería":["",""],
+        "Cádiz":["",""],
+        "Granada":["",""],
+        "Huelva":["",""],
+        "Jaén":["",""],
+        "Málaga":["",""],
+        "Sevilla":["",""],
+        },
+    "Aragón":
+		{"Huesca":["",""],
+        "Teruel":["",""],
+        "Zaragoza":["",""],
+        },
+    "Asturias, Principado de":
+		{"Asturias":["",""],
+        },
+    "Balears, Illes":
+		{"Balears, Illes":["",""],
+        },
+    "Canarias":
+		{"Palmas, Las":["",""],
+        "Santa Cruz de Tenerife":["",""],
+        },
+    "Cantabria":
+		{"Cantabria":["",""], 
+        },
+    "Castilla y León":
+		{"Ávila":["",""],
+        "Burgos":["",""],
+        "León":["",""],
+        "Palencia":["",""],
+        "Salamanca":["",""],
+        "Segovia":["",""],
+        "Soria":["",""],
+        "Valladolid":["",""],
+        "Zamora":["",""],
+        },
+    "Castilla-La Mancha":
+		{"Albacete":["",""],
+        "Ciudad Rea":["",""],
+        "Cuenca":["",""],
+        "Guadalajara":["",""],
+        "Toledo":["",""],
+        },
+    "Cataluña":
+		{"Barcelona":["",""],
+        "Girona":["",""],
+        "Lleida":["",""],
+        "Tarragona":["",""],
+        },
+    "Comunitat Valenciana":
+		{"Alicante/Alacant":["",""],
+        "Castellón/Castelló":["",""],
+        "Valencia/València":["",""],
+        },
+    "Extremadura":
+		{"Badajoz":["",""],
+        "Cáceres":["",""],
+        },
+    "Galicia":
+		{"Coruña, A":["",""],
+        "Lugo":["",""],
+        "Ourense":["",""],
+        "Pontevedra":["",""],
+        },
+    "Madrid, Comunidad de":
+		{"Madrid":["",""],
+        },
+    "Murcia, Región de":
+		{"Murcia":["",""],
+        },
+    "Navarra, Comunidad Foral de":
+		{"Navarra":["",""],
+        },
+    "País Vasco":
+		{"Araba/Álava":["",""],
+        "Bizkaia":["",""],
+        "Gipuzkoa":["",""],
+        },
+    "Rioja, La":
+		{"Rioja, La":["",""],
+        },
+    "Ceuta":
+		{"Ceuta":["",""],
+        },
+    "Melilla":
+		{"Melilla":["",""],
+        },
+			
+}

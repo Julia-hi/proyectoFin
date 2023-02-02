@@ -1,0 +1,1438 @@
+[
+    {
+        "Madrid": [
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Acebeda (La)",
+                "Latitud": 41.08697,
+                "Longitud": -3.624634,
+                "Altitud": 1266.542
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Ajalvir",
+                "Latitud": 40.53437,
+                "Longitud": -3.481002,
+                "Altitud": 680.1722
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Alameda del Valle",
+                "Latitud": 40.9179,
+                "Longitud": -3.843788,
+                "Altitud": 1109.934
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "alamo (El)",
+                "Latitud": 40.22972,
+                "Longitud": -3.992688,
+                "Altitud": 606.2238
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Alcala de Henares",
+                "Latitud": 40.48166,
+                "Longitud": -3.364136,
+                "Altitud": 593.7416
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Alcobendas",
+                "Latitud": 40.54754,
+                "Longitud": -3.642091,
+                "Altitud": 694.4304
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Alcorcon",
+                "Latitud": 40.34912,
+                "Longitud": -3.828811,
+                "Altitud": 717.5549
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Aldea del Fresno",
+                "Latitud": 40.32399,
+                "Longitud": -4.202217,
+                "Altitud": 476.7994
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Algete",
+                "Latitud": 40.59642,
+                "Longitud": -3.497902,
+                "Altitud": 712.8972
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Alpedrete",
+                "Latitud": 40.65875,
+                "Longitud": -4.023713,
+                "Altitud": 916.7029
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Ambite",
+                "Latitud": 40.3292,
+                "Longitud": -3.181895,
+                "Altitud": 667.338
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Anchuelo",
+                "Latitud": 40.46549,
+                "Longitud": -3.268585,
+                "Altitud": 761.7067
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Aranjuez",
+                "Latitud": 40.03209,
+                "Longitud": -3.603288,
+                "Altitud": 502.3892
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Arganda del Rey",
+                "Latitud": 40.30095,
+                "Longitud": -3.43808,
+                "Altitud": 626.9236
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Arroyomolinos",
+                "Latitud": 40.26884,
+                "Longitud": -3.920291,
+                "Altitud": 597.4142
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Atazar (El)",
+                "Latitud": 40.93333,
+                "Longitud": -3.466667,
+                "Altitud": 900.2352
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Batres",
+                "Latitud": 40.21029,
+                "Longitud": -3.922307,
+                "Altitud": 603.6849
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Becerril de la Sierra",
+                "Latitud": 40.71638,
+                "Longitud": -3.989412,
+                "Altitud": 1086.586
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Belmonte de Tajo",
+                "Latitud": 40.13364,
+                "Longitud": -3.339654,
+                "Altitud": 732.0183
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Berrueco (El)",
+                "Latitud": 40.88814,
+                "Longitud": -3.561255,
+                "Altitud": 937.1234
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Berzosa del Lozoya",
+                "Latitud": 40.97594,
+                "Longitud": -3.525082,
+                "Altitud": 1079.826
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Boadilla del Monte",
+                "Latitud": 40.40525,
+                "Longitud": -3.876992,
+                "Altitud": 673.7737
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Boalo (El)",
+                "Latitud": 40.71746,
+                "Longitud": -3.920084,
+                "Altitud": 953.0439
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Braojos",
+                "Latitud": 41.04005,
+                "Longitud": -3.643112,
+                "Altitud": 1189.477
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Brea de Tajo",
+                "Latitud": 40.23012,
+                "Longitud": -3.109499,
+                "Altitud": 722.8417
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Brunete",
+                "Latitud": 40.40554,
+                "Longitud": -3.997736,
+                "Altitud": 654.7903
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Buitrago del Lozoya",
+                "Latitud": 40.99368,
+                "Longitud": -3.636723,
+                "Altitud": 977.8387
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Bustarviejo",
+                "Latitud": 40.85811,
+                "Longitud": -3.70969,
+                "Altitud": 1217.359
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cabanillas de la Sierra",
+                "Latitud": 40.81968,
+                "Longitud": -3.626066,
+                "Altitud": 921.8676
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cabrera (La)",
+                "Latitud": 40.86399,
+                "Longitud": -3.615572,
+                "Altitud": 1040.395
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cadalso de los Vidrios",
+                "Latitud": 40.30094,
+                "Longitud": -4.443737,
+                "Altitud": 799.9886
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Camarma de Esteruelas",
+                "Latitud": 40.54861,
+                "Longitud": -3.377597,
+                "Altitud": 639.19
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Campo Real",
+                "Latitud": 40.33815,
+                "Longitud": -3.380982,
+                "Altitud": 765.6791
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Canencia",
+                "Latitud": 40.90981,
+                "Longitud": -3.737718,
+                "Altitud": 1142.31
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Carabaña",
+                "Latitud": 40.25669,
+                "Longitud": -3.234641,
+                "Altitud": 612.9524
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Casarrubuelos",
+                "Latitud": 40.17114,
+                "Longitud": -3.833068,
+                "Altitud": 624.7643
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cenicientos",
+                "Latitud": 40.26463,
+                "Longitud": -4.464909,
+                "Altitud": 778.7822
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cercedilla",
+                "Latitud": 40.74145,
+                "Longitud": -4.054667,
+                "Altitud": 1191.372
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cervera de Buitrago",
+                "Latitud": 40.92196,
+                "Longitud": -3.53016,
+                "Altitud": 916.3304
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Chapinería",
+                "Latitud": 40.37918,
+                "Longitud": -4.20943,
+                "Altitud": 679.6159
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Chinchon",
+                "Latitud": 40.14019,
+                "Longitud": -3.415684,
+                "Altitud": 777.1609
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Ciempozuelos",
+                "Latitud": 40.15934,
+                "Longitud": -3.6184,
+                "Altitud": 580.2641
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cobeña",
+                "Latitud": 40.56733,
+                "Longitud": -3.504839,
+                "Altitud": 677.4468
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Collado Mediano",
+                "Latitud": 40.69389,
+                "Longitud": -4.023123,
+                "Altitud": 1029.724
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Collado Villalba",
+                "Latitud": 40.62725,
+                "Longitud": -4.008587,
+                "Altitud": 875.7213
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Colmenar de Oreja",
+                "Latitud": 40.10758,
+                "Longitud": -3.387693,
+                "Altitud": 756.9265
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Colmenar del Arroyo",
+                "Latitud": 40.41858,
+                "Longitud": -4.198538,
+                "Altitud": 679.1825
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Colmenar Viejo",
+                "Latitud": 40.65895,
+                "Longitud": -3.766043,
+                "Altitud": 880.6345
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Colmenarejo",
+                "Latitud": 40.56101,
+                "Longitud": -4.016842,
+                "Altitud": 875.1868
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Corpa",
+                "Latitud": 40.42489,
+                "Longitud": -3.262723,
+                "Altitud": 819.1653
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Coslada",
+                "Latitud": 40.42594,
+                "Longitud": -3.565464,
+                "Altitud": 628.7247
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Cubas de la Sagra",
+                "Latitud": 40.1917,
+                "Longitud": -3.837347,
+                "Altitud": 648.7275
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Daganzo de Arriba",
+                "Latitud": 40.54481,
+                "Longitud": -3.457924,
+                "Altitud": 665.5711
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Escorial (El)",
+                "Latitud": 40.58508,
+                "Longitud": -4.12952,
+                "Altitud": 915.7729
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Estremera",
+                "Latitud": 40.18403,
+                "Longitud": -3.106115,
+                "Altitud": 643.0197
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Fresnedillas de la Oliva",
+                "Latitud": 40.48651,
+                "Longitud": -4.172033,
+                "Altitud": 895.7322
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Fresno de Torote",
+                "Latitud": 40.59229,
+                "Longitud": -3.41205,
+                "Altitud": 657.2809
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Fuenlabrada",
+                "Latitud": 40.28387,
+                "Longitud": -3.800329,
+                "Altitud": 679.0076
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Fuente el Saz de Jarama",
+                "Latitud": 40.63877,
+                "Longitud": -3.51129,
+                "Altitud": 642.1251
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Fuentidueña de Tajo",
+                "Latitud": 40.11819,
+                "Longitud": -3.159549,
+                "Altitud": 565.6978
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Galapagar",
+                "Latitud": 40.57736,
+                "Longitud": -4.00357,
+                "Altitud": 884.4304
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Garganta de los Montes",
+                "Latitud": 40.92143,
+                "Longitud": -3.689205,
+                "Altitud": 1125.801
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Gargantilla del Lozoya y Pinilla de Buitrago",
+                "Latitud": 40.96463,
+                "Longitud": -3.718601,
+                "Altitud": 1136.591
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Gascones",
+                "Latitud": 41.01809,
+                "Longitud": -3.641817,
+                "Altitud": 1046.484
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Getafe",
+                "Latitud": 40.30498,
+                "Longitud": -3.732677,
+                "Altitud": 632.1449
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Griñon",
+                "Latitud": 40.21424,
+                "Longitud": -3.856192,
+                "Altitud": 676.9866
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Guadalix de la Sierra",
+                "Latitud": 40.78483,
+                "Longitud": -3.692719,
+                "Altitud": 841
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Guadarrama",
+                "Latitud": 40.67348,
+                "Longitud": -4.090732,
+                "Altitud": 965.5875
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Hiruela (La)",
+                "Latitud": 41.0785,
+                "Longitud": -3.454731,
+                "Altitud": 1255.356
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Horcajo de la Sierra",
+                "Latitud": 41.06738,
+                "Longitud": -3.585321,
+                "Altitud": 1080.612
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Horcajuelo de la Sierra",
+                "Latitud": 41.06009,
+                "Longitud": -3.54552,
+                "Altitud": 1138.176
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Hoyo de Manzanares",
+                "Latitud": 40.62273,
+                "Longitud": -3.90712,
+                "Altitud": 1005.688
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Humanes de Madrid",
+                "Latitud": 40.24954,
+                "Longitud": -3.827206,
+                "Altitud": 675.6912
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Leganés",
+                "Latitud": 40.32642,
+                "Longitud": -3.758988,
+                "Altitud": 658.15
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Loeches",
+                "Latitud": 40.38393,
+                "Longitud": -3.409393,
+                "Altitud": 639.8891
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Lozoya",
+                "Latitud": 40.9515,
+                "Longitud": -3.791897,
+                "Altitud": 1111.051
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Lozoyuela-Navas-Sieteiglesias",
+                "Latitud": 40.92643,
+                "Longitud": -3.617723,
+                "Altitud": 1022.991
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Madarcos",
+                "Latitud": 41.04731,
+                "Longitud": -3.582663,
+                "Altitud": 1057.624
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Madrid",
+                "Latitud": 40.41669,
+                "Longitud": -3.700346,
+                "Altitud": 653.0047
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Majadahonda",
+                "Latitud": 40.47283,
+                "Longitud": -3.872304,
+                "Altitud": 743.4514
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Manzanares el Real",
+                "Latitud": 40.72705,
+                "Longitud": -3.864914,
+                "Altitud": 917.528
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Meco",
+                "Latitud": 40.5542,
+                "Longitud": -3.328439,
+                "Altitud": 670.2038
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Mejorada del Campo",
+                "Latitud": 40.39701,
+                "Longitud": -3.487864,
+                "Altitud": 580.1962
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Miraflores de la Sierra",
+                "Latitud": 40.81381,
+                "Longitud": -3.766699,
+                "Altitud": 1149.553
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Molar (El)",
+                "Latitud": 40.73291,
+                "Longitud": -3.582258,
+                "Altitud": 819.3329
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Molinos (Los)",
+                "Latitud": 40.71456,
+                "Longitud": -4.072706,
+                "Altitud": 1046.887
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Montejo de la Sierra",
+                "Latitud": 41.05928,
+                "Longitud": -3.530301,
+                "Altitud": 1151.855
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Moraleja de Enmedio",
+                "Latitud": 40.26033,
+                "Longitud": -3.861412,
+                "Altitud": 682.4211
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Moralzarzal",
+                "Latitud": 40.68117,
+                "Longitud": -3.97335,
+                "Altitud": 982.0547
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Morata de Tajuña",
+                "Latitud": 40.22751,
+                "Longitud": -3.436966,
+                "Altitud": 559.4251
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Mostoles",
+                "Latitud": 40.32277,
+                "Longitud": -3.865741,
+                "Altitud": 665.2133
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Navacerrada",
+                "Latitud": 40.72893,
+                "Longitud": -4.0151,
+                "Altitud": 1193.742
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Navalafuente",
+                "Latitud": 40.82451,
+                "Longitud": -3.673573,
+                "Altitud": 906.057
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Navalagamella",
+                "Latitud": 40.46916,
+                "Longitud": -4.12338,
+                "Altitud": 759.7007
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Navalcarnero",
+                "Latitud": 40.28781,
+                "Longitud": -4.013766,
+                "Altitud": 672.8241
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Navarredonda y San Mamés",
+                "Latitud": 40.99078,
+                "Longitud": -3.726047,
+                "Altitud": 1219.314
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Navas del Rey",
+                "Latitud": 40.38501,
+                "Longitud": -4.250652,
+                "Altitud": 717.2259
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Nuevo Baztan",
+                "Latitud": 40.36552,
+                "Longitud": -3.243183,
+                "Altitud": 834.9736
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Olmeda de las Fuentes",
+                "Latitud": 40.36943,
+                "Longitud": -3.221704,
+                "Altitud": 785.2642
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Orusco de Tajuña",
+                "Latitud": 40.28515,
+                "Longitud": -3.208557,
+                "Altitud": 662.3139
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Paracuellos de Jarama",
+                "Latitud": 40.50481,
+                "Longitud": -3.53227,
+                "Altitud": 692.0413
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Parla",
+                "Latitud": 40.23754,
+                "Longitud": -3.772741,
+                "Altitud": 651.0903
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Patones",
+                "Latitud": 40.85573,
+                "Longitud": -3.48511,
+                "Altitud": 713.0287
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pedrezuela",
+                "Latitud": 40.74369,
+                "Longitud": -3.603798,
+                "Altitud": 869.5692
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pelayos de la Presa",
+                "Latitud": 40.35954,
+                "Longitud": -4.334138,
+                "Altitud": 561.4791
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Perales de Tajuña",
+                "Latitud": 40.23453,
+                "Longitud": -3.352198,
+                "Altitud": 577.9905
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pezuela de las Torres",
+                "Latitud": 40.41869,
+                "Longitud": -3.177605,
+                "Altitud": 855.1563
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pinilla del Valle",
+                "Latitud": 40.9262,
+                "Longitud": -3.819392,
+                "Altitud": 1097.138
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pinto",
+                "Latitud": 40.24454,
+                "Longitud": -3.696013,
+                "Altitud": 609.3594
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Piñuécar-Gandullas",
+                "Latitud": 41.03265,
+                "Longitud": -3.599468,
+                "Altitud": 1063.421
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pozuelo de Alarcon",
+                "Latitud": 40.4352,
+                "Longitud": -3.813062,
+                "Altitud": 697.1177
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pozuelo del Rey",
+                "Latitud": 40.36622,
+                "Longitud": -3.321994,
+                "Altitud": 807.1237
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Pradena del Rincon",
+                "Latitud": 41.04411,
+                "Longitud": -3.540921,
+                "Altitud": 1114.976
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Puebla de la Sierra",
+                "Latitud": 41.01208,
+                "Longitud": -3.444847,
+                "Altitud": 1160.507
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Puentes Viejas",
+                "Latitud": 40.99496,
+                "Longitud": -3.550907,
+                "Altitud": 1065.958
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Quijorna",
+                "Latitud": 40.42656,
+                "Longitud": -4.057429,
+                "Altitud": 574.5786
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Rascafría",
+                "Latitud": 40.90381,
+                "Longitud": -3.879398,
+                "Altitud": 1157.038
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Redueña",
+                "Latitud": 40.8163,
+                "Longitud": -3.603684,
+                "Altitud": 823.9578
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Ribatejada",
+                "Latitud": 40.6665,
+                "Longitud": -3.392131,
+                "Altitud": 761.6322
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Rivas-Vaciamadrid",
+                "Latitud": 40.3297,
+                "Longitud": -3.516941,
+                "Altitud": 560.5495
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Robledillo de la Jara",
+                "Latitud": 40.95299,
+                "Longitud": -3.525749,
+                "Altitud": 1017.706
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Robledo de Chavela",
+                "Latitud": 40.50089,
+                "Longitud": -4.238043,
+                "Altitud": 893.4601
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Robregordo",
+                "Latitud": 41.10658,
+                "Longitud": -3.593292,
+                "Altitud": 1297.608
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Rozas de Madrid (Las)",
+                "Latitud": 40.31007,
+                "Longitud": -4.490765,
+                "Altitud": 876.1035
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Rozas de Puerto Real",
+                "Latitud": 40.31007,
+                "Longitud": -4.490765,
+                "Altitud": 876.1035
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "San Agustín del Guadalix",
+                "Latitud": 40.67867,
+                "Longitud": -3.615861,
+                "Altitud": 667.7155
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "San Fernando de Henares",
+                "Latitud": 40.42553,
+                "Longitud": -3.536694,
+                "Altitud": 591.3853
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "San Lorenzo de El Escorial",
+                "Latitud": 40.59167,
+                "Longitud": -4.149123,
+                "Altitud": 1052.468
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "San Martín de la Vega",
+                "Latitud": 40.2078,
+                "Longitud": -3.568544,
+                "Altitud": 517.0689
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "San Martín de Valdeiglesias",
+                "Latitud": 40.36174,
+                "Longitud": -4.397521,
+                "Altitud": 677.8516
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "San Sebastian de los Reyes",
+                "Latitud": 40.54751,
+                "Longitud": -3.626394,
+                "Altitud": 681.644
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Santa María de la Alameda",
+                "Latitud": 40.5957,
+                "Longitud": -4.257937,
+                "Altitud": 1411.015
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Santorcaz",
+                "Latitud": 40.47216,
+                "Longitud": -3.233114,
+                "Altitud": 864.0168
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Santos de la Humosa (Los)",
+                "Latitud": 40.50191,
+                "Longitud": -3.254799,
+                "Altitud": 875.056
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Serna del Monte (La)",
+                "Latitud": 41.02979,
+                "Longitud": -3.625026,
+                "Altitud": 1072.925
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Serranillos del Valle",
+                "Latitud": 40.20465,
+                "Longitud": -3.885819,
+                "Altitud": 650.8673
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Sevilla la Nueva",
+                "Latitud": 40.34781,
+                "Longitud": -4.027501,
+                "Altitud": 674.3175
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Somosierra",
+                "Latitud": 41.13312,
+                "Longitud": -3.581837,
+                "Altitud": 1436.419
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Soto del Real",
+                "Latitud": 40.75428,
+                "Longitud": -3.783356,
+                "Altitud": 922.4442
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Talamanca de Jarama",
+                "Latitud": 40.74688,
+                "Longitud": -3.513244,
+                "Altitud": 655.0905
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Tielmes",
+                "Latitud": 40.24457,
+                "Longitud": -3.314466,
+                "Altitud": 580.7983
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Titulcia",
+                "Latitud": 40.13673,
+                "Longitud": -3.570501,
+                "Altitud": 514.1019
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Torrejon de Ardoz",
+                "Latitud": 40.4589,
+                "Longitud": -3.479771,
+                "Altitud": 591.0876
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Torrejon de la Calzada",
+                "Latitud": 40.20154,
+                "Longitud": -3.798929,
+                "Altitud": 632.9291
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Torrejon de Velasco",
+                "Latitud": 40.18713,
+                "Longitud": -3.778751,
+                "Altitud": 609.1476
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Torrelaguna",
+                "Latitud": 40.82785,
+                "Longitud": -3.538488,
+                "Altitud": 742.3256
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Torrelodones",
+                "Latitud": 40.57628,
+                "Longitud": -3.929452,
+                "Altitud": 847.145
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Torremocha de Jarama",
+                "Latitud": 40.83705,
+                "Longitud": -3.494407,
+                "Altitud": 705.3375
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Torres de la Alameda",
+                "Latitud": 40.40473,
+                "Longitud": -3.360132,
+                "Altitud": 668.0449
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Tres Cantos",
+                "Latitud": 40.59907,
+                "Longitud": -3.712258,
+                "Altitud": 744.3729
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdaracete",
+                "Latitud": 40.21115,
+                "Longitud": -3.194556,
+                "Altitud": 737.9929
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdeavero",
+                "Latitud": 40.63099,
+                "Longitud": -3.332983,
+                "Altitud": 713.679
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdelaguna",
+                "Latitud": 40.16192,
+                "Longitud": -3.367249,
+                "Altitud": 710.8623
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdemanco",
+                "Latitud": 40.87252,
+                "Longitud": -3.662956,
+                "Altitud": 1133.363
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdemaqueda",
+                "Latitud": 40.51147,
+                "Longitud": -4.295926,
+                "Altitud": 864.9176
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdemorillo",
+                "Latitud": 40.50208,
+                "Longitud": -4.065841,
+                "Altitud": 820.9337
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdemoro",
+                "Latitud": 40.19269,
+                "Longitud": -3.679874,
+                "Altitud": 612.726
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdeolmos-Alalpardo",
+                "Latitud": 40.62949,
+                "Longitud": -3.475017,
+                "Altitud": 680.2087
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdepiélagos",
+                "Latitud": 40.76059,
+                "Longitud": -3.465914,
+                "Altitud": 744.8907
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdetorres de Jarama",
+                "Latitud": 40.69559,
+                "Longitud": -3.514251,
+                "Altitud": 651.753
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valdilecha",
+                "Latitud": 40.29548,
+                "Longitud": -3.303884,
+                "Altitud": 724.2806
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Valverde de Alcala",
+                "Latitud": 40.41972,
+                "Longitud": -3.298921,
+                "Altitud": 733.9373
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Velilla de San Antonio",
+                "Latitud": 40.36703,
+                "Longitud": -3.488029,
+                "Altitud": 555.8903
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Vellon (El)",
+                "Latitud": 40.76603,
+                "Longitud": -3.582034,
+                "Altitud": 894.388
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Venturada",
+                "Latitud": 40.79869,
+                "Longitud": -3.622139,
+                "Altitud": 883.1885
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villa del Prado",
+                "Latitud": 40.27678,
+                "Longitud": -4.305642,
+                "Altitud": 512.4543
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villaconejos",
+                "Latitud": 40.10424,
+                "Longitud": -3.484903,
+                "Altitud": 635.7664
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villalbilla",
+                "Latitud": 40.43228,
+                "Longitud": -3.298869,
+                "Altitud": 744.6702
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villamanrique de Tajo",
+                "Latitud": 40.06812,
+                "Longitud": -3.240428,
+                "Altitud": 549.4291
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villamanta",
+                "Latitud": 40.29961,
+                "Longitud": -4.110051,
+                "Altitud": 550.4752
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villamantilla",
+                "Latitud": 40.33805,
+                "Longitud": -4.13056,
+                "Altitud": 550.092
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villanueva de la Cañada",
+                "Latitud": 40.44681,
+                "Longitud": -4.005355,
+                "Altitud": 655.8425
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villanueva de Perales",
+                "Latitud": 40.34705,
+                "Longitud": -4.101031,
+                "Altitud": 594.7557
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villanueva del Pardillo",
+                "Latitud": 40.49063,
+                "Longitud": -3.964322,
+                "Altitud": 653.1323
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villar del Olmo",
+                "Latitud": 40.33669,
+                "Longitud": -3.235551,
+                "Altitud": 680.3748
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villarejo de Salvanés",
+                "Latitud": 40.16873,
+                "Longitud": -3.275975,
+                "Altitud": 759.0782
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villaviciosa de Odon",
+                "Latitud": 40.3571,
+                "Longitud": -3.90059,
+                "Altitud": 647.7311
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Villavieja del Lozoya",
+                "Latitud": 41.00592,
+                "Longitud": -3.671118,
+                "Altitud": 1062.474
+            },
+            {
+                "Comunidad": "Madrid",
+                "Provincia": "Madrid",
+                "Poblacion": "Zarzalejo",
+                "Latitud": 40.54749,
+                "Longitud": -4.181604,
+                "Altitud": 1105.808
+            }
+        ]
+    }
+]

@@ -1,0 +1,2182 @@
+[
+    {
+        "Navarra": [
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Abaigar",
+                "Latitud": 42.64694,
+                "Longitud": -2.143441,
+                "Altitud": 485.6676
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Abarzuza",
+                "Latitud": 42.72641,
+                "Longitud": -2.022548,
+                "Altitud": 568.4764
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Abaurregaina\/Abaurrea Alta",
+                "Latitud": 42.90345,
+                "Longitud": -1.207954,
+                "Altitud": 1050.703
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Abaurrepea\/Abaurrea Baja",
+                "Latitud": 42.90345,
+                "Longitud": -1.207954,
+                "Altitud": 1050.703
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aberin",
+                "Latitud": 42.61907,
+                "Longitud": -2.007192,
+                "Altitud": 507.0975
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ablitas",
+                "Latitud": 41.97364,
+                "Longitud": -1.638694,
+                "Altitud": 390.1332
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Adios",
+                "Latitud": 42.68629,
+                "Longitud": -1.735999,
+                "Altitud": 480.1988
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aguilar de Codés",
+                "Latitud": 42.61294,
+                "Longitud": -2.389456,
+                "Altitud": 722.7128
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aibar\/Oibar",
+                "Latitud": 42.59235,
+                "Longitud": -1.359912,
+                "Altitud": 551.8924
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Allín",
+                "Latitud": 42.70855,
+                "Longitud": -2.076739,
+                "Altitud": 455.8627
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Allo",
+                "Latitud": 42.5673,
+                "Longitud": -2.019259,
+                "Altitud": 429.8232
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Altsasu\/Alsasua",
+                "Latitud": 42.89522,
+                "Longitud": -2.168797,
+                "Altitud": 531.4604
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Améscoa Baja",
+                "Latitud": 42.8045,
+                "Longitud": -2.141833,
+                "Altitud": 928.2976
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ancín",
+                "Latitud": 42.65845,
+                "Longitud": -2.19008,
+                "Altitud": 477.146
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Andosilla",
+                "Latitud": 42.37699,
+                "Longitud": -1.942034,
+                "Altitud": 316.7053
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Añorbe",
+                "Latitud": 42.65805,
+                "Longitud": -1.714662,
+                "Altitud": 573.9486
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ansoain",
+                "Latitud": 42.83389,
+                "Longitud": -1.638431,
+                "Altitud": 429.1146
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Anue",
+                "Latitud": 42.979,
+                "Longitud": -1.589,
+                "Altitud": 799.0044
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aoiz\/Agoitz",
+                "Latitud": 42.78579,
+                "Longitud": -1.36801,
+                "Altitud": 501.6778
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Araitz",
+                "Latitud": 43.06558,
+                "Longitud": -2.006245,
+                "Altitud": 228.7052
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arakil",
+                "Latitud": 42.917,
+                "Longitud": -1.861,
+                "Altitud": 438.7797
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aranarache",
+                "Latitud": 42.77942,
+                "Longitud": -2.228781,
+                "Altitud": 785.7566
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aranguren",
+                "Latitud": 42.78961,
+                "Longitud": -1.535561,
+                "Altitud": 622.8678
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arano",
+                "Latitud": 43.19917,
+                "Longitud": -1.89433,
+                "Altitud": 455.9649
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arantza",
+                "Latitud": 43.19677,
+                "Longitud": -1.72578,
+                "Altitud": 267.3421
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aras",
+                "Latitud": 42.5625,
+                "Longitud": -2.35474,
+                "Altitud": 636.3009
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arbizu",
+                "Latitud": 42.9155,
+                "Longitud": -2.039817,
+                "Altitud": 494.9281
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arce\/Artzi",
+                "Latitud": 42.922,
+                "Longitud": -1.383022,
+                "Altitud": 762.4823
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arcos (Los)",
+                "Latitud": 42.5709,
+                "Longitud": -2.193216,
+                "Altitud": 449.6534
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arellano",
+                "Latitud": 42.60604,
+                "Longitud": -2.046877,
+                "Altitud": 644.5254
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Areso",
+                "Latitud": 43.08125,
+                "Longitud": -1.950692,
+                "Altitud": 462.8911
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arguedas",
+                "Latitud": 42.17671,
+                "Longitud": -1.598272,
+                "Altitud": 266.3666
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aria",
+                "Latitud": 42.95305,
+                "Longitud": -1.265776,
+                "Altitud": 860.5184
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Aribe",
+                "Latitud": 42.94472,
+                "Longitud": -1.264723,
+                "Altitud": 701.3161
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Armañanzas",
+                "Latitud": 42.55992,
+                "Longitud": -2.28525,
+                "Altitud": 496.7855
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arroniz",
+                "Latitud": 42.589,
+                "Longitud": -2.091314,
+                "Altitud": 564.7612
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Arruazu",
+                "Latitud": 42.92223,
+                "Longitud": -2.000009,
+                "Altitud": 469.7116
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Artajona",
+                "Latitud": 42.59125,
+                "Longitud": -1.764497,
+                "Altitud": 450.9516
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Artazu",
+                "Latitud": 42.69187,
+                "Longitud": -1.838678,
+                "Altitud": 440.7018
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Atez",
+                "Latitud": 42.9398,
+                "Longitud": -1.709411,
+                "Altitud": 576.1057
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Auritz\/Burguete",
+                "Latitud": 42.98929,
+                "Longitud": -1.335345,
+                "Altitud": 895.7919
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ayegui",
+                "Latitud": 42.65673,
+                "Longitud": -2.038433,
+                "Altitud": 490.2995
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Azagra",
+                "Latitud": 42.30789,
+                "Longitud": -1.894474,
+                "Altitud": 293.2846
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Azuelo",
+                "Latitud": 42.60846,
+                "Longitud": -2.349251,
+                "Altitud": 611.0732
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Bakaiku",
+                "Latitud": 42.89249,
+                "Longitud": -2.102132,
+                "Altitud": 518.6227
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Barañain",
+                "Latitud": 42.80492,
+                "Longitud": -1.685519,
+                "Altitud": 436.32
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Barasoain",
+                "Latitud": 42.60348,
+                "Longitud": -1.646459,
+                "Altitud": 530.6812
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Barbarin",
+                "Latitud": 42.60233,
+                "Longitud": -2.102242,
+                "Altitud": 602.2934
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Bargota",
+                "Latitud": 42.56128,
+                "Longitud": -2.311974,
+                "Altitud": 589.0367
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Barillas",
+                "Latitud": 41.97106,
+                "Longitud": -1.662919,
+                "Altitud": 388.5261
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Basaburua",
+                "Latitud": 43.02667,
+                "Longitud": -1.779444,
+                "Altitud": 659.5215
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Baztan",
+                "Latitud": 43.2,
+                "Longitud": -1.467,
+                "Altitud": 431.7236
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Beintza-Labaien",
+                "Latitud": 43.08728,
+                "Longitud": -1.742534,
+                "Altitud": 446.4482
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Beire",
+                "Latitud": 42.45412,
+                "Longitud": -1.621434,
+                "Altitud": 367.1117
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Belascoain",
+                "Latitud": 42.75615,
+                "Longitud": -1.8325,
+                "Altitud": 423.4454
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Bera\/Vera de Bidasoa",
+                "Latitud": 43.28069,
+                "Longitud": -1.682699,
+                "Altitud": 42.49012
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Berbinzana",
+                "Latitud": 42.52661,
+                "Longitud": -1.834007,
+                "Altitud": 318.8264
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Beriain",
+                "Latitud": 42.7338,
+                "Longitud": -1.645333,
+                "Altitud": 499.5828
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Berrioplano",
+                "Latitud": 42.85239,
+                "Longitud": -1.692535,
+                "Altitud": 451.1977
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Berriozar",
+                "Latitud": 42.83624,
+                "Longitud": -1.67493,
+                "Altitud": 430.5623
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Bertizarana",
+                "Latitud": 43.13411,
+                "Longitud": -1.627507,
+                "Altitud": 135.3993
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Betelu",
+                "Latitud": 43.02534,
+                "Longitud": -1.980945,
+                "Altitud": 236.0627
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Bidaurreta",
+                "Latitud": 42.77467,
+                "Longitud": -1.836097,
+                "Altitud": 444.6025
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Biurrun-Olcoz",
+                "Latitud": 42.69229,
+                "Longitud": -1.678763,
+                "Altitud": 603.0551
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Buñuel",
+                "Latitud": 41.98046,
+                "Longitud": -1.443253,
+                "Altitud": 247
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Burgui\/Burgi",
+                "Latitud": 42.72029,
+                "Longitud": -1.00419,
+                "Altitud": 627.7626
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Burlada\/Burlata",
+                "Latitud": 42.826,
+                "Longitud": -1.615548,
+                "Altitud": 436.4857
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Busto (El)",
+                "Latitud": 42.55075,
+                "Longitud": -2.243561,
+                "Altitud": 429.9118
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cabanillas",
+                "Latitud": 42.03139,
+                "Longitud": -1.525195,
+                "Altitud": 261.1255
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cabredo",
+                "Latitud": 42.62925,
+                "Longitud": -2.413018,
+                "Altitud": 660.035
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cadreita",
+                "Latitud": 42.21754,
+                "Longitud": -1.695602,
+                "Altitud": 287.9483
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Caparroso",
+                "Latitud": 42.34153,
+                "Longitud": -1.649788,
+                "Altitud": 303
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Carcar",
+                "Latitud": 42.39011,
+                "Longitud": -1.971613,
+                "Altitud": 335.9902
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Carcastillo",
+                "Latitud": 42.3798,
+                "Longitud": -1.444428,
+                "Altitud": 354.3764
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cascante",
+                "Latitud": 41.99897,
+                "Longitud": -1.679192,
+                "Altitud": 365.7855
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Caseda",
+                "Latitud": 42.52327,
+                "Longitud": -1.367427,
+                "Altitud": 428.3817
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Castejon",
+                "Latitud": 42.16784,
+                "Longitud": -1.690636,
+                "Altitud": 279.5263
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Castillonuevo",
+                "Latitud": 42.67852,
+                "Longitud": -1.044187,
+                "Altitud": 774.6876
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cendea de Olza\/Oltza Zendea",
+                "Latitud": 42.80423,
+                "Longitud": -1.694407,
+                "Altitud": 431.3969
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cintruénigo",
+                "Latitud": 42.08046,
+                "Longitud": -1.805008,
+                "Altitud": 399.6217
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cirauqui",
+                "Latitud": 42.67577,
+                "Longitud": -1.891569,
+                "Altitud": 494.0934
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ciriza",
+                "Latitud": 42.79063,
+                "Longitud": -1.826934,
+                "Altitud": 462.1488
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cizur",
+                "Latitud": 42.78771,
+                "Longitud": -1.676974,
+                "Altitud": 464.4124
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Corella",
+                "Latitud": 42.11428,
+                "Longitud": -1.784595,
+                "Altitud": 376.7392
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Cortes",
+                "Latitud": 41.91969,
+                "Longitud": -1.421934,
+                "Altitud": 259
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Desojo",
+                "Latitud": 42.58708,
+                "Longitud": -2.273536,
+                "Altitud": 522.1982
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Dicastillo",
+                "Latitud": 42.59589,
+                "Longitud": -2.028451,
+                "Altitud": 557.3284
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Donamaria",
+                "Latitud": 43.11666,
+                "Longitud": -1.666667,
+                "Altitud": 198.6831
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Doneztebe\/Santesteban",
+                "Latitud": 43.13093,
+                "Longitud": -1.668722,
+                "Altitud": 130.5545
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Echarri",
+                "Latitud": 42.78057,
+                "Longitud": -1.826431,
+                "Altitud": 403.1423
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Egüés",
+                "Latitud": 42.82426,
+                "Longitud": -1.552572,
+                "Altitud": 503.538
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Elgorriaga",
+                "Latitud": 43.13913,
+                "Longitud": -1.688063,
+                "Altitud": 149.3327
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Enériz",
+                "Latitud": 42.67083,
+                "Longitud": -1.728613,
+                "Altitud": 426.3388
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Eratsun",
+                "Latitud": 43.08351,
+                "Longitud": -1.796789,
+                "Altitud": 518.8293
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ergoiena",
+                "Latitud": 42.87528,
+                "Longitud": -2.023889,
+                "Altitud": 583.5241
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Erro",
+                "Latitud": 42.94243,
+                "Longitud": -1.447209,
+                "Altitud": 661.9404
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Eslava",
+                "Latitud": 42.5647,
+                "Longitud": -1.458623,
+                "Altitud": 545.7512
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Esparza de Salazar\/Espartza Zaraitzu",
+                "Latitud": 42.85387,
+                "Longitud": -1.100172,
+                "Altitud": 705.2322
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Espronceda",
+                "Latitud": 42.59675,
+                "Longitud": -2.305045,
+                "Altitud": 539.9223
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Estella\/Lizarra",
+                "Latitud": 42.67093,
+                "Longitud": -2.031197,
+                "Altitud": 428.2558
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Esteribar",
+                "Latitud": 42.95,
+                "Longitud": -1.533333,
+                "Altitud": 804.6992
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Etayo",
+                "Latitud": 42.61776,
+                "Longitud": -2.155921,
+                "Altitud": 572.3201
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Etxalar",
+                "Latitud": 43.23387,
+                "Longitud": -1.637286,
+                "Altitud": 102.0956
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Etxarri-Aranatz",
+                "Latitud": 42.90774,
+                "Longitud": -2.064756,
+                "Altitud": 511.8878
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Etxauri",
+                "Latitud": 42.7942,
+                "Longitud": -1.791637,
+                "Altitud": 412.8882
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Eulate",
+                "Latitud": 42.77654,
+                "Longitud": -2.208038,
+                "Altitud": 730.8936
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ezcabarte",
+                "Latitud": 42.851,
+                "Longitud": -1.621,
+                "Altitud": 473.964
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ezcaroz\/Ezkaroze",
+                "Latitud": 42.88765,
+                "Longitud": -1.097649,
+                "Altitud": 741.0762
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ezkurra",
+                "Latitud": 43.08465,
+                "Longitud": -1.82525,
+                "Altitud": 525.4611
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ezprogui",
+                "Latitud": 42.58333,
+                "Longitud": -1.416667,
+                "Altitud": 524.7435
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Falces",
+                "Latitud": 42.38772,
+                "Longitud": -1.794073,
+                "Altitud": 296.4245
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Fitero",
+                "Latitud": 42.05658,
+                "Longitud": -1.857999,
+                "Altitud": 428.2101
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Fontellas",
+                "Latitud": 42.02809,
+                "Longitud": -1.57567,
+                "Altitud": 278.3386
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Funes",
+                "Latitud": 42.31392,
+                "Longitud": -1.802981,
+                "Altitud": 304.42
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Fustiñana",
+                "Latitud": 42.0199,
+                "Longitud": -1.486246,
+                "Altitud": 260.782
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Galar",
+                "Latitud": 42.76156,
+                "Longitud": -1.699125,
+                "Altitud": 548.4805
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Gallipienzo",
+                "Latitud": 42.52393,
+                "Longitud": -1.409592,
+                "Altitud": 525.1298
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Gallués\/Galoze",
+                "Latitud": 42.78402,
+                "Longitud": -1.095836,
+                "Altitud": 634.5071
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Garaioa",
+                "Latitud": 42.92982,
+                "Longitud": -1.244181,
+                "Altitud": 779.7978
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Garde",
+                "Latitud": 42.78862,
+                "Longitud": -0.924175,
+                "Altitud": 745.9025
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Garínoain",
+                "Latitud": 42.60081,
+                "Longitud": -1.644067,
+                "Altitud": 537.0995
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Garralda",
+                "Latitud": 42.94818,
+                "Longitud": -1.286497,
+                "Altitud": 846.9196
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Genevilla",
+                "Latitud": 42.64478,
+                "Longitud": -2.391769,
+                "Altitud": 616.5192
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Goizueta",
+                "Latitud": 43.17105,
+                "Longitud": -1.864216,
+                "Altitud": 157.4991
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Goñi",
+                "Latitud": 42.85199,
+                "Longitud": -1.903221,
+                "Altitud": 885.0417
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Güesa\/Gorza",
+                "Latitud": 42.80645,
+                "Longitud": -1.095125,
+                "Altitud": 656.9835
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Guesalaz",
+                "Latitud": 42.75,
+                "Longitud": -1.917,
+                "Altitud": 541.5654
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Guirguillano",
+                "Latitud": 42.71777,
+                "Longitud": -1.877828,
+                "Altitud": 614.8031
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Hiriberri\/Villanueva de Aezkoa",
+                "Latitud": 42.94518,
+                "Longitud": -1.23044,
+                "Altitud": 922.5541
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Huarte\/Uharte",
+                "Latitud": 42.83154,
+                "Longitud": -1.590709,
+                "Altitud": 443.3268
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ibargoiti",
+                "Latitud": 42.68056,
+                "Longitud": -1.467222,
+                "Altitud": 589.6138
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Igantzi",
+                "Latitud": 43.22575,
+                "Longitud": -1.699339,
+                "Altitud": 208.3124
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Igúzquiza",
+                "Latitud": 42.64522,
+                "Longitud": -2.084984,
+                "Altitud": 521.692
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Imotz",
+                "Latitud": 42.967,
+                "Longitud": -1.783,
+                "Altitud": 708.5986
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Irañeta",
+                "Latitud": 42.9229,
+                "Longitud": -1.945243,
+                "Altitud": 462.9885
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Irurtzun",
+                "Latitud": 42.91966,
+                "Longitud": -1.8282,
+                "Altitud": 472.6737
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Isaba\/Izaba",
+                "Latitud": 42.86159,
+                "Longitud": -0.9234196,
+                "Altitud": 792.2268
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ituren",
+                "Latitud": 43.12894,
+                "Longitud": -1.707117,
+                "Altitud": 157.9286
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Iturmendi",
+                "Latitud": 42.88948,
+                "Longitud": -2.118865,
+                "Altitud": 527.0626
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Iza",
+                "Latitud": 42.83689,
+                "Longitud": -1.729486,
+                "Altitud": 437.0211
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Izagaondoa",
+                "Latitud": 42.753,
+                "Longitud": -1.421,
+                "Altitud": 656.3472
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Izalzu\/Itzaltzu",
+                "Latitud": 42.91353,
+                "Longitud": -1.053661,
+                "Altitud": 813.3014
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Jaurrieta",
+                "Latitud": 42.88721,
+                "Longitud": -1.136416,
+                "Altitud": 915.8698
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Javier",
+                "Latitud": 42.59081,
+                "Longitud": -1.20881,
+                "Altitud": 453.4229
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Juslapeña",
+                "Latitud": 42.89875,
+                "Longitud": -1.694989,
+                "Altitud": 529.6924
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lakuntza",
+                "Latitud": 42.92131,
+                "Longitud": -2.023261,
+                "Altitud": 493.4403
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lana",
+                "Latitud": 42.706,
+                "Longitud": -2.247,
+                "Altitud": 583.7512
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lantz",
+                "Latitud": 42.9982,
+                "Longitud": -1.620193,
+                "Altitud": 632.9497
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lapoblacion",
+                "Latitud": 42.60503,
+                "Longitud": -2.459554,
+                "Altitud": 966.2166
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Larraga",
+                "Latitud": 42.55874,
+                "Longitud": -1.848682,
+                "Altitud": 397.0584
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Larraona",
+                "Latitud": 42.77948,
+                "Longitud": -2.25731,
+                "Altitud": 771.8146
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Larraun",
+                "Latitud": 42.9934,
+                "Longitud": -1.939244,
+                "Altitud": 667.3818
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lazagurría",
+                "Latitud": 42.4927,
+                "Longitud": -2.24049,
+                "Altitud": 393.9949
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Leache",
+                "Latitud": 42.60708,
+                "Longitud": -1.40691,
+                "Altitud": 591.1342
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Legarda",
+                "Latitud": 42.71169,
+                "Longitud": -1.772264,
+                "Altitud": 476.2949
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Legaria",
+                "Latitud": 42.64911,
+                "Longitud": -2.173456,
+                "Altitud": 476.4376
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Leitza",
+                "Latitud": 43.07879,
+                "Longitud": -1.914608,
+                "Altitud": 475.8446
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lekunberri",
+                "Latitud": 43.0013,
+                "Longitud": -1.891916,
+                "Altitud": 567.6735
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Leoz",
+                "Latitud": 42.64524,
+                "Longitud": -1.519539,
+                "Altitud": 767.5615
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lerga",
+                "Latitud": 42.56644,
+                "Longitud": -1.500859,
+                "Altitud": 614.0958
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lerín",
+                "Latitud": 42.48297,
+                "Longitud": -1.972567,
+                "Altitud": 435.6659
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lesaka",
+                "Latitud": 43.24679,
+                "Longitud": -1.703853,
+                "Altitud": 77.67777
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lezaun",
+                "Latitud": 42.77801,
+                "Longitud": -1.994227,
+                "Altitud": 823.1769
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Liédena",
+                "Latitud": 42.6189,
+                "Longitud": -1.275538,
+                "Altitud": 434.2063
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lizoain",
+                "Latitud": 42.79815,
+                "Longitud": -1.467238,
+                "Altitud": 533.1543
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lodosa",
+                "Latitud": 42.42459,
+                "Longitud": -2.078364,
+                "Altitud": 329.6654
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Longuida\/Longida",
+                "Latitud": 42.75722,
+                "Longitud": -1.385556,
+                "Altitud": 480.7935
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Lumbier",
+                "Latitud": 42.65289,
+                "Longitud": -1.307247,
+                "Altitud": 468.2798
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Luquin",
+                "Latitud": 42.61172,
+                "Longitud": -2.099288,
+                "Altitud": 595.0789
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Luzaide\/Valcarlos",
+                "Latitud": 43.09192,
+                "Longitud": -1.302452,
+                "Altitud": 364.558
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Mañeru",
+                "Latitud": 42.66977,
+                "Longitud": -1.86277,
+                "Altitud": 456.9252
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Marañon",
+                "Latitud": 42.62965,
+                "Longitud": -2.439308,
+                "Altitud": 631.9917
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Marcilla",
+                "Latitud": 42.32644,
+                "Longitud": -1.739259,
+                "Altitud": 293.0134
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Mélida",
+                "Latitud": 42.35847,
+                "Longitud": -1.548073,
+                "Altitud": 351.4484
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Mendavia",
+                "Latitud": 42.44454,
+                "Longitud": -2.2009,
+                "Altitud": 358.8896
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Mendaza",
+                "Latitud": 42.64162,
+                "Longitud": -2.234998,
+                "Altitud": 648.1318
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Mendigorría",
+                "Latitud": 42.62843,
+                "Longitud": -1.835484,
+                "Altitud": 400.2758
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Metauten",
+                "Latitud": 42.67667,
+                "Longitud": -2.129596,
+                "Altitud": 526.5096
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Milagro",
+                "Latitud": 42.24124,
+                "Longitud": -1.763065,
+                "Altitud": 294.1204
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Mirafuentes",
+                "Latitud": 42.62218,
+                "Longitud": -2.278983,
+                "Altitud": 644
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Miranda de Arga",
+                "Latitud": 42.48354,
+                "Longitud": -1.82951,
+                "Altitud": 337.395
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Monreal",
+                "Latitud": 42.70464,
+                "Longitud": -1.506409,
+                "Altitud": 544.6546
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Monteagudo",
+                "Latitud": 41.96272,
+                "Longitud": -1.692299,
+                "Altitud": 403.3899
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Morentin",
+                "Latitud": 42.61279,
+                "Longitud": -2.013619,
+                "Altitud": 535.4586
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Mues",
+                "Latitud": 42.60636,
+                "Longitud": -2.226478,
+                "Altitud": 518.3762
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Murchante",
+                "Latitud": 42.03039,
+                "Longitud": -1.653715,
+                "Altitud": 318.6382
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Murieta",
+                "Latitud": 42.65601,
+                "Longitud": -2.154553,
+                "Altitud": 467.4558
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Murillo el Cuende",
+                "Latitud": 42.3978,
+                "Longitud": -1.629983,
+                "Altitud": 338.5544
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Murillo el Fruto",
+                "Latitud": 42.3926,
+                "Longitud": -1.461822,
+                "Altitud": 362.163
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Muruzabal",
+                "Latitud": 42.68972,
+                "Longitud": -1.770907,
+                "Altitud": 442.5836
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Navascués",
+                "Latitud": 42.71852,
+                "Longitud": -1.116588,
+                "Altitud": 633.8943
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Nazar",
+                "Latitud": 42.63671,
+                "Longitud": -2.279646,
+                "Altitud": 740.0682
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Noain (Valle de Elorz)\/Noain (Elortzibar)",
+                "Latitud": 42.7599,
+                "Longitud": -1.633801,
+                "Altitud": 459.8526
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Obanos",
+                "Latitud": 42.67956,
+                "Longitud": -1.785792,
+                "Altitud": 414.2519
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ochagavía\/Otsagabia",
+                "Latitud": 42.90578,
+                "Longitud": -1.090726,
+                "Altitud": 763.3962
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Oco",
+                "Latitud": 42.63827,
+                "Longitud": -2.164585,
+                "Altitud": 492.338
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Odieta",
+                "Latitud": 42.94,
+                "Longitud": -1.638,
+                "Altitud": 535.4056
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Oitz",
+                "Latitud": 43.10935,
+                "Longitud": -1.685726,
+                "Altitud": 178.4459
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Olaibar",
+                "Latitud": 42.886,
+                "Longitud": -1.603,
+                "Altitud": 479.1287
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Olazti\/Olazagutía",
+                "Latitud": 42.87633,
+                "Longitud": -2.197067,
+                "Altitud": 542.6686
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Olejua",
+                "Latitud": 42.62326,
+                "Longitud": -2.141197,
+                "Altitud": 574.1867
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Olite",
+                "Latitud": 42.48148,
+                "Longitud": -1.651641,
+                "Altitud": 394.055
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ollo",
+                "Latitud": 42.86711,
+                "Longitud": -1.858877,
+                "Altitud": 502.7184
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Oloriz",
+                "Latitud": 42.63547,
+                "Longitud": -1.612838,
+                "Altitud": 597.8652
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Orbaitzeta",
+                "Latitud": 42.97443,
+                "Longitud": -1.2294,
+                "Altitud": 765.6407
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Orbara",
+                "Latitud": 42.96646,
+                "Longitud": -1.241657,
+                "Altitud": 757.6503
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Orísoain",
+                "Latitud": 42.60114,
+                "Longitud": -1.603631,
+                "Altitud": 578.1315
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Orkoien",
+                "Latitud": 42.8228,
+                "Longitud": -1.702052,
+                "Altitud": 442.7829
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Oronz\/Orontze",
+                "Latitud": 42.86818,
+                "Longitud": -1.096854,
+                "Altitud": 723.6107
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Oroz-Betelu",
+                "Latitud": 42.89537,
+                "Longitud": -1.304438,
+                "Altitud": 604.8019
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Orreaga\/Roncesvalles",
+                "Latitud": 43.00944,
+                "Longitud": -1.319766,
+                "Altitud": 954.5584
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Oteiza",
+                "Latitud": 42.61991,
+                "Longitud": -1.95315,
+                "Altitud": 510.9438
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Pamplona\/Iruña",
+                "Latitud": 42.81721,
+                "Longitud": -1.646767,
+                "Altitud": 458.1406
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Peralta",
+                "Latitud": 42.33884,
+                "Longitud": -1.797463,
+                "Altitud": 299.4853
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Petilla de Aragon",
+                "Latitud": 42.46149,
+                "Longitud": -1.092859,
+                "Altitud": 831.5078
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Piedramillera",
+                "Latitud": 42.63192,
+                "Longitud": -2.203634,
+                "Altitud": 617.1473
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Pitillas",
+                "Latitud": 42.422,
+                "Longitud": -1.622338,
+                "Altitud": 351.164
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Puente la Reina\/Gares",
+                "Latitud": 42.67213,
+                "Longitud": -1.815331,
+                "Altitud": 348.5276
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Pueyo",
+                "Latitud": 42.56591,
+                "Longitud": -1.647855,
+                "Altitud": 517.1697
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ribaforada",
+                "Latitud": 41.99684,
+                "Longitud": -1.511305,
+                "Altitud": 263.6679
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Romanzado",
+                "Latitud": 42.68146,
+                "Longitud": -1.231362,
+                "Altitud": 522.5592
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Roncal\/Erronkari",
+                "Latitud": 42.80754,
+                "Longitud": -0.9558963,
+                "Altitud": 699.3717
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sada",
+                "Latitud": 42.58585,
+                "Longitud": -1.397875,
+                "Altitud": 485.6982
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Saldías",
+                "Latitud": 43.08857,
+                "Longitud": -1.781005,
+                "Altitud": 553.2933
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Salinas de Oro",
+                "Latitud": 42.77519,
+                "Longitud": -1.88998,
+                "Altitud": 682.4023
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "San Adrian",
+                "Latitud": 42.33271,
+                "Longitud": -1.933409,
+                "Altitud": 298.6025
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "San Martín de Unx",
+                "Latitud": 42.52383,
+                "Longitud": -1.561407,
+                "Altitud": 597.6311
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sangüesa\/Zangoza",
+                "Latitud": 42.57694,
+                "Longitud": -1.285476,
+                "Altitud": 399.6167
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sansol",
+                "Latitud": 42.55363,
+                "Longitud": -2.267601,
+                "Altitud": 494.1248
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Santacara",
+                "Latitud": 42.37534,
+                "Longitud": -1.553171,
+                "Altitud": 351.041
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sarriés\/Sartze",
+                "Latitud": 42.83516,
+                "Longitud": -1.100333,
+                "Altitud": 687.5157
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sartaguda",
+                "Latitud": 42.38142,
+                "Longitud": -2.058642,
+                "Altitud": 338.0532
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sesma",
+                "Latitud": 42.4778,
+                "Longitud": -2.083364,
+                "Altitud": 434.409
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sorlada",
+                "Latitud": 42.61526,
+                "Longitud": -2.215357,
+                "Altitud": 570.1953
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Sunbilla",
+                "Latitud": 43.16499,
+                "Longitud": -1.67044,
+                "Altitud": 106.4811
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Tafalla",
+                "Latitud": 42.53033,
+                "Longitud": -1.674269,
+                "Altitud": 433.6423
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Tiebas-Muruarte de Reta",
+                "Latitud": 42.69312,
+                "Longitud": -1.640636,
+                "Altitud": 574.0651
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Tirapu",
+                "Latitud": 42.65747,
+                "Longitud": -1.702654,
+                "Altitud": 498.1133
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Torralba del Río",
+                "Latitud": 42.60806,
+                "Longitud": -2.331271,
+                "Altitud": 626.2723
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Torres del Río",
+                "Latitud": 42.55206,
+                "Longitud": -2.271269,
+                "Altitud": 461.8875
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Tudela",
+                "Latitud": 42.06388,
+                "Longitud": -1.605718,
+                "Altitud": 268.958
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Tulebras",
+                "Latitud": 41.97674,
+                "Longitud": -1.676432,
+                "Altitud": 372.949
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ucar",
+                "Latitud": 42.67572,
+                "Longitud": -1.706602,
+                "Altitud": 503.2144
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Uharte-Arakil",
+                "Latitud": 42.92068,
+                "Longitud": -1.969659,
+                "Altitud": 473.1925
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ujué",
+                "Latitud": 42.50721,
+                "Longitud": -1.499354,
+                "Altitud": 787.8973
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ultzama",
+                "Latitud": 43,
+                "Longitud": -1.678056,
+                "Altitud": 546.3792
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Unciti",
+                "Latitud": 42.74726,
+                "Longitud": -1.502249,
+                "Altitud": 605.3009
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Unzué",
+                "Latitud": 42.65227,
+                "Longitud": -1.625873,
+                "Altitud": 653.5177
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Urdazubi\/Urdax",
+                "Latitud": 43.26653,
+                "Longitud": -1.503896,
+                "Altitud": 98.64223
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Urdiain",
+                "Latitud": 42.88711,
+                "Longitud": -2.136436,
+                "Altitud": 551.1738
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Urraul Alto",
+                "Latitud": 42.77569,
+                "Longitud": -1.247821,
+                "Altitud": 573.8953
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Urraul Bajo",
+                "Latitud": 42.714,
+                "Longitud": -1.323,
+                "Altitud": 458.3008
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Urrotz",
+                "Latitud": 43.10044,
+                "Longitud": -1.707319,
+                "Altitud": 320.5983
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Urroz-Villa",
+                "Latitud": 42.77863,
+                "Longitud": -1.458369,
+                "Altitud": 527.5408
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Urzainqui\/Urzainki",
+                "Latitud": 42.83205,
+                "Longitud": -0.9444442,
+                "Altitud": 733.1646
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Uterga",
+                "Latitud": 42.71005,
+                "Longitud": -1.75952,
+                "Altitud": 494.9627
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Uztarroz\/Uztarroze",
+                "Latitud": 42.89209,
+                "Longitud": -0.940819,
+                "Altitud": 856.1575
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Valle de Yerri\/Deierri",
+                "Latitud": 42.71667,
+                "Longitud": -2,
+                "Altitud": 508.0046
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Valtierra",
+                "Latitud": 42.19593,
+                "Longitud": -1.63384,
+                "Altitud": 270.1983
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Viana",
+                "Latitud": 42.51513,
+                "Longitud": -2.371608,
+                "Altitud": 475.407
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Vidangoz\/Bidankoze",
+                "Latitud": 42.80064,
+                "Longitud": -1.014815,
+                "Altitud": 769.7194
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Villafranca",
+                "Latitud": 42.2793,
+                "Longitud": -1.750145,
+                "Altitud": 292.0777
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Villamayor de Monjardín",
+                "Latitud": 42.6288,
+                "Longitud": -2.104801,
+                "Altitud": 673.8203
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Villatuerta",
+                "Latitud": 42.6594,
+                "Longitud": -1.993951,
+                "Altitud": 440.6565
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Villava\/Atarrabia",
+                "Latitud": 42.83096,
+                "Longitud": -1.608811,
+                "Altitud": 434.213
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Yesa",
+                "Latitud": 42.6195,
+                "Longitud": -1.203681,
+                "Altitud": 494.9805
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Zabalza",
+                "Latitud": 42.77918,
+                "Longitud": -1.798546,
+                "Altitud": 435.8728
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Ziordia",
+                "Latitud": 42.87082,
+                "Longitud": -2.228952,
+                "Altitud": 554.5064
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Zizur Mayor\/Zizur Nagusia",
+                "Latitud": 42.7868,
+                "Longitud": -1.690832,
+                "Altitud": 441.8872
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Zubieta",
+                "Latitud": 43.12394,
+                "Longitud": -1.742113,
+                "Altitud": 210.3568
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Zugarramurdi",
+                "Latitud": 43.26936,
+                "Longitud": -1.541245,
+                "Altitud": 209.7609
+            },
+            {
+                "Comunidad": "Navarra",
+                "Provincia": "Navarra",
+                "Poblacion": "Zúñiga",
+                "Latitud": 42.69436,
+                "Longitud": -2.302436,
+                "Altitud": 577.4291
+            }
+        ]
+    }
+]

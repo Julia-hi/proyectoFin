@@ -1,0 +1,621 @@
+[{"Islas Baleares":[
+    {
+        "Menorca": [
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Alaior",
+                "Latitud": 39.93064,
+                "Longitud": 4.139987,
+                "Altitud": 114
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Sant Lluís",
+                "Latitud": 39.85266,
+                "Longitud": 4.259394,
+                "Altitud": 59.16509
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Es Castell",
+                "Latitud": 39.8776,
+                "Longitud": 4.289603,
+                "Altitud": 19.78382
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Ciutadella de Menorca",
+                "Latitud": 40.00232,
+                "Longitud": 3.839262,
+                "Altitud": 26.66946
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Ferreries",
+                "Latitud": 39.98328,
+                "Longitud": 4.010968,
+                "Altitud": 74.94495
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Mao",
+                "Latitud": 39.88961,
+                "Longitud": 4.264211,
+                "Altitud": 39.57444
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Es Mercadal",
+                "Latitud": 39.99089,
+                "Longitud": 4.093808,
+                "Altitud": 58.13219
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Menorca",
+                "Poblacion": "Es Migjorn Gran",
+                "Latitud": 39.94633,
+                "Longitud": 4.049105,
+                "Altitud": 114.6791
+            }
+        ]
+    },
+    {
+        "Mallorca": [
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Mallorca",
+                "Poblacion": "Alaró",
+                "Latitud": 39.70685,
+                "Longitud": 2.790548,
+                "Altitud": 224.2227
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Alcúdia",
+                "Latitud": 39.85231,
+                "Longitud": 3.122027,
+                "Altitud": 15.67431
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Algaida",
+                "Latitud": 39.55969,
+                "Longitud": 2.892573,
+                "Altitud": 193.2809
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Andratx",
+                "Latitud": 39.5708,
+                "Longitud": 2.421365,
+                "Altitud": 60.20264
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Ariany",
+                "Latitud": 39.64943,
+                "Longitud": 3.11086,
+                "Altitud": 122.6419
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Artà",
+                "Latitud": 39.69215,
+                "Longitud": 3.349073,
+                "Altitud": 130.6105
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Banyalbufar",
+                "Latitud": 39.68718,
+                "Longitud": 2.513457,
+                "Altitud": 109.7573
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Binissalem",
+                "Latitud": 39.68446,
+                "Longitud": 2.847511,
+                "Altitud": 129.6953
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Búger",
+                "Latitud": 39.75927,
+                "Longitud": 2.985579,
+                "Altitud": 93.89581
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Bunyola",
+                "Latitud": 39.69663,
+                "Longitud": 2.699386,
+                "Altitud": 216.3141
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Calvià",
+                "Latitud": 39.56524,
+                "Longitud": 2.504216,
+                "Altitud": 114.0867
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Campanet",
+                "Latitud": 39.77475,
+                "Longitud": 2.965845,
+                "Altitud": 127.2656
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Campos",
+                "Latitud": 39.42727,
+                "Longitud": 3.021843,
+                "Altitud": 22.76925
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Capdepera",
+                "Latitud": 39.70133,
+                "Longitud": 3.435561,
+                "Altitud": 117.9911
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Consell",
+                "Latitud": 39.67012,
+                "Longitud": 2.816188,
+                "Altitud": 148.8572
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Costitx",
+                "Latitud": 39.65622,
+                "Longitud": 2.949179,
+                "Altitud": 135.5031
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Deya",
+                "Latitud": 39.74844,
+                "Longitud": 2.649177,
+                "Altitud": 185.4465
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Escorca",
+                "Latitud": 39.8211,
+                "Longitud": 2.869478,
+                "Altitud": 690.5303
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Esporles",
+                "Latitud": 39.66946,
+                "Longitud": 2.57915,
+                "Altitud": 187.8363
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Estellencs",
+                "Latitud": 39.65333,
+                "Longitud": 2.481678,
+                "Altitud": 151.0275
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Felanitx",
+                "Latitud": 39.46876,
+                "Longitud": 3.148028,
+                "Altitud": 116.2949
+            },{
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Fornalutx",
+                "Latitud": 39.7826,
+                "Longitud": 2.741559,
+                "Altitud": 148.4023
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Inca",
+                "Latitud": 39.71875,
+                "Longitud": 2.915544,
+                "Altitud": 116.5367
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Lloret de Vistalegre",
+                "Latitud": 39.61689,
+                "Longitud": 2.974723,
+                "Altitud": 159.5069
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Lloseta",
+                "Latitud": 39.71799,
+                "Longitud": 2.864577,
+                "Altitud": 166.5043
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Llubí",
+                "Latitud": 39.70045,
+                "Longitud": 3.004657,
+                "Altitud": 69.92153
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Llucmajor",
+                "Latitud": 39.48591,
+                "Longitud": 2.89485,
+                "Altitud": 138.0817
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Manacor",
+                "Latitud": 39.57434,
+                "Longitud": 3.20142,
+                "Altitud": 75.37592
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Mancor de la Vall",
+                "Latitud": 39.75063,
+                "Longitud": 2.873395,
+                "Altitud": 205.7321
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Maria de la Salut",
+                "Latitud": 39.67049,
+                "Longitud": 3.076207,
+                "Altitud": 86.95065
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Marratxí",
+                "Latitud": 39.64213,
+                "Longitud": 2.752193,
+                "Altitud": 125.666
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Montuiri",
+                "Latitud": 39.57029,
+                "Longitud": 2.984617,
+                "Altitud": 152.9209
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Muro",
+                "Latitud": 39.73408,
+                "Longitud": 3.053606,
+                "Altitud": 62.19497
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Palma",
+                "Latitud": 39.56951,
+                "Longitud": 2.649966,
+                "Altitud": 31.92724
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Petra",
+                "Latitud": 39.6091,
+                "Longitud": 3.112162,
+                "Altitud": 112.8493
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "La Puebla",
+                "Latitud": 39.77052,
+                "Longitud": 3.016888,
+                "Altitud": 24.64385
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Pollensa",
+                "Latitud": 39.87775,
+                "Longitud": 3.017193,
+                "Altitud": 49.42315
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Porreres",
+                "Latitud": 39.51733,
+                "Longitud": 3.023831,
+                "Altitud": 130.0504
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Puigpuñent",
+                "Latitud": 39.62405,
+                "Longitud": 2.527614,
+                "Altitud": 221.9999
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Las Salinas",
+                "Latitud": 39.339,
+                "Longitud": 3.051014,
+                "Altitud": 42.5712
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "San Lorenzo de Cardessar",
+                "Latitud": 39.60896,
+                "Longitud": 3.284748,
+                "Altitud": 73.45789
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "San Juan",
+                "Latitud": 39.59594,
+                "Longitud": 3.039554,
+                "Altitud": 138.863
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Santa Eugènia",
+                "Latitud": 39.62394,
+                "Longitud": 2.839166,
+                "Altitud": 130.224
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Santa Margalida",
+                "Latitud": 39.70306,
+                "Longitud": 3.103551,
+                "Altitud": 80.91718
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Santa María del Camí",
+                "Latitud": 39.6468,
+                "Longitud": 2.776213,
+                "Altitud": 128.8374
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Santañy",
+                "Latitud": 39.35489,
+                "Longitud": 3.127745,
+                "Altitud": 62.64299
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Selva",
+                "Latitud": 39.75464,
+                "Longitud": 2.90122,
+                "Altitud": 193.6428
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Sencelles",
+                "Latitud": 39.64624,
+                "Longitud": 2.896189,
+                "Altitud": 117.951
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Sineu",
+                "Latitud": 39.64284,
+                "Longitud": 3.010996,
+                "Altitud": 141.6883
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Sóller",
+                "Latitud": 39.76583,
+                "Longitud": 2.714238,
+                "Altitud": 42.06099
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Son Servera",
+                "Latitud": 39.62423,
+                "Longitud": 3.356735,
+                "Altitud": 73.98268
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Valldemossa",
+                "Latitud": 39.71176,
+                "Longitud": 2.622538,
+                "Altitud": 415.1554
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Mallorca",
+                "Poblacion": "Vilafranca de Bonany",
+                "Latitud": 39.56957,
+                "Longitud": 3.084015,
+                "Altitud": 98.93115
+            }
+        ]
+    },
+    {
+        "Ibiza": [
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Ibiza",
+                "Poblacion": "Ibiza",
+                "Latitud": 38.90886,
+                "Longitud": 1.432378,
+                "Altitud": 9.813921
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Ibiza",
+                "Poblacion": "San Antonio Abad",
+                "Latitud": 38.98012,
+                "Longitud": 1.306587,
+                "Altitud": 4.347667
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Ibiza",
+                "Poblacion": "San Juan Bautista",
+                "Latitud": 39.07785,
+                "Longitud": 1.51227,
+                "Altitud": 189.9139
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Ibiza",
+                "Poblacion": "San José",
+                "Latitud": 38.92173,
+                "Longitud": 1.293443,
+                "Altitud": 201.3573
+            },
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla":"Ibiza",
+                "Poblacion": "Santa Eulalia del Río",
+                "Latitud": 38.98257,
+                "Longitud": 1.530198,
+                "Altitud": 13.57007
+            }
+        ]
+    },
+    {
+        "Formentera": [
+            {
+                "Comunidad": "Islas Baleares",
+                "Provincia": "Islas Baleares",
+                "Isla": "Formentera",
+                "Poblacion": "Formentera",
+                "Latitud": 38.6964,
+                "Longitud": 1.453135,
+                "Altitud": 21.56246
+            }
+        ]
+    }
+]
+}]

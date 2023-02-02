@@ -1,0 +1,1390 @@
+[
+    {
+        "La Rioja": [
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Agoncillo",
+                "Latitud": 42.44667,
+                "Longitud": -2.290619,
+                "Altitud": 346.0684
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Aguilar del Río Alhama",
+                "Latitud": 41.9618,
+                "Longitud": -1.994517,
+                "Altitud": 642.4493
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ajamil de Cameros",
+                "Latitud": 42.16764,
+                "Longitud": -2.486093,
+                "Altitud": 1013.896
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Albelda de Iregua",
+                "Latitud": 42.35826,
+                "Longitud": -2.473416,
+                "Altitud": 527.8994
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Alberite",
+                "Latitud": 42.40607,
+                "Longitud": -2.440523,
+                "Altitud": 451.6525
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Alcanadre",
+                "Latitud": 42.40578,
+                "Longitud": -2.118423,
+                "Altitud": 346.884
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Aldeanueva de Ebro",
+                "Latitud": 42.2292,
+                "Longitud": -1.887112,
+                "Altitud": 347
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Alesanco",
+                "Latitud": 42.41421,
+                "Longitud": -2.8169,
+                "Altitud": 565.6456
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Aleson",
+                "Latitud": 42.40511,
+                "Longitud": -2.690376,
+                "Altitud": 573.7119
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Alfaro",
+                "Latitud": 42.17858,
+                "Longitud": -1.749326,
+                "Altitud": 308.5974
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Almarza de Cameros",
+                "Latitud": 42.21799,
+                "Longitud": -2.598178,
+                "Altitud": 1069.351
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Anguciana",
+                "Latitud": 42.57567,
+                "Longitud": -2.908328,
+                "Altitud": 479.3135
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Anguiano",
+                "Latitud": 42.26134,
+                "Longitud": -2.764917,
+                "Altitud": 652.6512
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Arenzana de Abajo",
+                "Latitud": 42.3866,
+                "Longitud": -2.7191,
+                "Altitud": 546.6681
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Arenzana de Arriba",
+                "Latitud": 42.3876,
+                "Longitud": -2.69415,
+                "Altitud": 597.5667
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Arnedillo",
+                "Latitud": 42.2122,
+                "Longitud": -2.235894,
+                "Altitud": 671.225
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Arnedo",
+                "Latitud": 42.22784,
+                "Longitud": -2.100014,
+                "Altitud": 529.8414
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Arrúbal",
+                "Latitud": 42.43536,
+                "Longitud": -2.25173,
+                "Altitud": 356.6617
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ausejo",
+                "Latitud": 42.34546,
+                "Longitud": -2.169606,
+                "Altitud": 559.8897
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Autol",
+                "Latitud": 42.21553,
+                "Longitud": -2.006565,
+                "Altitud": 447.7715
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Azofra",
+                "Latitud": 42.42418,
+                "Longitud": -2.800831,
+                "Altitud": 549.5315
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Badaran",
+                "Latitud": 42.3673,
+                "Longitud": -2.808181,
+                "Altitud": 626.2255
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Bañares",
+                "Latitud": 42.46864,
+                "Longitud": -2.911659,
+                "Altitud": 594.9688
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Baños de Río Tobía",
+                "Latitud": 42.33489,
+                "Longitud": -2.761148,
+                "Altitud": 579.7742
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Baños de Rioja",
+                "Latitud": 42.51219,
+                "Longitud": -2.945273,
+                "Altitud": 549.6365
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Berceo",
+                "Latitud": 42.33819,
+                "Longitud": -2.852499,
+                "Altitud": 725.8651
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Bergasa",
+                "Latitud": 42.25214,
+                "Longitud": -2.132939,
+                "Altitud": 659.4448
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Bergasillas Bajera",
+                "Latitud": 42.24489,
+                "Longitud": -2.158813,
+                "Altitud": 835.3159
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Bezares",
+                "Latitud": 42.37076,
+                "Longitud": -2.670013,
+                "Altitud": 691.6075
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Bobadilla",
+                "Latitud": 42.31765,
+                "Longitud": -2.759309,
+                "Altitud": 575.4393
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Brieva de Cameros",
+                "Latitud": 42.16628,
+                "Longitud": -2.800397,
+                "Altitud": 962.1104
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Briñas",
+                "Latitud": 42.60185,
+                "Longitud": -2.830334,
+                "Altitud": 451.1893
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Briones",
+                "Latitud": 42.54424,
+                "Longitud": -2.785056,
+                "Altitud": 502.3963
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cabezon de Cameros",
+                "Latitud": 42.19762,
+                "Longitud": -2.51906,
+                "Altitud": 933.9756
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Calahorra",
+                "Latitud": 42.30372,
+                "Longitud": -1.965034,
+                "Altitud": 350.8057
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Camprovín",
+                "Latitud": 42.35464,
+                "Longitud": -2.722103,
+                "Altitud": 655.001
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Canales de la Sierra",
+                "Latitud": 42.14049,
+                "Longitud": -3.024993,
+                "Altitud": 1034.365
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cañas",
+                "Latitud": 42.39169,
+                "Longitud": -2.846487,
+                "Altitud": 644.0715
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Canillas de Río Tuerto",
+                "Latitud": 42.39923,
+                "Longitud": -2.841517,
+                "Altitud": 622.8653
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cardenas",
+                "Latitud": 42.37424,
+                "Longitud": -2.767255,
+                "Altitud": 569.4557
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Casalarreina",
+                "Latitud": 42.54792,
+                "Longitud": -2.913199,
+                "Altitud": 499.5124
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Castañares de Rioja",
+                "Latitud": 42.5118,
+                "Longitud": -2.931715,
+                "Altitud": 544.8438
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Castroviejo",
+                "Latitud": 42.33028,
+                "Longitud": -2.661105,
+                "Altitud": 957.0941
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cellorigo",
+                "Latitud": 42.62777,
+                "Longitud": -2.99873,
+                "Altitud": 779.0795
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cenicero",
+                "Latitud": 42.48131,
+                "Longitud": -2.641844,
+                "Altitud": 433.9284
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cervera del Río Alhama",
+                "Latitud": 42.00699,
+                "Longitud": -1.95191,
+                "Altitud": 533.9604
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cidamon",
+                "Latitud": 42.49515,
+                "Longitud": -2.879802,
+                "Altitud": 584.6813
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cihuri",
+                "Latitud": 42.56455,
+                "Longitud": -2.9222,
+                "Altitud": 487.6716
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cirueña",
+                "Latitud": 42.41072,
+                "Longitud": -2.895997,
+                "Altitud": 753.5059
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Clavijo",
+                "Latitud": 42.34995,
+                "Longitud": -2.425871,
+                "Altitud": 870.1968
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cordovín",
+                "Latitud": 42.38482,
+                "Longitud": -2.814371,
+                "Altitud": 591.1239
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Corera",
+                "Latitud": 42.34285,
+                "Longitud": -2.219425,
+                "Altitud": 524.1997
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cornago",
+                "Latitud": 42.06551,
+                "Longitud": -2.093088,
+                "Altitud": 700.761
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Corporales",
+                "Latitud": 42.43361,
+                "Longitud": -2.994002,
+                "Altitud": 729.3324
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Cuzcurrita de Río Tiron",
+                "Latitud": 42.54151,
+                "Longitud": -2.963024,
+                "Altitud": 518.9031
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Daroca de Rioja",
+                "Latitud": 42.37144,
+                "Longitud": -2.58142,
+                "Altitud": 718.0956
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Enciso",
+                "Latitud": 42.14893,
+                "Longitud": -2.269399,
+                "Altitud": 800.3494
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Entrena",
+                "Latitud": 42.38834,
+                "Longitud": -2.530942,
+                "Altitud": 556.1802
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Estollo",
+                "Latitud": 42.32934,
+                "Longitud": -2.850387,
+                "Altitud": 748.5827
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ezcaray",
+                "Latitud": 42.32673,
+                "Longitud": -3.013395,
+                "Altitud": 813.0378
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Foncea",
+                "Latitud": 42.61551,
+                "Longitud": -3.038363,
+                "Altitud": 696.9241
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Fonzaleche",
+                "Latitud": 42.58122,
+                "Longitud": -3.011809,
+                "Altitud": 558.2291
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Fuenmayor",
+                "Latitud": 42.467,
+                "Longitud": -2.562578,
+                "Altitud": 436.0469
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Galbarruli",
+                "Latitud": 42.62254,
+                "Longitud": -2.961143,
+                "Altitud": 656.6448
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Galilea",
+                "Latitud": 42.34824,
+                "Longitud": -2.235826,
+                "Altitud": 558.0848
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Gallinero de Cameros",
+                "Latitud": 42.17146,
+                "Longitud": -2.617937,
+                "Altitud": 1052.772
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Gimileo",
+                "Latitud": 42.5504,
+                "Longitud": -2.82106,
+                "Altitud": 480.4563
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Grañon",
+                "Latitud": 42.45045,
+                "Longitud": -3.026787,
+                "Altitud": 728.1026
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Gravalos",
+                "Latitud": 42.10866,
+                "Longitud": -2.001227,
+                "Altitud": 757.1207
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Haro",
+                "Latitud": 42.57721,
+                "Longitud": -2.846298,
+                "Altitud": 478.9891
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Herce",
+                "Latitud": 42.21436,
+                "Longitud": -2.164783,
+                "Altitud": 592.4082
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Herramélluri",
+                "Latitud": 42.50209,
+                "Longitud": -3.019801,
+                "Altitud": 572.0812
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Hervías",
+                "Latitud": 42.4481,
+                "Longitud": -2.885615,
+                "Altitud": 655.4955
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Hormilla",
+                "Latitud": 42.43786,
+                "Longitud": -2.774394,
+                "Altitud": 515.5236
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Hormilleja",
+                "Latitud": 42.45579,
+                "Longitud": -2.730995,
+                "Altitud": 492.3883
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Hornillos de Cameros",
+                "Latitud": 42.21006,
+                "Longitud": -2.419479,
+                "Altitud": 1145.726
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Hornos de Moncalvillo",
+                "Latitud": 42.39176,
+                "Longitud": -2.585274,
+                "Altitud": 677.0172
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Huércanos",
+                "Latitud": 42.4291,
+                "Longitud": -2.694138,
+                "Altitud": 514.9982
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Igea",
+                "Latitud": 42.07071,
+                "Longitud": -2.010171,
+                "Altitud": 568.7258
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Jalon de Cameros",
+                "Latitud": 42.21824,
+                "Longitud": -2.488461,
+                "Altitud": 869.4159
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Laguna de Cameros",
+                "Latitud": 42.1751,
+                "Longitud": -2.542447,
+                "Altitud": 1043.967
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Lagunilla del Jubera",
+                "Latitud": 42.33369,
+                "Longitud": -2.320709,
+                "Altitud": 612.0925
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Lardero",
+                "Latitud": 42.42645,
+                "Longitud": -2.461432,
+                "Altitud": 438.448
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ledesma de la Cogolla",
+                "Latitud": 42.3204,
+                "Longitud": -2.720068,
+                "Altitud": 748.3919
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Leiva",
+                "Latitud": 42.50365,
+                "Longitud": -3.046514,
+                "Altitud": 586.0123
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Leza de Río Leza",
+                "Latitud": 42.32795,
+                "Longitud": -2.405732,
+                "Altitud": 574.0675
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Logroño",
+                "Latitud": 42.46577,
+                "Longitud": -2.449995,
+                "Altitud": 396.4728
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Lumbreras",
+                "Latitud": 42.105,
+                "Longitud": -2.62399,
+                "Altitud": 1182.519
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Manjarrés",
+                "Latitud": 42.3926,
+                "Longitud": -2.67522,
+                "Altitud": 630.46
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Mansilla de la Sierra",
+                "Latitud": 42.15337,
+                "Longitud": -2.945217,
+                "Altitud": 959.0128
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Manzanares de Rioja",
+                "Latitud": 42.39614,
+                "Longitud": -2.895233,
+                "Altitud": 800.946
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Matute",
+                "Latitud": 42.29838,
+                "Longitud": -2.795419,
+                "Altitud": 685.0762
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Medrano",
+                "Latitud": 42.38266,
+                "Longitud": -2.55403,
+                "Altitud": 599.9323
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Munilla",
+                "Latitud": 42.18866,
+                "Longitud": -2.295301,
+                "Altitud": 801.2989
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Murillo de Río Leza",
+                "Latitud": 42.40302,
+                "Longitud": -2.324659,
+                "Altitud": 409.3719
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Muro de Aguas",
+                "Latitud": 42.13338,
+                "Longitud": -2.109735,
+                "Altitud": 881.153
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Muro en Cameros",
+                "Latitud": 42.22531,
+                "Longitud": -2.528894,
+                "Altitud": 1102.083
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Najera",
+                "Latitud": 42.41604,
+                "Longitud": -2.734324,
+                "Altitud": 491.8676
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Nalda",
+                "Latitud": 42.33414,
+                "Longitud": -2.486961,
+                "Altitud": 621.6317
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Navajún",
+                "Latitud": 41.96408,
+                "Longitud": -2.098725,
+                "Altitud": 927.8933
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Navarrete",
+                "Latitud": 42.43074,
+                "Longitud": -2.564667,
+                "Altitud": 505.4879
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Nestares",
+                "Latitud": 42.26964,
+                "Longitud": -2.61939,
+                "Altitud": 861.1385
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Nieva de Cameros",
+                "Latitud": 42.21777,
+                "Longitud": -2.667628,
+                "Altitud": 1008.789
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ochanduri",
+                "Latitud": 42.52465,
+                "Longitud": -3.003631,
+                "Altitud": 550.3547
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ocon",
+                "Latitud": 42.29795,
+                "Longitud": -2.244663,
+                "Altitud": 885.0756
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ojacastro",
+                "Latitud": 42.34657,
+                "Longitud": -3.005141,
+                "Altitud": 792.9922
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ollauri",
+                "Latitud": 42.54215,
+                "Longitud": -2.833227,
+                "Altitud": 499.6054
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ortigosa de Cameros",
+                "Latitud": 42.17596,
+                "Longitud": -2.705041,
+                "Altitud": 1061.807
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Pazuengos",
+                "Latitud": 42.31839,
+                "Longitud": -2.925584,
+                "Altitud": 1160.065
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Pedroso",
+                "Latitud": 42.03333,
+                "Longitud": -2.716667,
+                "Altitud": 1699.063
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Pinillos",
+                "Latitud": 42.19918,
+                "Longitud": -2.596651,
+                "Altitud": 1009.915
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Pradejon",
+                "Latitud": 42.33448,
+                "Longitud": -2.068308,
+                "Altitud": 364.7923
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Pradillo",
+                "Latitud": 42.17748,
+                "Longitud": -2.640748,
+                "Altitud": 884.1365
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Préjano",
+                "Latitud": 42.18618,
+                "Longitud": -2.179706,
+                "Altitud": 705.9279
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Quel",
+                "Latitud": 42.22894,
+                "Longitud": -2.049811,
+                "Altitud": 477.9927
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Rabanera",
+                "Latitud": 42.18958,
+                "Longitud": -2.486754,
+                "Altitud": 973.8629
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Rasillo de Cameros (El)",
+                "Latitud": 42.19453,
+                "Longitud": -2.69815,
+                "Altitud": 1098.583
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Redal (El)",
+                "Latitud": 42.33796,
+                "Longitud": -2.201439,
+                "Altitud": 530.1921
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ribafrecha",
+                "Latitud": 42.35477,
+                "Longitud": -2.387509,
+                "Altitud": 499.8856
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Rincon de Soto",
+                "Latitud": 42.23453,
+                "Longitud": -1.850801,
+                "Altitud": 291.5012
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Robres del Castillo",
+                "Latitud": 42.27408,
+                "Longitud": -2.292233,
+                "Altitud": 732.1305
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Rodezno",
+                "Latitud": 42.5257,
+                "Longitud": -2.845027,
+                "Altitud": 546.4205
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Sajazarra",
+                "Latitud": 42.5884,
+                "Longitud": -2.961486,
+                "Altitud": 515.8929
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "San Asensio",
+                "Latitud": 42.49755,
+                "Longitud": -2.748897,
+                "Altitud": 535.0013
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "San Millan de la Cogolla",
+                "Latitud": 42.329,
+                "Longitud": -2.861402,
+                "Altitud": 725.5252
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "San Millan de Yécora",
+                "Latitud": 42.54663,
+                "Longitud": -3.096873,
+                "Altitud": 658
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "San Roman de Cameros",
+                "Latitud": 42.23228,
+                "Longitud": -2.473908,
+                "Altitud": 841.6791
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "San Torcuato",
+                "Latitud": 42.48249,
+                "Longitud": -2.890032,
+                "Altitud": 599.8317
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "San Vicente de la Sonsierra",
+                "Latitud": 42.56242,
+                "Longitud": -2.759273,
+                "Altitud": 499.6028
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Santa Coloma",
+                "Latitud": 42.36699,
+                "Longitud": -2.655694,
+                "Altitud": 763.788
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Santa Engracia del Jubera",
+                "Latitud": 42.30088,
+                "Longitud": -2.292164,
+                "Altitud": 651.6323
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Santa Eulalia Bajera",
+                "Latitud": 42.2103,
+                "Longitud": -2.191216,
+                "Altitud": 633.9897
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Santo Domingo de la Calzada",
+                "Latitud": 42.44199,
+                "Longitud": -2.95259,
+                "Altitud": 641.3798
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Santurde de Rioja",
+                "Latitud": 42.38959,
+                "Longitud": -2.980024,
+                "Altitud": 713.6771
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Santurdejo",
+                "Latitud": 42.37824,
+                "Longitud": -2.954972,
+                "Altitud": 776.8748
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Sojuela",
+                "Latitud": 42.37001,
+                "Longitud": -2.545047,
+                "Altitud": 666.7807
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Sorzano",
+                "Latitud": 42.34253,
+                "Longitud": -2.528136,
+                "Altitud": 722.3146
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Sotés",
+                "Latitud": 42.40012,
+                "Longitud": -2.602225,
+                "Altitud": 670.8347
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Soto en Cameros",
+                "Latitud": 42.28662,
+                "Longitud": -2.424889,
+                "Altitud": 732.1506
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Terroba",
+                "Latitud": 42.25843,
+                "Longitud": -2.443991,
+                "Altitud": 799.225
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Tirgo",
+                "Latitud": 42.54567,
+                "Longitud": -2.948646,
+                "Altitud": 521.4808
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Tobía",
+                "Latitud": 42.29815,
+                "Longitud": -2.815388,
+                "Altitud": 689.8137
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Tormantos",
+                "Latitud": 42.49433,
+                "Longitud": -3.074003,
+                "Altitud": 608.6924
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Torre en Cameros",
+                "Latitud": 42.24041,
+                "Longitud": -2.51884,
+                "Altitud": 1134.403
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Torrecilla en Cameros",
+                "Latitud": 42.25526,
+                "Longitud": -2.630543,
+                "Altitud": 751.1946
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Torrecilla sobre Alesanco",
+                "Latitud": 42.40828,
+                "Longitud": -2.834565,
+                "Altitud": 613.0709
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Torremontalbo",
+                "Latitud": 42.50055,
+                "Longitud": -2.685056,
+                "Altitud": 424.9834
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Treviana",
+                "Latitud": 42.55835,
+                "Longitud": -3.051075,
+                "Altitud": 586.3843
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Tricio",
+                "Latitud": 42.40126,
+                "Longitud": -2.718959,
+                "Altitud": 563.7631
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Tudelilla",
+                "Latitud": 42.29966,
+                "Longitud": -2.116139,
+                "Altitud": 541.8914
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Uruñuela",
+                "Latitud": 42.44272,
+                "Longitud": -2.707949,
+                "Altitud": 498.3737
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Valdemadera",
+                "Latitud": 41.98395,
+                "Longitud": -2.073984,
+                "Altitud": 965.7645
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Valgañon",
+                "Latitud": 42.31764,
+                "Longitud": -3.06729,
+                "Altitud": 937.2846
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ventosa",
+                "Latitud": 42.40391,
+                "Longitud": -2.626475,
+                "Altitud": 640.8217
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Ventrosa",
+                "Latitud": 42.15555,
+                "Longitud": -2.852024,
+                "Altitud": 968.6185
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Viguera",
+                "Latitud": 42.30816,
+                "Longitud": -2.533868,
+                "Altitud": 687.5367
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villalba de Rioja",
+                "Latitud": 42.60916,
+                "Longitud": -2.88795,
+                "Altitud": 552.1461
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villalobar de Rioja",
+                "Latitud": 42.49213,
+                "Longitud": -2.961956,
+                "Altitud": 586.6432
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villamediana de Iregua",
+                "Latitud": 42.4263,
+                "Longitud": -2.419214,
+                "Altitud": 444.9522
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villanueva de Cameros",
+                "Latitud": 42.16763,
+                "Longitud": -2.64923,
+                "Altitud": 886.7664
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villar de Arnedo (El)",
+                "Latitud": 42.3207,
+                "Longitud": -2.095296,
+                "Altitud": 433.9665
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villar de Torre",
+                "Latitud": 42.37067,
+                "Longitud": -2.865805,
+                "Altitud": 766.6995
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villarejo",
+                "Latitud": 42.37299,
+                "Longitud": -2.887695,
+                "Altitud": 833.6031
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villarroya",
+                "Latitud": 42.13246,
+                "Longitud": -2.066742,
+                "Altitud": 920.0107
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villarta-Quintana",
+                "Latitud": 42.42986,
+                "Longitud": -3.049242,
+                "Altitud": 754.0377
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villavelayo",
+                "Latitud": 42.13184,
+                "Longitud": -2.985576,
+                "Altitud": 952.2856
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villaverde de Rioja",
+                "Latitud": 42.32081,
+                "Longitud": -2.8139,
+                "Altitud": 798.5352
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Villoslada de Cameros",
+                "Latitud": 42.11401,
+                "Longitud": -2.673385,
+                "Altitud": 1072.263
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Viniegra de Abajo",
+                "Latitud": 42.15181,
+                "Longitud": -2.888074,
+                "Altitud": 887.5325
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Viniegra de Arriba",
+                "Latitud": 42.09575,
+                "Longitud": -2.834686,
+                "Altitud": 1193.244
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Zarraton",
+                "Latitud": 42.51579,
+                "Longitud": -2.882306,
+                "Altitud": 560.7578
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Zarzosa",
+                "Latitud": 42.1813,
+                "Longitud": -2.341549,
+                "Altitud": 937.8779
+            },
+            {
+                "Comunidad": "La Rioja",
+                "Provincia": "La Rioja",
+                "Poblacion": "Zorraquín",
+                "Latitud": 42.32597,
+                "Longitud": -3.039334,
+                "Altitud": 872.1453
+            }
+        ]
+    }
+]

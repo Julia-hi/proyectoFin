@@ -1,0 +1,716 @@
+{
+    "Provincia": [
+        {
+            "Las Palmas": [
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Agaete",
+                    "Latitud": 28.10045,
+                    "Longitud": -15.69982,
+                    "Altitud": 50.89878
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Agüimes",
+                    "Latitud": 27.90411,
+                    "Longitud": -15.44564,
+                    "Altitud": 274.6894
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Aldea de San Nicolas (La)",
+                    "Latitud": 27.99022,
+                    "Longitud": -15.78118,
+                    "Altitud": 53.51977
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Antigua",
+                    "Latitud": 28.42347,
+                    "Longitud": -14.01455,
+                    "Altitud": 257.4895
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Arrecife",
+                    "Latitud": 28.95951,
+                    "Longitud": -13.5476,
+                    "Altitud": 4.273663
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Artenara",
+                    "Latitud": 28.02005,
+                    "Longitud": -15.64664,
+                    "Altitud": 1229.801
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Arucas",
+                    "Latitud": 28.11927,
+                    "Longitud": -15.52474,
+                    "Altitud": 251.5649
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Betancuria",
+                    "Latitud": 28.42438,
+                    "Longitud": -14.05646,
+                    "Altitud": 392.2021
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Firgas",
+                    "Latitud": 28.10761,
+                    "Longitud": -15.56337,
+                    "Altitud": 501.9252
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Galdar",
+                    "Latitud": 28.14404,
+                    "Longitud": -15.65036,
+                    "Altitud": 114.2928
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Haría",
+                    "Latitud": 29.14651,
+                    "Longitud": -13.4977,
+                    "Altitud": 278.1612
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Ingenio",
+                    "Latitud": 27.92047,
+                    "Longitud": -15.44246,
+                    "Altitud": 312.7698
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Mogan",
+                    "Latitud": 27.8837,
+                    "Longitud": -15.72398,
+                    "Altitud": 253.7186
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Moya",
+                    "Latitud": 28.1,
+                    "Longitud": -15.58333,
+                    "Altitud": 553.071
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Oliva (La)",
+                    "Latitud": 28.6104,
+                    "Longitud": -13.9288,
+                    "Altitud": 220.1189
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Pajara",
+                    "Latitud": 28.35059,
+                    "Longitud": -14.10761,
+                    "Altitud": 199.2286
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Palmas de Gran Canaria (Las)",
+                    "Latitud": 28.12482,
+                    "Longitud": -15.43001,
+                    "Altitud": 7.271036
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Puerto del Rosario",
+                    "Latitud": 28.4965,
+                    "Longitud": -13.86221,
+                    "Altitud": 17.26586
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "San Bartolomé",
+                    "Latitud": 27.92461,
+                    "Longitud": -15.573,
+                    "Altitud": 886.5434
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "San Bartolomé de Tirajana",
+                    "Latitud": 27.92461,
+                    "Longitud": -15.573,
+                    "Altitud": 886.5434
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Santa Brígida",
+                    "Latitud": 28.0306,
+                    "Longitud": -15.49134,
+                    "Altitud": 554.6102
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Santa Lucía de Tirajana",
+                    "Latitud": 27.91272,
+                    "Longitud": -15.54124,
+                    "Altitud": 685.452
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Santa María de Guía de Gran Canaria",
+                    "Latitud": 28.13915,
+                    "Longitud": -15.63284,
+                    "Altitud": 184.0675
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Teguise",
+                    "Latitud": 29.05942,
+                    "Longitud": -13.5603,
+                    "Altitud": 303.7625
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Tejeda",
+                    "Latitud": 27.99499,
+                    "Longitud": -15.61547,
+                    "Altitud": 1047.64
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Telde",
+                    "Latitud": 27.99604,
+                    "Longitud": -15.41789,
+                    "Altitud": 150.629
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Teror",
+                    "Latitud": 28.0595,
+                    "Longitud": -15.54824,
+                    "Altitud": 591.0235
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Tías",
+                    "Latitud": 28.95304,
+                    "Longitud": -13.65303,
+                    "Altitud": 203.0193
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Tinajo",
+                    "Latitud": 29.06644,
+                    "Longitud": -13.67695,
+                    "Altitud": 197.1857
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Tuineje",
+                    "Latitud": 28.32417,
+                    "Longitud": -14.04758,
+                    "Altitud": 184.2644
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Valleseco",
+                    "Latitud": 28.04794,
+                    "Longitud": -15.5737,
+                    "Altitud": 1046.185
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Valsequillo de Gran Canaria",
+                    "Latitud": 27.99119,
+                    "Longitud": -15.49928,
+                    "Altitud": 579.2171
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Vega de San Mateo",
+                    "Latitud": 28.01057,
+                    "Longitud": -15.53256,
+                    "Altitud": 832.0562
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Las Palmas",
+                    "Poblacion": "Yaiza",
+                    "Latitud": 28.95247,
+                    "Longitud": -13.76526,
+                    "Altitud": 180.6911
+                }
+            ]
+        },
+        {
+            "Santa Cruz de Tenerife": [
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Adeje",
+                    "Latitud": 28.12185,
+                    "Longitud": -16.72464,
+                    "Altitud": 288.9392
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Agulo",
+                    "Latitud": 28.18672,
+                    "Longitud": -17.19591,
+                    "Altitud": 199.3272
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Alajero",
+                    "Latitud": 28.06276,
+                    "Longitud": -17.23902,
+                    "Altitud": 821.5216
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Arafo",
+                    "Latitud": 28.34072,
+                    "Longitud": -16.41512,
+                    "Altitud": 432.3514
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Arico",
+                    "Latitud": 28.1778,
+                    "Longitud": -16.47941,
+                    "Altitud": 362.0416
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Arona",
+                    "Latitud": 28.10047,
+                    "Longitud": -16.68066,
+                    "Altitud": 630.8655
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Barlovento",
+                    "Latitud": 28.82735,
+                    "Longitud": -17.80326,
+                    "Altitud": 560.6917
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Breña Alta",
+                    "Latitud": 28.65905,
+                    "Longitud": -17.79119,
+                    "Altitud": 370.9761
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Breña Baja",
+                    "Latitud": 28.63037,
+                    "Longitud": -17.79027,
+                    "Altitud": 539.2067
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Buenavista del Norte",
+                    "Latitud": 28.37029,
+                    "Longitud": -16.85024,
+                    "Altitud": 127.8591
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Candelaria",
+                    "Latitud": 28.35276,
+                    "Longitud": -16.37013,
+                    "Altitud": 10
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Fasnia",
+                    "Latitud": 28.23996,
+                    "Longitud": -16.43982,
+                    "Altitud": 482.8613
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Frontera",
+                    "Latitud": 27.75379,
+                    "Longitud": -18.00364,
+                    "Altitud": 339.0463
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Fuencaliente de la Palma",
+                    "Latitud": 28.4885,
+                    "Longitud": -17.84942,
+                    "Altitud": 604.7274
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Garachico",
+                    "Latitud": 28.37217,
+                    "Longitud": -16.76521,
+                    "Altitud": 11.52424
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Garafía",
+                    "Latitud": 28.81667,
+                    "Longitud": -17.91667,
+                    "Altitud": 899.6116
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Granadilla de Abona",
+                    "Latitud": 28.12018,
+                    "Longitud": -16.57691,
+                    "Altitud": 647.0933
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Guancha (La)",
+                    "Latitud": 28.37436,
+                    "Longitud": -16.65256,
+                    "Altitud": 483.8696
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Guía de Isora",
+                    "Latitud": 28.20995,
+                    "Longitud": -16.779,
+                    "Altitud": 590.0607
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Güímar",
+                    "Latitud": 28.31723,
+                    "Longitud": -16.41325,
+                    "Altitud": 307.1391
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Hermigua",
+                    "Latitud": 28.16725,
+                    "Longitud": -17.19206,
+                    "Altitud": 127.1466
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Icod de los Vinos",
+                    "Latitud": 28.36761,
+                    "Longitud": -16.71886,
+                    "Altitud": 229.9812
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Llanos de Aridane (Los)",
+                    "Latitud": 28.65619,
+                    "Longitud": -17.91137,
+                    "Altitud": 345.7089
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Matanza de Acentejo (La)",
+                    "Latitud": 28.45248,
+                    "Longitud": -16.46325,
+                    "Altitud": 282.3254
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Orotava (La)",
+                    "Latitud": 28.39108,
+                    "Longitud": -16.52354,
+                    "Altitud": 342.5714
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Paso (El)",
+                    "Latitud": 28.65043,
+                    "Longitud": -17.87833,
+                    "Altitud": 669.5245
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Pinar de El Hierro (El)",
+                    "Latitud": 27.7255,
+                    "Longitud": -18.0243,
+                    "Altitud": 1330.287
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Puerto de la Cruz",
+                    "Latitud": 28.41339,
+                    "Longitud": -16.54516,
+                    "Altitud": 53.82357
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Puntagorda",
+                    "Latitud": 28.75,
+                    "Longitud": -17.96667,
+                    "Altitud": 849.1637
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Puntallana",
+                    "Latitud": 28.73491,
+                    "Longitud": -17.7509,
+                    "Altitud": 494.2469
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Realejos (Los)",
+                    "Latitud": 28.36667,
+                    "Longitud": -16.58333,
+                    "Altitud": 596.4269
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Rosario (El)",
+                    "Latitud": 28.42729,
+                    "Longitud": -16.35815,
+                    "Altitud": 722.4636
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "San Andrés y Sauces",
+                    "Latitud": 28.8,
+                    "Longitud": -17.76667,
+                    "Altitud": 60.90185
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "San Cristobal de La Laguna",
+                    "Latitud": 28.48812,
+                    "Longitud": -16.31478,
+                    "Altitud": 548.1752
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "San Juan de la Rambla",
+                    "Latitud": 28.39464,
+                    "Longitud": -16.65047,
+                    "Altitud": 50.26696
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "San Miguel de Abona",
+                    "Latitud": 28.09838,
+                    "Longitud": -16.61715,
+                    "Altitud": 604.5886
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "San Sebastian de la Gomera",
+                    "Latitud": 28.09222,
+                    "Longitud": -17.11187,
+                    "Altitud": 2.807406
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Santa Cruz de la Palma",
+                    "Latitud": 28.68326,
+                    "Longitud": -17.76396,
+                    "Altitud": 3.8835480000000002
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Santa Cruz de Tenerife",
+                    "Latitud": 28.46981,
+                    "Longitud": -16.25486,
+                    "Altitud": 41.29388
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Santa Úrsula",
+                    "Latitud": 28.42549,
+                    "Longitud": -16.48891,
+                    "Altitud": 284.0858
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Santiago del Teide",
+                    "Latitud": 28.29614,
+                    "Longitud": -16.81461,
+                    "Altitud": 929.3008
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Sauzal (El)",
+                    "Latitud": 28.47941,
+                    "Longitud": -16.43661,
+                    "Altitud": 323.1106
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Silos (Los)",
+                    "Latitud": 28.36535,
+                    "Longitud": -16.81598,
+                    "Altitud": 99.97398
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Tacoronte",
+                    "Latitud": 28.48153,
+                    "Longitud": -16.412,
+                    "Altitud": 488.9084
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Tanque (El)",
+                    "Latitud": 28.33258,
+                    "Longitud": -16.78752,
+                    "Altitud": 1027.389
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Tazacorte",
+                    "Latitud": 28.6427,
+                    "Longitud": -17.93224,
+                    "Altitud": 124.7486
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Tegueste",
+                    "Latitud": 28.52328,
+                    "Longitud": -16.33353,
+                    "Altitud": 412.2942
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Tijarafe",
+                    "Latitud": 28.7,
+                    "Longitud": -17.95,
+                    "Altitud": 615.9692
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Valle Gran Rey",
+                    "Latitud": 28.12357,
+                    "Longitud": -17.32575,
+                    "Altitud": 607.2831
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Vallehermoso",
+                    "Latitud": 28.17902,
+                    "Longitud": -17.26406,
+                    "Altitud": 181.5817
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Valverde",
+                    "Latitud": 27.8089,
+                    "Longitud": -17.91566,
+                    "Altitud": 588.4797
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Victoria de Acentejo (La)",
+                    "Latitud": 28.43531,
+                    "Longitud": -16.46762,
+                    "Altitud": 387.9303
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Vilaflor",
+                    "Latitud": 28.15728,
+                    "Longitud": -16.63811,
+                    "Altitud": 1411.228
+                },
+                {
+                    "Comunidad": "Canarias",
+                    "Provincia": "Santa Cruz de Tenerife",
+                    "Poblacion": "Villa de Mazo",
+                    "Latitud": 28.58121,
+                    "Longitud": -17.79915,
+                    "Altitud": 965.7053
+                }
+            ]
+        }
+    ]
+}
