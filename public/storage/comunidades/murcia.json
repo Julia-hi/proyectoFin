@@ -1,0 +1,503 @@
+{
+    "Provincia": [
+        {
+            "Murcia": [
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Abanilla",
+                    "Latitud": 38.20628,
+                    "Longitud": -1.043499,
+                    "Altitud": 215.4028,
+                    "Habitantes": 6589,
+                    "Hombres": 3315,
+                    "Mujeres": 3274
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Abarán",
+                    "Latitud": 38.20514,
+                    "Longitud": -1.397181,
+                    "Altitud": 200.7275,
+                    "Habitantes": 12991,
+                    "Hombres": 6536,
+                    "Mujeres": 6455
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Águilas",
+                    "Latitud": 37.4038,
+                    "Longitud": -1.581161,
+                    "Altitud": 8.231929,
+                    "Habitantes": 34533,
+                    "Hombres": 17426,
+                    "Mujeres": 17107
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Albudeite",
+                    "Latitud": 38.02719,
+                    "Longitud": -1.384766,
+                    "Altitud": 180.3854,
+                    "Habitantes": 1369,
+                    "Hombres": 691,
+                    "Mujeres": 678
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Alcantarilla",
+                    "Latitud": 37.97068,
+                    "Longitud": -1.218209,
+                    "Altitud": 73.48013,
+                    "Habitantes": 41084,
+                    "Hombres": 20484,
+                    "Mujeres": 20600
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Alcázares (Los)",
+                    "Latitud": 37.74362,
+                    "Longitud": -0.8498135,
+                    "Altitud": 2.761286,
+                    "Habitantes": 15619,
+                    "Hombres": 8094,
+                    "Mujeres": 7525
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Aledo",
+                    "Latitud": 37.79744,
+                    "Longitud": -1.573683,
+                    "Altitud": 604.458,
+                    "Habitantes": 1066,
+                    "Hombres": 544,
+                    "Mujeres": 522
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Alguazas",
+                    "Latitud": 38.04954,
+                    "Longitud": -1.24202,
+                    "Altitud": 84.25748,
+                    "Habitantes": 8978,
+                    "Hombres": 4685,
+                    "Mujeres": 4293
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Alhama de Murcia",
+                    "Latitud": 37.85101,
+                    "Longitud": -1.424666,
+                    "Altitud": 201.4063,
+                    "Habitantes": 19860,
+                    "Hombres": 10152,
+                    "Mujeres": 9708
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Archena",
+                    "Latitud": 38.11435,
+                    "Longitud": -1.297061,
+                    "Altitud": 105.1455,
+                    "Habitantes": 18202,
+                    "Hombres": 9438,
+                    "Mujeres": 8764
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Beniel",
+                    "Latitud": 38.04591,
+                    "Longitud": -1.001894,
+                    "Altitud": 31.7415,
+                    "Habitantes": 10933,
+                    "Hombres": 5662,
+                    "Mujeres": 5271
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Blanca",
+                    "Latitud": 38.1792,
+                    "Longitud": -1.376201,
+                    "Altitud": 149.6207,
+                    "Habitantes": 6370,
+                    "Hombres": 3216,
+                    "Mujeres": 3154
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Bullas",
+                    "Latitud": 38.04808,
+                    "Longitud": -1.670956,
+                    "Altitud": 647.6263,
+                    "Habitantes": 12493,
+                    "Hombres": 6361,
+                    "Mujeres": 6132
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Calasparra",
+                    "Latitud": 38.22923,
+                    "Longitud": -1.701833,
+                    "Altitud": 356.5284,
+                    "Habitantes": 10759,
+                    "Hombres": 5456,
+                    "Mujeres": 5303
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Campos del Río",
+                    "Latitud": 38.04043,
+                    "Longitud": -1.351669,
+                    "Altitud": 181.1191,
+                    "Habitantes": 2210,
+                    "Hombres": 1069,
+                    "Mujeres": 1141
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Caravaca de la Cruz",
+                    "Latitud": 38.10899,
+                    "Longitud": -1.866033,
+                    "Altitud": 636.1376,
+                    "Habitantes": 26415,
+                    "Hombres": 13280,
+                    "Mujeres": 13135
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Cartagena",
+                    "Latitud": 37.60565,
+                    "Longitud": -0.9912944,
+                    "Altitud": 11.15692,
+                    "Habitantes": 211996,
+                    "Hombres": 106755,
+                    "Mujeres": 105241
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Cehegín",
+                    "Latitud": 38.09269,
+                    "Longitud": -1.798522,
+                    "Altitud": 540.0687,
+                    "Habitantes": 16235,
+                    "Hombres": 8216,
+                    "Mujeres": 8019
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Ceutí",
+                    "Latitud": 38.07917,
+                    "Longitud": -1.272099,
+                    "Altitud": 93.69875,
+                    "Habitantes": 10174,
+                    "Hombres": 5179,
+                    "Mujeres": 4995
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Cieza",
+                    "Latitud": 38.23907,
+                    "Longitud": -1.418767,
+                    "Altitud": 189.8739,
+                    "Habitantes": 35200,
+                    "Hombres": 17666,
+                    "Mujeres": 17534
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Fortuna",
+                    "Latitud": 38.18111,
+                    "Longitud": -1.12821,
+                    "Altitud": 204.3466,
+                    "Habitantes": 9583,
+                    "Hombres": 5078,
+                    "Mujeres": 4505
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Fuente Álamo de Murcia",
+                    "Latitud": 37.72334,
+                    "Longitud": -1.166995,
+                    "Altitud": 131.1901,
+                    "Habitantes": 14876,
+                    "Hombres": 7861,
+                    "Mujeres": 7015
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Jumilla",
+                    "Latitud": 38.47595,
+                    "Longitud": -1.322032,
+                    "Altitud": 502.642,
+                    "Habitantes": 25685,
+                    "Hombres": 13367,
+                    "Mujeres": 12318
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Librilla",
+                    "Latitud": 37.88795,
+                    "Longitud": -1.353289,
+                    "Altitud": 174.8965,
+                    "Habitantes": 4534,
+                    "Hombres": 2276,
+                    "Mujeres": 2258
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Lorca",
+                    "Latitud": 37.67131,
+                    "Longitud": -1.698792,
+                    "Altitud": 336.2687,
+                    "Habitantes": 91906,
+                    "Hombres": 47784,
+                    "Mujeres": 44122
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Lorquí",
+                    "Latitud": 38.08183,
+                    "Longitud": -1.254943,
+                    "Altitud": 92.61366,
+                    "Habitantes": 6996,
+                    "Hombres": 3616,
+                    "Mujeres": 3380
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Mazarrón",
+                    "Latitud": 37.59907,
+                    "Longitud": -1.313669,
+                    "Altitud": 65.57575,
+                    "Habitantes": 35221,
+                    "Hombres": 18579,
+                    "Mujeres": 16642
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Molina de Segura",
+                    "Latitud": 38.05092,
+                    "Longitud": -1.210992,
+                    "Altitud": 94.52602,
+                    "Habitantes": 64065,
+                    "Hombres": 32194,
+                    "Mujeres": 31871
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Moratalla",
+                    "Latitud": 38.18645,
+                    "Longitud": -1.890504,
+                    "Altitud": 630.5613,
+                    "Habitantes": 8455,
+                    "Hombres": 4312,
+                    "Mujeres": 4143
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Mula",
+                    "Latitud": 38.04056,
+                    "Longitud": -1.486329,
+                    "Altitud": 295.3519,
+                    "Habitantes": 16941,
+                    "Hombres": 8726,
+                    "Mujeres": 8215
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Murcia",
+                    "Latitud": 37.98344,
+                    "Longitud": -1.12989,
+                    "Altitud": 51.07087,
+                    "Habitantes": 436870,
+                    "Hombres": 216744,
+                    "Mujeres": 220126
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Ojós",
+                    "Latitud": 38.14525,
+                    "Longitud": -1.343079,
+                    "Altitud": 128.2413,
+                    "Habitantes": 584,
+                    "Hombres": 305,
+                    "Mujeres": 279
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Pliego",
+                    "Latitud": 37.99001,
+                    "Longitud": -1.506185,
+                    "Altitud": 386.3144,
+                    "Habitantes": 4034,
+                    "Hombres": 2088,
+                    "Mujeres": 1946
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Puerto Lumbreras",
+                    "Latitud": 37.56221,
+                    "Longitud": -1.810215,
+                    "Altitud": 470.1874,
+                    "Habitantes": 13947,
+                    "Hombres": 7008,
+                    "Mujeres": 6939
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Ricote",
+                    "Latitud": 38.15238,
+                    "Longitud": -1.367112,
+                    "Altitud": 293.4324,
+                    "Habitantes": 1519,
+                    "Hombres": 771,
+                    "Mujeres": 748
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "San Javier",
+                    "Latitud": 37.80569,
+                    "Longitud": -0.8345491,
+                    "Altitud": 26.81056,
+                    "Habitantes": 31432,
+                    "Hombres": 16114,
+                    "Mujeres": 15318
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "San Pedro del Pinatar",
+                    "Latitud": 37.83504,
+                    "Longitud": -0.7915859,
+                    "Altitud": 16.43622,
+                    "Habitantes": 23738,
+                    "Hombres": 12053,
+                    "Mujeres": 11685
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Santomera",
+                    "Latitud": 38.05997,
+                    "Longitud": -1.047485,
+                    "Altitud": 39.86995,
+                    "Habitantes": 15319,
+                    "Hombres": 7778,
+                    "Mujeres": 7541
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Torre-Pacheco",
+                    "Latitud": 37.74428,
+                    "Longitud": -0.9536195,
+                    "Altitud": 41.09187,
+                    "Habitantes": 31495,
+                    "Hombres": 16592,
+                    "Mujeres": 14903
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Torres de Cotillas (Las)",
+                    "Latitud": 38.02786,
+                    "Longitud": -1.240312,
+                    "Altitud": 86.27866,
+                    "Habitantes": 21062,
+                    "Hombres": 10892,
+                    "Mujeres": 10170
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Totana",
+                    "Latitud": 37.77124,
+                    "Longitud": -1.501004,
+                    "Altitud": 259.0672,
+                    "Habitantes": 29211,
+                    "Hombres": 15059,
+                    "Mujeres": 14152
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Ulea",
+                    "Latitud": 38.13988,
+                    "Longitud": -1.329861,
+                    "Altitud": 126.4072,
+                    "Habitantes": 939,
+                    "Hombres": 489,
+                    "Mujeres": 450
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Unión (La)",
+                    "Latitud": 37.61675,
+                    "Longitud": -0.8800824,
+                    "Altitud": 112.227,
+                    "Habitantes": 17737,
+                    "Hombres": 8906,
+                    "Mujeres": 8831
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Villanueva del Río Segura",
+                    "Latitud": 38.13569,
+                    "Longitud": -1.324307,
+                    "Altitud": 138.7037,
+                    "Habitantes": 2270,
+                    "Hombres": 1124,
+                    "Mujeres": 1146
+                },
+                {
+                    "Comunidad": "Murcia",
+                    "Provincia": "Murcia",
+                    "Poblacion": "Yecla",
+                    "Latitud": 38.61524,
+                    "Longitud": -1.118017,
+                    "Altitud": 604.7735,
+                    "Habitantes": 35025,
+                    "Hombres": 17668,
+                    "Mujeres": 17357
+                }
+            ]
+        }
+    ]
+}

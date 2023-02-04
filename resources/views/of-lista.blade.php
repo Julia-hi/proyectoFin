@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\Municipio;
 use Illuminate\Support\Facades\Storage;
 ?>
@@ -36,14 +37,14 @@ use Illuminate\Support\Facades\Storage;
                                             </svg>
                                         </div>
                                         <select name="comunidad" id="comunidad" class="col-10 border-0" aria-label=".form-select-lg example">
-                                            <option value="todo">Seleccione Región ...</option>
+                                            <option value="todo" selected>Seleccione Región ...</option>
                                             <option value="andalucia">Andalucía</option>
                                             <option value="aragon">Aragón</option>
                                             <option value="asturias">Asturias</option>
                                             <option value="canarias">Canarias</option>
                                             <option value="cantabria">Cantabria</option>
                                             <option value="castilla-la-mancha">Castilla La Mancha</option>
-                                            <option value="castilla-leon">Castilla León</option>
+                                            <option value="castila-leon">Castilla León</option>
                                             <option value="catalunya">Catalunya</option>
                                             <option value="ceuta-y-melilla">Ceuta y Melilla</option>
                                             <option value="extremadura">Extremadura</option>
@@ -56,24 +57,28 @@ use Illuminate\Support\Facades\Storage;
                                             <option value="pais-vasco">País Vasco</option>
                                             <option value="valencia">Valencia</option>
                                         </select>
-
-                                        
                                     </div>
 
                                 </div>
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="provincia" id="provincia" class="border-0" aria-label=".form-select-lg example">
-                                           <!-- opciones insertarán desde script of-lista.js -->
+                                            <option value="todo" selected>Seleccione provincia ...</option>
+                                            <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
+                                        
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="poblacion" id="poblacion" class="border-0" aria-label=".form-select-lg example">
+                                            <option value="todo" selected>Seleccione población ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
                                     </div>
+                                    <!-- Latitud y longitud de pueblo elegido -->
+                                    <input hidden type="text" id="lat-pueblo" name ="lat-pueblo" value="">
+                                    <input hidden type="text" id="lon-pueblo" name ="lat-pueblo" value="">
                                 </div>
 
                                 <div class="col">
@@ -165,7 +170,6 @@ use Illuminate\Support\Facades\Storage;
     </div>
 
 </x-app-layout>
- <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
+<script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
 <script src="{{asset('storage/js/of-lista.js')}}"></script>
-
