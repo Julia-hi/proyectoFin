@@ -1,9 +1,27 @@
 <?php
-
-use App\Models\Municipio;
 use Illuminate\Support\Facades\Storage;
-?>
 
+// get selected parameters from query (from the URL) if exist
+function getParametrosQuery(){
+    if(isset($_POST['comunidad'])){
+        $valores['comunidad'] =$_POST['comunidad'];
+    }else{
+        $valores['comunidad'] = "todo";
+    }
+    if(isset($_POST['provincia']))
+    {
+        $provincia =$_POST['provincia'];
+    } else{
+        $provincia = "todo";
+    }
+    if(isset($_POST['poblacion'])){
+    $poblacion = $_POST['poblacion'];
+    }else{
+        $poblacion = "todo";
+    }
+    return $valores;
+}
+?>
 
 <x-app-layout>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
@@ -26,7 +44,8 @@ use Illuminate\Support\Facades\Storage;
 
                 <div class="m-2">
                     <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                        <form id="formulario">
+                        <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
+                        <form id="formulario" method="get" action="">
                             <div class="row p-3 g-6">
                                 <div class="col">
                                     <div class="row border rounded h-100">
@@ -78,7 +97,7 @@ use Illuminate\Support\Facades\Storage;
                                     </div>
                                     <!-- Latitud y longitud de pueblo elegido -->
                                     <input hidden type="text" id="lat-pueblo" name ="lat-pueblo" value="">
-                                    <input hidden type="text" id="lon-pueblo" name ="lat-pueblo" value="">
+                                    <input hidden type="text" id="lon-pueblo" name ="lon-pueblo" value="">
                                 </div>
 
                                 <div class="col">
@@ -102,21 +121,25 @@ use Illuminate\Support\Facades\Storage;
                                         <option value="embra">embra</option>
                                     </select>
                                 </div>
-
                                 <div class="col">
-                                    <button type="submit" class="p-3 rounded w-100">BUSCAR</button>
+                                    <button type="submit" class="p-3 rounded border w-100">BUSCAR</button>
                                 </div>
                             </div>
 
                     </div>
                     </form>
                 </div>
-                <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                <!--   Block para anuncios de ofertas   -->
+                <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <h2 class="p-2 my-4 text-center">Ofertas en
-                        <?php if ($area == "todo") {
-                            echo " toda España";
+                        <?php 
+                       // $valores = getParametrosQuery();
+                        if (isset($_GET['comunidad'])&& $_GET['comunidad'] != "todo") {
+                            echo " " . $_GET['comunidad'];
+                            
                         } else {
-                            echo " " . $area;
+                            echo " toda España <br>";
+                            echo $ofertas;
                         } ?>
                     </h2>
 

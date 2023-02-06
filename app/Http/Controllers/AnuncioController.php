@@ -1,8 +1,18 @@
 <?php
 
+/**
+ * Anuncios controller
+ * 
+ * todos anuncios
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\AnuncioOferta;
+use App\Models\AnuncioDemanda;
+
 
 class AnuncioController extends Controller
 {
@@ -23,7 +33,7 @@ class AnuncioController extends Controller
      */
     public function create()
     {
-         return view('anuncios.crear');
+         return view('anuncio.create');
     }
 
     /**
@@ -34,7 +44,37 @@ class AnuncioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /* $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'telefono' => ['required', 'string', 'max:255'],
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'telefono' => $request->telefono,
+        ]); */
+
+        $entrada = $request->validate([
+            /* 'user_id'=>'numeric|min:1',
+            'cine_id'=> 'numeric|min:1',
+            'fecha_id'=> 'min:1',
+            'entradas'=>'required|numeric|max:10|min:1', */
+            
+        ]);
+       
+        AnuncioDemanda::create([
+            'titulo' => $request->titulo,
+            'descripcion' => $request->descripcion,
+            'id_usuario' => $request->id_usuario,
+            'fecha' => date("H:i:s"),
+            'tipo' => 'tipo-anuncio',
+        ]);
+        return redirect()->route('/dashboard'); // return redirect()->route('item.index');
+        
     }
 
     /**

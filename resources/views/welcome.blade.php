@@ -19,6 +19,7 @@ $scriptUrl = Storage::url('welcome.js') ?>
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css')?>">
     <!-- <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
         html {
@@ -416,7 +417,8 @@ $scriptUrl = Storage::url('welcome.js') ?>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900  py-4 sm:pt-0">
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            <button type="button" class="mr-2 p-2" onclick="window.location.href='{{ url('/anuncio/crear')}}'">Publicar anuncio</button>
+        <!-- {{ url('$id_usuario/anuncio/crear')}} -->
+            <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="{{ url('/anuncio/crear')}}" tabindex="0"><span>Publicar anuncio</span></a>
             @auth
             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
             @else
@@ -451,11 +453,12 @@ $scriptUrl = Storage::url('welcome.js') ?>
                 </div>
                 <div class="m-2">
                     <!-- Anuncios oferta -->
-                    <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " id="ofertas-block">
+                    <div id="ofertas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg ">
                         
                         <div class="row d-flex justify-content-center align-content-center m-3">
-                            <button type="button" class="btn btn-sm btn-outline-secondary w-50" onclick="window.location.href='{{ url('/ofertas/lista/todo')}}'" >FILTRAR OFERTAS</button>
+                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url('/ofertas-lista')}}" >FILTRAR OFERTAS</a>
                         </div>
+                        
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card mb-4 box-shadow">
@@ -495,7 +498,7 @@ $scriptUrl = Storage::url('welcome.js') ?>
                     </div>
                     
                     <!-- Anuncios demanda -->
-                    <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg d-none" id="demandas-block">
+                    <div id="demandas-block" class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg d-none">
                         <h3 class="text-center">Demandas</h3>
                         <div class="row">
                             <div class="col-md-6">

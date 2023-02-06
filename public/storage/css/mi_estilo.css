@@ -1,0 +1,22 @@
+.red-brillante-boton {
+    position: relative !important;
+    display: inline-block !important;
+    width: 10em !important;
+    height: 2.5em !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-shadow: 0 -1px 1px #777 !important;
+    color: #fff !important;
+    outline: none !important;
+    border: 2px solid #F64C2B !important;
+    border-radius: 5px !important;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, .1em .1em .2em #800 !important;
+    background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, #F02F17) !important;
+}
+
+.red-brillante-boton:active {
+    top: .1em;
+    left: .1em;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
+}

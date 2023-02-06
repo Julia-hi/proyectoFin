@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('anuncoferta', function (Blueprint $table) {
+        Schema::create('anuncio_ofertas', function (Blueprint $table) {
             $table->foreignId('id')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('titulo')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('descripcion')->constrained('anuncios')->onUpdate('cascade')->onDelete('cascade');
@@ -23,7 +23,8 @@ return new class extends Migration
             $table->string('com_autonoma');
             $table->string('provincia');
             $table->string('localidad');
-            $table->string('calle');
+            $table->string('lat');
+            $table->string('lon');
             $table->timestamps();
         });
     }

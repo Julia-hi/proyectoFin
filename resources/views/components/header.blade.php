@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Municipio;
 use Illuminate\Support\Facades\Storage;
 ?>
 <div class="bg-white shadow" style="background-image: url('<?php $fondo =Storage::url('images/johas-fondo.svg'); echo($fondo); ?>'); ">

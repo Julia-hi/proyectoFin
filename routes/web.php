@@ -6,6 +6,7 @@ use App\Http\Controllers\AnuncioController;
 use App\Http\Controllers\AdminController; 
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OfertasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,13 +43,16 @@ Route::middleware('auth')->group(function () {
     Route::post('/ofertas', 'store');
 }); */
 
-Route::get('/ofertas/lista/{area}', [AnuncioController::class, 'index']);
+//Route::get('/ofertas/lista/{area}', [AnuncioController::class, 'index']);
+Route::resource('/ofertas-lista', OfertasController::class);
 
-Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
 
-Route::post('/anuncio/crear', [AnuncioController::class, 'store'])->name('anuncio.store');
+//Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
+//Route::post('/anuncio/crear', [AnuncioController::class, 'store']);
 
-Route::get('/anuncio/edit/{id}', [AnuncioController::class, 'edit'])->middleware('auth')->name('anuncio.edit');
+//Route::post('/anuncio-demanda/create', [AnuncioDemandaController::class, 'store'])->middleware('auth');
+// Route::post('/anuncio-oferta/crear', [AnuncioDemandaController::class, 'store'])->middleware('auth')->name('anuncio-demanda.store');
+//Route::get('/anuncio/edit/{id}', [AnuncioController::class, 'edit'])->middleware('auth')->name('anuncio.edit');
 
 Route::get('/mapa/{area}', function($area){
     return view('mapa', ['area'=>$area]);
@@ -77,8 +81,8 @@ Route::get('/admin/dashboard', function () {
 Route::post('/admin/login', [AdminAuthController::class, 'login']);
 Route::get('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout'); */
 
-Route::get('/demandas', function(){
+/* Route::get('/demandas', function(){
     return view('demandas');
-});
+}); */
 
 require __DIR__.'/auth.php';

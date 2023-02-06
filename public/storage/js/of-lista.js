@@ -26,24 +26,15 @@ let mostrarProvincias = () => {
         $("#poblacion").append("<option value='todo' selected>Seleccione poblacion ...</option>");
     } else {
         if (xmlHttp != undefined && comunidad != "todo") {
-            // $("#provincia").innerHTML = '';
-
             cargarProvincias(comunidad.value);
-
-
-
             secondSelect.addEventListener("change", function () {
                 thirdSelect.innerHTML = "";
                 mostrarPoblaciones(datos);
             });
-
-
         } else {
             Swal.fire("El navegador no soporta AJAX. Debe actualizar el navegador");
         }
     }
-
-
 }
 
 let mostrarPoblaciones = (datos) => {
@@ -76,10 +67,7 @@ let mostrarPoblaciones = (datos) => {
             $("#lat-pueblo").value = document.getElementById("lat-" + selectedPoblacion).innerText;
             $("#lon-pueblo").value = document.getElementById("lon-" + selectedPoblacion).innerText;
         });
-
     }
-
-
 }
 
 let crearConexion = () => {

@@ -1,18 +1,11 @@
 <?php
 
-/**
- * Ofertas controller
- * 
- * anuncios de oferta
- */
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AnuncioOferta;
 use Illuminate\Support\Facades\DB;
 
-class OfertasController extends Controller
+class AnuncioDemandaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,16 +14,7 @@ class OfertasController extends Controller
      */
     public function index()
     {
-        //$area = "todo";
-
-        $count = DB::table('anuncio_ofertas')->count();
-        if (DB::table('anuncio_ofertas')->count() > 0) {
-            $ofertas = DB::table('anuncio_ofertas')->simplePaginate(2);
-        } else {
-            $ofertas = "ofertas not found";
-        }
-        // $ofertas=AnuncioOferta::all();
-        return view('ofertas-lista', ['count' => $count, 'ofertas'=>$ofertas]); //),$ofertas); //return view('ofertas-lista', $ofertas);
+        //
     }
 
     /**
@@ -51,7 +35,21 @@ class OfertasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $entrada = $request->validate([
+            /* 'user_id'=>'numeric|min:1',
+            'cine_id'=> 'numeric|min:1',
+            'fecha_id'=> 'min:1',
+            'entradas'=>'required|numeric|max:10|min:1', */
+            
+        ]);
+       
+        DB::table('anuncios')->insert([
+            'titulo' => $request->input('titulo'),
+            'descripcion' => $request->input('descripcion'),
+            'id_usuario' => $request->input('id_usuario'),
+            'fecha' => date("H:i:s"),
+            'tipo' => 'tipo-anuncio',
+        ]);
     }
 
     /**
