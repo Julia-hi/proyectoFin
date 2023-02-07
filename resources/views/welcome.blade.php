@@ -11,9 +11,7 @@ $scriptUrl = Storage::url('welcome.js') ?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>MiLorito</title>
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -414,6 +412,10 @@ $scriptUrl = Storage::url('welcome.js') ?>
 </head>
 
 <body class="antialiased">
+     <!-- Page Heading - resources/views/components/header.blade.php -->
+     <header>
+            <x-header />
+        </header>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900  py-4 sm:pt-0">
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -431,11 +433,11 @@ $scriptUrl = Storage::url('welcome.js') ?>
         @endif
         <div class="container ">
             <div class="justify-center sm:px-6 lg:px-8">
-                <div class="text-center pt-8 sm:justify-start sm:pt-0">
+               <!--  <div class="text-center pt-8 sm:justify-start sm:pt-0">
                     <a href="/">
                         <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                     </a>
-                </div>
+                </div> -->
                 <div class="m-2 ">
                     <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                         <h2 class="p-2 my-4 text-center">Espacio para amantes de loros</h2>
@@ -456,7 +458,7 @@ $scriptUrl = Storage::url('welcome.js') ?>
                     <div id="ofertas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg ">
                         
                         <div class="row d-flex justify-content-center align-content-center m-3">
-                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url('/ofertas-lista')}}" >FILTRAR OFERTAS</a>
+                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url('/ofertas-lista')}}" >VER TODAS OFERTAS</a>
                         </div>
                         
                         <div class="row">

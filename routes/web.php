@@ -7,7 +7,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OfertasController;
-
+use App\Http\Controllers\DemandasController;
+use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
+use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
+use App\Http\Controllers\UserAnuncios\UserAnunciosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,6 +48,10 @@ Route::middleware('auth')->group(function () {
 
 //Route::get('/ofertas/lista/{area}', [AnuncioController::class, 'index']);
 Route::resource('/ofertas-lista', OfertasController::class);
+Route::resource('/demandas', DemandasController::class);
+Route::resource('/{user-id}/demandas', UserAnuncioDemandaController::class); 
+Route::resource('/{user-id}/ofertas', UserAnuncioOfertaController::class);
+Route::resource('/{user-id}/anuncios', UserAnunciosController::class);
 
 
 //Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');

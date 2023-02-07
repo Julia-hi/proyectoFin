@@ -1,18 +1,11 @@
 <?php
 
-/**
- * Ofertas controller
- * 
- * anuncios de oferta
- */
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AnuncioOferta;
 use Illuminate\Support\Facades\DB;
 
-class OfertasController extends Controller
+class DemandasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,19 +14,13 @@ class OfertasController extends Controller
      */
     public function index()
     {
-        $valores = $this->getParametrosQuery();
-        $count = DB::table('anuncio_ofertas')->count();
-        if (DB::table('anuncio_ofertas')->count() > 0) {
-            if ($valores['comunidad'] != "todo") {
-                $ofertas = DB::table('anuncio_ofertas')->where('comunidad', $valores['comunidad']);
-            } else {
-                $ofertas = DB::table('anuncio_ofertas')->simplePaginate(2);
-            }
+        $count = DB::table('anuncdemanda')->count();
+        if (DB::table('anuncdemanda')->count() > 0) {
+                $demandas = DB::table('anuncdemanda')->get();
         } else {
-            $ofertas = "ofertas not found";
+            $demandas = "demandas not found";
         }
-        // $ofertas=AnuncioOferta::all();
-        return view('ofertas-lista', ['count' => $count, 'ofertas' => $ofertas]); //),$ofertas); //return view('ofertas-lista', $ofertas);
+        return  view('demandas', ['count' => $count, 'ofertas' => $demandas]);
     }
 
     /**
@@ -100,25 +87,5 @@ class OfertasController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    function getParametrosQuery()
-    {
-        if (isset($_POST['comunidad'])) {
-            $valores['comunidad'] = $_POST['comunidad'];
-        } else {
-            $valores['comunidad'] = "todo";
-        }
-        if (isset($_POST['provincia'])) {
-            $provincia = $_POST['provincia'];
-        } else {
-            $provincia = "todo";
-        }
-        if (isset($_POST['poblacion'])) {
-            $poblacion = $_POST['poblacion'];
-        } else {
-            $poblacion = "todo";
-        }
-        return $valores;
     }
 }
