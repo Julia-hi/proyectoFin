@@ -1,4 +1,3 @@
-
 @auth
 @if(Auth::user()->rol=="admin")
 <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
@@ -10,7 +9,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Mis anuncios') }}
+            {{ __('Mis mensajes') }}
         </h2>
     </x-slot>
 
@@ -19,14 +18,14 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 text-center">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        {{ __('Mis anuncios') }}
+                        {{ __('Mis mensajes') }}
                     </h2>
                     <div class="pt-3">
                         <?php
-                        if ($anuncios == "anuncios no encontrados") {
-                            echo "todavia no tienes anuncios publicados";
+                        if ($mensajes == "mensajes no encontrados") {
+                            echo "todavia no tienes mensajes";
                         } else {
-                            echo "tienes " . count($anuncios) . " anuncios publicados";
+                            echo "tienes " . count($mensajes) . " mensajes";
                         }
                         ?>
                     </div>

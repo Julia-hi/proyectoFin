@@ -10,7 +10,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Mis anuncios') }}
+            {{ __('Mis favoritos') }}
         </h2>
     </x-slot>
 
@@ -19,14 +19,14 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 text-center">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        {{ __('Mis anuncios') }}
+                        {{ __('Mis favoritos') }}
                     </h2>
                     <div class="pt-3">
                         <?php
-                        if ($anuncios == "anuncios no encontrados") {
-                            echo "todavia no tienes anuncios publicados";
+                        if ($anuncios == "favoritos no encontrados") {
+                            echo "todavia no tienes favoritos";
                         } else {
-                            echo "tienes " . count($anuncios) . " anuncios publicados";
+                            echo "tienes " . count($favoritos) . " favoritos";
                         }
                         ?>
                     </div>

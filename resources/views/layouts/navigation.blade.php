@@ -1,24 +1,27 @@
-
+<?php $user_id = Auth::user()->id; ?>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                
+
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('user.anuncios.index',$user_id)" :active="request()->routeIs('user.anuncios.index',$user_id)">
                         {{ __('Mis anuncios') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('user.favoritos.index', $user_id)" :active="request()->routeIs('user.favoritos.index',$user_id)">
                         {{ __('Mis favoritos') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('user.mensajes.index', $user_id)" :active="request()->routeIs('user.mensajes.index',$user_id)">
                         {{ __('Mensajes') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('anuncio.create')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('user.anuncios.create', $user_id)" :active="request()->routeIs('user.anuncios.create', $user_id)">
                         {{ __('Publicar anuncio') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+                        {{ __('Perfil') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -39,25 +42,24 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        
+                        <x-dropdown-link :href="route('user.anuncios.index',$user_id)">
                             {{ __('Mis anuncios') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('user.favoritos.index', $user_id)">
                             {{ __('Favoritos') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('user.mensajes.index', $user_id)">
                             {{ __('Mensajes') }}
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Perfil') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
@@ -94,25 +96,25 @@
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
+
+                <x-responsive-nav-link :href="route('user.anuncios.index',$user_id)">
                     {{ __('Mis anuncios') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Favoritos') }}
+                <x-responsive-nav-link :href="route('user.favoritos.index', $user_id)">
+                    {{ __('Mis favoritos') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('profile.edit')">
+                <x-responsive-nav-link :href="route('user.mensajes.index', $user_id)">
                     {{ __('Mensajes') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+                    {{ __('Perfil') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>

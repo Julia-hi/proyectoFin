@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\UserAnuncios;
-use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Anuncio;
+use Illuminate\Support\Facades\DB;
 
 class UserAnunciosController extends Controller
 {
@@ -12,10 +15,20 @@ class UserAnunciosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($user)
     {
-        $user_id = 12;
-        return view('user/anuncios');
+        $user_id = Auth::user()->id;
+        $anuncios = Anuncio::where('id_usuario', $user_id)->get();
+       // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
+       //$count = count($anuncios);
+       $count=Anuncio::where('id_usuario', $user_id)->count();
+        if ($count > 0) {
+                $anuncios = DB::table('anuncios')->where('id_usuario',$user_id);
+            } else {
+            $anuncios = "anuncios no encontrados";
+        }
+        $user = Auth::user()->name;
+        return view('user.anuncios', ['user' => $user, 'anuncios'=>$anuncios]); 
     }
 
     /**
@@ -25,7 +38,9 @@ class UserAnunciosController extends Controller
      */
     public function create()
     {
-        //
+        $tipoAnunc = 'oferta';
+        $user = Auth::user()->name;
+        return view('user.anuncCreate', ['user' => $user,'tipoAnunc'=>$tipoAnunc]); 
     }
 
     /**

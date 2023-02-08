@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\UserAnuncios;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
 class UserAnuncioOfertaController extends Controller
@@ -22,9 +22,10 @@ class UserAnuncioOfertaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $user = Auth::user();
+        return view('user.anuncOfertaCreate', ['user_id'=>$user_id]);
     }
 
     /**

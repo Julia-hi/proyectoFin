@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Favorito;
 
-class AnuncioDemandaController extends Controller
+class UserFavoritosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,18 @@ class AnuncioDemandaController extends Controller
      */
     public function index()
     {
-        //
+        $user_id = Auth::user()->id;
+        $anuncios = Favorito::where('id_usuario', $user_id)->get();
+        // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
+        //$count = count($anuncios);
+        $count = Favorito::where('id_usuario', $user_id)->count();
+        if ($count > 0) {
+            $favoritos = Favorito::where('id_usuario', $user_id)->get();
+        } else {
+            $favoritos = "favoritos no encontrados";
+        }
+        $user = Auth::user()->name;
+        return view('user.favoritos', ['user' => $user, 'anuncios' => $favoritos]);
     }
 
     /**
@@ -35,21 +47,7 @@ class AnuncioDemandaController extends Controller
      */
     public function store(Request $request)
     {
-        $entrada = $request->validate([
-            /* 'user_id'=>'numeric|min:1',
-            'cine_id'=> 'numeric|min:1',
-            'fecha_id'=> 'min:1',
-            'entradas'=>'required|numeric|max:10|min:1', */
-            
-        ]);
-        
-        DB::table('anuncios')->insertGetId([
-            'titulo' => $request->input('titulo'),
-            'descripcion' => $request->input('descripcion'),
-            'id_usuario' => $request->input('id_usuario'),
-            'fecha' => date("H:i:s"),
-            'tipo' => 'tipo-anuncio',
-        ]);
+        //
     }
 
     /**

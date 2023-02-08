@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\UserAnuncios;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserAnuncioDemandaController extends Controller
 {
@@ -24,7 +26,15 @@ class UserAnuncioDemandaController extends Controller
      */
     public function create()
     {
-        //
+        //$user_id=15;
+        //echo "User id "+$user_id;
+        if (Auth::user()) {
+            $user = Auth::user()->id;
+        } else {
+            $user = 10;
+        }
+
+        return view('user.anuncDemandaCreate', ['user_id' => $user]);
     }
 
     /**

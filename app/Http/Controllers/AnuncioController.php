@@ -33,7 +33,7 @@ class AnuncioController extends Controller
      */
     public function create()
     {
-         return view('anuncio.create');
+        // return view('anuncio.create');
     }
 
     /**

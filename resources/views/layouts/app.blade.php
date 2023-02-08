@@ -1,6 +1,5 @@
 <?php 
-use Illuminate\Support\Facades\Storage;
-$calendarStyle = Storage::url('css/calendar.css'); ?>
+use Illuminate\Support\Facades\Storage; ?>
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -19,7 +18,7 @@ $calendarStyle = Storage::url('css/calendar.css'); ?>
    
     <!-- <link href="{{ asset('css/calendar.css') }}" rel="stylesheet">  -->
     @stack('styles')
-    <link rel="stylesheet" href="<?php //echo $calendarStyle; ?>">
+    <link rel="stylesheet" href="">
     <!-- Scripts  ,'resources/js/scripts/of-lista.js' -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -35,9 +34,7 @@ $calendarStyle = Storage::url('css/calendar.css'); ?>
         </header>
 
         @auth
-            
                 @include('layouts.navigation')
-            
         @endauth
 
         <!-- Page Content -->

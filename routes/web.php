@@ -11,6 +11,8 @@ use App\Http\Controllers\DemandasController;
 use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
 use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
 use App\Http\Controllers\UserAnuncios\UserAnunciosController;
+use App\Http\Controllers\UserFavoritosController;
+use App\Http\Controllers\UserMensajesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,28 +48,30 @@ Route::middleware('auth')->group(function () {
     Route::post('/ofertas', 'store');
 }); */
 
-//Route::get('/ofertas/lista/{area}', [AnuncioController::class, 'index']);
+
 Route::resource('/ofertas-lista', OfertasController::class);
 Route::resource('/demandas', DemandasController::class);
 Route::resource('/{user-id}/demandas', UserAnuncioDemandaController::class); 
 Route::resource('/{user-id}/ofertas', UserAnuncioOfertaController::class);
-Route::resource('/{user-id}/anuncios', UserAnunciosController::class);
+Route::resource('user.anuncios', UserAnunciosController::class);
+Route::resource('user.favoritos', UserFavoritosController::class);
+Route::resource('user.mensajes', UserMensajesController::class);
 
 
-//Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
+Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
 //Route::post('/anuncio/crear', [AnuncioController::class, 'store']);
 
 //Route::post('/anuncio-demanda/create', [AnuncioDemandaController::class, 'store'])->middleware('auth');
 // Route::post('/anuncio-oferta/crear', [AnuncioDemandaController::class, 'store'])->middleware('auth')->name('anuncio-demanda.store');
 //Route::get('/anuncio/edit/{id}', [AnuncioController::class, 'edit'])->middleware('auth')->name('anuncio.edit');
 
-Route::get('/mapa/{area}', function($area){
+/* Route::get('/mapa/{area}', function($area){
     return view('mapa', ['area'=>$area]);
 });
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/dashboard', function () {
     return view('admin.home1');
-});
+}); */
 
 
 /* Route::get('/admin', function(){

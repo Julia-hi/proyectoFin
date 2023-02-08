@@ -3,18 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Mensaje;
 use Illuminate\Support\Facades\DB;
 
-class AnuncioDemandaController extends Controller
+class UserMensajesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($user)
     {
-        //
+        $user_id = Auth::user()->id;
+        $mensajes = Mensaje::where('id_remitente', $user_id)->get();
+       
+       $count=Mensaje::where('id_remitente', $user_id)->count();
+        if ($count > 0) {
+           // $mensajes = DB::table('anuncios')->where('id_usuario',$user_id);
+           $mensajes = Mensaje::where('id_remitente', $user_id)->get();
+            } else {
+                $mensajes = "mensajes no encontrados";
+        }
+        $user = Auth::user()->name;
+        return view('user.mensajes', ['user' => $user, 'mensajes'=>$mensajes]);
     }
 
     /**
@@ -35,21 +48,7 @@ class AnuncioDemandaController extends Controller
      */
     public function store(Request $request)
     {
-        $entrada = $request->validate([
-            /* 'user_id'=>'numeric|min:1',
-            'cine_id'=> 'numeric|min:1',
-            'fecha_id'=> 'min:1',
-            'entradas'=>'required|numeric|max:10|min:1', */
-            
-        ]);
-        
-        DB::table('anuncios')->insertGetId([
-            'titulo' => $request->input('titulo'),
-            'descripcion' => $request->input('descripcion'),
-            'id_usuario' => $request->input('id_usuario'),
-            'fecha' => date("H:i:s"),
-            'tipo' => 'tipo-anuncio',
-        ]);
+        //
     }
 
     /**
