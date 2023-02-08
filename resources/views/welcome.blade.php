@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\Auth;
 $logoUrl = Storage::url('logo.png');
-$scriptUrl = Storage::url('welcome.js') ?>
+$scriptUrl = Storage::url('welcome.js');
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -417,12 +419,18 @@ $scriptUrl = Storage::url('welcome.js') ?>
             <x-header />
         </header>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900  py-4 sm:pt-0">
+        
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
         <!-- {{ url('$id_usuario/anuncio/crear')}} -->
-            <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="{{ url('/anuncio/crear')}}" tabindex="0"><span>Publicar anuncio</span></a>
+        @guest
+        <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a>
+        @endguest
             @auth
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+            <?php $user_name = Auth::user()->name; 
+            $user_id = Auth::user()->id; ?>
+            <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios/create" tabindex="0"><span>Publicar anuncio</span></a>
+            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a>
             @else
             <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
             @if (Route::has('register'))
@@ -460,7 +468,6 @@ $scriptUrl = Storage::url('welcome.js') ?>
                         <div class="row d-flex justify-content-center align-content-center m-3">
                             <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url('/ofertas-lista')}}" >VER TODAS OFERTAS</a>
                         </div>
-                        
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card mb-4 box-shadow">

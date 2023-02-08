@@ -51,9 +51,9 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('/ofertas-lista', OfertasController::class);
 Route::resource('/demandas', DemandasController::class);
-Route::resource('/{user-id}/demandas', UserAnuncioDemandaController::class); 
-Route::resource('/{user-id}/ofertas', UserAnuncioOfertaController::class);
-Route::resource('user.anuncios', UserAnunciosController::class);
+//Route::resource('/{user-id}/demandas', UserAnuncioDemandaController::class); 
+//Route::resource('/{user-id}/ofertas', UserAnuncioOfertaController::class);
+Route::resource('user.anuncios', UserAnunciosController::class)->middleware('auth');
 Route::resource('user.favoritos', UserFavoritosController::class);
 Route::resource('user.mensajes', UserMensajesController::class);
 

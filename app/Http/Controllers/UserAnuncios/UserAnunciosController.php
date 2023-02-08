@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Anuncio;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class UserAnunciosController extends Controller
 {
@@ -39,8 +40,8 @@ class UserAnunciosController extends Controller
     public function create()
     {
         $tipoAnunc = 'oferta';
-        $user = Auth::user()->name;
-        return view('user.anuncCreate', ['user' => $user,'tipoAnunc'=>$tipoAnunc]); 
+        $user_id = Auth::user()->id;
+        return view('user.anuncCreate', ['user'=>$user_id,'tipoAnunc'=>$tipoAnunc]); 
     }
 
     /**
@@ -51,7 +52,13 @@ class UserAnunciosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //insert validation of request
+       // route('user.anuncios.index',$user_id)
+       // return redirect('/user/'.$request->user_id.'/anuncios')->with('status', 'Profile updated!');
+       return Redirect::route('user.anuncios.index',$request->user_id)->with('status', 'Profile updated!');
+      //return back()->withInput();
+      //return redirect()->back()->withInput();
+      
     }
 
     /**
