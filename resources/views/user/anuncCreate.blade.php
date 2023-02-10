@@ -161,7 +161,7 @@
                             </div>
 
                         </div>
-                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo-anuncio" name="tipo-anuncio" value="oferta">
+                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo_anuncio" name="tipo_anuncio" value="oferta">
                         <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user_id" name="user_id" value="{{ 'user' }}">
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
@@ -197,7 +197,7 @@
                             </div>
 
                         </div>
-                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo-anuncio" name="tipo-anuncio" value="demanda">
+                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo_anuncio" name="tipo_anuncio" value="demanda">
                         <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user-id" name="user-id" value="{{ 'user' }}">
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">

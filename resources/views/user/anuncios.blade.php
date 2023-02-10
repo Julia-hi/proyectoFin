@@ -6,7 +6,10 @@
 //  return redirect()->route('admin/dashboard');
 ?>
 @else
+@if(isset($status))
+<script>alert( 'Estoy aqui' ); </script>
 
+@endif
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -23,11 +26,12 @@
                     </h2>
                     <div class="pt-3">
                         <?php
-                        if ($anuncios == "anuncios no encontrados") {
+                        /* if ($anuncios == "anuncios no encontrados") {
                             echo "todavia no tienes anuncios publicados";
                         } else {
                             echo "tienes " . count($anuncios) . " anuncios publicados";
-                        }
+                        } */
+                        echo "tienes anuncios publicados";
                         ?>
                     </div>
                 </div>

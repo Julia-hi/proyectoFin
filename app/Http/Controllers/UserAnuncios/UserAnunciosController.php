@@ -5,7 +5,7 @@ namespace App\Http\Controllers\UserAnuncios;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\Anuncio;
+use App\Models\Anuncios;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
@@ -19,17 +19,17 @@ class UserAnunciosController extends Controller
     public function index($user)
     {
         $user_id = Auth::user()->id;
-        $anuncios = Anuncio::where('id_usuario', $user_id)->get();
-       // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
-       //$count = count($anuncios);
-       $count=Anuncio::where('id_usuario', $user_id)->count();
+        $anuncios = Anuncios::where('id_usuario', $user_id)->get();
+        // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
+        //$count = count($anuncios);
+        $count = Anuncios::where('id_usuario', $user_id)->count();
         if ($count > 0) {
-                $anuncios = DB::table('anuncios')->where('id_usuario',$user_id);
-            } else {
+            $anuncios = DB::table('anuncios')->where('id_usuario', $user_id);
+        } else {
             $anuncios = "anuncios no encontrados";
         }
         $user = Auth::user()->name;
-        return view('user.anuncios', ['user' => $user, 'anuncios'=>$anuncios]); 
+        return view('user.anuncios', ['user' => $user, 'anuncios' => $anuncios]);
     }
 
     /**
@@ -41,7 +41,7 @@ class UserAnunciosController extends Controller
     {
         $tipoAnunc = 'oferta';
         $user_id = Auth::user()->id;
-        return view('user.anuncCreate', ['user'=>$user_id,'tipoAnunc'=>$tipoAnunc]); 
+        return view('user.anuncCreate', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]);
     }
 
     /**
@@ -52,13 +52,46 @@ class UserAnunciosController extends Controller
      */
     public function store(Request $request)
     {
+        $message = "Ha producido un error, anuncio de demanda no creado";
+        
         //insert validation of request
-       // route('user.anuncios.index',$user_id)
-       // return redirect('/user/'.$request->user_id.'/anuncios')->with('status', 'Profile updated!');
-       return Redirect::route('user.anuncios.index',$request->user_id)->with('status', 'Profile updated!');
-      //return back()->withInput();
-      //return redirect()->back()->withInput();
-      
+        /* $validarBase = $request->validate(
+            [
+                'titulo' => 'required|max:100',
+                'descripcion' => 'required|max:300',
+                'id_usuario' => 'required'
+            ]
+
+        );
+        if ($validarBase && $request->tipo_anuncio == 'oferta') {
+            //validate oferta
+            $validarOfertaForm='...';
+            //insert to database
+            $message = 'Anuncio de oferta se ha publicado!';
+        }else{
+            $message = "Ha producido un error, anuncio de oferta no creado";
+        } */
+
+        if ($request->tipo_anuncio == 'demanda') {
+            //demanda ya valida
+            //insert to database 
+            /* DB::table('anuncios')->insert([
+                'id_usuario'=>Auth::user()->id,
+                'estado' => 'active',
+                'tipo' => 'demanda',  
+            ]); */
+            $user_id=Auth::user()->id;
+            $anunc=['id_usuario'=>$user_id, 'estado'=>'active', 'tipo'=>'demanda'];
+            Anuncios::create($anunc);
+            $message = 'Anuncio de demanda se ha publicado!';
+        }else{
+            $message = "Ha producido un error, anuncio de demanda no creado";
+        }
+        $user = Auth::user()->name;
+        return Redirect::route('user.anuncios.index', ['user'=>$user]); //->with('status', $message);
+        //return back()->withInput();
+        //return redirect()->back()->withInput();
+
     }
 
     /**

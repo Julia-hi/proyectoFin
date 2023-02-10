@@ -3,9 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-//use Illuminate\Support\Facades\Auth;
 
-//$user_id = Auth::user()->id; 
 return new class extends Migration
 {
     /**
@@ -15,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('anuncios', function (Blueprint $table) {
-            $table->id();
+        $this->down();
+        Schema::create('anuncios_demanda', function (Blueprint $table) {
+            $table->foreignId('id');
+            $table->foreign('id')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('titulo', 100)->collation('utf8mb4_unicode_ci');
+            $table->mediumText('descripcion', 300)->collation('utf8mb4_unicode_ci');
             $table->unsignedBigInteger('id_usuario');
             $table->foreign('id_usuario')->references('id')->on('users');
-            $table->string('estado')->default('active');
-            $table->string('tipo',8); //oferta o demanda
             $table->timestamps();
-           
         });
     }
 
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anuncios');
+        Schema::dropIfExists('anuncios_demanda');
     }
 };
