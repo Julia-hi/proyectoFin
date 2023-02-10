@@ -1,4 +1,3 @@
-
 @auth
 @if(Auth::user()->rol=="admin")
 <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
@@ -7,7 +6,9 @@
 ?>
 @else
 @if(isset($status))
-<script>alert( 'Estoy aqui' ); </script>
+<script>
+    alert('Estoy aqui');
+</script>
 
 @endif
 <x-app-layout>
@@ -26,13 +27,44 @@
                     </h2>
                     <div class="pt-3">
                         <?php
-                        /* if ($anuncios == "anuncios no encontrados") {
-                            echo "todavia no tienes anuncios publicados";
-                        } else {
-                            echo "tienes " . count($anuncios) . " anuncios publicados";
-                        } */
-                        echo "tienes anuncios publicados";
-                        ?>
+                        $numAnuncios = 0;
+                        if ($demandas != null) {
+                            $numAnuncios = $numAnuncios + $demandas->count();
+                        } elseif ($ofertas != null) {
+                            $numAnuncios = $numAnuncios + $ofertas->count();
+                        } ?>
+                        @if( $numAnuncios> 0 )
+                        <p class="text-left">Tienes {{ $numAnuncios }} anuncio(s) publicados</p>
+                        @if ( $demandas->count()> 0 )
+                        <h3 class="text-uppercase">Demandas</h3>
+                        <div class="border rounded mt-2 p-0">
+                            <div class="row border-bottom m-0 p-1 align-items-center">
+                                <div class="col-1 text-center text-uppercase">id</div>
+                                <div class="col-2 text-center text-uppercase">titulo</div>
+                                <div class="col text-center text-uppercase">Descripción</div>
+                                <div class="col-3 text-uppercase">opciones</div>
+                            </div>
+                            @foreach ($demandas as $demanda)
+                            <div class="row w-100 m-0 p-2 align-items-center">
+                                <div class="col-1 text-left"> {{ $demanda->id }}</div>
+                                <div class="col-2 text-left"> {{ $demanda->titulo }}</div>
+                                <div class="col text-left"> {{ $demanda->descripcion }}</div>
+                                <div class="col-3 ">
+                                    <div class="btn-group d-flex align-items-center">
+                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
+                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
+                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        @elseif( $ofertas->count()> 0 )
+                        <h3>Ofertas</h3>
+                        @endif
+                        @else
+                        <p>todavia no tienes anuncios publicados"</p>
+                        @endif
                     </div>
                 </div>
             </div>

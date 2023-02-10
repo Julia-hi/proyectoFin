@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         $this->down();
-        Schema::create('anuncio_ofertas', function (Blueprint $table) {
+        Schema::create('anuncios_oferta', function (Blueprint $table) {
             $table->foreignId('id');
             $table->foreign('id')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->string('titulo', 100)->collation('utf8mb4_unicode_ci');

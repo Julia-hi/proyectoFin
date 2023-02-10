@@ -44,8 +44,8 @@
                                 </div>
                                 <div class="py-2">
                                     <!-- Descripcion -->
-                                    <label for="description" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="description" rows="10" name="description"></textarea>
+                                    <label for="descripcion" class="form-label">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" rows="10" name="descripcion"></textarea>
                                 </div>
                                 <div class="py-2">
                                     <!-- Localidad -->
@@ -162,7 +162,7 @@
 
                         </div>
                         <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo_anuncio" name="tipo_anuncio" value="oferta">
-                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user_id" name="user_id" value="{{ 'user' }}">
+                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user_id" name="user_id" value="<?php echo $user_id; ?>">
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
                             <div class="col-2">
@@ -190,15 +190,15 @@
                                 </div>
                                 <div class="py-2">
                                     <!-- Descripcion -->
-                                    <label for="description" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="description" rows="10" name="description"></textarea>
+                                    <label for="descripcion" class="form-label">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" rows="10" name="descripcion"></textarea>
                                 </div>
 
                             </div>
 
                         </div>
                         <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo_anuncio" name="tipo_anuncio" value="demanda">
-                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user-id" name="user-id" value="{{ 'user' }}">
+                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user_id" name="user_id" value="<?php echo $user_id; ?>">
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
                             <div class="col-2">

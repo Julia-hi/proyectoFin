@@ -5,9 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AnuncioOferta extends Model
+class AnunciosOferta extends Model
 {
     use HasFactory;
+
+     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'anuncios_oferta';
+
     protected $fillable = [
         'titulo',
         'descripcion',
@@ -21,4 +29,13 @@ class AnuncioOferta extends Model
         'lon',
         'id_usuario'
     ];
+    
+    /**
+     * Relacion uno/uno
+     * @return Anuncios
+     */
+    public function anuncios()
+    {
+        return $this->hasOne(Anuncios::class);
+    }
 }

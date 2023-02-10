@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Anuncios;
+use App\Models\AnunciosDemanda;
+use App\Models\AnunciosOferta;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
@@ -22,14 +24,12 @@ class UserAnunciosController extends Controller
         $anuncios = Anuncios::where('id_usuario', $user_id)->get();
         // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
         //$count = count($anuncios);
-        $count = Anuncios::where('id_usuario', $user_id)->count();
-        if ($count > 0) {
-            $anuncios = DB::table('anuncios')->where('id_usuario', $user_id);
-        } else {
-            $anuncios = "anuncios no encontrados";
-        }
+    //$count = $anuncios->count();
+       
         $user = Auth::user()->name;
-        return view('user.anuncios', ['user' => $user, 'anuncios' => $anuncios]);
+        $usersDemandas = AnunciosDemanda::where('id_usuario', $user_id)->get();
+        $usersOfertas = AnunciosOferta::where('id_usuario', $user_id)->get();
+        return view('user.anuncios', ['user' => $user, 'demandas'=>$usersDemandas, 'ofertas'=>$usersOfertas]);
     }
 
     /**
@@ -53,7 +53,7 @@ class UserAnunciosController extends Controller
     public function store(Request $request)
     {
         $message = "Ha producido un error, anuncio de demanda no creado";
-        
+        $user_id = $request->user_id;
         //insert validation of request
         /* $validarBase = $request->validate(
             [
@@ -80,18 +80,38 @@ class UserAnunciosController extends Controller
                 'estado' => 'active',
                 'tipo' => 'demanda',  
             ]); */
-            $user_id=Auth::user()->id;
-            $anunc=['id_usuario'=>$user_id, 'estado'=>'active', 'tipo'=>'demanda'];
-            Anuncios::create($anunc);
+            
+            /**
+             * Insert to database
+             * Anuncio y anuncio Demanda tienen relacion uno a uno
+             * 
+             * @param Request $request
+             * */
+            DB::transaction(function () use ($request) {
+                $anuncio = new Anuncios;
+                $anuncio->id_usuario =$request->user_id;
+                $anuncio->estado = 'active';
+                $anuncio->tipo = 'demanda';
+                $anuncio->save();
+        //insert to table anuncio_demanda
+                $anuncioDemanda = new AnunciosDemanda;
+                $anuncioDemanda->id_anuncio = $anuncio->id;
+                $anuncioDemanda->titulo = $request->input('titulo');
+                $anuncioDemanda->descripcion = $request->input('descripcion');
+                $anuncioDemanda->id_usuario = $request->user_id;
+                
+                $anuncioDemanda->save();
+            });
+            
             $message = 'Anuncio de demanda se ha publicado!';
-        }else{
+        } else {
             $message = "Ha producido un error, anuncio de demanda no creado";
         }
         $user = Auth::user()->name;
-        return Redirect::route('user.anuncios.index', ['user'=>$user]); //->with('status', $message);
-        //return back()->withInput();
-        //return redirect()->back()->withInput();
-
+        $anuncios = Anuncios::where('id_usuario', $user_id);
+        $usersDemandas = AnunciosDemanda::where('id_usuario', $user_id);
+        $usersOfertas = AnunciosOferta::where('id_usuario', $user_id);
+        return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas'=>$usersDemandas, 'ofertas'=>$usersOfertas,'status'=>$message]);
     }
 
     /**

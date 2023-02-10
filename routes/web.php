@@ -13,6 +13,7 @@ use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
 use App\Http\Controllers\UserAnuncios\UserAnunciosController;
 use App\Http\Controllers\UserFavoritosController;
 use App\Http\Controllers\UserMensajesController;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,9 +25,11 @@ use App\Http\Controllers\UserMensajesController;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+
+Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

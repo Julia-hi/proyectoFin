@@ -18,11 +18,10 @@ return new class extends Migration
         Schema::create('anuncios', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('users');
             $table->string('estado')->default('active');
             $table->string('tipo',8); //oferta o demanda
             $table->timestamps();
-           
+            $table->foreign('id_usuario')->references('id')->on('users');
         });
     }
 

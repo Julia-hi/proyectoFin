@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Models\AnunciosDemanda;
 
 class Anuncios extends Model
 {
@@ -20,8 +21,17 @@ class Anuncios extends Model
     protected $fillable = [
         'id_usuario',
         'estado',
-        'tipo'   
+        'tipo'
     ];
 
+    public function anuncioDemanda()
+	{
+	 	return $this->belongsTo(AnunciosDemanda::class, 'foreign_key');
+	}
+
+    public function anuncioOferta()
+	{
+	 	return $this->belongsTo(AnunciosOferta::class, 'foreign_key');
+	}
 
 }
