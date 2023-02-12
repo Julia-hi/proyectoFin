@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -14,10 +15,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        
-        if(Auth::check() && Auth::user()->rol =="user"){
+        $this->checkConnectionDB();
+
+        if (Auth::check() && Auth::user()->rol == "user") {
             return view('dashboard');
-        }else{
+        } else {
             return redirect()->back()->with('Ha producido un error.');
         }
     }
@@ -86,5 +88,20 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Comprobar conexion con database 
+     * 
+     * @return bool
+     */
+    public function checkConnectionDB()
+    {
+        if ($dbconnect = DB::connection()->getPDO()) {
+            //$dbname = DB::connection()->getDatabaseName();
+            return true;
+        } else {
+            return false;
+        }
     }
 }

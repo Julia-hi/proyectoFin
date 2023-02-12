@@ -22,18 +22,25 @@ class OfertasController extends Controller
     public function index()
     {
         $valores = $this->getParametrosQuery();
-        $count = DB::table('anuncio_ofertas')->count();
-        if (DB::table('anuncio_ofertas')->count() > 0) {
+        $ofertas = AnuncioOferta::get();
+        $count =  $ofertas->count();
+        if ($count > 0) {
             if ($valores['comunidad'] != "todo") {
-                $ofertas = DB::table('anuncio_ofertas')->where('comunidad', $valores['comunidad']);
-            } else {
-                $ofertas = DB::table('anuncio_ofertas')->simplePaginate(2);
+                if ($valores['provincia'] != "todo") {
+                    if ($valores['poblacion'] != "todo") {
+                        $ofertas = AnuncioOferta::where('comunidad', $valores['comunidad'])->where('provincia', $valores['provincia'])
+                            ->where('poblacion', $valores['poblacion']);
+                    }
+                    $ofertas = AnuncioOferta::where('comunidad', $valores['comunidad'])->where('provincia', $valores['provincia']);
+                }
+                $ofertas = AnuncioOferta::where('comunidad', $valores['comunidad']);
             }
+            $ofertas = AnuncioOferta::get();
         } else {
             $ofertas = "ofertas not found";
         }
-        // $ofertas=AnuncioOferta::all();
-        return view('ofertas-lista', ['count' => $count, 'ofertas' => $ofertas]); //),$ofertas); //return view('ofertas-lista', $ofertas);
+        
+        return view('ofertas-lista', ['count' => $count, 'ofertas' => $ofertas]);
     }
 
     /**
@@ -110,14 +117,14 @@ class OfertasController extends Controller
             $valores['comunidad'] = "todo";
         }
         if (isset($_POST['provincia'])) {
-            $provincia = $_POST['provincia'];
+            $valores['provincia'] = $_POST['provincia'];
         } else {
-            $provincia = "todo";
+            $valore['provincia'] = "todo";
         }
         if (isset($_POST['poblacion'])) {
-            $poblacion = $_POST['poblacion'];
+            $valores['poblacion'] = $_POST['poblacion'];
         } else {
-            $poblacion = "todo";
+            $valores['poblacion'] = "todo";
         }
         return $valores;
     }

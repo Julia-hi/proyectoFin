@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Foto;
+use App\Models\Anuncio;
 
-class AnunciosOferta extends Model
+class AnuncioOferta extends Model
 {
     use HasFactory;
 
@@ -32,10 +34,25 @@ class AnunciosOferta extends Model
     
     /**
      * Relacion uno/uno
-     * @return Anuncios
+     * @return Anuncio
      */
-    public function anuncios()
+    public function anuncio()
     {
-        return $this->hasOne(Anuncios::class);
+        return $this->hasOne(Anuncio::class);
     }
+
+    public function favorito()
+	{
+	 	return $this->belongsTo(Favorito::class, 'foreign_key');
+	}
+
+    /**
+     * Relacion uno/uno
+     * @return Foto
+     */
+    public function anunciosOferta()
+    {
+        return $this->hasMany(Foto::class);
+    }
+    
 }

@@ -5,9 +5,9 @@ namespace App\Http\Controllers\UserAnuncios;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\Anuncios;
-use App\Models\AnunciosDemanda;
-use App\Models\AnunciosOferta;
+use App\Models\Anuncio;
+use App\Models\AnuncioDemanda;
+use App\Models\AnuncioOferta;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
@@ -21,15 +21,13 @@ class UserAnunciosController extends Controller
     public function index($user)
     {
         $user_id = Auth::user()->id;
-        $anuncios = Anuncios::where('id_usuario', $user_id)->get();
-        // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
-        //$count = count($anuncios);
-    //$count = $anuncios->count();
-       
+        // $anuncios = Anuncio::where('id_usuario', $user_id)->get();
+
+
         $user = Auth::user()->name;
-        $usersDemandas = AnunciosDemanda::where('id_usuario', $user_id)->get();
-        $usersOfertas = AnunciosOferta::where('id_usuario', $user_id)->get();
-        return view('user.anuncios', ['user' => $user, 'demandas'=>$usersDemandas, 'ofertas'=>$usersOfertas]);
+        $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id)->get();
+        $usersOfertas = AnuncioOferta::where('id_usuario', $user_id)->get();
+        return view('user.anuncios', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
     }
 
     /**
@@ -39,9 +37,17 @@ class UserAnunciosController extends Controller
      */
     public function create()
     {
-        $tipoAnunc = 'oferta';
+
+        //anuncios se crean por separado 
+
+       /*  if (!isset($tipoAnunc)) {
+            $tipoAnunc = 'oferta';
+        }else{
+            $tipoAnunc = 'demanda';
+        }
+
         $user_id = Auth::user()->id;
-        return view('user.anuncCreate', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]);
+        return view('user.anuncCreate', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]); */
     }
 
     /**
@@ -55,14 +61,14 @@ class UserAnunciosController extends Controller
         $message = "Ha producido un error, anuncio de demanda no creado";
         $user_id = $request->user_id;
         //insert validation of request
-        /* $validarBase = $request->validate(
+        $validarBase = $request->validate(
             [
-                'titulo' => 'required|max:100',
-                'descripcion' => 'required|max:300',
-                'id_usuario' => 'required'
+                'titulo' => 'required|string|min:10|max:100',
+                'descripcion' => 'required|min:10|max:300'
             ]
 
         );
+        /*
         if ($validarBase && $request->tipo_anuncio == 'oferta') {
             //validate oferta
             $validarOfertaForm='...';
@@ -72,7 +78,7 @@ class UserAnunciosController extends Controller
             $message = "Ha producido un error, anuncio de oferta no creado";
         } */
 
-        if ($request->tipo_anuncio == 'demanda') {
+        if ($validarBase && $request->tipo_anuncio == 'demanda') {
             //demanda ya valida
             //insert to database 
             /* DB::table('anuncios')->insert([
@@ -80,7 +86,7 @@ class UserAnunciosController extends Controller
                 'estado' => 'active',
                 'tipo' => 'demanda',  
             ]); */
-            
+
             /**
              * Insert to database
              * Anuncio y anuncio Demanda tienen relacion uno a uno
@@ -88,30 +94,31 @@ class UserAnunciosController extends Controller
              * @param Request $request
              * */
             DB::transaction(function () use ($request) {
-                $anuncio = new Anuncios;
-                $anuncio->id_usuario =$request->user_id;
+                $anuncio = new Anuncio;
+                $anuncio->id_usuario = $request->user_id;
                 $anuncio->estado = 'active';
                 $anuncio->tipo = 'demanda';
                 $anuncio->save();
-        //insert to table anuncio_demanda
-                $anuncioDemanda = new AnunciosDemanda;
+                //insert to table anuncio_demanda
+                $anuncioDemanda = new AnuncioDemanda;
                 $anuncioDemanda->id_anuncio = $anuncio->id;
                 $anuncioDemanda->titulo = $request->input('titulo');
                 $anuncioDemanda->descripcion = $request->input('descripcion');
                 $anuncioDemanda->id_usuario = $request->user_id;
-                
+
                 $anuncioDemanda->save();
             });
-            
+
             $message = 'Anuncio de demanda se ha publicado!';
+            $user = Auth::user()->name;
+            $anuncios = Anuncios::where('id_usuario', $user_id);
+            $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id);
+            $usersOfertas = AnuncioOferta::where('id_usuario', $user_id);
+            return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => $message]);
         } else {
             $message = "Ha producido un error, anuncio de demanda no creado";
+            return view('user.anuncCreate', ['user' => $user_id, 'tipoAnunc' => 'demanda']);
         }
-        $user = Auth::user()->name;
-        $anuncios = Anuncios::where('id_usuario', $user_id);
-        $usersDemandas = AnunciosDemanda::where('id_usuario', $user_id);
-        $usersOfertas = AnunciosOferta::where('id_usuario', $user_id);
-        return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas'=>$usersDemandas, 'ofertas'=>$usersOfertas,'status'=>$message]);
     }
 
     /**

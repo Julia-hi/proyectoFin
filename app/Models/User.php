@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Mensaje;
+use App\Models\Anuncio;
 
 class User extends Authenticatable
 {
@@ -47,23 +49,29 @@ class User extends Authenticatable
     protected $guard = 'admin';
 
 
-    function isAdmin(){
+    function isAdmin()
+    {
 
-        if(Auth::user()->rol=="admin") {
+        if (Auth::user()->rol == "admin") {
             return true;
         } else {
             return false;
         }
+    }
 
+    /**
+     * Get anuncio del usuario
+     */
+    public function anuncio()
+    {
+        return $this->belongsTo(Anuncio::class);
+    }
 
-       /*  if (Auth::attempt([
-            'email' => $email,
-            'password' => $password,
-            fn ($query) => $query->has('activeSubscription'),
-        ])) {
-            // Authentication was successful...
-            Auth::guard('admin')->login($user);
-        } */
-
+    /**
+     * Get mensaje del usuario
+     */
+    public function mensaje()
+    {
+        return $this->hasMany(Mensaje::class);
     }
 }

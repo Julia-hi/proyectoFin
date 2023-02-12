@@ -5,6 +5,11 @@ namespace App\Http\Controllers\UserAnuncios;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\AnuncioDemanda;
+use App\Models\AnuncioOferta;
+use App\Models\Anuncio;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class UserAnuncioDemandaController extends Controller
 {
@@ -15,8 +20,7 @@ class UserAnuncioDemandaController extends Controller
      */
     public function index()
     {
-        /* $user_id = 12;
-        return view('user/anuncios'); */
+        // no tiene
     }
 
     /**
@@ -26,15 +30,9 @@ class UserAnuncioDemandaController extends Controller
      */
     public function create()
     {
-        //$user_id=15;
-        //echo "User id "+$user_id;
-        if (Auth::user()) {
-            $user = Auth::user()->id;
-        } else {
-            $user = 10;
-        }
-
-        return view('user.anuncDemandaCreate', ['user_id' => $user]);
+        $user_id = Auth::user()->id;
+        $tipoAnunc = 'demanda';
+        return view('user.anuncCreateDemanda', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]);
     }
 
     /**
@@ -45,7 +43,36 @@ class UserAnuncioDemandaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user_id = $request->user_id;
+        //insert validation of request
+        $validar = $request->validate(
+            [
+                'titulo' => 'required|min:10|max:100',
+                'descripcion' => 'required|min:10|max:300'
+            ]
+        );
+        if ($validar && $request->tipo_anuncio == 'demanda') {
+            DB::transaction(function () use ($request) {
+                $anuncio = new Anuncio;
+                $anuncio->id_usuario = $request->user_id;
+                $anuncio->estado = 'active';
+                $anuncio->tipo = 'demanda';
+                $anuncio->save();
+                //insert to table anuncio_demanda
+                $anuncioDemanda = new AnuncioDemanda;
+                $anuncioDemanda->id_anuncio = $anuncio->id;
+                $anuncioDemanda->titulo = $request->input('titulo');
+                $anuncioDemanda->descripcion = $request->input('descripcion');
+                $anuncioDemanda->id_usuario = $request->user_id;
+                $anuncioDemanda->save();
+            });
+            $user = Auth::user()->name;
+            $user_id = Auth::user()->id;
+            // $anuncios = Anuncios::where('id_usuario', $user_id);
+            $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id);
+            $usersOfertas = AnuncioOferta::where('id_usuario', $user_id);
+            return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);   
+        }   
     }
 
     /**

@@ -3,14 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnuncioController; 
-use App\Http\Controllers\AdminController; 
-use App\Http\Controllers\AdminAuthController;
-use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\OfertasController;
 use App\Http\Controllers\DemandasController;
-use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
+
+use App\Http\Controllers\UserAnuncios\UserAnunciosController; //UserAnuncioOfertaController
 use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
-use App\Http\Controllers\UserAnuncios\UserAnunciosController;
+use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
 use App\Http\Controllers\UserFavoritosController;
 use App\Http\Controllers\UserMensajesController;
 use App\Http\Controllers\WelcomeController;
@@ -29,7 +28,7 @@ use App\Http\Controllers\WelcomeController;
     return view('welcome');
 }); */
 
-Route::get('/', [WelcomeController::class,'index'])->name('welcome');
+Route::get('/', [WelcomeController::class,'index'])->name('welcome') ;
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -42,31 +41,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-/* Route::controller(AnuncioController::class)->group(function () {
-    Route::get('/ofertas/lista/{area}', 'show', function($area){
-        return view('of-lista', ['area'=>$area]);
-    });
-    Route::post('/ofertas', 'store');
-}); */
-
-
 Route::resource('/ofertas-lista', OfertasController::class);
 Route::resource('/demandas', DemandasController::class);
-//Route::resource('/{user-id}/demandas', UserAnuncioDemandaController::class); 
-//Route::resource('/{user-id}/ofertas', UserAnuncioOfertaController::class);
 Route::resource('user.anuncios', UserAnunciosController::class)->middleware('auth');
-Route::resource('user.favoritos', UserFavoritosController::class);
-Route::resource('user.mensajes', UserMensajesController::class);
+Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class)->middleware('auth');
+Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class)->middleware('auth');
+Route::resource('user.favoritos', UserFavoritosController::class)->middleware('auth');
+Route::resource('user.mensajes', UserMensajesController::class)->middleware('auth');
 
 
 Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
-//Route::post('/anuncio/crear', [AnuncioController::class, 'store']);
-
-//Route::post('/anuncio-demanda/create', [AnuncioDemandaController::class, 'store'])->middleware('auth');
-// Route::post('/anuncio-oferta/crear', [AnuncioDemandaController::class, 'store'])->middleware('auth')->name('anuncio-demanda.store');
-//Route::get('/anuncio/edit/{id}', [AnuncioController::class, 'edit'])->middleware('auth')->name('anuncio.edit');
 
 /* Route::get('/mapa/{area}', function($area){
     return view('mapa', ['area'=>$area]);

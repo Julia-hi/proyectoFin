@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AnunciosDemanda;
-use App\Models\AnunciosOferta;
+use App\Models\AnuncioDemanda;
+use App\Models\AnuncioOferta;
+use Illuminate\Support\Facades\DB;
+use Exception;
+use Illuminate\Database\Connectors\MySqlConnector;
+use Illuminate\Database\Connectors\Connector;
+use PDO;
 
 class WelcomeController extends Controller
 {
@@ -15,13 +20,18 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $demandas = AnunciosDemanda::get();
-        $usersOfertas=AnunciosOferta::get();
-       // $demandas = DB::table('users')->get();
-      //  $usersOfertas = AnunciosOferta::all()->take(10)->get();
-        return view ('welcome', ['demandas'=>$demandas, 'ofertas'=>$usersOfertas]);
+        $demandas = AnuncioDemanda::limit(10)->get();
+        $ofertas = AnuncioOferta::get(); //::limit(10)->get();
+        /* if ($this->checkConnectionDB()) {
+            $demandas = AnuncioDemanda::limit(10)->get();
+            $ofertas = AnuncioOferta::get(); //::limit(10)->get();
+        } else {
+            $demandas = null;
+            $ofertas = null;
+        } */
+        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas]);
     }
- 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -86,5 +96,28 @@ class WelcomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * Comprobar conexion con database 
+     * 
+     * @return bool
+     */
+    public function checkConnectionDB()
+    {
+       /*  try {
+            $dbconnect = DB::connection()->getPDO();
+            //$dbname = DB::connection()->getDatabaseName();
+            return true;
+        } catch (Exception $e) {
+            throw new Exception('Connección to database fallida');
+            return false;
+        } */
+
+        /* if((PDO::errorCode())!==null){
+            return false;
+        }else{
+            return true;
+        } */
     }
 }

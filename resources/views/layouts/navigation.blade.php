@@ -16,7 +16,7 @@
                     <x-nav-link :href="route('user.mensajes.index', $user_id)" :active="request()->routeIs('user.mensajes.index',$user_id)">
                         {{ __('Mensajes') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('user.anuncios.create', $user_id)" :active="request()->routeIs('user.anuncios.create', $user_id)">
+                    <x-nav-link :href="route('user.anuncios-oferta.create', $user_id)" :active="request()->routeIs('user.anuncios.create', $user_id)">
                         {{ __('Publicar anuncio') }}
                     </x-nav-link>
                     <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
@@ -50,7 +50,7 @@
                         <x-dropdown-link :href="route('user.mensajes.index', $user_id)">
                             {{ __('Mis mensajes') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('user.anuncios.create', $user_id)">
+                        <x-dropdown-link :href="route('user.anuncios-oferta.create', $user_id)">
                             {{ __('Publicar anuncio') }}
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('profile.edit')">

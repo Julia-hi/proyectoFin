@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use App\Models\AnunciosDemanda;
+use App\Models\AnuncioDemanda;
+use App\Models\AnuncioOferta;
+use App\Models\Mensaje;
 
-class Anuncios extends Model
+class Anuncio extends Model
 {
     use HasFactory;
 
@@ -26,12 +28,16 @@ class Anuncios extends Model
 
     public function anuncioDemanda()
 	{
-	 	return $this->belongsTo(AnunciosDemanda::class, 'foreign_key');
+	 	return $this->belongsTo(AnuncioDemanda::class, 'foreign_key');
 	}
 
     public function anuncioOferta()
 	{
-	 	return $this->belongsTo(AnunciosOferta::class, 'foreign_key');
+	 	return $this->belongsTo(AnuncioOferta::class, 'foreign_key');
 	}
-
+    
+    public function mensajes()
+	{
+	 	return $this->belongsTo(Mensaje::class, 'foreign_key');
+	}
 }

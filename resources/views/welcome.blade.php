@@ -431,7 +431,7 @@ $scriptUrl = Storage::url('welcome.js');
             @auth
             <?php $user_name = Auth::user()->name;
             $user_id = Auth::user()->id; ?>
-            <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios/create" tabindex="0"><span>Publicar anuncio</span></a>
+            <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
             <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a>
             @else
             <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
@@ -472,7 +472,7 @@ $scriptUrl = Storage::url('welcome.js');
                         </div>
                         <div class="row">
                             <!-- anuncio oferta -->
-                            @if( $ofertas->count()>0)
+                            @if( $ofertas!=null && $ofertas->count()>0)
                             <div class="col-md-6">
                                 @foreach ($ofertas as $oferta)
                                 <div class="card mb-4 " style="height: 200px;">
@@ -538,7 +538,7 @@ $scriptUrl = Storage::url('welcome.js');
                         
                         <div class="row">
                             <!-- bloque de uno Anuncio demanda -->
-                            @if( $demandas->count()>0)
+                            @if( $demandas!=null && $demandas->count()>0)
                             <div class="col-md-6">
                                 @foreach ($demandas as $demanda)
                                 <div class="card mb-4 " style="height: 200px;">

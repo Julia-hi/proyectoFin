@@ -1,9 +1,18 @@
 <?php
 
 namespace App\Http\Controllers\UserAnuncios;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\AnuncioDemanda;
+use App\Models\AnuncioOferta;
+use App\Models\Anuncio;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class UserAnuncioOfertaController extends Controller
 {
@@ -14,7 +23,7 @@ class UserAnuncioOfertaController extends Controller
      */
     public function index()
     {
-        //
+        // no tiene index
     }
 
     /**
@@ -24,8 +33,9 @@ class UserAnuncioOfertaController extends Controller
      */
     public function create($id)
     {
-        $user = Auth::user();
-        return view('user.anuncOfertaCreate', ['user_id'=>$user_id]);
+        $user_id = Auth::user()->id;
+        $tipoAnunc = 'oferta';
+        return view('user.anuncCreateOferta', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]);
     }
 
     /**
@@ -36,7 +46,52 @@ class UserAnuncioOfertaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user_id = $request->user_id;
+        //insert validation of request
+        $validar = $request->validate(
+            [
+                'titulo' => 'required|min:10|max:100',
+                'descripcion' => 'required|min:10|max:300',
+                'rasa' => 'required',
+                'genero' => 'required',
+                'fecha_nac' => 'required|date',
+                'comunidad' => 'required|not_regex:/^todo$/',
+                'provincia' => 'required|not_regex:/^todo$/',
+                'poblacion' => 'required|not_regex:/^todo$/',
+                'lat' => 'required',
+                'lon' => 'required',
+                'foto1' => 'required|image',
+                'foto2' => 'image',
+                'foto3' => 'image',
+                'foto4' => 'image',
+                'foto5' => 'image'
+            ]
+        );
+        $comunidades = ['andalucia', 'aragon','asturias','canarias','cantabria','castilla-la-mancha','castila-leon'];
+        
+       
+        if ($validar && $request->tipo_anuncio == 'oferta') {
+            DB::transaction(function () use ($request) {
+                $anuncio = new Anuncio;
+                $anuncio->id_usuario = $request->user_id;
+                $anuncio->estado = 'active';
+                $anuncio->tipo = 'demanda';
+                $anuncio->save();
+                //insert to table anuncio_demanda
+                $anuncioOferta = new AnuncioOferta;
+                $anuncioOferta->id_anuncio = $anuncio->id;
+                $anuncioOferta->titulo = $request->input('titulo');
+                $anuncioOferta->descripcion = $request->input('descripcion');
+                $anuncioOferta->id_usuario = $request->user_id;
+                $anuncioOferta->save();
+            });
+            $user = Auth::user()->name;
+            $user_id = Auth::user()->id;
+            // $anuncios = Anuncios::where('id_usuario', $user_id);
+            $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id);
+            $usersOfertas = AnuncioOferta::where('id_usuario', $user_id);
+            return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
+        }
     }
 
     /**

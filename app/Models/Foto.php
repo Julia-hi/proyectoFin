@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Anuncios;
+use App\Models\AnunciosOferta;
 
-class AnunciosDemanda extends Model
+class Foto extends Model
 {
     use HasFactory;
 
@@ -15,15 +15,16 @@ class AnunciosDemanda extends Model
      *
      * @var string
      */
-    protected $table = 'anuncios_demanda';
+    protected $table = 'fotos';
 
     protected $fillable = [
-        'titulo',
-        'descripcion',
-        'id_usuario'
+        'nombre_originale',
+        'enlace',
+        'id_anuncio'
     ];
 
-    public function anuncios() {
-		return $this->hasOne(Anuncios::class);
+    public function fotos()
+	{
+	 	return $this->belongsTo(AnunciosOferta::class, 'foreign_key');
 	}
 }
