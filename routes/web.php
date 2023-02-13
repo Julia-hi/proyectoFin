@@ -4,8 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnuncioController; 
 
-use App\Http\Controllers\OfertasController;
-use App\Http\Controllers\DemandasController;
+use App\Http\Controllers\Anuncios\OfertasController;
+use App\Http\Controllers\Anuncios\DemandasController;
 
 use App\Http\Controllers\UserAnuncios\UserAnunciosController; //UserAnuncioOfertaController
 use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
@@ -41,8 +41,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('/ofertas-lista', OfertasController::class);
-Route::resource('/demandas', DemandasController::class);
+Route::resource('ofertas', OfertasController::class)->only('index','show');
+Route::resource('demandas', DemandasController::class)->only('show');
 Route::resource('user.anuncios', UserAnunciosController::class)->middleware('auth');
 Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class)->middleware('auth');
 Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class)->middleware('auth');
@@ -50,7 +50,7 @@ Route::resource('user.favoritos', UserFavoritosController::class)->middleware('a
 Route::resource('user.mensajes', UserMensajesController::class)->middleware('auth');
 
 
-Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
+//Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
 
 /* Route::get('/mapa/{area}', function($area){
     return view('mapa', ['area'=>$area]);

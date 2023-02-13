@@ -20,8 +20,18 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $demandas = AnuncioDemanda::limit(10)->get();
-        $ofertas = AnuncioOferta::get(); //::limit(10)->get();
+        try {
+            $demandas = AnuncioDemanda::limit(10)->get();
+            $ofertas = AnuncioOferta::get(); //::limit(10)->get();
+            $status = 'ok';
+        } catch (Exception $er) {
+           // throw new Exception('conneción fallida');
+            $demandas = null;
+            $ofertas = null;
+            $status = 'error';
+            return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'status' => $status]);
+        }
+
         /* if ($this->checkConnectionDB()) {
             $demandas = AnuncioDemanda::limit(10)->get();
             $ofertas = AnuncioOferta::get(); //::limit(10)->get();
@@ -29,7 +39,7 @@ class WelcomeController extends Controller
             $demandas = null;
             $ofertas = null;
         } */
-        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas]);
+        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'status' => $status]);
     }
 
     /**
@@ -105,7 +115,7 @@ class WelcomeController extends Controller
      */
     public function checkConnectionDB()
     {
-       /*  try {
+        /*  try {
             $dbconnect = DB::connection()->getPDO();
             //$dbname = DB::connection()->getDatabaseName();
             return true;

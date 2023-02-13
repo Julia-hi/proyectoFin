@@ -50,7 +50,7 @@ class AnuncioOferta extends Model
      * Relacion uno/uno
      * @return Foto
      */
-    public function anunciosOferta()
+    public function fotos()
     {
         return $this->hasMany(Foto::class);
     }

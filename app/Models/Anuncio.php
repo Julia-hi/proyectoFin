@@ -26,6 +26,11 @@ class Anuncio extends Model
         'tipo'
     ];
 
+    function usuario()
+	{
+	 	return $this->hasOne(User::class, 'id_usuario');
+	}
+
     public function anuncioDemanda()
 	{
 	 	return $this->belongsTo(AnuncioDemanda::class, 'foreign_key');

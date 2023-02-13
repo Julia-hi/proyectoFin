@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Anuncios;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\AnuncioDemanda;
 
 class DemandasController extends Controller
 {
@@ -14,13 +16,13 @@ class DemandasController extends Controller
      */
     public function index()
     {
-        $count = DB::table('anuncdemanda')->count();
+        /*   $count = DB::table('anuncdemanda')->count();
         if (DB::table('anuncdemanda')->count() > 0) {
                 $demandas = DB::table('anuncdemanda')->get();
         } else {
             $demandas = "demandas not found";
         }
-        return  view('demandas', ['count' => $count, 'ofertas' => $demandas]);
+        return  view('demandas', ['count' => $count, 'ofertas' => $demandas]); */
     }
 
     /**
@@ -52,7 +54,11 @@ class DemandasController extends Controller
      */
     public function show($id)
     {
-        //
+        if ($demanda = AnuncioDemanda::find($id)) {
+        } else {
+            $demanda = null;
+        }
+        return view('anuncio.anunc-demanda', ['demanda' => $demanda]);
     }
 
     /**

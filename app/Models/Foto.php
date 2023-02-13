@@ -23,7 +23,7 @@ class Foto extends Model
         'id_anuncio'
     ];
 
-    public function fotos()
+    public function anuncio()
 	{
 	 	return $this->belongsTo(AnunciosOferta::class, 'foreign_key');
 	}

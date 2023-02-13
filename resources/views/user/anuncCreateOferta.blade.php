@@ -23,8 +23,8 @@
                         <div class="align-items-center d-flex justify-content-center p-3">
                             <div class="btn-group border d-flex justify-content-center">
 
-                                <button type="button" class="btn btn-sm btn-outline-secondary text-uppercase active" id="ofertas">buscar nuevo dueño</button>
-                                <a href="{{route('user.anuncios-demanda.create', $user_id)}}" class="btn btn-sm btn-outline-secondary text-uppercase" id="demandas">buscar LORO</a>
+                                <a href="#" title="publicar oferta" class="btn btn-sm btn-outline-secondary text-uppercase active" id="ofertas">buscar nuevo dueño</a>
+                                <a href="{{route('user.anuncios-demanda.create', $user_id)}}" title="publicar demanda" class="btn btn-sm btn-outline-secondary text-uppercase" id="demandas">buscar LORO</a>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                 <div id="ofertas-block" class="mt-8 p-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg ">
                     <h3 class="text-center p-2">Formulario para publicar anuncio si queres VENDER / REGALAR / INTERCAMBIAR tu loro</h3>
                     <p>Importante: uno anuncio para uno lorito. Si tienes más loros - publica varios anuncios.</p>
-                    <form method="post" enctype="multipart/form-data" action="{{route('user.anuncios-oferta.store',$user_id)}}" id="create-oferta">
+                    <form method="post" enctype="multipart/form-data" action="{{route('user.anuncios-oferta.store',$user_id)}}" id="create_oferta">
                         @csrf
                         <div class="row">
                             <div class="col-8">
@@ -107,8 +107,8 @@
                                                 <x-input-error :messages="$errors->get('poblacion')" class="mt-2" />
                                             </div>
                                             <!-- Latitud y longitud de pueblo elegido -->
-                                            <input hidden type="text" id="lat-pueblo" name="lat-pueblo" value="">
-                                            <input hidden type="text" id="lon-pueblo" name="lat-pueblo" value="">
+                                            <input hidden type="text" id="lat_pueblo" name="lat_pueblo" value="">
+                                            <input hidden type="text" id="lon_pueblo" name="lon_pueblo" value="">
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                 <!-- elegir raza -->
                                 <div class="py-2">
                                     <select name="raza" id="raza" class="border rounded h-100 w-100 p-2">
-                                        <option value="todos">Elegir raza</option>
+                                        <option value="todo" selected>Seleccione Raza ...</option>
                                         <option value="agapornis">Agapornis</option>
                                         <option value="ara">Ara</option>
                                         <option value="amazona">Amazona</option>
@@ -132,7 +132,8 @@
                                 <!-- Elegir genero -->
                                 <div class="py-2">
                                     <select name="genero" id="genero" class="border rounded h-100 w-100 p-2">
-                                        <option value="none" checked>Genero indefinido</option>
+                                        <option value="todo" selected>Seleccione Genero ...</option>
+                                        <option value="none">Genero indefinido</option>
                                         <option value="macho">macho</option>
                                         <option value="embra">embra</option>
                                     </select>

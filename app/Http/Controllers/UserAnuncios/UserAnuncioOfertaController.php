@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\AnuncioDemanda;
 use App\Models\AnuncioOferta;
 use App\Models\Anuncio;
+use App\Models\Foto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
 
 class UserAnuncioOfertaController extends Controller
 {
@@ -46,20 +46,21 @@ class UserAnuncioOfertaController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id = $request->user_id;
-        //insert validation of request
-        $validar = $request->validate(
+        $user = Auth::user()->name; //nombre del usuario
+        $user_id = Auth::user()->id; //id del usuario
+        //validar entrada del request
+        $entrada = $request->validate(
             [
                 'titulo' => 'required|min:10|max:100',
                 'descripcion' => 'required|min:10|max:300',
-                'rasa' => 'required',
-                'genero' => 'required',
+                'raza' => 'required|not_regex:/^todo$/',
+                'genero' => 'required|not_regex:/^todo$/',
                 'fecha_nac' => 'required|date',
                 'comunidad' => 'required|not_regex:/^todo$/',
                 'provincia' => 'required|not_regex:/^todo$/',
                 'poblacion' => 'required|not_regex:/^todo$/',
-                'lat' => 'required',
-                'lon' => 'required',
+                'lat_pueblo' => 'required',
+                'lon_pueblo' => 'required',
                 'foto1' => 'required|image',
                 'foto2' => 'image',
                 'foto3' => 'image',
@@ -67,31 +68,40 @@ class UserAnuncioOfertaController extends Controller
                 'foto5' => 'image'
             ]
         );
-        $comunidades = ['andalucia', 'aragon','asturias','canarias','cantabria','castilla-la-mancha','castila-leon'];
-        
-       
-        if ($validar && $request->tipo_anuncio == 'oferta') {
-            DB::transaction(function () use ($request) {
-                $anuncio = new Anuncio;
-                $anuncio->id_usuario = $request->user_id;
-                $anuncio->estado = 'active';
-                $anuncio->tipo = 'demanda';
-                $anuncio->save();
-                //insert to table anuncio_demanda
-                $anuncioOferta = new AnuncioOferta;
-                $anuncioOferta->id_anuncio = $anuncio->id;
-                $anuncioOferta->titulo = $request->input('titulo');
-                $anuncioOferta->descripcion = $request->input('descripcion');
-                $anuncioOferta->id_usuario = $request->user_id;
-                $anuncioOferta->save();
-            });
-            $user = Auth::user()->name;
-            $user_id = Auth::user()->id;
-            // $anuncios = Anuncios::where('id_usuario', $user_id);
-            $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id);
-            $usersOfertas = AnuncioOferta::where('id_usuario', $user_id);
-            return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
+        $entrada['id_usuario'] = Auth::user()->id;
+        $entrada['estado'] = 'active';
+        $entrada['tipo'] = 'oferta';
+        Anuncio::create($entrada); // insertar anuncio en la tabla 'anuncios'
+        // ultimo anuncio del user (anuncio actual)
+        $ult_anuncio = DB::table('anuncios')->where('id_usuario', $user_id)->latest()->first();
+
+        //guardar fotos del formulario para ordenar si por acaso no existen algunos fotos por el medio
+        $fotos_user = array();
+        for ($i = 1; $i <= 5; $i++) {
+            $string = 'foto' . $i;
+            if ($request->file($string)) {
+                $fotos_user[] = $request->file($string);
+            }
         }
+
+        foreach ($fotos_user as $key => $foto) {
+            //guardo ficheros validados en servidor 
+            $fichero = $this->cargarFichero($foto, $user_id, $ult_anuncio->id, 'foto' . $key);
+            //insert to database - tabla "fotos"
+            Foto::create($fichero);
+        }
+        // insert to database - tabla "anuncios_oferta"
+       //  AnuncioOferta::create($fichero);
+
+
+
+// NO TERMINADO
+
+
+
+        $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id);
+        $usersOfertas = AnuncioOferta::where('id_usuario', $user_id);
+        return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
     }
 
     /**
@@ -137,5 +147,39 @@ class UserAnuncioOfertaController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * cargar fichero con nombre cambiado
+     * 
+     * Cambiar nombre del archivo en formato <id_anuncio>-<id_user>-<foto>.<extencion>
+     * y guardar fotos validos 
+     * en servidor carpeta /storage/app/usersImages
+     * 
+     * @param File $miFichero
+     * @param int $user_id
+     * @param int $id_anuncio
+     * @param string $nombre = 'foto1', 'foto2' ...
+     * @return array
+     */
+    public function cargarFichero($miFichero, $user_id, $id_anuncio, $nombre)
+    {
+        // Obtener nombre originale del fichero
+        $original_file_name = $miFichero->getClientOriginalName();
+
+        // Obtener extension del fichero
+        $file_extension = $miFichero->getClientOriginalExtension();
+
+        // Crear nombre nuevo para fichero
+        $new_file_name = $id_anuncio . '-' . $user_id . '-' . $nombre . '.' . $file_extension;
+
+        // guardar archivo en servidor carpeta /storage/app/usersImages
+        $miFichero->storeAs('/usersImages', $new_file_name);
+
+        // Obtener URL del fichero
+        $file_url = Storage::disk('public')->url($new_file_name);
+
+        $entrada = ['nombre_originale' => $original_file_name, 'enlace' => $file_url, 'id_anuncio' => $id_anuncio];
+        return $entrada;
     }
 }

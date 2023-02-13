@@ -20,3 +20,10 @@
     left: .1em;
     box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
 }
+
+.hojas{
+    background-color:#DCF2FA; 
+    background-image: url('../images/hojas-fondo1.svg'); 
+    background-size: cover;
+    background-position: right top; background-attachment: fixed;
+}

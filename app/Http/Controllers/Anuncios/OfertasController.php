@@ -6,8 +6,9 @@
  * anuncios de oferta
  */
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Anuncios;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AnuncioOferta;
 use Illuminate\Support\Facades\DB;
@@ -39,7 +40,7 @@ class OfertasController extends Controller
         } else {
             $ofertas = "ofertas not found";
         }
-        
+
         return view('ofertas-lista', ['count' => $count, 'ofertas' => $ofertas]);
     }
 
@@ -72,7 +73,13 @@ class OfertasController extends Controller
      */
     public function show($id)
     {
-        //
+        if ($oferta = AnuncioOferta::find($id)) {
+            $fotos = $oferta->fotos();
+        } else {
+            $oferta = null;
+            $fotos = null;
+        }
+        return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'fotos' => $fotos, 'status'=>'ok']);
     }
 
     /**
