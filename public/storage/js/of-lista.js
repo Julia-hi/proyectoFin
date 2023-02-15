@@ -38,6 +38,7 @@ let mostrarProvincias = () => {
 }
 
 let mostrarPoblaciones = (datos) => {
+    let lat, lon;
     $("#poblacion").innerHTML = '';
     if ($("#provincia").value == "todo" || $("#comunidad").value == "todo") {
         $("#poblacion").innerHTML = '';
@@ -54,18 +55,17 @@ let mostrarPoblaciones = (datos) => {
                         value: innerItem.Poblacion,
                         text: innerItem.Poblacion
                     }));
-                    $('#poblacion').append('<span hidden id="lat-' + innerItem.Poblacion + '">' + innerItem.Latitud + "</span>")
-                    $('#poblacion').append('<span hidden id="lon-' + innerItem.Poblacion + '">' + innerItem.Longitud + "</span>")
+                    lat=innerItem.Latitud;
+                    lon = innerItem.Longitud;
+                  //  $('#poblacion_block').append('<span  id="lat_' + innerItem.Poblacion + '">' + innerItem.Latitud + "</span>")
+                  //  $('#poblacion_block').append('<span  id="lon_' + innerItem.Poblacion + '">' + innerItem.Longitud + "</span>")
                 });
             }
         });
         thirdSelect.addEventListener("change", function () {
-            let selectedPoblacion = $("#poblacion option:selected").text();
-            // let lat = document.getElementById("lat-"+selectedPoblacion).innerText;
-            //  let lon = document.getElementById("lon-"+selectedPoblacion).innerText;
-            //console.log("latitude: "+lat);
-            $("#lat-pueblo").value = document.getElementById("lat-" + selectedPoblacion).innerText;
-            $("#lon-pueblo").value = document.getElementById("lon-" + selectedPoblacion).innerText;
+            console.log("latitude: "+lat);
+            $("#lat_pueblo").val(lat);
+            $("#lon_pueblo").val(lon);
         });
     }
 }

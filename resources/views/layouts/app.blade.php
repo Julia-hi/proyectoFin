@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 use Illuminate\Support\Facades\Storage; ?>
 
 <!DOCTYPE html>
@@ -14,21 +15,22 @@ use Illuminate\Support\Facades\Storage; ?>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    
+
     <!-- Scripts  ,'resources/js/scripts/of-lista.js' -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])   
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="font-sans antialiased">
+<head>
+    <x-header />
+</head>
     <div class="min-h-screen bg-gray-100">
         <!-- Page Heading - resources/views/components/header.blade.php -->
-        <header>
-            <x-header />
-        </header>
+        
 
         @auth
-                @include('layouts.navigation')
+        @include('layouts.navigation')
         @endauth
 
         <!-- Page Content -->

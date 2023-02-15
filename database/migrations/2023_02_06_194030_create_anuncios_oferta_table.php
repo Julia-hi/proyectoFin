@@ -21,12 +21,12 @@ return new class extends Migration
             $table->mediumText('descripcion', 300)->collation('utf8mb4_unicode_ci');
             $table->unsignedBigInteger('id_usuario');
             $table->foreign('id_usuario')->references('id')->on('users');
-            $table->string('rasa', 10)->collation('utf8mb4_unicode_ci');
+            $table->string('raza', 10)->collation('utf8mb4_unicode_ci');
             $table->string('genero', 10)->collation('utf8mb4_unicode_ci');
             $table->date('fecha_nac');
-            $table->string('com_autonoma', 100)->collation('utf8mb4_unicode_ci');
+            $table->string('comunidad', 100)->collation('utf8mb4_unicode_ci');
             $table->string('provincia', 100)->collation('utf8mb4_unicode_ci');
-            $table->string('localidad', 30)->collation('utf8mb4_unicode_ci');
+            $table->string('poblacion', 30)->collation('utf8mb4_unicode_ci');
             $table->string('lat', 10);
             $table->string('lon', 10);
             $table->timestamps();

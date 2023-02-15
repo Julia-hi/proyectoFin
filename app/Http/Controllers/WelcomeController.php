@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\AnuncioDemanda;
 use App\Models\AnuncioOferta;
+use App\Models\Foto;
 use Illuminate\Support\Facades\DB;
 use Exception;
 use Illuminate\Database\Connectors\MySqlConnector;
@@ -22,14 +23,16 @@ class WelcomeController extends Controller
     {
         try {
             $demandas = AnuncioDemanda::limit(10)->get();
-            $ofertas = AnuncioOferta::get(); //::limit(10)->get();
+            $ofertas = AnuncioOferta::limit(10)->get();
+            
             $status = 'ok';
         } catch (Exception $er) {
-           // throw new Exception('conneción fallida');
+            // throw new Exception('conneción fallida');
             $demandas = null;
             $ofertas = null;
+            $fotos = null;
             $status = 'error';
-            return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'status' => $status]);
+            return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas,'status' => $status]);
         }
 
         /* if ($this->checkConnectionDB()) {

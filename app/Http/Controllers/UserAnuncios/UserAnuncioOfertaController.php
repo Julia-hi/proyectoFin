@@ -35,7 +35,7 @@ class UserAnuncioOfertaController extends Controller
     {
         $user_id = Auth::user()->id;
         $tipoAnunc = 'oferta';
-        return view('user.anuncCreateOferta', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]);
+        return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);
     }
 
     /**
@@ -59,8 +59,8 @@ class UserAnuncioOfertaController extends Controller
                 'comunidad' => 'required|not_regex:/^todo$/',
                 'provincia' => 'required|not_regex:/^todo$/',
                 'poblacion' => 'required|not_regex:/^todo$/',
-                'lat_pueblo' => 'required',
-                'lon_pueblo' => 'required',
+                'lat' => 'required',
+                'lon' => 'required',
                 'foto1' => 'required|image',
                 'foto2' => 'image',
                 'foto3' => 'image',
@@ -68,12 +68,21 @@ class UserAnuncioOfertaController extends Controller
                 'foto5' => 'image'
             ]
         );
-        $entrada['id_usuario'] = Auth::user()->id;
+        $entrada['id_usuario'] = $user_id;
         $entrada['estado'] = 'active';
         $entrada['tipo'] = 'oferta';
         Anuncio::create($entrada); // insertar anuncio en la tabla 'anuncios'
+        $ult_anuncio = DB::table('anuncios')->latest()->first();
+            $entrada['id'] = $ult_anuncio->id;
+      
+        AnuncioOferta::create($entrada); // insertar anuncio en la tabla 'anuncios'
+            
+        
+
+
         // ultimo anuncio del user (anuncio actual)
-        $ult_anuncio = DB::table('anuncios')->where('id_usuario', $user_id)->latest()->first();
+        // $ult_anuncio = DB::table('anuncios')->where('id_usuario', $user_id)->latest()->first();
+
 
         //guardar fotos del formulario para ordenar si por acaso no existen algunos fotos por el medio
         $fotos_user = array();
@@ -86,21 +95,21 @@ class UserAnuncioOfertaController extends Controller
 
         foreach ($fotos_user as $key => $foto) {
             //guardo ficheros validados en servidor 
-            $fichero = $this->cargarFichero($foto, $user_id, $ult_anuncio->id, 'foto' . $key);
+            $fichero = $this->cargarFichero($foto, $user_id, $entrada['id'], 'foto' . $key);
             //insert to database - tabla "fotos"
             Foto::create($fichero);
         }
         // insert to database - tabla "anuncios_oferta"
-       //  AnuncioOferta::create($fichero);
+        //  AnuncioOferta::create($fichero);
 
 
 
-// NO TERMINADO
+        // NO TERMINADO
 
 
 
-        $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id);
-        $usersOfertas = AnuncioOferta::where('id_usuario', $user_id);
+        $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id)->get();
+        $usersOfertas = AnuncioOferta::where('id_usuario', $user_id)->get();
         return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
     }
 
@@ -174,11 +183,12 @@ class UserAnuncioOfertaController extends Controller
         $new_file_name = $id_anuncio . '-' . $user_id . '-' . $nombre . '.' . $file_extension;
 
         // guardar archivo en servidor carpeta /storage/app/usersImages
-        $miFichero->storeAs('/usersImages', $new_file_name);
+        $miFichero->storeAs('/usersImages', $new_file_name, 'public');
 
         // Obtener URL del fichero
-        $file_url = Storage::disk('public')->url($new_file_name);
-
+    
+       $file_url = Storage::disk('public')->url($new_file_name);
+       
         $entrada = ['nombre_originale' => $original_file_name, 'enlace' => $file_url, 'id_anuncio' => $id_anuncio];
         return $entrada;
     }

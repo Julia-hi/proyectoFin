@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\AnunciosOferta;
+use App\Models\AnuncioOferta;
 
 class Foto extends Model
 {
@@ -25,6 +25,7 @@ class Foto extends Model
 
     public function anuncio()
 	{
-	 	return $this->belongsTo(AnunciosOferta::class, 'foreign_key');
+        return $this->belongsTo(AnuncioOferta::class, 'id_anuncio');
 	}
+    
 }

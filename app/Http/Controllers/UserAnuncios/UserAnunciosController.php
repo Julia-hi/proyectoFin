@@ -27,6 +27,7 @@ class UserAnunciosController extends Controller
         $user = Auth::user()->name;
         $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id)->get();
         $usersOfertas = AnuncioOferta::where('id_usuario', $user_id)->get();
+       // $usersOfertas = DB::table('anuncios_oferta')->where('id_usuario',$user_id)->get();
         return view('user.anuncios', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
     }
 
@@ -58,7 +59,7 @@ class UserAnunciosController extends Controller
      */
     public function store(Request $request)
     {
-        $message = "Ha producido un error, anuncio de demanda no creado";
+        /* $message = "Ha producido un error, anuncio de demanda no creado";
         $user_id = $request->user_id;
         //insert validation of request
         $validarBase = $request->validate(
@@ -68,31 +69,9 @@ class UserAnunciosController extends Controller
             ]
 
         );
-        /*
-        if ($validarBase && $request->tipo_anuncio == 'oferta') {
-            //validate oferta
-            $validarOfertaForm='...';
-            //insert to database
-            $message = 'Anuncio de oferta se ha publicado!';
-        }else{
-            $message = "Ha producido un error, anuncio de oferta no creado";
-        } */
 
         if ($validarBase && $request->tipo_anuncio == 'demanda') {
-            //demanda ya valida
-            //insert to database 
-            /* DB::table('anuncios')->insert([
-                'id_usuario'=>Auth::user()->id,
-                'estado' => 'active',
-                'tipo' => 'demanda',  
-            ]); */
-
-            /**
-             * Insert to database
-             * Anuncio y anuncio Demanda tienen relacion uno a uno
-             * 
-             * @param Request $request
-             * */
+           
             DB::transaction(function () use ($request) {
                 $anuncio = new Anuncio;
                 $anuncio->id_usuario = $request->user_id;
@@ -118,7 +97,7 @@ class UserAnunciosController extends Controller
         } else {
             $message = "Ha producido un error, anuncio de demanda no creado";
             return view('user.anuncCreate', ['user' => $user_id, 'tipoAnunc' => 'demanda']);
-        }
+        } */
     }
 
     /**

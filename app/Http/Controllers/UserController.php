@@ -15,7 +15,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        $this->checkConnectionDB();
 
         if (Auth::check() && Auth::user()->rol == "user") {
             return view('dashboard');
@@ -90,18 +89,4 @@ class UserController extends Controller
         //
     }
 
-    /**
-     * Comprobar conexion con database 
-     * 
-     * @return bool
-     */
-    public function checkConnectionDB()
-    {
-        if ($dbconnect = DB::connection()->getPDO()) {
-            //$dbname = DB::connection()->getDatabaseName();
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

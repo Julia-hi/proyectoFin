@@ -19,14 +19,15 @@ class AnuncioOferta extends Model
     protected $table = 'anuncios_oferta';
 
     protected $fillable = [
+        'id',
         'titulo',
         'descripcion',
-        'rasa',
+        'raza',
         'genero',
         'fecha_nac',
-        'com_autonoma',
+        'comunidad',
         'provincia',
-        'localidad',
+        'poblacion',
         'lat',
         'lon',
         'id_usuario'
@@ -52,7 +53,7 @@ class AnuncioOferta extends Model
      */
     public function fotos()
     {
-        return $this->hasMany(Foto::class);
+        return $this->hasMany(Foto::class, 'id_anuncio');
     }
     
 }

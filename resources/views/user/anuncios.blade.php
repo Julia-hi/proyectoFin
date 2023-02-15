@@ -59,17 +59,40 @@
                             </div>
                             @endforeach
                         </div>
-                        @elseif( $ofertas->count()> 0 )
-                        <h3>Ofertas</h3>
                         @endif
-                        @else
-                        <p>todavia no tienes anuncios publicados"</p>
-                        @endif
+                        
+                        @if( $ofertas->count()> 0 )
+                        <h3 class="text-uppercase mt-3">Ofertas</h3>
+                        <div class="border rounded mt-2 p-0">
+                            <div class="row border-bottom m-0 p-1 align-items-center">
+                                <div class="col-1 text-center text-uppercase">id</div>
+                                <div class="col-2 text-center text-uppercase">titulo</div>
+                                <div class="col text-center text-uppercase">Descripción</div>
+                                <div class="col-3 text-uppercase">opciones</div>
+                            </div>
+                            @foreach ($ofertas as $oferta)
+                            <div class="row w-100 m-0 p-2 align-items-center">
+                                <div class="col-1 text-left"> {{ $oferta->id }}</div>
+                                <div class="col-2 text-left"> {{ $oferta->titulo }}</div>
+                                <div class="col text-left"> {{ $oferta->descripcion }}</div>
+                                <div class="col-3 ">
+                                    <div class="btn-group d-flex align-items-center">
+                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
+                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
+                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                            @endif
+                            @else
+                            <p>todavia no tienes anuncios publicados"</p>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </x-app-layout>
 @endif
 @endauth

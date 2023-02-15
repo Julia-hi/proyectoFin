@@ -98,7 +98,7 @@
                                                 <x-input-error :messages="$errors->get('provincia')" class="mt-2" />
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div id="poblacion_block" class="col">
                                             <div class="row  rounded h-100">
                                                 <select name="poblacion" id="poblacion" class="border" aria-label=".form-select-lg example">
                                                     <option value="todo" selected>Seleccione población ...</option>
@@ -106,9 +106,9 @@
                                                 </select>
                                                 <x-input-error :messages="$errors->get('poblacion')" class="mt-2" />
                                             </div>
-                                            <!-- Latitud y longitud de pueblo elegido -->
-                                            <input hidden type="text" id="lat_pueblo" name="lat_pueblo" value="">
-                                            <input hidden type="text" id="lon_pueblo" name="lon_pueblo" value="">
+                                            <!-- Latitud y longitud de pueblo elegido, valores insertarán desde script of-lista.js -->
+                                            <input  type="text" id="lat_pueblo" name="lat" >
+                                            <input type="text" id="lon_pueblo" name="lon" >
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
                             <div class="col-2">
-                                <input type="submit" name="enviar" value="Crear anuncio" class="btn btn-danger w-100 active text-uppercase font-weight-bold">
+                                <input type="submit" name="enviar" value="Crear anuncio" class="btn  w-100 active text-uppercase font-weight-bold"> <!-- class btn-danger -->
                             </div>
                             <div class="col-2">
                                 <input type="reset" name="limpiar" value="Limpiar" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">
@@ -196,8 +196,8 @@
                 </div>
 </x-app-layout>
 <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
-<!--<script src="{{asset('storage/js/of-lista.js')}}"></script>
- <script src="{{asset('storage/js/welcome.js')}}"></script> -->
+<script src="{{asset('storage/js/of-lista.js')}}"></script>
+<!-- <script src="{{asset('storage/js/welcome.js')}}"></script> -->
 <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
 @endif
 @endauth
