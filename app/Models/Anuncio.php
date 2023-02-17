@@ -28,17 +28,17 @@ class Anuncio extends Model
 
     function usuario()
 	{
-	 	return $this->hasOne(User::class, 'id_usuario');
+	 	return $this->hasOne(User::class);
 	}
 
     public function anuncioDemanda()
 	{
-	 	return $this->belongsTo(AnuncioDemanda::class, 'foreign_key');
+	 	return $this->hasOne(AnuncioDemanda::class, 'foreign_key');
 	}
 
     public function anuncioOferta()
 	{
-	 	return $this->belongsTo(AnuncioOferta::class, 'foreign_key');
+	 	return $this->hasOne(AnuncioOferta::class, 'foreign_key');
 	}
     
     public function mensajes()

@@ -1,0 +1,31 @@
+<form id="filter-form" action="{{ url('/filter') }}" method="get">
+
+div for display results
+<div id="filter-results"></div>
+
+
+<script>
+    $(document).ready(function() {
+        $('#filter-form').submit(function(event) {
+            event.preventDefault(); // prevent the form from submitting
+
+            var town = $('#town').val();
+            var country = $('#country').val();
+
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'GET',
+                data: {
+                    town: town,
+                    country: country
+                },
+                success: function(response) {
+                    $('#filter-results').html(response);
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>

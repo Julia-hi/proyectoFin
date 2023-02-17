@@ -6,7 +6,12 @@ use Illuminate\Support\Facades\Auth;
 $logoUrl = Storage::url('logo.png');
 
 ?>
-<!-- Vista del anuncio demanda elegido -->
+<!-- 
+###
+###   Vista del anuncio demanda elegido 
+### 
+-->
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -42,9 +47,9 @@ $logoUrl = Storage::url('logo.png');
             <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
             <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a>
             @else
-            <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+            <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+            <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
             @endif
             @endauth
         </div>
@@ -52,7 +57,7 @@ $logoUrl = Storage::url('logo.png');
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8 ">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height: 150px;">
-                    <img src="<?php echo Storage::url('images/logo.svg'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1">
+                    <a href="/"></a><img src="<?php echo Storage::url('images/logo.svg'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1"></a>
                 </div>
 
                 <div class="m-2">
@@ -60,7 +65,7 @@ $logoUrl = Storage::url('logo.png');
                     <div id="ofertas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg  p-3">
 
                         <div class="row d-flex justify-content-center align-content-center m-3">
-                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="">VOLVER</a>
+                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url()->previous() }}">VOLVER</a>
                         </div>
                         <div class="row">
                             @if($demanda!=null)
@@ -72,7 +77,8 @@ $logoUrl = Storage::url('logo.png');
                                         <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
+                                                    
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
                                                 </div>
                                                 <div>
                                                     <small class="text-muted">Publicato hace: </small>
@@ -84,7 +90,7 @@ $logoUrl = Storage::url('logo.png');
                                 </div>
                             </div>
                             <!-- section enviar mensaje -->
-                            <div class="col-md-6">
+                            <div hidden class="col-md-6">
                                 <h3>Enviar mensaje a </h3>
                                 <form action="" method="post">
                                     @csrf

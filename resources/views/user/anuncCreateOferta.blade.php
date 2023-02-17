@@ -106,9 +106,9 @@
                                                 </select>
                                                 <x-input-error :messages="$errors->get('poblacion')" class="mt-2" />
                                             </div>
-                                            <!-- Latitud y longitud de pueblo elegido, valores insertarán desde script of-lista.js -->
-                                            <input  type="text" id="lat_pueblo" name="lat" >
-                                            <input type="text" id="lon_pueblo" name="lon" >
+                                            <!-- Latitud y longitud de pueblo elegido, valores insertarán desde script of-lista.js - obtienen del json file -->
+                                            <input  hidden type="text" id="lat_pueblo" name="lat" >
+                                            <input hidden type="text" id="lon_pueblo" name="lon" >
                                         </div>
                                     </div>
                                 </div>

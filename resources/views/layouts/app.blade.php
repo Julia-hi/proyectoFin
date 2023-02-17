@@ -22,12 +22,14 @@ use Illuminate\Support\Facades\Storage; ?>
 </head>
 
 <body class="font-sans antialiased">
-<head>
-    <x-header />
-</head>
+    <!-- Page Heading - resources/views/components/header.blade.php -->
+
+    <head>
+        <x-header />
+    </head>
     <div class="min-h-screen bg-gray-100">
-        <!-- Page Heading - resources/views/components/header.blade.php -->
-        
+
+
 
         @auth
         @include('layouts.navigation')
@@ -38,7 +40,6 @@ use Illuminate\Support\Facades\Storage; ?>
             @if (isset($slot))
             {{ $slot }}
             @endif
-
         </main>
     </div>
 </body>

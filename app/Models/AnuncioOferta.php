@@ -6,12 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Foto;
 use App\Models\Anuncio;
+use App\Models\User;
+use App\Models\Favorito;
 
 class AnuncioOferta extends Model
 {
     use HasFactory;
 
-     /**
+    /**
      * The table associated with the model.
      *
      * @var string
@@ -32,20 +34,28 @@ class AnuncioOferta extends Model
         'lon',
         'id_usuario'
     ];
-    
+
     /**
-     * Relacion uno/uno
+     * Obtener anuncio
      * @return Anuncio
      */
     public function anuncio()
     {
-        return $this->hasOne(Anuncio::class);
+        return $this->belongsTo(Anuncio::class);
     }
 
-    public function favorito()
-	{
-	 	return $this->belongsTo(Favorito::class, 'foreign_key');
-	}
+    function usuario()
+    {
+        return $this->belongsTo(User::class, 'id_usuario');
+    }
+    /**
+     * favoritos a que pertenece anuncio concreto
+     * @return Object
+     */
+    public function favoritos()
+    {
+        return $this->hasMany(Favorito::class, 'foreign_key');
+    }
 
     /**
      * Relacion uno/uno
@@ -55,5 +65,4 @@ class AnuncioOferta extends Model
     {
         return $this->hasMany(Foto::class, 'id_anuncio');
     }
-    
 }

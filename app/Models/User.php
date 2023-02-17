@@ -10,6 +10,8 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Mensaje;
 use App\Models\Anuncio;
+use App\Models\AnuncioOferta;
+use App\Models\AnuncioDemanda;
 
 class User extends Authenticatable
 {
@@ -25,6 +27,7 @@ class User extends Authenticatable
         'email',
         'password',
         'telefono',
+        'rol'
     ];
 
     /**
@@ -60,11 +63,27 @@ class User extends Authenticatable
     }
 
     /**
-     * Get anuncio del usuario
+     * Get anuncios del usuario
      */
-    public function anuncio()
+    public function anuncios()
     {
-        return $this->belongsTo(Anuncio::class);
+        return $this->hasMany(Anuncio::class, 'id_usuario');
+    }
+
+    /**
+     * Get anuncios oferta del usuario
+     */
+    public function anunciosOferta()
+    {
+        return $this->hasMany(AnuncioOferta::class);
+    }
+
+    /**
+     * Get anuncios oferta del usuario
+     */
+    public function anunciosDemanda()
+    {
+        return $this->hasMany(AnuncioDemanda::class);
     }
 
     /**
@@ -74,4 +93,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Mensaje::class);
     }
+
+    /**
+     * Get favoritos
+     */
+    public function favoritos()
+    {
+        return $this->hasMany(Favorito::class);
+    }
+
+    
 }

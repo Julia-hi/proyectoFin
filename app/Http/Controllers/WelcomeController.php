@@ -22,8 +22,8 @@ class WelcomeController extends Controller
     public function index()
     {
         try {
-            $demandas = AnuncioDemanda::limit(10)->get();
-            $ofertas = AnuncioOferta::limit(10)->get();
+            $demandas = AnuncioDemanda::limit(12)->get();
+            $ofertas = AnuncioOferta::limit(12)->get();
             
             $status = 'ok';
         } catch (Exception $er) {

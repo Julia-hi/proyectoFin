@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Favorito;
+use App\Http\Controllers\Controller;
+use App\Models\Anuncio;
 use App\Models\AnuncioOferta;
+use App\Models\AnuncioDemanda;
 
-class UserFavoritosController extends Controller
+class AdminAnunciosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,21 +17,7 @@ class UserFavoritosController extends Controller
      */
     public function index()
     {
-        $user_id = Auth::user()->id;
-        $favoritos = Favorito::where('id_usuario', $user_id)->get();
-        // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
-        //$count = count($anuncios);
-        $count = Favorito::where('id_usuario', $user_id)->count();
-        if ($count > 0) {
-            $favoritos = Favorito::where('id_usuario', $user_id)->get();
-            /* foreach($favoritos as $fav){
-                $fav->anuncio->titulo;
-            } */
-        } else {
-            $favoritos = "favoritos no encontrados";
-        }
-        $user = Auth::user()->name;
-        return view('user.favoritos', ['user' => $user, 'anuncios' => $favoritos]);
+        $anuncios = Anuncio::all();
     }
 
     /**
@@ -51,13 +38,7 @@ class UserFavoritosController extends Controller
      */
     public function store(Request $request)
     {
-        $entrada['id_usuario'] = Auth::user();
-        $entrada['id_anuncio'] = $request->id_anuncio;
-        //consultar la base de datos si existe anuncio
-        $anuncio = AnuncioOferta::where('id', $request->id_anuncio)->get();
-        if ($anuncio != null) {
-            Favorito::create($entrada); // insert to database - tabla "favoritos"
-        }
+        //
     }
 
     /**
@@ -102,7 +83,6 @@ class UserFavoritosController extends Controller
      */
     public function destroy($id)
     {
-        $favorito=Favorito::find($id)->get();
-        $favorito->forceDelete();
+        //
     }
 }

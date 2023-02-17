@@ -7,26 +7,17 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('user.anuncios.index',$user_id)" :active="request()->routeIs('user.anuncios.index',$user_id)">
+                    <x-nav-link :href="route('admin.anuncios.index',$user_id)" :active="request()->routeIs('user.anuncios.index',$user_id)">
                     <img src="<?php echo Storage::url('images/icons/receipt-solid.svg');?>" style="width:1em;" class="mr-2">
-                    {{ __('Mis anuncios') }}
+                    {{ __('Usuarios') }}
                     </x-nav-link>
                     <x-nav-link :href="route('user.favoritos.index', $user_id)" :active="request()->routeIs('user.favoritos.index',$user_id)">
                         <img src="<?php echo Storage::url('images/icons/heart-solid.svg');?>" style="width:1em;" class="mr-2">
-                        {{ __('Mis favoritos') }}
+                        {{ __('Anuncios') }}
                     </x-nav-link>
                     <x-nav-link :href="route('user.mensajes.index', $user_id)" :active="request()->routeIs('user.mensajes.index',$user_id)">
                     <img src="<?php echo Storage::url('images/icons/comment-regular.svg');?>" style="width:1em;" class="mr-2">
-                    {{ __('Mensajes') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('user.anuncios-oferta.create', $user_id)" :active="request()->routeIs('user.anuncios.create', $user_id)">
-                    <img src="<?php echo Storage::url('images/icons/bullhorn-solid.svg');?>" style="width:1em;" class="mr-2">
-                    {{ __('Publicar anuncio') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
-                    <img src="<?php echo Storage::url('images/icons/user-regular.svg');?>" style="width:1em;" class="mr-2">
-                        {{ __('Perfil') }}
-                    </x-nav-link>
+                    {{ __('Estadísticas') }}
                 </div>
             </div>
 
@@ -46,20 +37,14 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('user.anuncios.index',$user_id)">
-                            {{ __('Mis anuncios') }}
+                        <x-dropdown-link :href="route('user.anuncios.index',$user_id)" :active="request()->routeIs('user.anuncios.index',$user_id)">
+                            {{ __('Usuarios') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('user.favoritos.index', $user_id)">
-                            {{ __('Mis favoritos') }}
+                        <x-dropdown-link :href="route('user.favoritos.index', $user_id)" :active="request()->routeIs('user.favoritos.index',$user_id)">
+                            {{ __('Anuncios') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('user.mensajes.index', $user_id)">
-                            {{ __('Mis mensajes') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link :href="route('user.anuncios-oferta.create', $user_id)">
-                            {{ __('Publicar anuncio') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Perfil') }}
+                        <x-dropdown-link :href="route('user.mensajes.index', $user_id)" :active="request()->routeIs('user.mensajes.index',$user_id)">
+                            {{ __('Estadísticas') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->

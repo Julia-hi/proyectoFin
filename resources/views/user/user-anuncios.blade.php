@@ -27,12 +27,12 @@
                     </h2>
                     <div class="pt-3">
                         <?php
-                        $numAnuncios = 0;
-                        if ($demandas != null) {
+                        $numAnuncios = $demandas->count() + $ofertas->count();
+                        /* if ($demandas != null) {
                             $numAnuncios = $numAnuncios + $demandas->count();
                         } elseif ($ofertas != null) {
                             $numAnuncios = $numAnuncios + $ofertas->count();
-                        } ?>
+                        } */ ?>
                         @if( $numAnuncios> 0 )
                         <p class="text-left">Tienes {{ $numAnuncios }} anuncio(s) publicados</p>
                         @if ( $demandas->count()> 0 )
@@ -51,7 +51,8 @@
                                 <div class="col text-left"> {{ $demanda->descripcion }}</div>
                                 <div class="col-3 ">
                                     <div class="btn-group d-flex align-items-center">
-                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
+                                    <?php $url = '/demandas/'.$demanda->id; ?>
+                                        <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
                                         <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
                                         <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a>
                                     </div>
@@ -60,35 +61,36 @@
                             @endforeach
                         </div>
                         @endif
-                        
+
                         @if( $ofertas->count()> 0 )
                         <h3 class="text-uppercase mt-3">Ofertas</h3>
                         <div class="border rounded mt-2 p-0">
-                            <div class="row border-bottom m-0 p-1 align-items-center">
-                                <div class="col-1 text-center text-uppercase">id</div>
-                                <div class="col-2 text-center text-uppercase">titulo</div>
-                                <div class="col text-center text-uppercase">Descripción</div>
-                                <div class="col-3 text-uppercase">opciones</div>
+                            <div class="row border-bottom m-0 p-0 align-items-center">
+                                <div class="col-1 border-right text-center text-uppercase">id</div>
+                                <div class="col-2 border-right text-center text-uppercase">titulo</div>
+                                <div class="col border-right text-center text-uppercase">Descripción</div>
+                                <div class="col-3 border-left text-uppercase">opciones</div>
                             </div>
                             @foreach ($ofertas as $oferta)
                             <div class="row w-100 m-0 p-2 align-items-center">
                                 <div class="col-1 text-left"> {{ $oferta->id }}</div>
                                 <div class="col-2 text-left"> {{ $oferta->titulo }}</div>
                                 <div class="col text-left"> {{ $oferta->descripcion }}</div>
-                                <div class="col-3 ">
+                                <div class="col-3">
                                     <div class="btn-group d-flex align-items-center">
-                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
+                                        <?php $url = '/ofertas/'.$oferta->id; ?>
+                                        <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
                                         <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
                                         <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a>
                                     </div>
                                 </div>
                             </div>
                             @endforeach
-                            @endif
-                            @else
-                            <p>todavia no tienes anuncios publicados"</p>
-                            @endif
                         </div>
+                        @endif
+                        @else
+                        <p>todavia no tienes anuncios publicados"</p>
+                        @endif
                     </div>
                 </div>
             </div>

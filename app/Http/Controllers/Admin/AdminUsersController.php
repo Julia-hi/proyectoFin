@@ -1,36 +1,42 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Favorito;
-use App\Models\AnuncioOferta;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\User;
+use Exception;
 
-class UserFavoritosController extends Controller
+class AdminUsersController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $user_id = Auth::user()->id;
-        $favoritos = Favorito::where('id_usuario', $user_id)->get();
-        // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
-        //$count = count($anuncios);
-        $count = Favorito::where('id_usuario', $user_id)->count();
-        if ($count > 0) {
-            $favoritos = Favorito::where('id_usuario', $user_id)->get();
-            /* foreach($favoritos as $fav){
-                $fav->anuncio->titulo;
-            } */
-        } else {
-            $favoritos = "favoritos no encontrados";
+        $user = User::where('id', $id)->get();
+        try {
+            $user = User::where('id', $id)->get();
+        } catch (Exception $ex) {
+            //error se no hay conexion con la BD
+            $status = "error";
+            return view('welcome', ['demandas' => null, 'ofertas' => null, 'status' => $status]);
         }
-        $user = Auth::user()->name;
-        return view('user.favoritos', ['user' => $user, 'anuncios' => $favoritos]);
+        if ($user->rol == "admin") {
+            $users = User::all();
+            $status = "ok";
+            return view('admin.admin_users', ['admin_id' => $id, 'users' => $users, 'status' => $status]);
+        } else {
+            //return to welcome with status ok
+            $demandas = AnuncioDemanda::limit(12)->get();
+            $ofertas = AnuncioOferta::limit(12)->get();
+            $status = "ok";
+             return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas,'status' => $status]);
+            //return Redirect::route('/');
+        }
     }
 
     /**
@@ -51,13 +57,7 @@ class UserFavoritosController extends Controller
      */
     public function store(Request $request)
     {
-        $entrada['id_usuario'] = Auth::user();
-        $entrada['id_anuncio'] = $request->id_anuncio;
-        //consultar la base de datos si existe anuncio
-        $anuncio = AnuncioOferta::where('id', $request->id_anuncio)->get();
-        if ($anuncio != null) {
-            Favorito::create($entrada); // insert to database - tabla "favoritos"
-        }
+        //
     }
 
     /**
@@ -102,7 +102,6 @@ class UserFavoritosController extends Controller
      */
     public function destroy($id)
     {
-        $favorito=Favorito::find($id)->get();
-        $favorito->forceDelete();
+        //
     }
 }

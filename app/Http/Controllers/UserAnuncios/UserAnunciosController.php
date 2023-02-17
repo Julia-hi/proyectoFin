@@ -18,17 +18,15 @@ class UserAnunciosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($user)
+    public function index($id)
     {
-        $user_id = Auth::user()->id;
-        // $anuncios = Anuncio::where('id_usuario', $user_id)->get();
-
-
-        $user = Auth::user()->name;
-        $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id)->get();
-        $usersOfertas = AnuncioOferta::where('id_usuario', $user_id)->get();
-       // $usersOfertas = DB::table('anuncios_oferta')->where('id_usuario',$user_id)->get();
-        return view('user.anuncios', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
+        $usersDemandas = AnuncioDemanda::where('id_usuario', $id)->get();
+        $usersOfertas= AnuncioOferta::where('id_usuario', $id)->get();
+      //  $usersOfertas = AnuncioOferta::where('id_usuario', $user_id)->get();
+      //$usersOfertas = Auth::user()->anunciosOferta();
+     // $usersOfertas = Auth::user()->anunciosOferta();
+      //  $usersOfertas = DB::table('anuncios_oferta')->where('id_usuario',$id)->get();
+        return view('user.user-anuncios', ['user' => Auth::user()->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
     }
 
     /**

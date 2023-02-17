@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('titulo', 100)->collation('utf8mb4_unicode_ci');
             $table->mediumText('descripcion', 300)->collation('utf8mb4_unicode_ci');
             $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_usuario')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
             $table->foreign('id_anuncio')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
         });

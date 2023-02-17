@@ -14,6 +14,8 @@ use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
 use App\Http\Controllers\UserFavoritosController;
 use App\Http\Controllers\UserMensajesController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\Admin\AdminUsersController;
+use App\Http\Controllers\Admin\AdminAnunciosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,15 +42,21 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::resource('user.anuncios', UserAnunciosController::class);
+    Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class);
+    Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class);
+    Route::resource('user.favoritos', UserFavoritosController::class);
+    Route::resource('user.mensajes', UserMensajesController::class);
+    Route::resource('admin.users', AdminUsersController::class);
 });
 
 Route::resource('ofertas', OfertasController::class)->only('index','show');
 Route::resource('demandas', DemandasController::class)->only('show');
-Route::resource('user.anuncios', UserAnunciosController::class)->middleware('auth');
-Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class)->middleware('auth');
-Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class)->middleware('auth');
-Route::resource('user.favoritos', UserFavoritosController::class)->middleware('auth');
-Route::resource('user.mensajes', UserMensajesController::class)->middleware('auth');
+// Route::resource('user.anuncios', UserAnunciosController::class)->middleware('auth');
+// Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class)->middleware('auth');
+// Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class)->middleware('auth');
+// Route::resource('user.favoritos', UserFavoritosController::class)->middleware('auth');
+// Route::resource('user.mensajes', UserMensajesController::class)->middleware('auth');
 
 
 //Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');

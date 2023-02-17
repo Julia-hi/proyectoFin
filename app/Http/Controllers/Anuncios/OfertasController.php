@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AnuncioOferta;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class OfertasController extends Controller
 {
@@ -22,26 +23,44 @@ class OfertasController extends Controller
      */
     public function index()
     {
-        $valores = $this->getParametrosQuery();
+        try {
+            if ($ofertas = AnuncioOferta::get()) {
+            } else {
+                $ofertas = "ofertas not found";
+            }
+            $status = "ok";
+        } catch (Exeption $ex) {
+            $status = "error";
+        }
+        return view('ofertas-lista', ['ofertas' => $ofertas, 'status' => $status]);
+    }
+
+    public function filter(Request $request)
+    {
+        // var_dump($request->input('comunidad'));
+        //ofertas?comunidad=andalucia&provincia=todo&raza=todos&sexo=todos
+        $valores = $request;
+        // $valores = $this->getParametrosQuery();
         $ofertas = AnuncioOferta::get();
         $count =  $ofertas->count();
         if ($count > 0) {
-            if ($valores['comunidad'] != "todo") {
+            if ($request->input('comunidad') != "todo") {
                 if ($valores['provincia'] != "todo") {
-                    if ($valores['poblacion'] != "todo") {
-                        $ofertas = AnuncioOferta::where('comunidad', $valores['comunidad'])->where('provincia', $valores['provincia'])
+                    if ($request->input('poblacion') != "todo") {
+                        $ofertas = AnuncioOferta::where('comunidad', $request->input('comunidad'))->where('provincia', $valores['provincia'])
                             ->where('poblacion', $valores['poblacion']);
                     }
                     $ofertas = AnuncioOferta::where('comunidad', $valores['comunidad'])->where('provincia', $valores['provincia']);
                 }
-                $ofertas = AnuncioOferta::where('comunidad', $valores['comunidad']);
+                $ofertas = AnuncioOferta::where('comunidad', $request->input('comunidad'))->get();
+            } else {
+                $ofertas = AnuncioOferta::where('raza', $request->input('raza'))->where('genero', $request->input('sexo'))->get();
             }
-            $ofertas = AnuncioOferta::get();
         } else {
             $ofertas = "ofertas not found";
         }
 
-        return view('ofertas-lista', ['count' => $count, 'ofertas' => $ofertas]);
+        return view('ofertas-lista', ['count' => $count, 'ofertas' => $ofertas, 'status' => "ok"]);
     }
 
     /**
@@ -74,12 +93,17 @@ class OfertasController extends Controller
     public function show($id)
     {
         if ($oferta = AnuncioOferta::find($id)) {
-            $fotos = $oferta->fotos();
+            $fotos = $oferta->fotos;
+            $autor = $oferta->usuario;
         } else {
             $oferta = null;
             $fotos = null;
         }
-        return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'fotos' => $fotos, 'status'=>'ok']);
+
+
+        // $oferta['autor'] =  $autor->name;
+
+        return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'autor' => $autor, 'fotos' => $fotos, 'status' => 'ok']);
     }
 
     /**

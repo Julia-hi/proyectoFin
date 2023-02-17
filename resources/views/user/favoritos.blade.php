@@ -21,14 +21,28 @@
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('Mis favoritos') }}
                     </h2>
+                    <p>Anuncios favoritos disponibles.</p>
                     <div class="pt-3">
-                        <?php
-                        if ($anuncios == "favoritos no encontrados") {
+                        
+                        @if ($anuncios == "favoritos no encontrados") 
                             echo "todavia no tienes favoritos";
-                        } else {
-                            echo "tienes " . count($favoritos) . " favoritos";
-                        }
-                        ?>
+                        @else
+                            @foreach ($favoritos as $fav)
+                            <div class="row w-100 m-0 p-2 align-items-center">
+                                <div class="col-1 text-left"> {{ $fav->anuncio->id }}</div>
+                                <div class="col-2 text-left"> {{ $fav->anuncio->titulo }}</div>
+                                <div class="col text-left"> {{ $fav->anuncio->descripcion }}</div>
+                                <div class="col-3 ">
+                                    <div class="btn-group d-flex align-items-center">
+                                    <?php $url = '/ofertas/'.$fav->id; ?>
+                                        <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
+                                        <a href="" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Dejar de seguir</a>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        @endif
+                        
                     </div>
                 </div>
             </div>

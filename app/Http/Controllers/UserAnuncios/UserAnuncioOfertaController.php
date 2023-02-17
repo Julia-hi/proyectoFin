@@ -33,7 +33,7 @@ class UserAnuncioOfertaController extends Controller
      */
     public function create($id)
     {
-        $user_id = Auth::user()->id;
+       
         $tipoAnunc = 'oferta';
         return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);
     }
@@ -46,8 +46,8 @@ class UserAnuncioOfertaController extends Controller
      */
     public function store(Request $request)
     {
-        $user = Auth::user()->name; //nombre del usuario
-        $user_id = Auth::user()->id; //id del usuario
+        $user = Auth::user();
+        
         //validar entrada del request
         $entrada = $request->validate(
             [
@@ -68,21 +68,14 @@ class UserAnuncioOfertaController extends Controller
                 'foto5' => 'image'
             ]
         );
-        $entrada['id_usuario'] = $user_id;
+        $entrada['id_usuario'] = $user->id;
         $entrada['estado'] = 'active';
         $entrada['tipo'] = 'oferta';
         Anuncio::create($entrada); // insertar anuncio en la tabla 'anuncios'
         $ult_anuncio = DB::table('anuncios')->latest()->first();
-            $entrada['id'] = $ult_anuncio->id;
-      
-        AnuncioOferta::create($entrada); // insertar anuncio en la tabla 'anuncios'
-            
-        
+        $entrada['id'] = $ult_anuncio->id;
 
-
-        // ultimo anuncio del user (anuncio actual)
-        // $ult_anuncio = DB::table('anuncios')->where('id_usuario', $user_id)->latest()->first();
-
+        AnuncioOferta::create($entrada); // insert to database - tabla "anuncios_oferta"
 
         //guardar fotos del formulario para ordenar si por acaso no existen algunos fotos por el medio
         $fotos_user = array();
@@ -95,22 +88,15 @@ class UserAnuncioOfertaController extends Controller
 
         foreach ($fotos_user as $key => $foto) {
             //guardo ficheros validados en servidor 
-            $fichero = $this->cargarFichero($foto, $user_id, $entrada['id'], 'foto' . $key);
-            //insert to database - tabla "fotos"
-            Foto::create($fichero);
+            $fichero = $this->cargarFichero($foto, $user->id, $entrada['id'], 'foto' . $key);
+            Foto::create($fichero); //insert to database - tabla "fotos"
         }
-        // insert to database - tabla "anuncios_oferta"
-        //  AnuncioOferta::create($fichero);
 
+       
 
-
-        // NO TERMINADO
-
-
-
-        $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id)->get();
-        $usersOfertas = AnuncioOferta::where('id_usuario', $user_id)->get();
-        return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
+       $usersDemandas = AnuncioDemanda::where('id_usuario', $user->id)->get();
+       $usersOfertas= AnuncioOferta::where('id_usuario', $user->id)->get();
+        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
     }
 
     /**
@@ -166,7 +152,7 @@ class UserAnuncioOfertaController extends Controller
      * en servidor carpeta /storage/app/usersImages
      * 
      * @param File $miFichero
-     * @param int $user_id
+     * @param int $user->id
      * @param int $id_anuncio
      * @param string $nombre = 'foto1', 'foto2' ...
      * @return array
@@ -183,12 +169,12 @@ class UserAnuncioOfertaController extends Controller
         $new_file_name = $id_anuncio . '-' . $user_id . '-' . $nombre . '.' . $file_extension;
 
         // guardar archivo en servidor carpeta /storage/app/usersImages
-        $miFichero->storeAs('/usersImages', $new_file_name, 'public');
+        // $miFichero->storeAs('/usersImages', $new_file_name, 'public');
+        $miFichero->move(public_path('/storage/usersImages'), $new_file_name);
 
-        // Obtener URL del fichero
-    
-       $file_url = Storage::disk('public')->url($new_file_name);
-       
+        // Obtener URL del fichero guardado
+        $file_url = "/storage/usersImages/" . $new_file_name;
+
         $entrada = ['nombre_originale' => $original_file_name, 'enlace' => $file_url, 'id_anuncio' => $id_anuncio];
         return $entrada;
     }
