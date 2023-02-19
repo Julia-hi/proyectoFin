@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('favoritos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('users');
-            $table->unsignedBigInteger('id_anuncio');
-            $table->foreign('id_anuncio')->references('id')->on('anuncios');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('anuncio_id');
+            $table->foreign('anuncio_id')->references('id')->on('anuncios_oferta');
             $table->timestamps();
         });
     }

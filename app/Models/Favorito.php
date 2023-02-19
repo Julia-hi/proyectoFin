@@ -11,8 +11,9 @@ class Favorito extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id_usuario',
-        'id_anuncio'   
+        'id',
+        'user_id',
+        'anuncio_id' 
     ];
 
     /**
@@ -20,7 +21,7 @@ class Favorito extends Model
      */
     public function user()
     {
-        return $this->belongsTo(User::class, 'id_usuario');
+        return $this->belongsToMany(User::class, 'user_id');
     }
 
     /**
@@ -28,6 +29,6 @@ class Favorito extends Model
      */
     public function anuncio()
     {
-        return $this->belongsTo(AnuncioOferta::class, 'id_usuario');
+        return $this->belongsTo(AnuncioOferta::class, 'anuncio_id');
     }
 }

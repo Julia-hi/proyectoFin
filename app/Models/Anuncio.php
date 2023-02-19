@@ -21,9 +21,11 @@ class Anuncio extends Model
     protected $table = 'anuncios';
 
     protected $fillable = [
-        'id_usuario',
+        'id',
+        'user_id',
         'estado',
-        'tipo'
+        'tipo',
+        'created_ad',
     ];
 
     function usuario()
@@ -33,12 +35,12 @@ class Anuncio extends Model
 
     public function anuncioDemanda()
 	{
-	 	return $this->hasOne(AnuncioDemanda::class, 'foreign_key');
+	 	return $this->hasOne(AnuncioDemanda::class);
 	}
 
     public function anuncioOferta()
 	{
-	 	return $this->hasOne(AnuncioOferta::class, 'foreign_key');
+	 	return $this->hasOne(AnuncioOferta::class);
 	}
     
     public function mensajes()

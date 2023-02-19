@@ -20,12 +20,12 @@ class Foto extends Model
     protected $fillable = [
         'nombre_originale',
         'enlace',
-        'id_anuncio'
+        'anuncio_id'
     ];
 
     public function anuncio()
 	{
-        return $this->belongsTo(AnuncioOferta::class, 'id_anuncio');
+        return $this->belongsTo(AnuncioOferta::class, 'anuncio_id');
 	}
     
 }

@@ -12,6 +12,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -29,15 +31,20 @@
 
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            <div class="align-self-center" style="height:50px;">
+            <div class="align-self-center">
                 @guest
-                <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a>
+                <a type="button" class="nav-botton red-brillante-boton mr-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a>
                 @endguest
                 @auth
                 <?php $user_name = Auth::user()->name;
-                $user_id = Auth::user()->id; ?>
-                <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
-                <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a>
+                $user_id = Auth::user()->id; ?><div class="row">
+                    <div class="col m-0">
+                        <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
+                    </div><!-- <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a> -->
+                    <div class="col m-0">
+                        @include('layouts.navigation-welcome')
+                    </div>
+                </div>
                 @else
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
                 @if (Route::has('register'))
@@ -153,9 +160,11 @@
                     <?php } else {
 
                     ?>
-                        <div class="btn-group row w-50 mb-3">
-                            <a href="#" class="btn btn-sm btn-outline-secondary col-3" active>Lista</a>
-                            <a href="#" class="btn btn-sm btn-outline-secondary col-3">Ver en mapa</a>
+                        <div class="align-items-center d-flex justify-content-center p-3">
+                            <div class="btn-group row w-50 mb-3">
+                                <a href="#" class="btn btn-sm btn-outline-secondary active col-3">Lista</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary col-3">Ver en mapa</a>
+                            </div>
                         </div>
                         <div>
                             <div class="row">
@@ -166,9 +175,8 @@
                                         <div class="card-body">
                                             <?php $fotos = $oferta->fotos; ?>
                                             @foreach($fotos as $foto)
-                                            <div style="height: 70%;"> <?php //echo Storage::url('usersImages/29-1-foto0.jpg'); 
-                                                                        ?>
-                                                <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1859bebb3c0%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1859bebb3c0%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.71249771118164%22%20y%3D%22120.18000011444092%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                                            <div style="height: 70%;">
+                                                <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
                                             </div>
                                             @endforeach
                                             <div class="" style="height: 30%;">
@@ -180,11 +188,40 @@
                                             <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
                                                 <div class="d-flex justify-content-between align-items-center">
                                                     <div class="btn-group">
+
                                                         <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                                         <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
+                                                        @auth
+                                                        <?php $user_id = Auth::user()->id;
+                                                        $user = Auth::user();
+                                                        // $favorito = $oferta->esFavorito($user_id, $oferta->id); 
+                                                        ?>
+                                                        <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
+                                                        si no es favorito - mostra borón para añadir a favoritos -->
+                                                        @if(!$oferta->esFavorito($user, $oferta))
+                                                        <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
+                                                            @csrf
+                                                            <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
+                                                            <input type="hidden" name="user_id" value="{{ $user_id }}">
+                                                            <button type="submit"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1em;" class="mx-2"></button>
+                                                        </form>
+                                                        @else
+                                                        <?php $favorito = $oferta->favoritos->first(); ?>
+                                                        <!-- formulario para Eeiminar favorito de la lista -->
+                                                        <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit"><img title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1em;" class="mx-2"></button>
+                                                        </form>
+                                                        @endif
+                                                        @endauth
+                                                        @guest
+                                                        <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
+                                                        @endguest
+
                                                     </div>
                                                     <div>
-                                                        <small class="text-muted">Publicato hace: </small>
+                                                        <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
                                                     </div>
                                                 </div>
                                             </div>

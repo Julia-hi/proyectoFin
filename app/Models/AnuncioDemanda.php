@@ -18,12 +18,18 @@ class AnuncioDemanda extends Model
     protected $table = 'anuncios_demanda';
 
     protected $fillable = [
+        'id',
         'titulo',
         'descripcion',
-        'id_usuario'
+        'user_id',
+        'created_at'
     ];
 
     public function anuncios() {
 		return $this->hasOne(Anuncio::class);
 	}
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

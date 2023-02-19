@@ -1,8 +1,6 @@
 .red-brillante-boton {
     position: relative !important;
     display: inline-block !important;
-    width: 10em !important;
-    height: 2.5em !important;
     vertical-align: middle !important;
     text-align: center !important;
     text-decoration: none !important;
@@ -26,4 +24,12 @@
     background-image: url('../images/hojas-fondo1.svg'); 
     background-size: cover;
     background-position: right top; background-attachment: fixed;
+}
+
+.nav-botton{
+    width: 10em !important;
+    height: 2.5em !important;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
 }

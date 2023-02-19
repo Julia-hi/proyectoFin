@@ -19,8 +19,8 @@ return new class extends Migration
             $table->foreign('id')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->string('titulo', 100)->collation('utf8mb4_unicode_ci');
             $table->mediumText('descripcion', 300)->collation('utf8mb4_unicode_ci');
-            $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('raza', 10)->collation('utf8mb4_unicode_ci');
             $table->string('genero', 10)->collation('utf8mb4_unicode_ci');
             $table->date('fecha_nac');

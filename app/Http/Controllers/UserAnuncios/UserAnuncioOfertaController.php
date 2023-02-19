@@ -68,7 +68,7 @@ class UserAnuncioOfertaController extends Controller
                 'foto5' => 'image'
             ]
         );
-        $entrada['id_usuario'] = $user->id;
+        $entrada['user_id'] = $user->id;
         $entrada['estado'] = 'active';
         $entrada['tipo'] = 'oferta';
         Anuncio::create($entrada); // insertar anuncio en la tabla 'anuncios'
@@ -91,11 +91,8 @@ class UserAnuncioOfertaController extends Controller
             $fichero = $this->cargarFichero($foto, $user->id, $entrada['id'], 'foto' . $key);
             Foto::create($fichero); //insert to database - tabla "fotos"
         }
-
-       
-
-       $usersDemandas = AnuncioDemanda::where('id_usuario', $user->id)->get();
-       $usersOfertas= AnuncioOferta::where('id_usuario', $user->id)->get();
+       $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
+       $usersOfertas= AnuncioOferta::where('user_id', $user->id)->get();
         return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
     }
 
@@ -147,17 +144,17 @@ class UserAnuncioOfertaController extends Controller
     /**
      * cargar fichero con nombre cambiado
      * 
-     * Cambiar nombre del archivo en formato <id_anuncio>-<id_user>-<foto>.<extencion>
+     * Cambiar nombre del archivo en formato <anuncio_id>-<user_id>-<foto>.<extencion>
      * y guardar fotos validos 
      * en servidor carpeta /storage/app/usersImages
      * 
      * @param File $miFichero
      * @param int $user->id
-     * @param int $id_anuncio
+     * @param int $anuncio_id
      * @param string $nombre = 'foto1', 'foto2' ...
      * @return array
      */
-    public function cargarFichero($miFichero, $user_id, $id_anuncio, $nombre)
+    public function cargarFichero($miFichero, $user_id, $anuncio_id, $nombre)
     {
         // Obtener nombre originale del fichero
         $original_file_name = $miFichero->getClientOriginalName();
@@ -166,7 +163,7 @@ class UserAnuncioOfertaController extends Controller
         $file_extension = $miFichero->getClientOriginalExtension();
 
         // Crear nombre nuevo para fichero
-        $new_file_name = $id_anuncio . '-' . $user_id . '-' . $nombre . '.' . $file_extension;
+        $new_file_name = $anuncio_id . '-' . $user_id . '-' . $nombre . '.' . $file_extension;
 
         // guardar archivo en servidor carpeta /storage/app/usersImages
         // $miFichero->storeAs('/usersImages', $new_file_name, 'public');
@@ -175,7 +172,7 @@ class UserAnuncioOfertaController extends Controller
         // Obtener URL del fichero guardado
         $file_url = "/storage/usersImages/" . $new_file_name;
 
-        $entrada = ['nombre_originale' => $original_file_name, 'enlace' => $file_url, 'id_anuncio' => $id_anuncio];
+        $entrada = ['nombre_originale' => $original_file_name, 'enlace' => $file_url, 'anuncio_id' => $anuncio_id];
         return $entrada;
     }
 }

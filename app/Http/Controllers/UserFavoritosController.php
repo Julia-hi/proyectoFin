@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Favorito;
 use App\Models\AnuncioOferta;
+use App\Models\User;
+
 
 class UserFavoritosController extends Controller
 {
@@ -14,23 +16,15 @@ class UserFavoritosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $user_id = Auth::user()->id;
-        $favoritos = Favorito::where('id_usuario', $user_id)->get();
-        // $count = DB::table('anuncios')->where('id_usuario',$user_id)->count();
-        //$count = count($anuncios);
-        $count = Favorito::where('id_usuario', $user_id)->count();
-        if ($count > 0) {
-            $favoritos = Favorito::where('id_usuario', $user_id)->get();
-            /* foreach($favoritos as $fav){
-                $fav->anuncio->titulo;
-            } */
-        } else {
-            $favoritos = "favoritos no encontrados";
+        $user = Auth::user();
+        $favoritos = Favorito::where('user_id', Auth::user()->id)->get();
+        if ($favoritos->count() < 1) {
+            $favoritos = null; // no encontrado favoritos
         }
         $user = Auth::user()->name;
-        return view('user.favoritos', ['user' => $user, 'anuncios' => $favoritos]);
+        return view('user.favoritos', ['user' => $user, 'favoritos' => $favoritos]);
     }
 
     /**
@@ -51,13 +45,15 @@ class UserFavoritosController extends Controller
      */
     public function store(Request $request)
     {
-        $entrada['id_usuario'] = Auth::user();
-        $entrada['id_anuncio'] = $request->id_anuncio;
+        $entrada['user_id'] = Auth::user()->id;
+        $entrada['anuncio_id'] = $request->anuncio_id;
         //consultar la base de datos si existe anuncio
-        $anuncio = AnuncioOferta::where('id', $request->id_anuncio)->get();
-        if ($anuncio != null) {
+        $anuncio = AnuncioOferta::where('id', $request->anuncio_id)->get();
+        if ($anuncio->count()>0) {
             Favorito::create($entrada); // insert to database - tabla "favoritos"
+            
         }
+        return back();
     }
 
     /**
@@ -100,9 +96,13 @@ class UserFavoritosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user, Favorito $favorito)
     {
-        $favorito=Favorito::find($id)->get();
-        $favorito->forceDelete();
+       // $fav=DB::table('favoritos')->where();
+      //  $fav = Favorito::find($favorito->id);
+        $favorito->delete();
+        return back(); 
     }
+
+   
 }

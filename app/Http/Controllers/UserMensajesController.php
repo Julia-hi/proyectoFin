@@ -17,12 +17,12 @@ class UserMensajesController extends Controller
     public function index($user)
     {
         $user_id = Auth::user()->id;
-        $mensajes = Mensaje::where('id_remitente', $user_id)->get();
+        $mensajes = Mensaje::where('remitente_id', $user_id)->get();
        
-       $count=Mensaje::where('id_remitente', $user_id)->count();
+       $count=Mensaje::where('remitente_id', $user_id)->count();
         if ($count > 0) {
            // $mensajes = DB::table('anuncios')->where('id_usuario',$user_id);
-           $mensajes = Mensaje::where('id_remitente', $user_id)->get();
+           $mensajes = Mensaje::where('remitente_id', $user_id)->get();
             } else {
                 $mensajes = "mensajes no encontrados";
         }

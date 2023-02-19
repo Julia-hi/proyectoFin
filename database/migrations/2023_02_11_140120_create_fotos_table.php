@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_originale'); //nombre de fichero enviado por usuario
             $table->string('enlace'); // localización de foto en servidor
-            $table->unsignedBigInteger('id_anuncio');
-            $table->foreign('id_anuncio')->references('id')->on('anuncios_oferta')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedBigInteger('anuncio_id');
+            $table->foreign('anuncio_id')->references('id')->on('anuncios_oferta')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

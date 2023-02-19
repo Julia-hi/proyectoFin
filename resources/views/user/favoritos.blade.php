@@ -1,4 +1,3 @@
-
 @auth
 @if(Auth::user()->rol=="admin")
 <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
@@ -21,28 +20,42 @@
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                         {{ __('Mis favoritos') }}
                     </h2>
-                    <p>Anuncios favoritos disponibles.</p>
                     <div class="pt-3">
-                        
-                        @if ($anuncios == "favoritos no encontrados") 
-                            echo "todavia no tienes favoritos";
+
+                        @if ($favoritos == null)
+                        <p>Todavia no tienes favoritos</p>
                         @else
-                            @foreach ($favoritos as $fav)
-                            <div class="row w-100 m-0 p-2 align-items-center">
-                                <div class="col-1 text-left"> {{ $fav->anuncio->id }}</div>
-                                <div class="col-2 text-left"> {{ $fav->anuncio->titulo }}</div>
-                                <div class="col text-left"> {{ $fav->anuncio->descripcion }}</div>
-                                <div class="col-3 ">
-                                    <div class="btn-group d-flex align-items-center">
-                                    <?php $url = '/ofertas/'.$fav->id; ?>
-                                        <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
-                                        <a href="" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Dejar de seguir</a>
-                                    </div>
+                        @foreach ($favoritos as $fav)
+                        <div class="row w-100 m-0 p-2 align-items-center">
+                            <div class="col-1 text-left"> {{ $fav->anuncio->id }}</div>
+                            <?php $fotos = $fav->anuncio->fotos; ?>
+                            <div class="col-1 text-left">
+                                <img class="card-img-top" src="{{ $fotos[0]->enlace }}" alt="" style="height: 80px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
+                            </div>
+                            <div class="col-2 text-left"> {{ $fav->anuncio->titulo }}</div>
+                            <div class="col text-left"> {{ $fav->anuncio->descripcion }}</div>
+                            <div class="col-3 ">
+                                <div class="btn-group d-flex align-items-center">
+                                    <?php $url = '/ofertas/' . $fav->id; ?>
+                                    <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
+                                    <!--   <form method="delete" action="{{ route('user.favoritos.destroy',['user'=>Auth::user(),'favorito' => $fav->id]) }}">
+
+                                        <input type="hidden" name="id_anuncio" value="{{ $fav->anuncio->id }}">
+                                        <button type="submit"><img title="eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1em;" class="mx-2"></button>
+                                    </form> -->
+                                    <!-- formulario para Eeiminar favorito de la lista -->
+                                    <form action="{{ route('user.favoritos.destroy', [Auth::user()->id, $fav->id]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit">Eliminar de favoritos</button>
+                                    </form>
+                                    <!-- <a href="" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Dejar de seguir</a> -->
                                 </div>
                             </div>
-                            @endforeach
+                        </div>
+                        @endforeach
                         @endif
-                        
+
                     </div>
                 </div>
             </div>

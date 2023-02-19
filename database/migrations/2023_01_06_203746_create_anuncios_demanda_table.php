@@ -15,14 +15,13 @@ return new class extends Migration
     {
         $this->down();
         Schema::create('anuncios_demanda', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id_anuncio')->unsigned();
+            $table->foreignId('id');
+            $table->foreign('id')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->string('titulo', 100)->collation('utf8mb4_unicode_ci');
             $table->mediumText('descripcion', 300)->collation('utf8mb4_unicode_ci');
-            $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
-            $table->foreign('id_anuncio')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

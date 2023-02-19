@@ -492,7 +492,7 @@ $scriptUrl = Storage::url('welcome.js');
                                                     <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
                                                 </div>
                                                 <div>
-                                                    <small class="text-muted">Publicato hace: </small>
+                                                    <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -530,7 +530,7 @@ $scriptUrl = Storage::url('welcome.js');
                                                     <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
                                                 </div>
                                                 <div>
-                                                    <small class="text-muted">Publicato hace: </small>
+                                                    <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>
                                                 </div>
                                             </div>
                                         </div>

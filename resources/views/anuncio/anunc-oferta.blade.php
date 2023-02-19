@@ -133,7 +133,7 @@ $logoUrl = Storage::url('logo.png');
                     </div>
                     <!-- section enviar mensaje -->
                     <div hidden class="col-md-6">
-                        <h3>Enviar mensaje a {{ $oferta->autor }}</h3>
+                        <h3>Enviar mensaje a {{ $oferta->usuario->name }}</h3>
                         <form action="" method="post">
                             @csrf
                             <label for="tema_mensaje">Tema</label>

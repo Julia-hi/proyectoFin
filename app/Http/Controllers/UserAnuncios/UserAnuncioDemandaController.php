@@ -43,7 +43,7 @@ class UserAnuncioDemandaController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id = $request->user_id;
+        $user = Auth::user();
         //insert validation of request
         $validar = $request->validate(
             [
@@ -52,26 +52,26 @@ class UserAnuncioDemandaController extends Controller
             ]
         );
         if ($validar && $request->tipo_anuncio == 'demanda') {
-            DB::transaction(function () use ($request) {
-                $anuncio = new Anuncio;
-                $anuncio->id_usuario = $request->user_id;
-                $anuncio->estado = 'active';
-                $anuncio->tipo = 'demanda';
-                $anuncio->save();
-                //insert to table anuncio_demanda
-                $anuncioDemanda = new AnuncioDemanda;
-                $anuncioDemanda->id_anuncio = $anuncio->id;
-                $anuncioDemanda->titulo = $request->input('titulo');
-                $anuncioDemanda->descripcion = $request->input('descripcion');
-                $anuncioDemanda->id_usuario = $request->user_id;
-                $anuncioDemanda->save();
-            });
-            $user = Auth::user()->name;
-            $user_id = Auth::user()->id;
+            $entrada = $request->validate(
+                [
+                    'titulo' => 'required|min:10|max:100',
+                    'descripcion' => 'required|min:10|max:300'
+                ]
+            );
+            $entrada['user_id'] = $user->id;
+            $entrada['estado'] = 'active';
+            $entrada['tipo'] = 'demanda';
+            Anuncio::create($entrada); // insertar anuncio en la tabla 'anuncios'
+            $ult_anuncio = DB::table('anuncios')->latest()->first();
+            $entrada['id'] = $ult_anuncio->id;
+    
+            AnuncioDemanda::create($entrada); // insert to database - tabla "anuncios_odemanda"
+          //  $user = Auth::user()->name;
+            
             // $anuncios = Anuncios::where('id_usuario', $user_id);
-            $usersDemandas = AnuncioDemanda::where('id_usuario', $user_id);
-            $usersOfertas = AnuncioOferta::where('id_usuario', $user_id);
-            return Redirect::route('user.anuncios.index', ['user' => $user, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);   
+            $usersDemandas = AnuncioDemanda::where('user_id', $user->id);
+            $usersOfertas = AnuncioOferta::where('user_id', $user->id);
+            return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);   
         }   
     }
 

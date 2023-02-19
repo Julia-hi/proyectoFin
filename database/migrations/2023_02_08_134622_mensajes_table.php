@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('mensajes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_anuncio');
-            $table->foreign('id_anuncio')->references('id')->on('anuncios');
-            $table->unsignedBigInteger('id_destino');
-            $table->foreign('id_destino')->references('id_usuario')->on('anuncios');
-            $table->unsignedBigInteger('id_remitente');
-            $table->foreign('id_remitente')->references('id')->on('users');
+            $table->unsignedBigInteger('anuncio_id');
+            $table->foreign('anuncio_id')->references('id')->on('anuncios');
+            $table->unsignedBigInteger('estino_id');
+            $table->foreign('estino_id')->references('user_id')->on('anuncios');
+            $table->unsignedBigInteger('remitente_id');
+            $table->foreign('remitente_id')->references('id')->on('users');
             $table->mediumText('texto');
             $table->timestamps();
         });
