@@ -16,13 +16,17 @@ class DemandasController extends Controller
      */
     public function index()
     {
-        /*   $count = DB::table('anuncdemanda')->count();
-        if (DB::table('anuncdemanda')->count() > 0) {
-                $demandas = DB::table('anuncdemanda')->get();
-        } else {
-            $demandas = "demandas not found";
+        try {
+            $demandas = AnuncioDemanda::get();
+            if ($demandas->count()>0) {
+            } else {
+                $demandas = "null";
+            }
+            $status = "ok";
+        } catch (Exeption $ex) {
+            $status = "error";
         }
-        return  view('demandas', ['count' => $count, 'ofertas' => $demandas]); */
+        return view('demandas', ['demandas' => $demandas, 'status' => $status]);
     }
 
     /**
@@ -55,10 +59,11 @@ class DemandasController extends Controller
     public function show($id)
     {
         if ($demanda = AnuncioDemanda::find($id)) {
+            $autor = $demanda->autor;
         } else {
             $demanda = null;
         }
-        return view('anuncio.anunc-demanda', ['demanda' => $demanda]);
+        return view('anuncio.anunc-demanda', ['demanda' => $demanda,'autor' => $autor, 'status'=>'ok']);
     }
 
     /**

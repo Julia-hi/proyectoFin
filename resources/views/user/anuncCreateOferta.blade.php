@@ -121,7 +121,7 @@
                                         <option value="agapornis">Agapornis</option>
                                         <option value="ara">Ara</option>
                                         <option value="amazona">Amazona</option>
-                                        <option value="cocatúa">Cocatúa</option>
+                                        <option value="cacatúa">Cacatúa</option>
                                         <option value="ninfa">Ninfa</option>
                                         <option value="periquito">Periquito</option>
                                         <option value="yaco">Yaco</option>

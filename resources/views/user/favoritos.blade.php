@@ -26,15 +26,16 @@
                         <p>Todavia no tienes favoritos</p>
                         @else
                         @foreach ($favoritos as $fav)
+                        @if($fav->anuncio->tipo =='oferta')
                         <div class="row w-100 m-0 p-2 align-items-center">
                             <div class="col-1 text-left"> {{ $fav->anuncio->id }}</div>
-                            <?php $fotos = $fav->anuncio->fotos; ?>
+                            <?php $fotos = $fav->anuncio->anuncioOferta->fotos; ?>
                             <div class="col-1 text-left">
-                                <img class="card-img-top" src="{{ $fotos[0]->enlace }}" alt="" style="height: 80px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
+                                <img class="card-img-top" src="{{ $fotos[0]->enlace }}" alt="{{ $fav->anuncio->titulo }}" style="height: 80px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
                             </div>
-                            <div class="col-2 text-left"> {{ $fav->anuncio->titulo }}</div>
-                            <div class="col text-left"> {{ $fav->anuncio->descripcion }}</div>
-                            <div class="col-3 ">
+                            <div class="col-2 text-left"> {{ $fav->anuncio->anuncioOferta->titulo }}</div>
+                            <div class="col text-left"> {{ $fav->anuncio->anuncioOferta->descripcion }}</div>
+                            <div class="col-3">
                                 <div class="btn-group d-flex align-items-center">
                                     <?php $url = '/ofertas/' . $fav->id; ?>
                                     <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
@@ -47,12 +48,34 @@
                                     <form action="{{ route('user.favoritos.destroy', [Auth::user()->id, $fav->id]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit">Eliminar de favoritos</button>
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar de favoritos</button>
                                     </form>
                                     <!-- <a href="" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Dejar de seguir</a> -->
                                 </div>
                             </div>
                         </div>
+                        @elseif($fav->anuncio->tipo =='demanda')
+                        <div class="row w-100 m-0 p-2 align-items-center">
+                            <div class="col-1 text-left"> {{ $fav->anuncio->id }}</div>
+                           
+                            <div class="col-2 text-left"> {{ $fav->anuncio->anuncioOferta->titulo }}</div>
+                            <div class="col text-left"> {{ $fav->anuncio->anuncioOferta->descripcion }}</div>
+                            <div class="col-3">
+                                <div class="btn-group d-flex align-items-center">
+                                    <?php $url = '/ofertas/' . $fav->id; ?>
+                                    <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
+                                   
+                                    <!-- formulario para Eeiminar favorito de la lista -->
+                                    <form action="{{ route('user.favoritos.destroy', [Auth::user()->id, $fav->id]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar de favoritos</button>
+                                    </form>
+                                    <!-- <a href="" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Dejar de seguir</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                         @endforeach
                         @endif
 

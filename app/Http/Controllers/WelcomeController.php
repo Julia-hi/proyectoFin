@@ -34,14 +34,6 @@ class WelcomeController extends Controller
             $status = 'error';
             return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas,'status' => $status]);
         }
-
-        /* if ($this->checkConnectionDB()) {
-            $demandas = AnuncioDemanda::limit(10)->get();
-            $ofertas = AnuncioOferta::get(); //::limit(10)->get();
-        } else {
-            $demandas = null;
-            $ofertas = null;
-        } */
         return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'status' => $status]);
     }
 

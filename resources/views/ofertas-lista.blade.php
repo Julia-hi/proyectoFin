@@ -21,14 +21,10 @@
 
 <body class="antialiased mt-0">
     <!-- Page Heading - resources/views/components/header.blade.php -->
-
     <header>
         <x-header />
     </header>
-
-
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             <div class="align-self-center">
@@ -194,16 +190,15 @@
                                                         @auth
                                                         <?php $user_id = Auth::user()->id;
                                                         $user = Auth::user();
-                                                        // $favorito = $oferta->esFavorito($user_id, $oferta->id); 
                                                         ?>
                                                         <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
                                                         si no es favorito - mostra borón para añadir a favoritos -->
-                                                        @if(!$oferta->esFavorito($user, $oferta))
+                                                        @if(!$oferta->anuncio->esFavorito($user, $oferta->anuncio))
                                                         <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
                                                             @csrf
                                                             <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
                                                             <input type="hidden" name="user_id" value="{{ $user_id }}">
-                                                            <button type="submit"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1em;" class="mx-2"></button>
+                                                            <button type="submit" data-title="Guardar como favorito"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
                                                         </form>
                                                         @else
                                                         <?php $favorito = $oferta->favoritos->first(); ?>
@@ -211,7 +206,7 @@
                                                         <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit"><img title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1em;" class="mx-2"></button>
+                                                            <button type="submit"><img data-title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
                                                         </form>
                                                         @endif
                                                         @endauth

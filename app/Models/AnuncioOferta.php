@@ -43,13 +43,19 @@ class AnuncioOferta extends Model
      */
     public function anuncio()
     {
-        return $this->belongsTo(Anuncio::class,'anuncio_id');
+        return $this->belongsTo(Anuncio::class,'id');
     }
 
-    function usuario()
+
+    /**
+     * Obtener autor del anuncio oferta
+     * @return User
+     */
+    function autor()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
     /**
      * favoritos a que pertenece anuncio concreto
      * @return Object
@@ -69,26 +75,4 @@ class AnuncioOferta extends Model
     }
 
 
-    /**
-     * @param int $id_user
-     * @param int $id_anuncio
-     * @return AnuncioOferta
-     */
-   /*  public function esFavorito($id_user, $id_anuncio)
-    {
-       
-        $favorito= DB::table('favoritos')->where('id_usuario', $id_user)->where('id_anuncio', $id_anuncio)->get();
-        if($favorito->count()>0){
-           // $anuncio = DB::table('anuncios_oferta')->where('id', $id_anuncio)->get();
-            return $favorito;
-        }else{
-            return null;
-        }
-    } */
-
-
-    public function esFavorito(User $user, AnuncioOferta $anuncio)
-    {
-        return $user->favoritos()->where('anuncio_id', $anuncio->id)->exists();
-    }
 }

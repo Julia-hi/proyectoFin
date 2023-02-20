@@ -52,7 +52,7 @@ $logoUrl = Storage::url('logo.png');
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8 ">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height: 150px;">
-                   <a href="/"> <img src="<?php echo Storage::url('images/logo.png'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1"></a>
+                    <a href="/"> <img src="<?php echo Storage::url('images/logo.png'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1"></a>
                 </div>
 
                 <div class="m-2">
@@ -70,7 +70,9 @@ $logoUrl = Storage::url('logo.png');
                                         <div class="row">
                                             <div class="col-md-6">
                                                 @if($fotos->count()<=1) <div style="height: auto;">
-                                                    <img class="rounded h-auto w-100" src="<?php echo $fotos->first()->enlace; ?>" alt="" style="object-fit: cover;" data-holder-rendered="true">
+                                                    <div>
+                                                        <img class="rounded w-100" src="<?php echo $fotos->first()->enlace; ?>" alt="" style="max-height:450px; object-fit: cover;" data-holder-rendered="true">
+                                                    </div>
                                             </div>
                                             @else
                                             <div class="col-md-6">
@@ -107,22 +109,22 @@ $logoUrl = Storage::url('logo.png');
                                         </div>
 
                                         <div class="col-md-6">
-                                            <h3 class="text-uppercase pb-2">{{ $oferta->titulo }}</h3>
-                                            <h3>Raza: {{ $oferta->rasa }}</3>
-                                            <p>Genero: {{ $oferta->genero }}</p>
-                                            <p>Nacido: {{ $oferta->fecha_nac }}</p>
-                                            <b>Localidad: </b><span class="text-capitalize">{{ $oferta->comunidad }}</span>
-                                            
-                                            <h3>Descripción: </h3>
-                                            <p class="card-text py-2">{{ $oferta->descripcion }}</p>
-
-                                            <div class="w-100 d-flex  justify-content-between align-items-center">
+                                            <h1 class="text-uppercase pb-2">{{ $oferta->titulo }}</h1>
+                                            <h2>Raza: <span class="text-capitalize">{{ $oferta->raza }}</span></h2>
+                                            <h2>Genero: <span class="text-capitalize">{{ $oferta->genero }}</span></h2>
+                                            <h2>Nacido: <span class="text-capitalize">{{ $oferta->fecha_nac }}</span></h2>
+                                            <h2>Localidad: <span class="text-capitalize">{{ $oferta->comunidad }}</span></h2>
+                                            <div class="mt-3 h-50">
+                                            <h2 class="mb-1">Descripción: </h2>
+                                                <p class="card-text my-1">{{ $oferta->descripcion }}</p>
+                                            </div>
+                                            <div class="w-100 d-flex justify-content-between align-items-center">
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
                                                 </div>
-                                                <div>
-                                                    <small class="text-muted">Publicato hace: </small>
-                                                    <p>Publicado por: {{ $autor->name }}</p>
+                                                <div class="align-self-baseline">
+                                                    <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
+                                                    <p>Anunciante: {{ $autor->name }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -133,7 +135,7 @@ $logoUrl = Storage::url('logo.png');
                     </div>
                     <!-- section enviar mensaje -->
                     <div hidden class="col-md-6">
-                        <h3>Enviar mensaje a {{ $oferta->usuario->name }}</h3>
+                        <h3>Enviar mensaje a {{ $autor->name }}</h3>
                         <form action="" method="post">
                             @csrf
                             <label for="tema_mensaje">Tema</label>

@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
 $logoUrl = Storage::url('logo.png');
-
 ?>
 <!-- 
 ###
@@ -77,14 +76,13 @@ $logoUrl = Storage::url('logo.png');
                                         <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="btn-group">
-                                                    
                                                     <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
                                                 </div>
                                                 <div>
-                                                    <small class="text-muted">Publicato hace: </small>
+                                                    <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>
+                                                    <p>Anunciante: {{ $autor->name }}</p>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

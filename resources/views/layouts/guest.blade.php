@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Storage;
 
-$logoUrl = Storage::url('images/logo.png');
+$logoUrl = Storage::url('images/logo.svg');
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +26,8 @@ $logoUrl = Storage::url('images/logo.png');
 
 <body class="font-sans text-gray-900 antialiased">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 hojas">
-        <div class="d-flex flex-row justify-content-center align-items-end" style="height: 100px;">
-           <a href="/" class="h-75 mt-3 mb-1"><img src="<?php echo $logoUrl; ?>" alt="Logo MiLorito"  title="volver a la pagina principal"></a>
+        <div class="d-flex flex-row justify-content-center align-items-end" style="height: 150px;">
+           <a href="/" class="h-75 mt-3 mb-1"><img class="h-100" src="<?php echo $logoUrl; ?>"  alt="Logo MiLorito" date-title="volver a la pagina principal"></a>
         </div>
         <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
             {{ $slot }}

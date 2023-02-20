@@ -94,7 +94,7 @@ class OfertasController extends Controller
     {
         if ($oferta = AnuncioOferta::find($id)) {
             $fotos = $oferta->fotos;
-            $autor = $oferta->usuario;
+            $autor = $oferta->autor;
         } else {
             $oferta = null;
             $fotos = null;

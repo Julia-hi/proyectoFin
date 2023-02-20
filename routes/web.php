@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('ofertas', OfertasController::class)->only('index','show');
-Route::resource('demandas', DemandasController::class)->only('show');
+Route::resource('demandas', DemandasController::class)->only('index','show');
 // Route::resource('user.anuncios', UserAnunciosController::class)->middleware('auth');
 // Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class)->middleware('auth');
 // Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class)->middleware('auth');

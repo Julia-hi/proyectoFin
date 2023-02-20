@@ -25,11 +25,16 @@ class AnuncioDemanda extends Model
         'created_at'
     ];
 
-    public function anuncios() {
-		return $this->hasOne(Anuncio::class);
+    public function anuncio() {
+		return $this->hasOne(Anuncio::class, 'id');
 	}
 
-    public function user(){
+     /**
+     * Obtener autor del anuncio demanda
+     * @return User
+     */
+    function autor()
+    {
         return $this->belongsTo(User::class, 'user_id');
     }
 }

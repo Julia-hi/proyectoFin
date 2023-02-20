@@ -18,6 +18,8 @@ class Favorito extends Model
 
     /**
      * Get user de favorito
+     * 
+     * @return User
      */
     public function user()
     {
@@ -25,10 +27,11 @@ class Favorito extends Model
     }
 
     /**
-     * Get user de favorito
+     * Get anuncio favorito
+     * @return Anuncio
      */
     public function anuncio()
     {
-        return $this->belongsTo(AnuncioOferta::class, 'anuncio_id');
+        return $this->belongsTo(Anuncio::class, 'anuncio_id');
     }
 }

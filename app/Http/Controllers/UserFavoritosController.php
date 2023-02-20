@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Favorito;
-use App\Models\AnuncioOferta;
+use App\Models\Anuncio;
 use App\Models\User;
 
 
@@ -48,10 +48,9 @@ class UserFavoritosController extends Controller
         $entrada['user_id'] = Auth::user()->id;
         $entrada['anuncio_id'] = $request->anuncio_id;
         //consultar la base de datos si existe anuncio
-        $anuncio = AnuncioOferta::where('id', $request->anuncio_id)->get();
+        $anuncio = Anuncio::where('id', $request->anuncio_id)->get();
         if ($anuncio->count()>0) {
-            Favorito::create($entrada); // insert to database - tabla "favoritos"
-            
+            Favorito::create($entrada); // insert to database - tabla "favoritos"  
         }
         return back();
     }
