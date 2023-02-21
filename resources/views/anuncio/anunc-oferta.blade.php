@@ -21,6 +21,18 @@ $logoUrl = Storage::url('logo.png');
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
+    <style>
+        #draggable {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            background-color: white;
+            z-index: 3;
+            max-width: 80%;
+            padding: 20px;
+            cursor: move;
+        }
+    </style>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -50,6 +62,29 @@ $logoUrl = Storage::url('logo.png');
         </div>
         @endif
         <div class="container">
+            @auth
+            <div id="draggable" class="w-25 rounded border shadow">
+                <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
+                <form method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
+                    @csrf
+                    <textarea class="form-control" id="mensaje" rows="10" name="texto" placeholder="Escribe qualcosa aquí..."></textarea>
+                    <x-input-error :messages="$errors->get('texto')" class="mt-2" />
+                    <input hidden name="anuncio_id" type="text" value="{{ $oferta->id }}" />
+                    <input hidden name="user_id" type="text" value="{{ Auth::user()->id }}" />
+                    <div class="d-flex items-center justify-content-between my-4">
+                        <x-primary-button class="ml-3">
+                            {{ __('Enviar') }}
+                        </x-primary-button>
+                    </div>
+                </form>
+            </div>
+            @endauth
+            @guest
+            <div id="draggable" class="w-25 rounded border shadow">
+                <a type="button" href="/login">Identificate</a>
+            </div>
+
+            @endguest
             <div class="justify-center sm:px-6 lg:px-8 ">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height: 150px;">
                     <a href="/"> <img src="<?php echo Storage::url('images/logo.png'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1"></a>
@@ -115,12 +150,12 @@ $logoUrl = Storage::url('logo.png');
                                             <h2>Nacido: <span class="text-capitalize">{{ $oferta->fecha_nac }}</span></h2>
                                             <h2>Localidad: <span class="text-capitalize">{{ $oferta->comunidad }}</span></h2>
                                             <div class="mt-3 h-50">
-                                            <h2 class="mb-1">Descripción: </h2>
+                                                <h2 class="mb-1">Descripción: </h2>
                                                 <p class="card-text my-1">{{ $oferta->descripcion }}</p>
                                             </div>
                                             <div class="w-100 d-flex justify-content-between align-items-center">
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
+                                                <div class="">
+                                                    <button id="crearMensaje" type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
                                                 </div>
                                                 <div class="align-self-baseline">
                                                     <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
@@ -133,27 +168,7 @@ $logoUrl = Storage::url('logo.png');
                             </div>
                         </div>
                     </div>
-                    <!-- section enviar mensaje -->
-                    <div hidden class="col-md-6">
-                        <h3>Enviar mensaje a {{ $autor->name }}</h3>
-                        <form action="" method="post">
-                            @csrf
-                            <label for="tema_mensaje">Tema</label>
-                            <input type="text" name="tema_mensaje" value=" {{ $oferta->titulo }}">
-                            <label for="body_mensaje">Tema</label>
-                            <input type="textarea" name="body_mensaje">
-                            <!-- bottones del formulario -->
-                            <div class="row justify-content-center">
-                                <div class="col-2">
-                                    <input type="submit" name="enviar" value="Enviar mensaje" class="btn btn-danger w-100 active text-uppercase font-weight-bold">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" title="añadir a favoritos">Favoritos</button>
-                                </div>
-                                <div class="col-2">
-                                    <input type="reset" name="limpiar" value="Limpiar" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+
                     <!-- FIN del bloque de uno Anuncio demanda -->
                     @elseif($status=='error')
                     <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
@@ -166,6 +181,83 @@ $logoUrl = Storage::url('logo.png');
     </div>
     </div>
     </div>
+    <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            // showFormulario();
+            // showDiv();
+            var draggable = document.getElementById('draggable');
+            var isDragging = false;
+            var dragX, dragY;
+
+            draggable.addEventListener('mousedown', function(e) {
+                isDragging = true;
+                dragX = e.clientX - draggable.offsetLeft;
+                dragY = e.clientY - draggable.offsetTop;
+            });
+
+            document.addEventListener('mousemove', function(e) {
+                if (isDragging) {
+                    draggable.style.left = (e.clientX - dragX) + 'px';
+                    draggable.style.top = (e.clientY - dragY) + 'px';
+                }
+            });
+
+            document.addEventListener('mouseup', function() {
+                isDragging = false;
+            });
+
+        });
+
+        function showDiv() {
+            var button = document.getElementById('crearMensaje');
+            button.addEventListener('click', function() {
+                // Create a new div element
+                var newDiv = document.createElement('div');
+
+                // Set some properties for the new div element
+                newDiv.innerHTML = 'This is a dynamically created div.';
+                newDiv.style.backgroundColor = 'blue';
+                newDiv.style.width = '100px';
+                newDiv.style.height = '100px';
+                newDiv.style.color = 'white';
+                newDiv.style.padding = '20px';
+                newDiv.style.margin = '10px';
+
+                // Append the new div element to the document body
+                document.body.appendChild(newDiv);
+            });
+        }
+
+        function showFormulario() {
+
+            document.getElementById('crearMensaje').addEventListener('click', function() {
+                // Open a new window with the form
+                var messageWindow = window.open('', 'messageWindow', 'width=400,height=400');
+
+                // Create the form elements
+                var form = messageWindow.document.createElement('form');
+                var label = messageWindow.document.createElement('label');
+                var input = messageWindow.document.createElement('input');
+                var submit = messageWindow.document.createElement('input');
+
+                // Set attributes for the form elements
+                form.setAttribute('method', 'post');
+                form.setAttribute('action', 'submit-form.php');
+                label.innerHTML = 'Message:';
+                input.setAttribute('type', 'text');
+                input.setAttribute('name', 'message');
+                submit.setAttribute('type', 'submit');
+                submit.setAttribute('value', 'Send');
+
+                // Add the form elements to the form and the form to the window
+                form.appendChild(label);
+                form.appendChild(input);
+                form.appendChild(submit);
+                messageWindow.document.body.appendChild(form);
+            })
+        }
+    </script>
 </body>
 
 </html>

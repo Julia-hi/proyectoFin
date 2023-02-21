@@ -73,17 +73,17 @@
                                             <option value="canarias">Canarias</option>
                                             <option value="cantabria">Cantabria</option>
                                             <option value="castilla-la-mancha">Castilla La Mancha</option>
-                                            <option value="castila-leon">Castilla León</option>
+                                            <option value="castilla-leon">Castilla León</option>
                                             <option value="catalunya">Catalunya</option>
                                             <option value="ceuta-y-melilla">Ceuta y Melilla</option>
                                             <option value="extremadura">Extremadura</option>
                                             <option value="galicia">Galicia</option>
                                             <option value="islas-baleares">Islas Baleares</option>
-                                            <option value="rioja">La Rioja</option>
                                             <option value="madrid">Madrid</option>
                                             <option value="murcia">Murcia</option>
                                             <option value="navarra">Navarra</option>
                                             <option value="pais-vasco">País Vasco</option>
+                                            <option value="rioja">La Rioja</option>
                                             <option value="valencia">Valencia</option>
                                         </select>
                                     </div>

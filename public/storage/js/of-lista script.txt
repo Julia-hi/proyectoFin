@@ -9,15 +9,15 @@ div for display results
         $('#filter-form').submit(function(event) {
             event.preventDefault(); // prevent the form from submitting
 
-            var town = $('#town').val();
-            var country = $('#country').val();
+            var provincia = $('#provincia').val();
+            var poblacion = $('#poblacion').val();
 
             $.ajax({
                 url: $(this).attr('action'),
                 type: 'GET',
                 data: {
-                    town: town,
-                    country: country
+                    provincia: provincia,
+                    poblacion: poblacion
                 },
                 success: function(response) {
                     $('#filter-results').html(response);
@@ -28,4 +28,21 @@ div for display results
             });
         });
     });
+
+
+// Get the URL parameters
+const urlSearchParams = new URLSearchParams(window.location.search);
+
+// Get the value of a parameter
+const myParam = urlSearchParams.get('myParam');
+
+// Log the value of the parameter
+console.log(myParam);
 </script>
+
+php code:
+<?php
+  $myVariable = $_POST['variable'];
+  // Do something with $myVariable
+  echo $myVariable;
+?>

@@ -16,12 +16,14 @@ class AdminController extends Controller
     public function index()
     {
        // echo (Auth::user()->rol);
-
+/* 
         if (Auth::check() && Auth::user()->rol=="admin") {
-            return view('admin.dashboard');
+            
         } else {
             return view('admin.login');
-        }
+        } */
+        return redirect()->intended(RouteServiceProvider::ADMIN);
+       // return view('admin.dashboard');
     }
 
     /**

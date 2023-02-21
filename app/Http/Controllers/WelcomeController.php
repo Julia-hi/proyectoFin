@@ -30,7 +30,6 @@ class WelcomeController extends Controller
             // throw new Exception('conneción fallida');
             $demandas = null;
             $ofertas = null;
-            $fotos = null;
             $status = 'error';
             return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas,'status' => $status]);
         }

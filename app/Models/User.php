@@ -54,7 +54,6 @@ class User extends Authenticatable
 
     function isAdmin()
     {
-
         if (Auth::user()->rol == "admin") {
             return true;
         } else {
@@ -89,7 +88,7 @@ class User extends Authenticatable
     /**
      * Get mensaje del usuario
      */
-    public function mensaje()
+    public function mensajes()
     {
         return $this->hasMany(Mensaje::class);
     }
@@ -102,5 +101,11 @@ class User extends Authenticatable
         return $this->hasMany(Favorito::class);
     }
 
-    
+    public function esAutor(User $user)
+    {
+
+        //mensaje->anuncio->usuario - autor del anuncio
+        //  return $this->mensajes()->anuncio->usuario->id->where('user_id', $user->id)->exists();    
+        return $this->anuncios()->where('user_id', $user->id)->exists();
+    }
 }

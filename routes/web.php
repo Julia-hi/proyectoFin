@@ -14,6 +14,7 @@ use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
 use App\Http\Controllers\UserFavoritosController;
 use App\Http\Controllers\UserMensajesController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\AdminAnunciosController;
 /*
@@ -49,6 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('user.mensajes', UserMensajesController::class);
     Route::resource('admin.users', AdminUsersController::class);
 });
+
 
 Route::resource('ofertas', OfertasController::class)->only('index','show');
 Route::resource('demandas', DemandasController::class)->only('index','show');

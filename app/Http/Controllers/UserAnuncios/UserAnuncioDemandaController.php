@@ -45,13 +45,8 @@ class UserAnuncioDemandaController extends Controller
     {
         $user = Auth::user();
         //insert validation of request
-        $validar = $request->validate(
-            [
-                'titulo' => 'required|min:10|max:100',
-                'descripcion' => 'required|min:10|max:300'
-            ]
-        );
-        if ($validar && $request->tipo_anuncio == 'demanda') {
+       
+        if ($request->tipo_anuncio == 'demanda') {
             $entrada = $request->validate(
                 [
                     'titulo' => 'required|min:10|max:100',

@@ -10,14 +10,37 @@ class Mensaje extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'id_anuncio',
-        'id_destino', // id de usuario propietario del anuncio
-        'id_remitente', //id de user que envia mensaje
-        'texto'   
+        'id',
+        'anuncio_id',
+        'user_id', // usuario autor del mensaje
+        'texto',
+        'created_at'
     ];
 
-    public function mensajes()
-	{
-	 	return $this->belongsTo(Anuncio::class, 'foreign_key');
-	}
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'mensajes';
+    
+    /**
+     * Obtener anuncio a qual pertenece il mansaje
+     * @return Anuncio
+     */
+    public function anuncio()
+    {
+        return $this->belongsTo(Anuncio::class, 'anuncio_id');
+    }
+
+    /**
+     * Obtener id del usuario autor del mensaje
+     * @return User
+     */
+    public function usuario()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
+
+    
 }

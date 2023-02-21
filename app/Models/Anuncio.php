@@ -20,33 +20,55 @@ class Anuncio extends Model
      */
     protected $table = 'anuncios';
 
+    /**
+     * Campos del modelo anuncio relacionados con DB
+     * @var array
+     */
     protected $fillable = [
         'id',
         'user_id',
         'estado',
         'tipo',
-        'created_ad',
+        'created_at',
     ];
 
+    /**
+     * Obreter usuario del anuncio (autor)
+     * @return User
+     */
     function usuario()
-	{
-	 	return $this->hasOne(User::class);
-	}
+    {
+        return $this->hasOne(User::class);
+    }
 
+    /**
+     * Obtener anuncio demanda (es unico)
+     * @return AnuncioDemanda
+     */
     public function anuncioDemanda()
-	{
-	 	return $this->hasOne(AnuncioDemanda::class,'id');
-	}
+    {
+        return $this->hasOne(AnuncioDemanda::class, 'id');
+    }
 
+    /**
+     * Obtener anuncio de oferta (es unico)
+     * 
+     * @return AnuncioOferta
+     */
     public function anuncioOferta()
-	{
-	 	return $this->hasOne(AnuncioOferta::class,'id');
-	}
-    
+    {
+        return $this->hasOne(AnuncioOferta::class, 'id');
+    }
+
+    /**
+     * Obtener mensajes del anuncio
+     * 
+     * @return collection
+     */
     public function mensajes()
-	{
-	 	return $this->belongsTo(Mensaje::class, 'foreign_key');
-	}
+    {
+        return $this->hasMany(Mensaje::class, 'anuncio_id');
+    }
 
     /**
      * favoritos a que pertenece anuncio concreto
@@ -57,6 +79,10 @@ class Anuncio extends Model
         return $this->hasMany(Favorito::class, 'anuncio_id');
     }
 
+    /**
+     * Validar si anuncio ya añadido a favoritos
+     * @return bool
+     */
     public function esFavorito(User $user, Anuncio $anuncio)
     {
         return $user->favoritos()->where('anuncio_id', $anuncio->id)->exists();

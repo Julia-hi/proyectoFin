@@ -21,13 +21,24 @@
                         {{ __('Mis mensajes') }}
                     </h2>
                     <div class="pt-3">
-                        <?php
-                        if ($mensajes == "mensajes no encontrados") {
-                            echo "todavia no tienes mensajes";
-                        } else {
-                            echo "tienes " . count($mensajes) . " mensajes";
-                        }
-                        ?>
+                        @if($dialogos == null)
+                        <div class="text-center">todavia no tienes mensajes</div>
+                        @else
+                        <div>Tienes {{ count($dialogos) }} conversaciones</div>
+                        @foreach($dialogos as $key=>$dialogo)
+                        <div>
+                            <!-- grupo de mensajes pertenecentes a un anuncio -->
+                            <h1>anuncio id: {{ $key }}</h1>
+                            @foreach($dialogo as $mensaje)
+                            <p>{{ $mensaje->texto}}</p>
+                            @endforeach
+                        </div>
+                        @endforeach
+                        <div>
+                            <?php $autor = Auth::user(); ?>
+                            
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>

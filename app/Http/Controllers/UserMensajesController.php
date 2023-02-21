@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Mensaje;
+use Exception;
 use Illuminate\Support\Facades\DB;
 
 class UserMensajesController extends Controller
@@ -16,18 +17,33 @@ class UserMensajesController extends Controller
      */
     public function index($user)
     {
-        $user_id = Auth::user()->id;
-        $mensajes = Mensaje::where('remitente_id', $user_id)->get();
-       
-       $count=Mensaje::where('remitente_id', $user_id)->count();
-        if ($count > 0) {
-           // $mensajes = DB::table('anuncios')->where('id_usuario',$user_id);
-           $mensajes = Mensaje::where('remitente_id', $user_id)->get();
-            } else {
-                $mensajes = "mensajes no encontrados";
-        }
-        $user = Auth::user()->name;
-        return view('user.mensajes', ['user' => $user, 'mensajes'=>$mensajes]);
+       // $dialogos = DB::table('mensajes')->where('user_id', $user)->groupBy('anuncio_id')->get();
+        $dialogos = DB::table('mensajes')
+        ->select('anuncio_id')
+        ->where('user_id', '=', $user)
+        ->groupBy('anuncio_id')
+        ->get();
+
+         foreach($dialogos as $key=>$dialogo){
+            $anunc_id=$dialogo->anuncio_id;
+          //  $mensajesEnviados[$anunc_id] = Mensaje::where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
+           $mensajesEnviados[$anunc_id] = DB::table('mensajes')->where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
+        } 
+       // $dialogos = Mensaje::where('user_id', $user)->get();
+        /* try {
+             $mensajes = DB::table('anuncios')->where('id_usuario',$user_id);
+            $user = Auth::user();
+             $dialogos = Mensaje::where('user_id', $user->id)->get()->groupBy('anuncio_id');
+             $dialogos = DB::table('mensajes')->where('user_id', $user->id)->groupBy('anuncio_id')->get();
+            $dialogos = Mensaje::where('user_id', 1)->get();
+            if ($dialogos->count < 1) {
+                $dialogos = null;
+            }
+            return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);
+        } catch (Exception $ex) {
+            return view('user.mensajes', ['user' => null, 'dialogos' => null, 'status' => 'error']);
+        } */
+        return view('user.mensajes', ['user' => $user, 'dialogos' => $mensajesEnviados, 'status' => 'ok']);
     }
 
     /**
@@ -37,7 +53,7 @@ class UserMensajesController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.mensaje-create', ['user' => Auth::user()]);
     }
 
     /**
@@ -48,7 +64,15 @@ class UserMensajesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $entrada = $request->validate(
+            [
+                'texto' => 'required|min:10|max:300'
+            ]
+        );
+        $entrada['anuncio_id'] = $request->anuncio_id;
+        $entrada['user_id'] = $request->user_id;
+        Mensaje::create($entrada); // insert a database
+        //  return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']); 
     }
 
     /**
