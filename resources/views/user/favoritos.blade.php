@@ -39,11 +39,6 @@
                                 <div class="btn-group d-flex align-items-center">
                                     <?php $url = '/ofertas/' . $fav->id; ?>
                                     <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
-                                    <!--   <form method="delete" action="{{ route('user.favoritos.destroy',['user'=>Auth::user(),'favorito' => $fav->id]) }}">
-
-                                        <input type="hidden" name="id_anuncio" value="{{ $fav->anuncio->id }}">
-                                        <button type="submit"><img title="eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1em;" class="mx-2"></button>
-                                    </form> -->
                                     <!-- formulario para Eeiminar favorito de la lista -->
                                     <form action="{{ route('user.favoritos.destroy', [Auth::user()->id, $fav->id]) }}" method="POST">
                                         @csrf

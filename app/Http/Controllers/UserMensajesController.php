@@ -26,8 +26,8 @@ class UserMensajesController extends Controller
 
          foreach($dialogos as $key=>$dialogo){
             $anunc_id=$dialogo->anuncio_id;
-          //  $mensajesEnviados[$anunc_id] = Mensaje::where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
-           $mensajesEnviados[$anunc_id] = DB::table('mensajes')->where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
+            $mensajesEnviados[$anunc_id] = Mensaje::where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
+           //$mensajesEnviados[$anunc_id] = DB::table('mensajes')->where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
         } 
        // $dialogos = Mensaje::where('user_id', $user)->get();
         /* try {

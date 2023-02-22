@@ -66,7 +66,7 @@ class User extends Authenticatable
      */
     public function anuncios()
     {
-        return $this->hasMany(Anuncio::class, 'user_id');
+        return $this->hasMany(Anuncio::class);
     }
 
     /**

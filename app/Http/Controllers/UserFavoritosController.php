@@ -19,7 +19,7 @@ class UserFavoritosController extends Controller
     public function index($id)
     {
         $user = Auth::user();
-        $favoritos = Favorito::where('user_id', Auth::user()->id)->get();
+        $favoritos = Favorito::where('user_id', $id)->get();
         if ($favoritos->count() < 1) {
             $favoritos = null; // no encontrado favoritos
         }

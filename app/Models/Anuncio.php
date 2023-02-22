@@ -36,9 +36,9 @@ class Anuncio extends Model
      * Obreter usuario del anuncio (autor)
      * @return User
      */
-    function usuario()
+    function autor()
     {
-        return $this->hasOne(User::class);
+        return $this->hasOne(User::class,'id');
     }
 
     /**
