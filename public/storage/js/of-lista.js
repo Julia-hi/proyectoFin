@@ -1,34 +1,63 @@
 /**
  * autor: Yulia Tropin Tropina, 3DAWd
  * Proyecto fin del curso "Mi lorito"
+ * 
+ * jQuery required
  * */
 
 "use strict"
 let xmlHttp;
-const firstSelect = document.getElementById("comunidad");
-const secondSelect = document.getElementById("provincia");
-const thirdSelect = document.getElementById("poblacion");
+//parametros del query
+const urlParams = new URLSearchParams(window.location.search);
+
+
+/**
+ * Datos de la comunidad seleccionada (json)
+ * @var Object
+ */
 let datos;
+
+/**
+ * Provincia seleccionada
+ * @var String 
+ */
 let selectedProv;
 
 window.addEventListener("load", () => {
-    firstSelect.addEventListener("change", mostrarProvincias);
+    var selectedRaza = urlParams.get('raza'); //obtener seleccionada opcion de raza desde query
+    //set selected attribute para opción seleccionada
+    $('#raza option[value="' + selectedRaza + '"]').attr('selected', 'selected');
+
+    var selectedGenero = urlParams.get('genero'); //obtener seleccionada opcion del genero desde query
+    //set selected attribute para opción seleccionada
+    $('#genero option[value="' + selectedGenero + '"]').attr('selected', 'selected');
+    xmlHttp = crearConexion();
+    var selectedCom = urlParams.get('comunidad');
+    $('#comunidad option[value="' + selectedCom + '"]').attr('selected', 'selected');
+    $("#comunidad").val(selectedCom);
+    console.log($("#comunidad").val());
+    if (selectedCom != "todo") {
+        mostrarProvincias(selectedCom);
+        $("#comunidad").on("change", mostrarProvincias);
+    }
 })
 
-let mostrarProvincias = () => {
-    secondSelect.innerHTML = "";
-    thirdSelect.innerHTML = "";
-    xmlHttp = crearConexion();
-    if (firstSelect.value == "todo" || $("#provincia").value == "todo") {
-        $("#provincia").innerHTML = '';
+/**
+ * Mostrar provincias (opciones del select)
+ * @param {String} selectedCom 
+ */
+function mostrarProvincias(selectedCom) {
+    //limpiar opciones seleccionados anteriormente 
+    $("#provincia").empty();
+    $("#poblacion").empty();
+    if (selectedCom == "todo" || $("#provincia").val() == "todo") {
         $("#provincia").append("<option value='todo' selected>Seleccione provincia ...</option>");
-        $("#poblacion").innerHTML = '';
         $("#poblacion").append("<option value='todo' selected>Seleccione poblacion ...</option>");
     } else {
         if (xmlHttp != undefined && comunidad != "todo") {
             cargarProvincias(comunidad.value);
-            secondSelect.addEventListener("change", function () {
-                thirdSelect.innerHTML = "";
+            $('#provincia').on("change", function () {
+                $('#poblacion').empty();
                 mostrarPoblaciones(datos);
             });
         } else {
@@ -39,15 +68,15 @@ let mostrarProvincias = () => {
 
 let mostrarPoblaciones = (datos) => {
     let lat, lon;
-    $("#poblacion").innerHTML = '';
+    $("#poblacion").empty();
     if ($("#provincia").value == "todo" || $("#comunidad").value == "todo") {
         $("#poblacion").innerHTML = '';
         $("#poblacion").append("<option value='todo' selected>Seleccione poblacion ...</option>");
     } else {
-        $("#poblacion").innerHTML = '';
         $("#poblacion").append("<option value='todo' selected>Seleccione poblacion ...</option>");
         selectedProv = $("#provincia option:selected").text();
 
+        //obtener latitud and longitude del pueblo
         $.each(datos.Provincia, function (i, element) {
             if (Object.keys(element)[0] == selectedProv) {
                 $.each(element[selectedProv], function (j, innerItem) {
@@ -55,15 +84,18 @@ let mostrarPoblaciones = (datos) => {
                         value: innerItem.Poblacion,
                         text: innerItem.Poblacion
                     }));
-                    lat=innerItem.Latitud;
+                    lat = innerItem.Latitud;
                     lon = innerItem.Longitud;
-                  //  $('#poblacion_block').append('<span  id="lat_' + innerItem.Poblacion + '">' + innerItem.Latitud + "</span>")
-                  //  $('#poblacion_block').append('<span  id="lon_' + innerItem.Poblacion + '">' + innerItem.Longitud + "</span>")
+                    //obtener selected poblacion desde query
+                    var selectedPueblo = urlParams.get('poblacion');
+                    //set selected attribute para opción seleccionada
+                    $('#poblacion option[value="' + selectedPueblo + '"]').attr('selected', 'selected');
                 });
             }
         });
-        thirdSelect.addEventListener("change", function () {
-            console.log("latitude: "+lat);
+
+        //set latitude y longitude del pueblo elegido -> para mostrar marker del ubicación en mapa
+        $('#poblacion').on("change", function () {
             $("#lat_pueblo").val(lat);
             $("#lon_pueblo").val(lon);
         });
@@ -85,7 +117,7 @@ let crearConexion = () => {
 }
 
 let cargarProvincias = (com) => {
-
+    console.log("/storage/comunidades/" + com + ".json");
     xmlHttp.open("GET", "/storage/comunidades/" + com + ".json", true);
     xmlHttp.onreadystatechange = () => {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -100,10 +132,12 @@ let cargarProvincias = (com) => {
                     value: Object.keys(elemento),
                     text: Object.keys(elemento)
                 }));
-                //  thirdSelect.innerHTML = "";
-                //console.log("I am in third nivel, provincia elegida: " + $("#provincia option:selected").text());
-                //  thirdSelect.append("<option value='todo'>Seleccione poblacion ...</option>");
             })
+
+            var selectedProv = urlParams.get('provincia');
+            $('#provincia option[value="' + selectedProv + '"]').attr('selected', 'selected');
+            mostrarPoblaciones(datos);
+            $('#provincia').on('change', mostrarPoblaciones(datos));
         }
     };
     xmlHttp.send(); //comienza la petición de respuesta al servidor
@@ -125,3 +159,8 @@ function eliminateSpacesString(optValor) {
     }
     return newValor.toLowerCase();
 }
+
+
+
+
+

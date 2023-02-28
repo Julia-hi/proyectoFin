@@ -1,20 +1,12 @@
 <?php
 
-/**
- * Ofertas controller
- * 
- * anuncios de oferta
- */
-
 namespace App\Http\Controllers\Anuncios;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\AnuncioOferta;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
-class OfertasController extends Controller
+class MapaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,7 +24,7 @@ class OfertasController extends Controller
         } catch (Exeption $ex) {
             $status = "error";
         }
-        return view('ofertas-lista', ['ofertas' => $ofertas, 'status' => $status]);
+        return view('mapa', ['ofertas' => $ofertas, 'status' => $status]);
     }
 
     /**
@@ -64,18 +56,7 @@ class OfertasController extends Controller
      */
     public function show($id)
     {
-        if ($oferta = AnuncioOferta::find($id)) {
-            $fotos = $oferta->fotos;
-            $autor = $oferta->autor;
-        } else {
-            $oferta = null;
-            $fotos = null;
-        }
-
-
-        // $oferta['autor'] =  $autor->name;
-
-        return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'autor' => $autor, 'fotos' => $fotos, 'status' => 'ok']);
+        //
     }
 
     /**
@@ -110,25 +91,5 @@ class OfertasController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    function getParametrosQuery()
-    {
-        if (isset($_POST['comunidad'])) {
-            $valores['comunidad'] = $_POST['comunidad'];
-        } else {
-            $valores['comunidad'] = "todo";
-        }
-        if (isset($_POST['provincia'])) {
-            $valores['provincia'] = $_POST['provincia'];
-        } else {
-            $valore['provincia'] = "todo";
-        }
-        if (isset($_POST['poblacion'])) {
-            $valores['poblacion'] = $_POST['poblacion'];
-        } else {
-            $valores['poblacion'] = "todo";
-        }
-        return $valores;
     }
 }

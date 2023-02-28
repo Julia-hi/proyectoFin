@@ -73,6 +73,7 @@ class UserMensajesController extends Controller
         $entrada['user_id'] = $request->user_id;
         Mensaje::create($entrada); // insert a database
         //  return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']); 
+        return back()->with('visible',$entrada['anuncio_id']);
     }
 
     /**

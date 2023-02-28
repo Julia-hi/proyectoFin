@@ -53,7 +53,7 @@
                 <div class="m-2">
                     <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
-                        <form id="filter_form" method="get" action=""><!-- {{ route('ofertas.filter') }} -->
+                        <form id="formulario" method="get" action="{{ route('ofertas.filter') }}">
                             <div class="row p-3 g-6">
                                 <div class="col">
                                     <div class="row border rounded h-100">
@@ -118,14 +118,14 @@
                                     </select>
                                 </div>
                                 <div class="col ">
-                                    <select name="genero" id="genero" class="border rounded h-100 w-100 p-2">
+                                    <select name="sexo" id="sexo" class="border rounded h-100 w-100 p-2">
                                         <option value="todos" checked>Genero no importa</option>
                                         <option value="macho">macho</option>
                                         <option value="embra">embra</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button id="buscar-botton" type="submit" class="p-3 rounded border w-100">BUSCAR</button>
+                                    <button type="submit" class="p-3 rounded border w-100">BUSCAR</button>
                                 </div>
                             </div>
                     </div>
@@ -142,7 +142,8 @@
                     <h2 class="p-2 my-4 text-center">Ofertas en <span class="text-capitalize"><?php echo $comunidad; ?></span>
 
                     </h2>
-                    @if($ofertas == "ofertas not found") 
+                    <?php
+                    if ($ofertas == "ofertas not found") { ?>
                         <div class="text-center">
                             <p>Lo sentimos, este momento no hemos encontrado ofertas en <span class="text-capitalize"><?php echo $comunidad ?></span></p>
                             <p>Consulta ofertas sin filtros (para toda España) o intenta más tarde.</p>
@@ -150,7 +151,9 @@
                                 <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
                             </div>
                         </div>
-                    @else
+                    <?php } else {
+
+                    ?>
                         <div class="align-items-center d-flex justify-content-center p-3">
                             <div class="btn-group row w-50 mb-3">
                                 <a href="#" class="btn btn-sm btn-outline-secondary active col-3">Lista</a>
@@ -164,9 +167,8 @@
                                 <div class="col-md-4">
                                     <div class="card mb-4" style="height: 500px;">
                                         <div class="card-body">
-                                            <?php // $fotos = $oferta->fotos; 
-                                            ?>
-                                            @foreach($oferta->fotos as $foto)
+                                            <?php $fotos = $oferta->fotos; ?>
+                                            @foreach($fotos as $foto)
                                             <div style="height: 70%;">
                                                 <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
                                             </div>
@@ -179,14 +181,10 @@
                                             </div>
                                             <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group" style="height:30px;">
-                                                        <?php $url = '/ofertas/' . $oferta->id; ?>
-                                                        <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
-                                                            <span class="text-center align-middle">Ver</span>
-                                                        </a>
-                                                        <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
-                                                            <span class="text-center">Enviar mensaje</span>
-                                                        </a>
+                                                    <div class="btn-group">
+
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                                                        <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
                                                         @auth
                                                         <?php $user_id = Auth::user()->id;
                                                         $user = Auth::user();
@@ -231,7 +229,7 @@
                                 @endif
                             </div>
                         </div>
-                    @endif
+                    <?php } ?>
                 </div>
             </div>
         </div>

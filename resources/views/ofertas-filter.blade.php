@@ -53,7 +53,7 @@
                 <div class="m-2">
                     <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
-                        <form id="filter_form" method="get" action=""><!-- {{ route('ofertas.filter') }} -->
+                        <form id="filter_form" method="get" action="{{ route('filter.index') }}">
                             <div class="row p-3 g-6">
                                 <div class="col">
                                     <div class="row border rounded h-100">
@@ -64,7 +64,7 @@
                                             </svg>
                                         </div>
                                         <select name="comunidad" id="comunidad" class="col-10 border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione Región ...</option>
+                                            <option value="todo">Seleccione Región ...</option>
                                             <option value="andalucia">Andalucía</option>
                                             <option value="aragon">Aragón</option>
                                             <option value="asturias">Asturias</option>
@@ -89,7 +89,7 @@
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="provincia" id="provincia" class="border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione provincia ...</option>
+                                            <option value="todo">Seleccione provincia ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
 
@@ -98,7 +98,7 @@
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="poblacion" id="poblacion" class="border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione población ...</option>
+                                            <option value="todo">Seleccione población ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
                                     </div>
@@ -106,7 +106,7 @@
 
                                 <div class="col">
                                     <select name="raza" id="raza" class="border rounded h-100 w-100 p-2">
-                                        <option value="todos">Todas razas</option>
+                                        <option value="todo">Todas razas</option>
                                         <option value="agapornis">agapornis</option>
                                         <option value="ara">ara</option>
                                         <option value="amazona">amazona</option>
@@ -119,7 +119,7 @@
                                 </div>
                                 <div class="col ">
                                     <select name="genero" id="genero" class="border rounded h-100 w-100 p-2">
-                                        <option value="todos" checked>Genero no importa</option>
+                                        <option value="todo">Genero no importa</option>
                                         <option value="macho">macho</option>
                                         <option value="embra">embra</option>
                                     </select>
@@ -164,9 +164,9 @@
                                 <div class="col-md-4">
                                     <div class="card mb-4" style="height: 500px;">
                                         <div class="card-body">
-                                            <?php // $fotos = $oferta->fotos; 
+                                            <?php  $fotos = $oferta->fotos; 
                                             ?>
-                                            @foreach($oferta->fotos as $foto)
+                                            @foreach($fotos as $foto)
                                             <div style="height: 70%;">
                                                 <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
                                             </div>

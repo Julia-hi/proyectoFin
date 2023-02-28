@@ -1,4 +1,4 @@
-.red-brillante-boton {
+/* .red-brillante-boton {
     position: relative !important;
     display: inline-block !important;
     vertical-align: middle !important;
@@ -17,16 +17,17 @@
     top: .1em;
     left: .1em;
     box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
-}
+} */
 
-.hojas{
-    background-color:#DCF2FA; 
-    background-image: url('../images/hojas-fondo1.svg'); 
+.hojas {
+    background-color: #DCF2FA;
+    background-image: url('../images/hojas-fondo1.svg');
     background-size: cover;
-    background-position: right top; background-attachment: fixed;
+    background-position: right top;
+    background-attachment: fixed;
 }
 
-.nav-botton{
+.nav-botton {
     width: 10em !important;
     height: 2.5em !important;
     margin: 0;
@@ -41,6 +42,7 @@
     transition: all 0.1s ease 0.5s;
     visibility: visible;
 }
+
 [data-title]:after {
     content: attr(data-title);
     position: absolute;
@@ -48,23 +50,56 @@
     left: 100%;
     padding: 4px 4px 4px 8px;
     color: #222;
-    white-space: nowrap; 
-    -moz-border-radius: 5px; 
-    -webkit-border-radius: 5px;  
-    border-radius: 5px;  
-    -moz-box-shadow: 0px 0px 4px #222;  
-    -webkit-box-shadow: 0px 0px 4px #222;  
-    box-shadow: 0px 0px 4px #222;  
-    background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);  
-    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f8f8f8),color-stop(1, #cccccc));
-    background-image: -webkit-linear-gradient(top, #f8f8f8, #cccccc);  
-    background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);  
-    background-image: -ms-linear-gradient(top, #f8f8f8, #cccccc);  
+    white-space: nowrap;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 4px #222;
+    -webkit-box-shadow: 0px 0px 4px #222;
+    box-shadow: 0px 0px 4px #222;
+    background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #cccccc));
+    background-image: -webkit-linear-gradient(top, #f8f8f8, #cccccc);
+    background-image: -moz-linear-gradient(top, #f8f8f8, #cccccc);
+    background-image: -ms-linear-gradient(top, #f8f8f8, #cccccc);
     background-image: -o-linear-gradient(top, #f8f8f8, #cccccc);
     opacity: 0;
     z-index: 99999;
     visibility: hidden;
 }
+
 [data-title] {
     position: relative;
+}
+
+.oculto {
+    display: none;
+    position: absolute;
+    top: 20%;
+    /* Posicion del div - centrar verticalmente */
+    left: 50%;
+    /* Posicion del div - centrar horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centre el div con precisión */
+    width: 80vw;
+    /* anchura */
+    height: 80vh;
+    /* altura */
+    background-color: #D8F3DC;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 5;
+}
+
+.mensaje_bloque {
+    top: 0;
+    left: 0;
+    min-height: 25%;
+    background-color: red;
+    z-index: 10;
+}
+
+.visible {
+    display: block;
+    /* Show the div when the button is pressed */
 }

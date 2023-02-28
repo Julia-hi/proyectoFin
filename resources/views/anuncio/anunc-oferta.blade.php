@@ -67,7 +67,7 @@ $logoUrl = Storage::url('logo.png');
                 <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
                 <form method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
                     @csrf
-                    <textarea class="form-control" id="mensaje" rows="10" name="texto" placeholder="Escribe qualcosa aquí..."></textarea>
+                    <textarea class="form-control" id="mensaje" rows="10" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
                     <x-input-error :messages="$errors->get('texto')" class="mt-2" />
                     <input hidden name="anuncio_id" type="text" value="{{ $oferta->id }}" />
                     <input hidden name="user_id" type="text" value="{{ Auth::user()->id }}" />

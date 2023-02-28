@@ -35,13 +35,13 @@ if ($user != null) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
- 
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <?php $backgrounImg = Storage::url('images/hojas-fondo1.svg'); ?>
 
 <body class="antialiased">
-    
+
     @if($status=='error')
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
         <div class="container">
@@ -112,7 +112,15 @@ if ($user != null) {
                     <!-- Anuncios oferta -->
                     <div id="ofertas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg  p-3">
                         <div class="row d-flex justify-content-center align-content-center m-3">
-                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url('/ofertas')}}">VER TODAS OFERTAS</a>
+                             <form action="{{ route('filter.index') }}">
+                                <input type="text" name="comunidad" id="comunidad" value="todo">
+                                <input type="text" name="provincia" id="provincia" value="todo">
+                                <input type="text" name="poblacion" id="poblacion" value="todo">
+                                <input type="text" name="raza" id="raza" value="todo">
+                                <input type="text" name="genero" id="genero" value="todo">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary w-50">VER TODAS OFERTAS</button>
+                            </form>
+                           <!--  <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url('/ofertas')}}">VER TODAS OFERTAS</a> -->
                         </div>
                         <div class="row">
                             <!-- anuncio oferta -->
@@ -135,14 +143,14 @@ if ($user != null) {
                                         </div>
                                         <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
                                             <div class="d-flex justify-content-between align-items-center">
-                                                <div class="btn-group">
+                                                <div class="btn-group" style="height:30px;">
                                                     <?php $url = '/ofertas/' . $oferta->id; ?>
                                                     <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
                                                         <span class="text-center align-middle">Ver</span>
                                                     </a>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                                    <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
                                                         <span class="text-center">Enviar mensaje</span>
-                                                    </button>
+                                                    </a>
                                                     @auth
                                                     <?php $user_id = Auth::user()->id;
                                                     $user = Auth::user();

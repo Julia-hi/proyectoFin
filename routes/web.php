@@ -7,7 +7,8 @@ use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\Anuncios\OfertasController;
 use App\Http\Controllers\Anuncios\DemandasController;
-
+use App\Http\Controllers\Anuncios\MapaController;
+use App\Http\Controllers\Anuncios\BuscarOfertasController; 
 use App\Http\Controllers\UserAnuncios\UserAnunciosController; //UserAnuncioOfertaController
 use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
 use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
@@ -51,47 +52,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('admin.users', AdminUsersController::class);
 });
 
-
+Route::get('/ofertas-filter', [BuscarOfertasController::class, 'index'])->name('filter.index');
 Route::resource('ofertas', OfertasController::class)->only('index','show');
+Route::get('/ofertas/filter', [OfertasController::class, 'filter'])->name('ofertas.filter');
+Route::resource('mapa', MapaController::class)->only('index','show');
 Route::resource('demandas', DemandasController::class)->only('index','show');
-// Route::resource('user.anuncios', UserAnunciosController::class)->middleware('auth');
-// Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class)->middleware('auth');
-// Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class)->middleware('auth');
-// Route::resource('user.favoritos', UserFavoritosController::class)->middleware('auth');
-// Route::resource('user.mensajes', UserMensajesController::class)->middleware('auth');
-
-
-//Route::get('/anuncio/crear', [AnuncioController::class, 'create'])->middleware('auth')->name('anuncio.create');
-
-/* Route::get('/mapa/{area}', function($area){
-    return view('mapa', ['area'=>$area]);
-});
-Route::get('/admin', [AdminController::class, 'index']);
-Route::get('/admin/dashboard', function () {
-    return view('admin.home1');
-}); */
-
-
-/* Route::get('/admin', function(){
-    return view('admin/dashboard');
-})->middleware('auth:admin'); */
-
-
-/* Route::middleware(['auth:admin'])->group(function () {
-    // routes that require admin authentication
-    Route::get('/admin/dashboard', [AdminController::class, 'show']);
-}); */
-
-/* Route::middleware(['auth:admin'])->group(function () {
-    Route::get('admin/dashboard', 'AdminController@index')->name('admin.dashboard');
-}); */
-
-/* Route::get('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login');
-Route::post('/admin/login', [AdminAuthController::class, 'login']);
-Route::get('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout'); */
-
-/* Route::get('/demandas', function(){
-    return view('demandas');
-}); */
 
 require __DIR__.'/auth.php';
