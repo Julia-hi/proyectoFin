@@ -125,112 +125,115 @@
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button id="buscar-botton" type="submit" class="p-3 rounded border w-100">BUSCAR</button>
+                                    <button id="buscar-botton" type="submit" class="btn btn-sm btn-outline-secondary text-uppercase h-100 w-100">BUSCAR</button>
                                 </div>
                             </div>
                     </div>
                     </form>
                 </div>
                 <!--   Block para anuncios de ofertas   -->
-                <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height: 25vh;">
                     <?php
                     if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
                         $comunidad = $_GET['comunidad'];
                     } else {
                         $comunidad = " toda España <br>";
                     } ?>
-                    <h2 class="p-2 my-4 text-center">Ofertas en <span class="text-capitalize"><?php echo $comunidad; ?></span>
+                    <h2 class="p-2 my-1 text-center">Ofertas en <span class="text-capitalize"><?php echo $comunidad; ?></span>
 
                     </h2>
-                    @if($ofertas == "ofertas not found") 
-                        <div class="text-center">
-                            <p>Lo sentimos, este momento no hemos encontrado ofertas en <span class="text-capitalize"><?php echo $comunidad ?></span></p>
-                            <p>Consulta ofertas sin filtros (para toda España) o intenta más tarde.</p>
-                            <div class="row d-flex justify-content-center align-content-center m-3">
-                                <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
-                            </div>
+                    @if($ofertas == "ofertas not found")
+                    <div class="text-center">
+                        <p>Lo sentimos, este momento no hemos encontrado ofertas en <span class="text-capitalize"><?php echo $comunidad ?></span></p>
+                        <p>Consulta ofertas sin filtros (para toda España) o intenta más tarde.</p>
+                        <div class="row d-flex justify-content-center align-content-center m-3">
+                            <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
                         </div>
+                    </div>
                     @else
-                        <div class="align-items-center d-flex justify-content-center p-3">
-                            <div class="btn-group row w-50 mb-3">
-                                <a href="#" class="btn btn-sm btn-outline-secondary active col-3">Lista</a>
-                                <a href="mapa" class="btn btn-sm btn-outline-secondary col-3">Ver en mapa</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="row">
-                                @if( $ofertas!=null && $ofertas->count()>0)
-                                @foreach ($ofertas as $oferta)
-                                <div class="col-md-4">
-                                    <div class="card mb-4" style="height: 500px;">
-                                        <div class="card-body">
-                                            <?php  $fotos = $oferta->fotos; 
-                                            ?>
-                                            @foreach($fotos as $foto)
-                                            <div style="height: 70%;">
-                                                <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
-                                            </div>
-                                            @endforeach
-                                            <div class="" style="height: 30%;">
-                                                <h3 class="text-uppercase pb-2">{{ $oferta->titulo}}</h3>
-                                                <div class="d-flex align-items-stretch" style="overflow: hidden; text-overflow: ellipsis;">
-                                                    <p class="card-text text-capitalise">{{ $oferta->descripcion }}</p>
-                                                </div>
-                                            </div>
-                                            <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group" style="height:30px;">
-                                                        <?php $url = '/ofertas/' . $oferta->id; ?>
-                                                        <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
-                                                            <span class="text-center align-middle">Ver</span>
-                                                        </a>
-                                                        <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
-                                                            <span class="text-center">Enviar mensaje</span>
-                                                        </a>
-                                                        @auth
-                                                        <?php $user_id = Auth::user()->id;
-                                                        $user = Auth::user();
-                                                        ?>
-                                                        <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
-                                                        si no es favorito - mostra borón para añadir a favoritos -->
-                                                        @if(!$oferta->anuncio->esFavorito($user, $oferta->anuncio))
-                                                        <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
-                                                            @csrf
-                                                            <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
-                                                            <input type="hidden" name="user_id" value="{{ $user_id }}">
-                                                            <button type="submit" data-title="Guardar como favorito"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                        </form>
-                                                        @else
-                                                        <?php $favorito = $oferta->favoritos->first(); ?>
-                                                        <!-- formulario para Eeiminar favorito de la lista -->
-                                                        <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit"><img data-title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                        </form>
-                                                        @endif
-                                                        @endauth
-                                                        @guest
-                                                        <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
-                                                        @endguest
 
-                                                    </div>
-                                                    <div>
-                                                        <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
-                                                    </div>
+                    <div>
+                        <div class="row">
+
+                            @if( $ofertas!=null && $ofertas->count()>0)
+                            <div class="align-items-center d-flex justify-content-center p-3">
+                                <div class="btn-group row w-50 mb-3">
+                                    <a id="linkFilter" class="btn btn-sm btn-outline-secondary active col-3">Lista</a>
+                                    <a id="mapaFilter" class="btn btn-sm btn-outline-secondary col-3">Ver en mapa</a>
+                                </div>
+                            </div>
+                            @foreach ($ofertas as $oferta)
+                            <div class="col-md-4">
+                                <div class="card mb-4" style="height: 500px;">
+                                    <div class="card-body">
+                                        <?php $fotos = $oferta->fotos;
+                                        ?>
+                                        @foreach($fotos as $foto)
+                                        <div style="height: 70%;">
+                                            <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
+                                        </div>
+                                        @endforeach
+                                        <div class="" style="height: 30%;">
+                                            <h3 class="text-uppercase pb-2">{{ $oferta->titulo}}</h3>
+                                            <div class="d-flex align-items-stretch" style="overflow: hidden; text-overflow: ellipsis;">
+                                                <p class="card-text text-capitalise">{{ $oferta->descripcion }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group" style="height:30px;">
+                                                    <?php $url = '/ofertas/' . $oferta->id; ?>
+                                                    <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
+                                                        <span class="text-center align-middle">Ver</span>
+                                                    </a>
+                                                    <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
+                                                        <span class="text-center">Enviar mensaje</span>
+                                                    </a>
+                                                    @auth
+                                                    <?php $user_id = Auth::user()->id;
+                                                    $user = Auth::user();
+                                                    ?>
+                                                    <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
+                                                        si no es favorito - mostra borón para añadir a favoritos -->
+                                                    @if(!$oferta->anuncio->esFavorito($user, $oferta->anuncio))
+                                                    <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
+                                                        @csrf
+                                                        <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
+                                                        <input type="hidden" name="user_id" value="{{ $user_id }}">
+                                                        <button type="submit" data-title="Guardar como favorito"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                    </form>
+                                                    @else
+                                                    <?php $favorito = $oferta->favoritos->first(); ?>
+                                                    <!-- formulario para Eeiminar favorito de la lista -->
+                                                    <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"><img data-title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                    </form>
+                                                    @endif
+                                                    @endauth
+                                                    @guest
+                                                    <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
+                                                    @endguest
+
+                                                </div>
+                                                <div>
+                                                    <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
-                                @elseif($status=='error')
-                                <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
-                                @else
-                                <h4 class="text-center">Disculpa, no hemos encontrado anuncios...</h4>
-                                @endif
                             </div>
+                            @endforeach
+                            @elseif($status=='error')
+                            <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
+                            @else
+                            <h4 class="text-center">Disculpa, no hemos encontrado anuncios con estés parámetros pero...<br>
+                                ¡seguro que alguno pequeño pajarito te esta esperando. <br>Cambia parametros de busqueda para encontrarlo!</h4>
+                            @endif
                         </div>
+                    </div>
                     @endif
                 </div>
             </div>

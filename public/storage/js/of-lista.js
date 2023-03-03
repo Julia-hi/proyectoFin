@@ -10,7 +10,6 @@ let xmlHttp;
 //parametros del query
 const urlParams = new URLSearchParams(window.location.search);
 
-
 /**
  * Datos de la comunidad seleccionada (json)
  * @var Object
@@ -24,38 +23,55 @@ let datos;
 let selectedProv;
 
 window.addEventListener("load", () => {
+
     var selectedRaza = urlParams.get('raza'); //obtener seleccionada opcion de raza desde query
+    var selectedGenero = urlParams.get('genero'); //obtener seleccionada opcion del genero desde query
+    var selectedCom = urlParams.get('comunidad');
+    var selectedProv = urlParams.get('provincia');
+    var selectedPueblo = urlParams.get('poblacion');
+    // ofertas-filter?comunidad=todo&provincia=todo&poblacion=todo&raza=todo&genero=todo
+    var mapaLink = "mapa?comunidad=" + selectedCom + "&provincia=" + selectedProv + "&poblacion=" +
+        selectedPueblo + "&raza=" + selectedRaza + "&genero=" + selectedGenero;
+    //set enlace para botón della vista del mapa
+    $("#mapaFilter").attr('href', mapaLink);
+
+    var listaLink = "ofertas-filter?comunidad=" + selectedCom + "&provincia=" + selectedProv + "&poblacion=" +
+        selectedPueblo + "&raza=" + selectedRaza + "&genero=" + selectedGenero;
+    //set enlace para botón della vista de lista
+    $("#linkFilter").attr('href', listaLink);
+
     //set selected attribute para opción seleccionada
     $('#raza option[value="' + selectedRaza + '"]').attr('selected', 'selected');
 
-    var selectedGenero = urlParams.get('genero'); //obtener seleccionada opcion del genero desde query
+
     //set selected attribute para opción seleccionada
     $('#genero option[value="' + selectedGenero + '"]').attr('selected', 'selected');
     xmlHttp = crearConexion();
-    var selectedCom = urlParams.get('comunidad');
+
     $('#comunidad option[value="' + selectedCom + '"]').attr('selected', 'selected');
     $("#comunidad").val(selectedCom);
     console.log($("#comunidad").val());
     if (selectedCom != "todo") {
-        mostrarProvincias(selectedCom);
-        $("#comunidad").on("change", mostrarProvincias);
+        mostrarProvincias();
     }
-})
+    $("#comunidad").on("change", mostrarProvincias);
+});
 
 /**
  * Mostrar provincias (opciones del select)
- * @param {String} selectedCom 
+ * 
  */
-function mostrarProvincias(selectedCom) {
+function mostrarProvincias() {
     //limpiar opciones seleccionados anteriormente 
     $("#provincia").empty();
     $("#poblacion").empty();
-    if (selectedCom == "todo" || $("#provincia").val() == "todo") {
+    let selectedComunidad = $("#comunidad").val();
+    if (selectedComunidad == "todo" || $("#provincia").val() == "todo") {
         $("#provincia").append("<option value='todo' selected>Seleccione provincia ...</option>");
         $("#poblacion").append("<option value='todo' selected>Seleccione poblacion ...</option>");
     } else {
-        if (xmlHttp != undefined && comunidad != "todo") {
-            cargarProvincias(comunidad.value);
+        if (xmlHttp != undefined && selectedComunidad != "todo") {
+            cargarProvincias(selectedComunidad);
             $('#provincia').on("change", function () {
                 $('#poblacion').empty();
                 mostrarPoblaciones(datos);
@@ -117,7 +133,6 @@ let crearConexion = () => {
 }
 
 let cargarProvincias = (com) => {
-    console.log("/storage/comunidades/" + com + ".json");
     xmlHttp.open("GET", "/storage/comunidades/" + com + ".json", true);
     xmlHttp.onreadystatechange = () => {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {

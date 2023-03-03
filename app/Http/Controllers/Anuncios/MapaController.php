@@ -13,15 +13,36 @@ class MapaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         try {
-            if ($ofertas = AnuncioOferta::get()) {
-            } else {
-                $ofertas = "ofertas not found";
-            }
+            $comunidad = $request->filled('comunidad') && $request->input('comunidad') !== 'todo' ? $request->input('comunidad') : null;
+            $provincia = $request->filled('provincia') && $request->input('provincia') !== 'todo' ? $request->input('provincia') : null;
+            $poblacion = $request->filled('poblacion') && $request->input('poblacion') !== 'todo' ? $request->input('poblacion') : null;
+            $raza = $request->filled('raza') && $request->input('raza') !== 'todo' ? $request->input('raza') : null;
+            $genero = $request->filled('genero') && $request->input('genero') !== 'todo' ? $request->input('genero') : null;
+
+            $ofertas = AnuncioOferta::where(function ($query) use ($comunidad, $provincia, $poblacion, $raza, $genero) {
+                if ($comunidad !== null) {
+                    $query->where('comunidad', $comunidad);
+                }
+                if ($provincia !== null) {
+                    $query->where('provincia', $provincia);
+                }
+                if ($poblacion !== null) {
+                    $query->where('poblacion', $poblacion);
+                }
+                if ($raza !== null) {
+                    $query->where('raza', $raza);
+                }
+                if ($genero !== null) {
+                    $query->where('genero', $genero);
+                }
+            })
+                ->get();
             $status = "ok";
         } catch (Exeption $ex) {
+            $ofertas = "ofertas not found";
             $status = "error";
         }
         return view('mapa', ['ofertas' => $ofertas, 'status' => $status]);

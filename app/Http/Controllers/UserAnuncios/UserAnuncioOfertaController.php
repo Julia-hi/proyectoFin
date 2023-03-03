@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Storage;
 
 class UserAnuncioOfertaController extends Controller
 {
+
+   
+
     /**
      * Display a listing of the resource.
      *
@@ -33,8 +36,9 @@ class UserAnuncioOfertaController extends Controller
      */
     public function create($id)
     {
-       
+
         $tipoAnunc = 'oferta';
+
         return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);
     }
 
@@ -47,7 +51,7 @@ class UserAnuncioOfertaController extends Controller
     public function store(Request $request)
     {
         $user = Auth::user();
-        
+
         //validar entrada del request
         $entrada = $request->validate(
             [
@@ -91,8 +95,8 @@ class UserAnuncioOfertaController extends Controller
             $fichero = $this->cargarFichero($foto, $user->id, $entrada['id'], 'foto' . $key);
             Foto::create($fichero); //insert to database - tabla "fotos"
         }
-       $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
-       $usersOfertas= AnuncioOferta::where('user_id', $user->id)->get();
+        $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
+        $usersOfertas = AnuncioOferta::where('user_id', $user->id)->get();
         return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
     }
 

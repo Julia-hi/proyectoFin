@@ -24,13 +24,18 @@
         <x-header />
     </head>
     <div class="min-h-screen bg-gray-100">
+
+
+
         @auth
         @include('layouts.navigation-admin')
         @endauth
 
         <!-- Page Content -->
         <main>
-            
+            @if (isset($slot))
+            {{ $slot }}
+            @endif
         </main>
     </div>
 </body>

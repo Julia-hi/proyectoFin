@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -22,8 +22,8 @@ class AdminController extends Controller
         } else {
             return view('admin.login');
         } */
-        return redirect()->intended(RouteServiceProvider::ADMIN);
-       // return view('admin.dashboard');
+       // return redirect()->intended(RouteServiceProvider::ADMIN);
+        return view('admin.dashboard');
     }
 
     /**

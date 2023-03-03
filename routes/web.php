@@ -13,7 +13,8 @@ use App\Http\Controllers\UserAnuncios\UserAnunciosController; //UserAnuncioOfert
 use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
 use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
 use App\Http\Controllers\UserFavoritosController;
-use App\Http\Controllers\UserMensajesController;
+use App\Http\Controllers\UserMensajesController; //EnviarMensajeController
+use App\Http\Controllers\EnviarMensajeController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminUsersController;
@@ -49,7 +50,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class);
     Route::resource('user.favoritos', UserFavoritosController::class);
     Route::resource('user.mensajes', UserMensajesController::class);
+    Route::post('/user/{id}/mensaje', [EnviarMensajeController:: class, 'sendMessage'])->name('enviarMensaje');
     Route::resource('admin.users', AdminUsersController::class);
+    Route::get('admin-dashboard',[AdminController::class,'index'])->name('admin');;
 });
 
 Route::get('/ofertas-filter', [BuscarOfertasController::class, 'index'])->name('filter.index');

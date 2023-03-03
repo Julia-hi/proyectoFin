@@ -17,32 +17,19 @@ class UserMensajesController extends Controller
      */
     public function index($user)
     {
-       // $dialogos = DB::table('mensajes')->where('user_id', $user)->groupBy('anuncio_id')->get();
+        // $dialogos = DB::table('mensajes')->where('user_id', $user)->groupBy('anuncio_id')->get();
         $dialogos = DB::table('mensajes')
-        ->select('anuncio_id')
-        ->where('user_id', '=', $user)
-        ->groupBy('anuncio_id')
-        ->get();
+            ->select('anuncio_id')
+            ->where('user_id', '=', $user)
+            ->groupBy('anuncio_id')
+            ->get();
 
-         foreach($dialogos as $key=>$dialogo){
-            $anunc_id=$dialogo->anuncio_id;
-            $mensajesEnviados[$anunc_id] = Mensaje::where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
-           //$mensajesEnviados[$anunc_id] = DB::table('mensajes')->where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
-        } 
-       // $dialogos = Mensaje::where('user_id', $user)->get();
-        /* try {
-             $mensajes = DB::table('anuncios')->where('id_usuario',$user_id);
-            $user = Auth::user();
-             $dialogos = Mensaje::where('user_id', $user->id)->get()->groupBy('anuncio_id');
-             $dialogos = DB::table('mensajes')->where('user_id', $user->id)->groupBy('anuncio_id')->get();
-            $dialogos = Mensaje::where('user_id', 1)->get();
-            if ($dialogos->count < 1) {
-                $dialogos = null;
-            }
-            return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);
-        } catch (Exception $ex) {
-            return view('user.mensajes', ['user' => null, 'dialogos' => null, 'status' => 'error']);
-        } */
+        foreach ($dialogos as $key => $dialogo) {
+            $anunc_id = $dialogo->anuncio_id;
+            $mensajesEnviados[$anunc_id] = Mensaje::where('anuncio_id', $anunc_id)->where('user_id', $user)->get();
+            //$mensajesEnviados[$anunc_id] = DB::table('mensajes')->where('anuncio_id',$anunc_id)->where('user_id',$user)->get();
+        }
+       
         return view('user.mensajes', ['user' => $user, 'dialogos' => $mensajesEnviados, 'status' => 'ok']);
     }
 
@@ -71,9 +58,31 @@ class UserMensajesController extends Controller
         );
         $entrada['anuncio_id'] = $request->anuncio_id;
         $entrada['user_id'] = $request->user_id;
+        $message = Mensaje::create($entrada); // insert a database
+          return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok', 'mensaje'=>$message]); 
+       // return back()->with('visible', $entrada['anuncio_id']);
+    }
+    /**
+     * Insert nuevo mensaje via Ajax (desde zona provada del usuario)
+     */
+    public function sendMessage(Request $request)
+    {
+       
+        $entrada = $request->validate(
+            [
+                'texto' => 'required|min:10|max:300',
+                'anuncio_id'=>'required',
+                'user_id'=>'required'
+            ]
+        );
+        $entrada['anuncio_id'] = $request->anuncio_id;
+        $entrada['user_id'] = $request->user_id;
         Mensaje::create($entrada); // insert a database
-        //  return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']); 
-        return back()->with('visible',$entrada['anuncio_id']);
+
+        return response()->json([
+            'success' => true,
+            'message' => $entrada
+        ])->header('Content-Type', 'application/json');
     }
 
     /**

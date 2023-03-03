@@ -13,13 +13,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-    
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -61,7 +59,7 @@
                 <div class="m-2">
                     <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
-                        <form id="formulario" method="get" action="{{ route('ofertas.filter') }}">
+                        <form id="filter_form" method="get" action="{{ route('mapa.index') }}">
                             <div class="row p-3 g-6">
                                 <div class="col">
                                     <div class="row border rounded h-100">
@@ -72,7 +70,7 @@
                                             </svg>
                                         </div>
                                         <select name="comunidad" id="comunidad" class="col-10 border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione Región ...</option>
+                                            <option value="todo">Seleccione Región ...</option>
                                             <option value="andalucia">Andalucía</option>
                                             <option value="aragon">Aragón</option>
                                             <option value="asturias">Asturias</option>
@@ -97,7 +95,7 @@
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="provincia" id="provincia" class="border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione provincia ...</option>
+                                            <option value="todo">Seleccione provincia ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
 
@@ -106,7 +104,7 @@
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="poblacion" id="poblacion" class="border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione población ...</option>
+                                            <option value="todo">Seleccione población ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
                                     </div>
@@ -114,7 +112,7 @@
 
                                 <div class="col">
                                     <select name="raza" id="raza" class="border rounded h-100 w-100 p-2">
-                                        <option value="todos">Todas razas</option>
+                                        <option value="todo">Todas razas</option>
                                         <option value="agapornis">agapornis</option>
                                         <option value="ara">ara</option>
                                         <option value="amazona">amazona</option>
@@ -126,69 +124,78 @@
                                     </select>
                                 </div>
                                 <div class="col ">
-                                    <select name="sexo" id="sexo" class="border rounded h-100 w-100 p-2">
-                                        <option value="todos" checked>Genero no importa</option>
+                                    <select name="genero" id="genero" class="border rounded h-100 w-100 p-2">
+                                        <option value="todo">Genero no importa</option>
                                         <option value="macho">macho</option>
                                         <option value="embra">embra</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <button type="submit" class="p-3 rounded border w-100">BUSCAR</button>
+                                    <button id="buscar-botton" type="submit" class="btn btn-sm btn-outline-secondary text-uppercase h-100 w-100">BUSCAR</button>
                                 </div>
                             </div>
-                        </form>
                     </div>
+                    </form>
+                    <!--   Block para anuncios de ofertas   -->
+            <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height: 25vh;">
 
+<?php
+if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
+    $comunidad = $_GET['comunidad'];
+} else {
+    $comunidad = " toda España <br>";
+} ?>
+<h2 class="p-2 my-4 text-center">Ofertas en <span class="text-capitalize"><?php echo $comunidad; ?></span>
+
+</h2>
+
+@if($ofertas == "ofertas not found")
+<div class="text-center">
+    <p>Lo sentimos, este momento no hemos encontrado ofertas en <span class="text-capitalize"><?php echo $comunidad ?></span></p>
+    <p>Consulta ofertas sin filtros (para toda España) o intenta más tarde.</p>
+    <div class="row d-flex justify-content-center align-content-center m-3">
+        <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
+    </div>
+</div>
+@else
+<div class="align-items-center d-flex justify-content-center p-2">
+    <div class="btn-group row w-50 mb-1">
+        <a id="linkFilter" class="btn btn-sm btn-outline-secondary col-3">Lista</a>
+        <a id="mapaFilter" class="btn btn-sm btn-outline-secondary active col-3">Ver en mapa</a>
+    </div>
+</div>
+@if( $ofertas!=null && $ofertas->count()>0)
+<div class="m-1">
+    <div class=" p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+        <div class="justify-center ">
+            <div id="map" class="w-100" style="height:100vh"></div>
+        </div>
+    </div>
+</div>
+@elseif($status=='error')
+<h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
+@else
+<h4 class="text-center">Disculpa, no hemos encontrado anuncios con estés parámetros pero...<br>
+    ¡seguro que alguno pequeño pajarito te esta esperando. <br>Cambia parametros de busqueda para encontrarlo!</h4>
+@endif
+@endif
                 </div>
-                <!--   Block para anuncios de ofertas   -->
-                <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <?php
-                    if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
-                        $comunidad = $_GET['comunidad'];
-                    } else {
-                        $comunidad = " toda España <br>";
-                    } ?>
-                    <h2 class="p-2 my-4 text-center">Ofertas en <span class="text-capitalize"><?php echo $comunidad; ?></span>
 
-                    </h2>
-                    <?php
-                    if ($ofertas == "ofertas not found") { ?>
-                        <div class="text-center">
-                            <p>Lo sentimos, este momento no hemos encontrado ofertas en <span class="text-capitalize"><?php echo $comunidad ?></span></p>
-                            <p>Consulta ofertas sin filtros (para toda España) o intenta más tarde.</p>
-                            <div class="row d-flex justify-content-center align-content-center m-3">
-                                <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
-                            </div>
-                        </div>
-                    <?php } else {
-
-                    ?>
-                        <div class="align-items-center d-flex justify-content-center p-3">
-                            <div class="btn-group row w-50 mb-3">
-                                <a href="/ofertas" class="btn btn-sm btn-outline-secondary  col-3">Lista</a>
-                                <a href="#" class="btn btn-sm btn-outline-secondary active col-3">Ver en mapa</a>
-                            </div>
-                        </div>
-
-                        <div class="m-2">
-                            <div class=" mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                                <div class="justify-center ">
-                                    <div id="map" class="w-100" style="height:400px;"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <?php } ?>
-                </div>
+            </div>
+            
             </div>
         </div>
     </div>
     </div>
+    </div>
+    <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
+    <script src="{{asset('storage/js/of-lista.js')}}"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
     <script>
         window.onload = function() {
-            var map = L.map('map').setView([44.407186, 8.933983], 13);
+            var map = L.map('map').setView([40.416775, -3.703790], 6.8);
 
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,

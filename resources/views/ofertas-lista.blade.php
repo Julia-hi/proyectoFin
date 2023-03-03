@@ -64,7 +64,7 @@
                                             </svg>
                                         </div>
                                         <select name="comunidad" id="comunidad" class="col-10 border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione Región ...</option>
+                                            <option value="todo" selected>Comunidad ...</option>
                                             <option value="andalucia">Andalucía</option>
                                             <option value="aragon">Aragón</option>
                                             <option value="asturias">Asturias</option>
@@ -89,7 +89,7 @@
                                 <div class="col">
                                     <div class="row border rounded h-100">
                                         <select name="provincia" id="provincia" class="border-0" aria-label=".form-select-lg example">
-                                            <option value="todo" selected>Seleccione provincia ...</option>
+                                            <option value="todo" selected>Provincia ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
 

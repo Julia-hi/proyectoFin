@@ -1,4 +1,4 @@
-/* .red-brillante-boton {
+.red-brillante-boton {
     position: relative !important;
     display: inline-block !important;
     vertical-align: middle !important;
@@ -17,7 +17,7 @@
     top: .1em;
     left: .1em;
     box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
-} */
+}
 
 .hojas {
     background-color: #DCF2FA;

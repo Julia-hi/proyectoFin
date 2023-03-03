@@ -3,80 +3,175 @@
 window.addEventListener("load", () => {
 
     const elements = document.querySelectorAll('.mostrarChatBoton');
-
-    // Add an event listener to each element
+    // Asignar event listener para cada elemento de clase "mostrarChatBoton"
     elements.forEach(element => {
         element.addEventListener('click', function () {
             var id = element.getAttribute('id');
-            //  mostrarChat(id);
-            mostrarDiv(id);
+            mostrarChat(id);
         });
     })
+
 })
-/* function mostrarChat(id) {
-    var idChat = 'chat' + id.replace('_', '');
-    // if()
-    if ($('#' + idChat).hasClass('hidden')) {
-        $('#' + idChat).removeClass('hidden');
-       
-    }
-} */
 
-function mostrarDiv(id) {
-    var idChat = 'chat' + id.replace('_', '');
-   // var chatDiv = $('#' + idChat);
-    // create the main div
-    var chatDiv = $("<div>").attr("id", idChat).addClass("oculto");
+/**
+ * Mostrar chat
+ * 
+ * @param {String} id 
+ */
+function mostrarChat(id) {
+    //cerrar todos bloques chat primero de abrir nuevo
+    $('.chat').each(function () { //cada elemento de clase "chat"
+        if (!$(this).hasClass('hidden')) {
+            // eliminar formularios de chat anterior
+            $('#message_form').remove();
+            $(this).addClass('hidden');
+        }
 
-    // create the inner border div
-    var borderDiv = $("<div>").addClass("border position-absolute px-2 mx-auto w-25 h-25")
-        .css({
-            "top": "0",
-            "left": "0",
-            "min-height": "25%",
-            "background-color": "red",
-            "z-index": "10"
+    });
+    var anuncio_id = id.replace('_', '');
+    var idChat = 'chat' + anuncio_id; //'chat1', 'chat2' ...
+    $('#' + idChat).removeClass('hidden'); //muestra bloque del dialogo elegido
+    $("#cruce").on('click', function () {
+        $('#' + idChat).addClass('hidden');
+        $('#message_form').remove();
+    })
+    $('#chat_body' + anuncio_id).scrollTop($('#chat_body' + anuncio_id)[0].scrollHeight);
+
+    createForm(anuncio_id, idChat, anuncio_id);
+
+    //evento para submit formulario
+    $('#message_form').submit(function (event) {
+        event.preventDefault();
+        var user_id = $("#user_id").val(); //id del autor del mansaje desde formulario
+        var anuncio_id = $("#anuncio_id").val(); //anuncio id desde formulario
+        var mensaje = $("#texto").val(); //texto del mensaje desde formulario
+        console.log(anuncio_id);
+        var url = "/user/" + user_id + "/mensaje"; //route para post request (Controller enviarMensajeController.php)
+        //obtener respuesta 
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                texto: mensaje,
+                anuncio_id: anuncio_id,
+                user_id: user_id
+            })
         })
-        .attr("title", "Cerrar");
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                mostrarUltimo(data, anuncio_id);
+            })
+            .catch(error => console.error(error));
+    });
+}
 
-    // create the button div
-    var buttonDiv = $("<div>").addClass("bg-white position-absolute top-0 start-0")
-        .css({
-            "width": "25px",
-            "height": "25px",
-            "z-index": "30"
-        })
-        .click(function () {
-            $('#' + idChat).addClass("oculto");
+/**
+ * Mostrar ultimo mensaje despues del submit
+ * @param {Object} data 
+ * @param {String} idChat 
+ */
+function mostrarUltimo(data, idChat, anuncio_id) {
+    if (data.success) {
+        console.log(data.message.texto);
+        // Create a new <li> element with class and attributes
+        var li = $("<li>", {
+            "class": "d-flex justify-content-end w-100 mb-2 mt-0"
         });
 
-    // create the SVG element
-    var svg = $("<svg>").attr({
-        "xmlns": "http://www.w3.org/2000/svg",
-        "width": "25",
-        "height": "25",
-        "viewBox": "0 0 16 16"
-    }).css("z-index", "35");
+        // Create a new <div> element with class and attributes
+        var div = $("<div>", {
+            "class": "bg-white rounded px-3 py-2",
+            "text": data.message.texto
+        });
 
-    // create the path element
-    var path = $("<path>").attr({
-        "fill": "#1F2937",
-        "d": "M11.414 4.586a2 2 0 0 0-2.828 0L8 5.172 6.414 3.586a2 2 0 1 0-2.828 2.828L5.172 8l-1.586 1.586a2 2 0 1 0 2.828 2.828L8 10.828l1.586 1.586a2 2 0 1 0 2.828-2.828L10.828 8l1.586-1.586a2 2 0 0 0 0-2.828z"
+        // Append the <div> element to the <li> element
+        li.append(div);
+
+        // Add the new <li> element to a parent element, e.g. <ul>
+        var ult_id = "ultimo_mensaje" + idChat;
+        console.log("ultimo: " + ult_id);
+        $("#" + ult_id).append(li);
+        //  $('#chat_body' + anuncio_id).append('<div class="bg-white rounded px-3 py-2">' + data.message.texto + '</div>'); //mostrar ultimo mensaje
+        $("#texto").val(''); //limpiar campo de textarea
+    }
+}
+
+function createForm(id, idChat) {
+
+    // Crear nuevo elemento <form>
+    var form = $('<form>').attr({
+        id: 'message_form'
     });
 
-    // append the path element to the SVG element
-    svg.append(path);
+    // Añadir CSRF token al formulario
+    form.append($('<input>').attr({
+        type: 'hidden',
+        name: '_token',
+        value: '{{ csrf_token() }}'
+    }));
 
-    // append the SVG element to the button div
-    buttonDiv.append(svg);
+    // Añadir textarea campo al formulario
+    form.append($('<textarea>').attr({
+        id: 'texto',
+        name: 'texto',
+        placeholder: 'Escribe mensaje aqui...',
+        class: 'form-control',
+        rows: '2'
+    }));
 
-    // append the button div to the inner border div
-    borderDiv.append(buttonDiv);
+    // Añadir input campo para anuncio_id 
+    form.append($('<input>').attr({
+        type: 'hidden',
+        name: 'anuncio_id',
+        id: 'anuncio_id',
+        value: id
+    }));
+    var userId = window.location.href.match(/\/user\/(\d+)/)[1];
+    console.log(userId);
+    // Añadir input campo para anuncio_id  user_id 
+    form.append($('<input>').attr({
+        type: 'hidden',
+        name: 'user_id',
+        id: 'user_id',
+        value: userId
+    }));
 
-    // append the inner border div to the main div
-    chatDiv.append(borderDiv);
 
-    // add the main div to the DOM
-    $("#chat").append(chatDiv);
+    // Añadir input campo para anuncio_id  chat_id 
+    form.append($('<input>').attr({
+        type: 'hidden',
+        name: 'chat_id',
+        id: 'chat_id',
+        value: idChat
+    }));
 
+    // Crear div para botones
+    var buttons = $('<div>').attr({
+        class: 'd-flex items-center justify-content-end my-2'
+    });
+
+    // Añadir reset button para formulario
+    buttons.append($('<button>').attr({
+        type: 'reset',
+        class: 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'
+    }).text('Limpiar'));
+
+    // Añadir submit button para formulario
+    buttons.append($('<button>').attr({
+        type: 'submit',
+        class: 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'
+    }).text('Enviar'));
+
+    // Aladir buttons div al formulario
+    form.append(buttons);
+
+    // Añadir formulario despues bloque del chat
+    $('#chat_body' + id).after(form);
 }
+
