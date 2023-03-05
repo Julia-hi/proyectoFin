@@ -70,7 +70,7 @@ class UserAnunciosController extends Controller
         if($anuncio->tipo =="oferta"){
             return view('user.anuncUpdateOferta', ['user' => $id, 'tipoAnunc' => 'oferta']);
         }elseif($anuncio->tipo =="demanda"){
-            return view('user.anuncUpdateOferta', ['user' => $id, 'tipoAnunc' => 'demanda']);
+            return view('user.anuncUpdateDemanda', ['user' => $id, 'tipoAnunc' => 'demanda']);
         }
     }
 

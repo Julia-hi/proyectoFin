@@ -169,10 +169,7 @@
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
                             <div class="col-2">
-                                <input type="submit" name="enviar" value="Modificar anuncio" class="btn  w-100 active text-uppercase font-weight-bold"> <!-- class btn-danger -->
-                            </div>
-                            <div class="col-2">
-                                <input type="reset" name="limpiar" value="Limpiar" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">
+                                <input type="submit" name="enviar" value="Guardar cambios" class="btn  w-100 active text-uppercase font-weight-bold"> <!-- class btn-danger -->
                             </div>
                             <div class="col-2">
                                 <a href="{{route('user.anuncios.index',Auth::user()->id)}}" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">Salir sin cambios</a>

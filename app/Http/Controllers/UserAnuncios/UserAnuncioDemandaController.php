@@ -44,8 +44,7 @@ class UserAnuncioDemandaController extends Controller
     public function store(Request $request)
     {
         $user = Auth::user();
-        //insert validation of request
-       
+
         if ($request->tipo_anuncio == 'demanda') {
             $entrada = $request->validate(
                 [
@@ -59,15 +58,15 @@ class UserAnuncioDemandaController extends Controller
             Anuncio::create($entrada); // insertar anuncio en la tabla 'anuncios'
             $ult_anuncio = DB::table('anuncios')->latest()->first();
             $entrada['id'] = $ult_anuncio->id;
-    
+
             AnuncioDemanda::create($entrada); // insert to database - tabla "anuncios_odemanda"
-          //  $user = Auth::user()->name;
-            
+            //  $user = Auth::user()->name;
+
             // $anuncios = Anuncios::where('id_usuario', $user_id);
             $usersDemandas = AnuncioDemanda::where('user_id', $user->id);
             $usersOfertas = AnuncioOferta::where('user_id', $user->id);
-            return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);   
-        }   
+            return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
+        }
     }
 
     /**
@@ -87,9 +86,11 @@ class UserAnuncioDemandaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $id_anuncio)
     {
-        //
+        $anuncio = AnuncioDemanda::find($id_anuncio);
+
+        return view('user.anuncEditDemanda', ['user' => Auth::user()->id, 'anuncios_demanda' => $id, 'anuncio' => $anuncio]);
     }
 
     /**
@@ -99,9 +100,22 @@ class UserAnuncioDemandaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $id_anuncio)
     {
-        //
+        $demanda = AnuncioDemanda::find($id_anuncio);
+        if ($request->tipo_anuncio == 'demanda') {
+            $entrada = $request->validate(
+                [
+                    'titulo' => 'required|min:10|max:100',
+                    'descripcion' => 'required|min:10|max:300'
+                ]
+            );
+            $demanda->titulo = $request->titulo;
+            $demanda->descripcion = $request->descripcion;
+            $demanda->save();
+
+            return Redirect::route('user.anuncios.index', ['user' => $id]);
+        }
     }
 
     /**
@@ -110,8 +124,10 @@ class UserAnuncioDemandaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, $id_anuncio)
     {
-        //
+        $demanda = AnuncioDemanda::find($id_anuncio);
+        $demanda->delete();
+        return Redirect::route('user.anuncios.index', ['user' => $id]);
     }
 }
