@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
-$logoUrl = Storage::url('logo.png');
 $scriptUrl = Storage::url('welcome.js'); ?>
 @auth
 <?php
@@ -41,7 +40,6 @@ if ($user != null) {
 <?php $backgrounImg = Storage::url('images/hojas-fondo1.svg'); ?>
 
 <body class="antialiased">
-
     @if($status=='error')
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
         <div class="container">
@@ -55,26 +53,21 @@ if ($user != null) {
                         <div class="text-center my-3">Disculpa, la conexión fallida, intenta más tarde por favor...</div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
     @else
-    <!-- Page Heading - resources/views/components/header.blade.php -->
-
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
-
         @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-        <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="{{ Auth::check() ? '/user/' . $user_id . '/anuncios-oferta/create' : '/login?redirect_to=' . Request::path() }}" tabindex="0"><span>Publicar anuncio</span></a>
+        <div class="fixed top-0 right-0 px-6 py-4 sm:block">
             @guest
-            <!-- <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a> -->
+            <a type="button" class="red-brillante-boton mr-1 p-2 text-center" href="{{ Auth::check() ? '/user/' . $user_id . '/anuncios-oferta/create' : '/login?redirect_to=' . Request::path() }}" tabindex="0"><span>Publicar anuncio</span></a>
             @endguest
             @auth
             <div class="row">
                 <div class="col m-0">
-                    <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
-                </div><!-- <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a> -->
+                    <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
+                </div>
                 <div class="col m-0">
                     @if($user!=null)
                     @include('layouts.navigation-welcome')
@@ -109,24 +102,25 @@ if ($user != null) {
                         </div>
                     </div>
                 </div>
-                <div class="m-2">
-                    <!-- Anuncios oferta -->
-                    <div id="ofertas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg  p-3">
+                <!-- Anuncios oferta -->
+                <div id="ofertas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg  p-3">
+                    <div class="row d-flex justify-content-center align-content-center m-3">
                         <form action="{{ route('filter.index') }}">
                             <input hidden type="text" name="comunidad" id="comunidad" value="todo">
                             <input hidden type="text" name="provincia" id="provincia" value="todo">
                             <input hidden type="text" name="poblacion" id="poblacion" value="todo">
                             <input hidden type="text" name="raza" id="raza" value="todo">
                             <input hidden type="text" name="genero" id="genero" value="todo">
-                            <div class="row d-flex justify-content-center align-content-center m-3">
-                                <button type="submit" class="btn btn-sm btn-outline-secondary w-50">VER TODAS OFERTAS</button>
+                            <div class="w-100 row d-flex justify-content-center align-content-center">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary w-auto mw-75">VER TODAS OFERTAS</button>
+                            </div>
                         </form>
                     </div>
                     <div class="row">
                         <!-- anuncio oferta -->
                         @if( $ofertas!=null && $ofertas->count()>0)
                         @foreach ($ofertas as $oferta)
-                        <div class="col-md-4">
+                        <div class="col-sm col-lg-4 col-md-6">
                             <div class="card mb-4" style="height: 500px;">
                                 <div class="card-body">
                                     <?php $fotos = $oferta->fotos; ?>
@@ -137,24 +131,22 @@ if ($user != null) {
                                     @endforeach
                                     <div class="" style="height: 30%;">
                                         <h3 class="text-uppercase pb-2">{{ $oferta->titulo}}</h3>
-                                        <div class="d-flex align-items-stretch" style="overflow: hidden; text-overflow: ellipsis;">
-                                            <p class="card-text text-capitalise">{{ $oferta->descripcion }}</p>
+                                        <div class="descripcion d-flex align-items-stretch" style="line-height:1.2em; max-height: 3.6em; overflow: hidden; ">
+                                            {{ $oferta->descripcion }}
                                         </div>
                                     </div>
                                     <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex flex-md-row flex-sm-column justify-content-between align-items-center">
                                             <div class="btn-group" style="height:30px;">
                                                 <?php $url = '/ofertas/' . $oferta->id; ?>
                                                 <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
                                                     <span class="text-center align-middle">Ver</span>
                                                 </a>
-                                                <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
-                                                    <span class="text-center">Enviar mensaje</span>
-                                                </a>
                                                 @auth
                                                 <?php $user_id = Auth::user()->id;
                                                 $user = Auth::user();
                                                 ?>
+                                                @if($oferta->autor->id!=$user->id)
                                                 <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
                                                         si no es favorito - mostra borón para añadir a favoritos -->
                                                 @if(!$oferta->anuncio->esFavorito($user, $oferta->anuncio))
@@ -168,7 +160,7 @@ if ($user != null) {
                                                 </form>
                                                 @else
                                                 <?php $favorito = $oferta->anuncio->favoritos->first(); ?>
-                                                <!-- formulario para Eeiminar favorito de la lista -->
+                                                <!-- formulario para Eliminar favorito de la lista -->
                                                 <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
                                                     @csrf
                                                     @method('DELETE')
@@ -177,12 +169,14 @@ if ($user != null) {
                                                     </button>
                                                 </form>
                                                 @endif
+                                                @endif
                                                 @endauth
                                                 @guest
                                                 <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
                                                 @endguest
                                             </div>
-                                            <div>
+                                            <!-- fecha de publicacion invisible on extra-small depositivos -->
+                                            <div class="d-xs-none d-md-block">
                                                 <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
                                             </div>
                                         </div>
@@ -193,26 +187,28 @@ if ($user != null) {
                         @endforeach
                         <!-- FIN del bloque de uno Anuncio oferta -->
                         @elseif($status=='error')
+                        <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                         <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                         @else
+                        <!-- Este mensaje muestra cuando conexion con hay anuncios de oferta en la base de datos -->
                         <h4 class="text-center">Disculpa, no hemos encontrado anuncios...</h4>
                         @endif
                     </div>
                 </div>
-
                 <!-- ANUNCIOS DEMANDA -->
                 <div id="demandas-block" class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg d-none">
 
                     <div class="row">
                         <!-- bloque de uno Anuncio demanda -->
                         @if( $demandas!=null && $demandas->count()>0)
-
                         @foreach ($demandas as $demanda)
                         <div class="col-md-4">
                             <div class="card mb-4" style="height: 200px;">
                                 <div class="card-body ">
                                     <h3 class="text-uppercase pb-2">{{ $demanda->titulo }}</h3>
-                                    <p class="card-text py-2">{{ $demanda->descripcion }}</p>
+                                    <div class="descripcion d-flex align-items-stretch" style="line-height:1.2em; max-height: 3.6em; overflow: hidden; ">
+                                        {{ $demanda->descripcion }}
+                                    </div>
                                     <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
@@ -220,11 +216,12 @@ if ($user != null) {
                                                 <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-secondary">
                                                     <span class="text-center align-middle">Ver</span>
                                                 </a>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
                                                 @auth
                                                 <?php $user_id = Auth::user()->id;
                                                 $user = Auth::user();
                                                 ?>
+                                                <!-- Muestra boton de favoritos solo si usuario no es autor del anuncio -->
+                                                @if($oferta->autor->id!=$user->id)
                                                 <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
                                                         si no es favorito - mostra borón para añadir a favoritos -->
                                                 @if(!$demanda->anuncio->esFavorito($user, $demanda->anuncio))
@@ -249,6 +246,7 @@ if ($user != null) {
                                                     </button>
                                                 </form>
                                                 @endif
+                                                @endif
                                                 @endauth
                                                 @guest
                                                 <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
@@ -263,21 +261,19 @@ if ($user != null) {
                             </div>
                         </div>
                         @endforeach
-
                         <!-- FIN del bloque de uno Anuncio demanda -->
-
                         @elseif($status=='error')
+                        <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                         <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
                         @else
+                        <!-- Este mensaje muestra cuando conexion con hay anuncios de demanda en la base de datos -->
                         <div class="text-center">Disculpa, no hemos encontrado anuncios...</div>
                         @endif
                     </div>
                 </div>
+
             </div>
         </div>
-    </div>
-
-
     </div>
     </div>
     <script src="{{asset('storage/js/welcome.js')}}"></script>

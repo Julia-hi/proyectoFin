@@ -33,17 +33,7 @@ class UserAnunciosController extends Controller
      */
     public function create()
     {
-
         //anuncios se crean por separado 
-
-       /*  if (!isset($tipoAnunc)) {
-            $tipoAnunc = 'oferta';
-        }else{
-            $tipoAnunc = 'demanda';
-        }
-
-        $user_id = Auth::user()->id;
-        return view('user.anuncCreate', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]); */
     }
 
     /**
@@ -76,7 +66,12 @@ class UserAnunciosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $anuncio = Anuncio::where('id',$id);
+        if($anuncio->tipo =="oferta"){
+            return view('user.anuncUpdateOferta', ['user' => $id, 'tipoAnunc' => 'oferta']);
+        }elseif($anuncio->tipo =="demanda"){
+            return view('user.anuncUpdateOferta', ['user' => $id, 'tipoAnunc' => 'demanda']);
+        }
     }
 
     /**

@@ -5,12 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\AnuncioDemanda;
 use App\Models\AnuncioOferta;
-use App\Models\Foto;
-use Illuminate\Support\Facades\DB;
 use Exception;
-use Illuminate\Database\Connectors\MySqlConnector;
-use Illuminate\Database\Connectors\Connector;
-use PDO;
 
 class WelcomeController extends Controller
 {

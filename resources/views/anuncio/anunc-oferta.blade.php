@@ -63,7 +63,7 @@ $logoUrl = Storage::url('logo.png');
         @endif
         <div class="container">
             @auth
-            <div id="draggable" class="w-25 rounded border shadow">
+            <div id="draggable" class="w-25 rounded border shadow hidden">
                 <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
                 <form method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
                     @csrf
@@ -75,21 +75,26 @@ $logoUrl = Storage::url('logo.png');
                         <x-primary-button class="ml-3">
                             {{ __('Enviar') }}
                         </x-primary-button>
+                        <button id="cerrar_dragable" type="button" class="cerrar_dragable btn">Cerrar</button>
                     </div>
                 </form>
             </div>
             @endauth
             @guest
-            <div id="draggable" class="w-25 rounded border shadow">
-                <a type="button" href="/login">Identificate</a>
+            <div id="draggable" class="w-25 rounded border shadow p-2">
+                <p class="pb-2">No estas logueado, por favor, inicia sesión. Nosotros respetamos privacidad de los 
+                    usuarios, por este motivo uso de mansajeria disponibile solo para usuarios registrados.</p>
+                <div class="d-flex justify-content-between w-100 ">
+                    <a type="button" href="/login" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">Identificate</a>
+                    <a type="button" href="/register" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">Registrate</a>
+                    <button id="" type="button" class="cerrar_dragable inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">Cerrar</button>
+                </div>
             </div>
-
             @endguest
             <div class="justify-center sm:px-6 lg:px-8 ">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height: 150px;">
                     <a href="/"> <img src="<?php echo Storage::url('images/logo.png'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1"></a>
                 </div>
-
                 <div class="m-2">
                     <!-- Anuncio oferta -->
                     <div id="" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg  p-3">
@@ -182,7 +187,8 @@ $logoUrl = Storage::url('logo.png');
     </div>
     </div>
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
-    <script>
+    <script src="{{asset('storage/js/anuncio-oferta.js')}}"></script>
+    <!--  <script>
         $(document).ready(function() {
             // showFormulario();
             // showDiv();
@@ -257,7 +263,7 @@ $logoUrl = Storage::url('logo.png');
                 messageWindow.document.body.appendChild(form);
             })
         }
-    </script>
+    </script> -->
 </body>
 
 </html>

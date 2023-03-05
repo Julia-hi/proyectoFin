@@ -1,7 +1,12 @@
+/**
+ * Proyecto fin del curso "MiLorito"
+ * @autor Yulia Tropin tropina 3DAWD IES Trassierra
+ * 
+ * Notación importante: jQuery required!
+ */
 "use strict"
 
 window.addEventListener("load", () => {
-
     const elements = document.querySelectorAll('.mostrarChatBoton');
     // Asignar event listener para cada elemento de clase "mostrarChatBoton"
     elements.forEach(element => {
@@ -10,7 +15,7 @@ window.addEventListener("load", () => {
             mostrarChat(id);
         });
     })
-
+   
 })
 
 /**
@@ -26,7 +31,6 @@ function mostrarChat(id) {
             $('#message_form').remove();
             $(this).addClass('hidden');
         }
-
     });
     var anuncio_id = id.replace('_', '');
     var idChat = 'chat' + anuncio_id; //'chat1', 'chat2' ...
@@ -36,7 +40,7 @@ function mostrarChat(id) {
         $('#message_form').remove();
     })
     $('#chat_body' + anuncio_id).scrollTop($('#chat_body' + anuncio_id)[0].scrollHeight);
-
+    // crear formulario
     createForm(anuncio_id, idChat, anuncio_id);
 
     //evento para submit formulario
@@ -73,35 +77,42 @@ function mostrarChat(id) {
 
 /**
  * Mostrar ultimo mensaje despues del submit
- * @param {Object} data 
- * @param {String} idChat 
+ * 
+ * @param {Object} data - respuesta de query
+ * @param {String} idChat - anuncio ID
  */
-function mostrarUltimo(data, idChat, anuncio_id) {
+function mostrarUltimo(data, idChat) {
     if (data.success) {
         console.log(data.message.texto);
-        // Create a new <li> element with class and attributes
+        // Crear nuevo elemento <li> con clases y attributos
         var li = $("<li>", {
             "class": "d-flex justify-content-end w-100 mb-2 mt-0"
         });
 
-        // Create a new <div> element with class and attributes
+        // Crear nuevo <div> elemento con clases y attributos
         var div = $("<div>", {
             "class": "bg-white rounded px-3 py-2",
             "text": data.message.texto
         });
 
-        // Append the <div> element to the <li> element
+        // Añadir elemento <div> al elemento <li>
         li.append(div);
 
-        // Add the new <li> element to a parent element, e.g. <ul>
+        // Añadir elemento <li> a su padre <ul>
         var ult_id = "ultimo_mensaje" + idChat;
-        console.log("ultimo: " + ult_id);
         $("#" + ult_id).append(li);
-        //  $('#chat_body' + anuncio_id).append('<div class="bg-white rounded px-3 py-2">' + data.message.texto + '</div>'); //mostrar ultimo mensaje
         $("#texto").val(''); //limpiar campo de textarea
     }
 }
 
+/**
+ * Crear formulario 
+ * Se crea nuevo formulario cada vez cuando se abre el bloque del dialogo
+ * para poder enviar nuevo mensaje desde area privada del usuario
+ * 
+ * @param {int} id 
+ * @param {String} idChat 
+ */
 function createForm(id, idChat) {
 
     // Crear nuevo elemento <form>
@@ -151,7 +162,7 @@ function createForm(id, idChat) {
         value: idChat
     }));
 
-    // Crear div para botones
+    // Crear <div> para botones
     var buttons = $('<div>').attr({
         class: 'd-flex items-center justify-content-end my-2'
     });
@@ -168,7 +179,7 @@ function createForm(id, idChat) {
         class: 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'
     }).text('Enviar'));
 
-    // Aladir buttons div al formulario
+    // Añadir buttons div al formulario
     form.append(buttons);
 
     // Añadir formulario despues bloque del chat

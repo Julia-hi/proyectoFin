@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Storage;
 
 class UserAnuncioOfertaController extends Controller
 {
-
-   
-
     /**
      * Display a listing of the resource.
      *
@@ -119,7 +116,8 @@ class UserAnuncioOfertaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tipoAnunc='oferta';
+        return view('user.anuncUpdateOferta', ['user' => Auth::user()->id, 'anuncios_ofertum' => $id]);
     }
 
     /**

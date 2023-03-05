@@ -27,12 +27,7 @@
                     </h2>
                     <div class="pt-3">
                         <?php
-                        $numAnuncios = $demandas->count() + $ofertas->count();
-                        /* if ($demandas != null) {
-                            $numAnuncios = $numAnuncios + $demandas->count();
-                        } elseif ($ofertas != null) {
-                            $numAnuncios = $numAnuncios + $ofertas->count();
-                        } */ ?>
+                        $numAnuncios = $demandas->count() + $ofertas->count(); ?>
                         @if( $numAnuncios> 0 )
                         <p class="text-left">Tienes {{ $numAnuncios }} anuncio(s) publicados</p>
                         @if ( $demandas->count()> 0 )
@@ -53,7 +48,7 @@
                                     <div class="btn-group d-flex align-items-center">
                                     <?php $url = '/demandas/'.$demanda->id; ?>
                                         <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
-                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
+                                        <a href="{{route('user.anuncios-demanda.edit',['user'=>Auth::user()->id,'anuncios_demanda'=>$demanda->id] )}}" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
                                         <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a>
                                     </div>
                                 </div>
@@ -80,7 +75,7 @@
                                     <div class="btn-group d-flex align-items-center">
                                         <?php $url = '/ofertas/'.$oferta->id; ?>
                                         <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
-                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
+                                        <a href="{{route('user.anuncios-oferta.edit',['user'=>Auth::user()->id,'anuncios_ofertum'=>$oferta->id] )}}" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
                                         <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a>
                                     </div>
                                 </div>

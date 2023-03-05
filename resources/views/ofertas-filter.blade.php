@@ -154,7 +154,6 @@
 
                     <div>
                         <div class="row">
-
                             @if( $ofertas!=null && $ofertas->count()>0)
                             <div class="align-items-center d-flex justify-content-center p-3">
                                 <div class="btn-group row w-50 mb-3">
@@ -163,7 +162,7 @@
                                 </div>
                             </div>
                             @foreach ($ofertas as $oferta)
-                            <div class="col-md-4">
+                            <div class="col-sm col-lg-4 col-md-6">
                                 <div class="card mb-4" style="height: 500px;">
                                     <div class="card-body">
                                         <?php $fotos = $oferta->fotos;
@@ -175,7 +174,7 @@
                                         @endforeach
                                         <div class="" style="height: 30%;">
                                             <h3 class="text-uppercase pb-2">{{ $oferta->titulo}}</h3>
-                                            <div class="d-flex align-items-stretch" style="overflow: hidden; text-overflow: ellipsis;">
+                                            <div class="descripcion d-flex align-items-stretch" style="line-height:1.2em; max-height: 3.6em; overflow: hidden;">
                                                 <p class="card-text text-capitalise">{{ $oferta->descripcion }}</p>
                                             </div>
                                         </div>
@@ -193,6 +192,7 @@
                                                     <?php $user_id = Auth::user()->id;
                                                     $user = Auth::user();
                                                     ?>
+                                                    @if($oferta->autor->id!=$user->id)
                                                     <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
                                                         si no es favorito - mostra borón para añadir a favoritos -->
                                                     @if(!$oferta->anuncio->esFavorito($user, $oferta->anuncio))
@@ -211,11 +211,11 @@
                                                         <button type="submit"><img data-title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
                                                     </form>
                                                     @endif
+                                                    @endif
                                                     @endauth
                                                     @guest
                                                     <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
                                                     @endguest
-
                                                 </div>
                                                 <div>
                                                     <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
@@ -229,6 +229,7 @@
                             @elseif($status=='error')
                             <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                             @else
+                            <!-- Este mensaje muestra cuando conexion con hay anuncios de oferta en la base de datos -->
                             <h4 class="text-center">Disculpa, no hemos encontrado anuncios con estés parámetros pero...<br>
                                 ¡seguro que alguno pequeño pajarito te esta esperando. <br>Cambia parametros de busqueda para encontrarlo!</h4>
                             @endif

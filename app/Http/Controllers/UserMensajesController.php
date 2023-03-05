@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Mensaje;
-use Exception;
+
 use Illuminate\Support\Facades\DB;
 
 class UserMensajesController extends Controller
@@ -59,8 +59,8 @@ class UserMensajesController extends Controller
         $entrada['anuncio_id'] = $request->anuncio_id;
         $entrada['user_id'] = $request->user_id;
         $message = Mensaje::create($entrada); // insert a database
-          return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok', 'mensaje'=>$message]); 
-       // return back()->with('visible', $entrada['anuncio_id']);
+        //  return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok', 'mensaje'=>$message]); 
+        return back()->with('visible', $message);
     }
     /**
      * Insert nuevo mensaje via Ajax (desde zona provada del usuario)

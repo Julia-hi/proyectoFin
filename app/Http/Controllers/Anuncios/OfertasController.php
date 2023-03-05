@@ -71,10 +71,6 @@ class OfertasController extends Controller
             $oferta = null;
             $fotos = null;
         }
-
-
-        // $oferta['autor'] =  $autor->name;
-
         return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'autor' => $autor, 'fotos' => $fotos, 'status' => 'ok']);
     }
 
