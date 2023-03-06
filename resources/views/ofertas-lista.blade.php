@@ -164,8 +164,6 @@
                                 <div class="col-md-4">
                                     <div class="card mb-4" style="height: 500px;">
                                         <div class="card-body">
-                                            <?php // $fotos = $oferta->fotos; 
-                                            ?>
                                             @foreach($oferta->fotos as $foto)
                                             <div style="height: 70%;">
                                                 <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">

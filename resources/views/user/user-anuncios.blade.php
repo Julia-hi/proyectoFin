@@ -52,36 +52,44 @@
                                         <form action="{{ route('user.anuncios-demanda.destroy', ['user'=>Auth::user()->id,'anuncios_demanda'=>$demanda->id]) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
+                                            <!-- botón para eliminar anuncio demanda -->
                                             <button type="submit" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</button>
                                         </form>
-                                        <!-- <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a> -->
                                     </div>
                                 </div>
                             </div>
                             @endforeach
                         </div>
                         @endif
-
                         @if( $ofertas->count()> 0 )
                         <h3 class="text-uppercase mt-3">Ofertas</h3>
                         <div class="border rounded mt-2 p-0">
                             <div class="row border-bottom m-0 p-0 align-items-center">
-                                <div class="col-1 border-right text-center text-uppercase">id</div>
-                                <div class="col-2 border-right text-center text-uppercase">titulo</div>
+                                <div class="col-1 border-right text-center text-uppercase">Id</div>
+                                <div class="col-2 border-right text-center text-uppercase">Titulo</div>
+                                <div class="col-1 border-right text-center text-uppercase">Foto</div>
                                 <div class="col border-right text-center text-uppercase">Descripción</div>
                                 <div class="col-3 border-left text-uppercase">opciones</div>
                             </div>
                             @foreach ($ofertas as $oferta)
                             <div class="row w-100 m-0 p-2 align-items-center">
-                                <div class="col-1 text-left"> {{ $oferta->id }}</div>
-                                <div class="col-2 text-left"> {{ $oferta->titulo }}</div>
-                                <div class="col text-left"> {{ $oferta->descripcion }}</div>
+                                <div class="col-1 text-left"> {{ $oferta->id }} </div>
+                                <div class="col-2 text-left"> {{ $oferta->titulo }} </div>
+                                <div class="col-1">
+                                    <img  src="<?php echo ($oferta->fotos[0]->enlace); ?>" alt="{{ $oferta->titulo }}" style="height: 50px; width: 50px; display: block; object-fit: cover" data-holder-rendered="true">
+                                </div>
+                                <div class="col text-left"> {{ $oferta->descripcion }} </div>
                                 <div class="col-3">
                                     <div class="btn-group d-flex align-items-center">
                                         <?php $url = '/ofertas/' . $oferta->id; ?>
                                         <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
                                         <a href="{{route('user.anuncios-oferta.edit',['user'=>Auth::user()->id,'anuncios_ofertum'=>$oferta->id] )}}" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Modificar</a>
-                                        <a href="#" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</a>
+                                        <form action="{{ route('user.anuncios-oferta.destroy', ['user'=>Auth::user()->id,'anuncios_ofertum'=>$oferta->id]) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <!-- botón para eliminar anuncio oferta -->
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

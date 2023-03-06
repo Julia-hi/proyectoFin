@@ -60,9 +60,7 @@ class UserAnuncioDemandaController extends Controller
             $entrada['id'] = $ult_anuncio->id;
 
             AnuncioDemanda::create($entrada); // insert to database - tabla "anuncios_odemanda"
-            //  $user = Auth::user()->name;
-
-            // $anuncios = Anuncios::where('id_usuario', $user_id);
+            
             $usersDemandas = AnuncioDemanda::where('user_id', $user->id);
             $usersOfertas = AnuncioOferta::where('user_id', $user->id);
             return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
@@ -84,6 +82,7 @@ class UserAnuncioDemandaController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
+     * @param  int  $id_anuncio
      * @return \Illuminate\Http\Response
      */
     public function edit($id, $id_anuncio)
@@ -98,6 +97,7 @@ class UserAnuncioDemandaController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     * @param  int  $id_anuncio
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id, $id_anuncio)
@@ -122,6 +122,7 @@ class UserAnuncioDemandaController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
+     * @param  int  $id_anuncio
      * @return \Illuminate\Http\Response
      */
     public function destroy($id, $id_anuncio)

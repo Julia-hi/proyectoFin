@@ -13,6 +13,7 @@ use App\Models\Foto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class UserAnuncioOfertaController extends Controller
 {
@@ -86,7 +87,6 @@ class UserAnuncioOfertaController extends Controller
                 $fotos_user[] = $request->file($string);
             }
         }
-
         foreach ($fotos_user as $key => $foto) {
             //guardo ficheros validados en servidor 
             $fichero = $this->cargarFichero($foto, $user->id, $entrada['id'], 'foto' . $key);
@@ -114,10 +114,10 @@ class UserAnuncioOfertaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $id_anuncio)
     {
-        $tipoAnunc='oferta';
-        return view('user.anuncUpdateOferta', ['user' => Auth::user()->id, 'anuncios_ofertum' => $id]);
+        $anuncio = AnuncioOferta::find($id_anuncio); 
+        return view('user.anuncEditOferta', ['user' => Auth::user()->id, 'anuncios_ofertum' => $id, 'anuncio' => $anuncio]);
     }
 
     /**
@@ -129,18 +129,43 @@ class UserAnuncioOfertaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        /* $demanda = AnuncioDemanda::find($id_anuncio);
+        if ($request->tipo_anuncio == 'demanda') {
+            $entrada = $request->validate(
+                [
+                    'titulo' => 'required|min:10|max:100',
+                    'descripcion' => 'required|min:10|max:300'
+                ]
+            );
+            $demanda->titulo = $request->titulo;
+            $demanda->descripcion = $request->descripcion;
+            $demanda->save();
+
+            return Redirect::route('user.anuncios.index', ['user' => $id]);
+        } */
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
+     * @param  int  $id_anuncio
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, $id_anuncio)
     {
-        //
+        $anuncio = Anuncio::find($id_anuncio);
+        //obtener todos fotos pertenecentes a anuncio
+        $fotos = AnuncioOferta::find($id_anuncio)->fotos()->get();
+        //eliminate ficheros desde storage
+        foreach ($fotos as $foto) {
+            $fileToDelete = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] . $foto->enlace);
+            if (file_exists($fileToDelete)) {
+                unlink($fileToDelete);
+            }
+        }
+          $anuncio->delete();
+          return Redirect::route('user.anuncios.index', ['user' => $id]);
     }
 
     /**
@@ -168,12 +193,10 @@ class UserAnuncioOfertaController extends Controller
         $new_file_name = $anuncio_id . '-' . $user_id . '-' . $nombre . '.' . $file_extension;
 
         // guardar archivo en servidor carpeta /storage/app/usersImages
-        // $miFichero->storeAs('/usersImages', $new_file_name, 'public');
         $miFichero->move(public_path('/storage/usersImages'), $new_file_name);
 
         // Obtener URL del fichero guardado
         $file_url = "/storage/usersImages/" . $new_file_name;
-
         $entrada = ['nombre_originale' => $original_file_name, 'enlace' => $file_url, 'anuncio_id' => $anuncio_id];
         return $entrada;
     }
