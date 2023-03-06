@@ -197,7 +197,6 @@
 </x-app-layout>
 <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('storage/js/of-lista.js')}}"></script>
-<!-- <script src="{{asset('storage/js/welcome.js')}}"></script> -->
 <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
 @endif
 @endauth

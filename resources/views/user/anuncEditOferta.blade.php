@@ -16,30 +16,27 @@
 
     <div class="container">
         <div class="justify-center sm:px-6 lg:px-8">
-            <div class="m-2 ">
-                <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <h2 class="text-center font-semibold text-xl text-gray-800 leading-tight">Modifica tu anuncio</h2>
-
-                </div>
-            </div>
             <div class="m-2">
+                
                 <!-- Anuncios oferta -->
                 <div id="ofertas-block" class="mt-8 p-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg ">
-
+                <h2 class="text-center font-semibold text-xl text-gray-800 leading-tight">Modifica tu anuncio</h2>
                     <form method="post" enctype="multipart/form-data" action="{{route('user.anuncios-oferta.store',$user_id)}}" id="create_oferta">
                         @csrf
+                        @method('PUT')
                         <div class="row">
                             <div class="col-8">
                                 <!-- titulo del anuncio -->
                                 <div class="py-2">
                                     <label for="titulo" class="form-label">Titulo del anuncio</label>
-                                    <input type="text" class="border rounded h-100 w-100 p-2" id="titulo" name="titulo">
+                                    <div id="anuncio_actuale" class="hidden">{{$anuncio}}</div>
+                                    <input type="text" class="border rounded h-100 w-100 p-2" id="titulo" name="titulo" value="{{$anuncio->titulo}}" required min=10 max=100>
                                     <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
                                 </div>
                                 <div class="py-2">
                                     <!-- Descripcion -->
                                     <label for="descripcion" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="descripcion" rows="10" name="descripcion"></textarea>
+                                    <textarea class="form-control" id="descripcion" rows="10" name="descripcion" required min=10 max=300>{{$anuncio->descripcion}}</textarea>
                                     <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
                                 </div>
                                 <div class="py-2">
@@ -56,7 +53,7 @@
                                                     </svg>
                                                 </div>
                                                 <select name="comunidad" id="comunidad" class="col-10 border" aria-label=".form-select-lg example">
-                                                    <option value="todo" selected>Seleccione Región ...</option>
+                                                    <option value="todo">Seleccione Región ...</option>
                                                     <option value="andalucia">Andalucía</option>
                                                     <option value="aragon">Aragón</option>
                                                     <option value="asturias">Asturias</option>
@@ -83,7 +80,7 @@
                                         <div class="col">
                                             <div class="row rounded h-100">
                                                 <select name="provincia" id="provincia" class="border" aria-label=".form-select-lg example">
-                                                    <option value="todo" selected>Seleccione provincia ...</option>
+                                                    <option value="todo">Seleccione provincia ...</option>
                                                     <!-- opciones insertarán desde script of-lista.js -->
                                                 </select>
                                                 <x-input-error :messages="$errors->get('provincia')" class="mt-2" />
@@ -92,7 +89,7 @@
                                         <div id="poblacion_block" class="col">
                                             <div class="row  rounded h-100">
                                                 <select name="poblacion" id="poblacion" class="border" aria-label=".form-select-lg example">
-                                                    <option value="todo" selected>Seleccione población ...</option>
+                                                    <option value="todo">Seleccione población ...</option>
                                                     <!-- opciones insertarán desde script of-lista.js -->
                                                 </select>
                                                 <x-input-error :messages="$errors->get('poblacion')" class="mt-2" />
@@ -108,7 +105,7 @@
                                 <!-- elegir raza -->
                                 <div class="py-2">
                                     <select name="raza" id="raza" class="border rounded h-100 w-100 p-2">
-                                        <option value="todo" selected>Seleccione Raza ...</option>
+                                        <option value="todo">Seleccione Raza ...</option>
                                         <option value="agapornis">Agapornis</option>
                                         <option value="ara">Ara</option>
                                         <option value="amazona">Amazona</option>
@@ -123,7 +120,6 @@
                                 <!-- Elegir genero -->
                                 <div class="py-2">
                                     <select name="genero" id="genero" class="border rounded h-100 w-100 p-2">
-                                        <option value="todo" selected>Seleccione Genero ...</option>
                                         <option value="none">Genero indefinido</option>
                                         <option value="macho">macho</option>
                                         <option value="embra">embra</option>
@@ -180,5 +176,8 @@
 </x-app-layout>
 <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
+<script src="{{asset('storage/js/editOferta.js')}}"></script>
+<script src="{{asset('storage/js/of-lista.js')}}"></script>
+
 @endif
 @endauth
