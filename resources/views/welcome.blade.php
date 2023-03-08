@@ -116,36 +116,27 @@ if ($user != null) {
                             </div>
                         </form>
                     </div>
+                    <!-- anuncio oferta -->
+                    @if( $ofertas!=null && $ofertas->count()>0)
                     <div class="row">
-                        <!-- anuncio oferta -->
-                        @if( $ofertas!=null && $ofertas->count()>0)
                         @foreach ($ofertas as $oferta)
-                        <div class="col-sm col-lg-4 col-md-6">
-                            <div class="card mb-4" style="">
-                                <?php $url = '/ofertas/' . $oferta->id; ?>
-                                <a href="<?php echo $url; ?>">
-
-
-                                    <?php $fotos = $oferta->fotos; ?>
-
-                                    <div class="position-relative " style="height: 100%;">
-                                        @foreach($fotos as $foto)
-                                        <img class="border border-5 border-success rounded" src="<?php echo $foto->enlace; ?>" alt="" style="display: block; object-fit: cover" data-holder-rendered="true">
-                                        @endforeach
-                                        <div class="position-absolute bottom-0 row text-white w-100 p-2">
-                                            <div class="col-6 text-left">
-                                                <h3 class="text-uppercase align-items-center p-0 m-0">{{ $oferta->titulo}}</h3>
-                                            </div>
-                                            <div class="col-6 d-flex justify-content-end">
-                                                <small class="">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
-                                            </div>
-                                        </div>
+                        <?php $url = '/ofertas/' . $oferta->id;
+                        $fotos = $oferta->fotos; ?>
+                        <div class="col-4 position-relative " style="width: 400px; height: 400px; cursor: pointer;" onclick="window.location='{{ $url }}';">
+                            <div class="p-1 w-100 h-100">
+                                <img class="border border-1 border-success rounded w-100 h-100 m-1" src="<?php echo $fotos[0]->enlace; ?>" alt="" style="display: block; object-fit: cover" data-holder-rendered="true">
+                                <div class="position-absolute bottom-0 row text-white w-100 p-2">
+                                    <div class="col-6 text-left">
+                                        <h3 class="text-uppercase align-items-center p-0 m-0">{{ $oferta->titulo}}</h3>
                                     </div>
-                                </a>
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <small class="">Publicado: {{ $oferta->created_at->format('M j, Y') }}</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
-                    @endforeach
                     <!-- FIN del bloque de uno Anuncio oferta -->
                     @elseif($status=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->

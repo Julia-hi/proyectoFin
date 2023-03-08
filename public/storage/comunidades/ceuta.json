@@ -11,18 +11,6 @@
                     "Altitud": 13.47725
                 }
             ]
-        },
-        {
-            "Melilla": [
-                {
-                    "Comunidad": "Ceuta y Melilla",
-                    "Provincia": "Melilla",
-                    "Poblacion": "Melilla",
-                    "Latitud": 35.2825,
-                    "Longitud": -2.9475,
-                    "Altitud": 10.3337
-                }
-            ]
         }
     ]
 }

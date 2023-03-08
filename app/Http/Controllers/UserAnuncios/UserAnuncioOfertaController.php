@@ -131,31 +131,38 @@ class UserAnuncioOfertaController extends Controller
     {
         $oferta = AnuncioOferta::find($id_anuncio);
         $fotos = $oferta->fotos();
-            $entrada = $request->validate(
-                [
-                    'titulo' => 'required|min:10|max:100',
-                    'descripcion' => 'required|min:10|max:300',
-                    'raza' => 'required|not_regex:/^todo$/',
-                    'genero' => 'required|not_regex:/^todo$/',
-                    'fecha_nac' => 'required|date',
-                    'comunidad' => 'required|not_regex:/^todo$/',
-                    'provincia' => 'required|not_regex:/^todo$/',
-                    'poblacion' => 'required|not_regex:/^todo$/',
-                    'lat' => 'required',
-                    'lon' => 'required',
-                    'foto1' => 'required|image',
-                    'foto2' => 'image',
-                    'foto3' => 'image',
-                    'foto4' => 'image',
-                    'foto5' => 'image'
-                ]
-            );
-           /*  $entrada['user_id'] = $id;
-            $entrada['estado'] = 'active';
-            $entrada['tipo'] = 'oferta'; */
-            $oferta->save();
+        $entrada = $request->validate(
+            [
+                'titulo' => 'required|min:10|max:100',
+                'descripcion' => 'required|min:10|max:300',
+                'raza' => 'required|not_regex:/^todo$/',
+                'genero' => 'required|not_regex:/^todo$/',
+                'fecha_nac' => 'required|date',
+                'comunidad' => 'required|not_regex:/^todo$/',
+                'provincia' => 'required|not_regex:/^todo$/',
+                'poblacion' => 'required|not_regex:/^todo$/',
+                'lat' => 'required',
+                'lon' => 'required',
+                'foto1' => 'image',
+                'foto2' => 'image',
+                'foto3' => 'image',
+                'foto4' => 'image',
+                'foto5' => 'image'
+            ]
+        );
+        $oferta->titulo = $request->titulo;
+        $oferta->descripcion = $request->descripcion;
+        $oferta->raza = $request->raza; 
+        $oferta->genero = $request->genero;
+        $oferta->fecha_nac = $request->fecha_nac;
+        $oferta->comunidad = $request->comunidad;
+        $oferta->provincia = $request->provincia;
+        $oferta->poblacion = $request->poblacion;
+        $oferta->lat = $request->lat;
+        $oferta->lon = $request->lon;
+        $oferta->save();
 
-            $fotos_user = array();
+        /*   $fotos_user = array();
             for ($i = 1; $i <= 5; $i++) {
                 $string = 'foto' . $i;
                 if ($request->file($string)) {
@@ -166,8 +173,9 @@ class UserAnuncioOfertaController extends Controller
                 //guardo ficheros validados en servidor 
                 $fichero = $this->cargarFichero($foto, $id, $entrada['id'], 'foto' . $key);
                 Foto::create($fichero); //insert to database - tabla "fotos"
-            }
-            return Redirect::route('user.anuncios.index', ['user' => $id]);  
+            } */
+           
+        return Redirect::route('user.anuncios.index', ['user' => $id]);
     }
 
     /**

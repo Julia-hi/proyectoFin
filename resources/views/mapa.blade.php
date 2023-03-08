@@ -72,25 +72,26 @@
                                             </svg>
                                         </div>
                                         <select name="comunidad" id="comunidad" class="col-10 border-0" aria-label=".form-select-lg example">
-                                            <option value="todo">Seleccione Región ...</option>
-                                            <option value="andalucia">Andalucía</option>
-                                            <option value="aragon">Aragón</option>
-                                            <option value="asturias">Asturias</option>
-                                            <option value="canarias">Canarias</option>
-                                            <option value="cantabria">Cantabria</option>
-                                            <option value="castilla-la-mancha">Castilla La Mancha</option>
-                                            <option value="castilla-leon">Castilla León</option>
-                                            <option value="catalunya">Catalunya</option>
-                                            <option value="ceuta-y-melilla">Ceuta y Melilla</option>
-                                            <option value="extremadura">Extremadura</option>
-                                            <option value="galicia">Galicia</option>
-                                            <option value="islas-baleares">Islas Baleares</option>
-                                            <option value="madrid">Madrid</option>
-                                            <option value="murcia">Murcia</option>
-                                            <option value="navarra">Navarra</option>
-                                            <option value="pais-vasco">País Vasco</option>
-                                            <option value="rioja">La Rioja</option>
-                                            <option value="valencia">Valencia</option>
+                                        <option value="todo" selected>Seleccione Región ...</option>
+                                                    <option value="andalucia">Andalucía</option>
+                                                    <option value="aragon">Aragón</option>
+                                                    <option value="asturias">Asturias</option>
+                                                    <option value="canarias">Canarias</option>
+                                                    <option value="cantabria">Cantabria</option>
+                                                    <option value="castilla-la mancha">Castilla La Mancha</option>
+                                                    <option value="castilla-leon">Castilla León</option>
+                                                    <option value="cataluña">Cataluña</option>
+                                                    <option value="ceuta">Ceuta</option>
+                                                    <option value="extremadura">Extremadura</option>
+                                                    <option value="galicia">Galicia</option>
+                                                    <option value="baleares">Islas Baleares</option>
+                                                    <option value="rioja">La Rioja</option>
+                                                    <option value="madrid">Madrid</option> 
+                                                    <option value="melilla">Melilla</option>
+                                                    <option value="murcia">Murcia</option>
+                                                    <option value="navarra">Navarra</option>
+                                                    <option value="pais vasco">País Vasco</option>
+                                                    <option value="valencia">Valencia</option>
                                         </select>
                                     </div>
                                 </div>
@@ -170,7 +171,7 @@
                         <div class="m-1">
                             <div class=" p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                                 <div class="justify-center">
-                                    <div id="map" class="w-100" style="height:100vh; z-index:0;"></div>
+                                    <div id="map" class="w-100" style="height:95vh; z-index:0;"></div>
                                 </div>
                             </div>
                         </div>
