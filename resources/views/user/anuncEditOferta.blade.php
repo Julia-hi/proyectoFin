@@ -6,37 +6,36 @@
 //  return redirect()->route('admin/dashboard');
 ?>
 @else
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Publicar anuncio') }}
         </h2>
     </x-slot>
-
     <div class="container">
         <div class="justify-center sm:px-6 lg:px-8">
             <div class="m-2">
-                
                 <!-- Anuncios oferta -->
                 <div id="ofertas-block" class="mt-8 p-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg ">
-                <h2 class="text-center font-semibold text-xl text-gray-800 leading-tight">Modifica tu anuncio</h2>
-                    <form method="post" enctype="multipart/form-data" action="{{route('user.anuncios-oferta.store',$user_id)}}" id="create_oferta">
+                    <h2 class="text-center font-semibold text-xl text-gray-800 leading-tight">Modifica tu anuncio</h2>
+                    <?php $url_update = "/user/" . $user_id . "/anuncios-oferta/" . $anuncio->id ?>
+                    <form method="post" enctype="multipart/form-data" action="{{$url_update}}" id="edit_oferta">
                         @csrf
                         @method('PUT')
                         <div class="row">
                             <div class="col-8">
+                                <!-- anuncio completo para uso de js -->
+                                <div id="anuncio_actuale" class="hidden">{{ $anuncio }}</div>
                                 <!-- titulo del anuncio -->
                                 <div class="py-2">
                                     <label for="titulo" class="form-label">Titulo del anuncio</label>
-                                    <div id="anuncio_actuale" class="hidden">{{$anuncio}}</div>
-                                    <input type="text" class="border rounded h-100 w-100 p-2" id="titulo" name="titulo" value="{{$anuncio->titulo}}" required min=10 max=100>
+                                    <input type="text" class="border rounded h-100 w-100 p-2" id="titulo" name="titulo" value="{{$anuncio->titulo}}" required minlength="10" maxlength="100">
                                     <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
                                 </div>
                                 <div class="py-2">
                                     <!-- Descripcion -->
                                     <label for="descripcion" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="descripcion" rows="10" name="descripcion" required min=10 max=300>{{$anuncio->descripcion}}</textarea>
+                                    <textarea class="form-control" id="descripcion" rows="10" name="descripcion" required minlength="10" maxlength="300">{{$anuncio->descripcion}}</textarea>
                                     <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
                                 </div>
                                 <div class="py-2">
@@ -75,13 +74,12 @@
                                                 </select>
                                                 <x-input-error :messages="$errors->get('comunidad')" class="mt-2" />
                                             </div>
-
                                         </div>
                                         <div class="col">
                                             <div class="row rounded h-100">
                                                 <select name="provincia" id="provincia" class="border" aria-label=".form-select-lg example">
                                                     <option value="todo">Seleccione provincia ...</option>
-                                                    <!-- opciones insertarán desde script of-lista.js -->
+                                                    <!-- opciones insertarán desde script editOferta.js -->
                                                 </select>
                                                 <x-input-error :messages="$errors->get('provincia')" class="mt-2" />
                                             </div>
@@ -90,7 +88,7 @@
                                             <div class="row  rounded h-100">
                                                 <select name="poblacion" id="poblacion" class="border" aria-label=".form-select-lg example">
                                                     <option value="todo">Seleccione población ...</option>
-                                                    <!-- opciones insertarán desde script of-lista.js -->
+                                                    <!-- opciones insertarán desde script editOferta.js -->
                                                 </select>
                                                 <x-input-error :messages="$errors->get('poblacion')" class="mt-2" />
                                             </div>
@@ -137,47 +135,36 @@
                                 <div class="py-2">
                                     <p>Cargar fotos (minimo una, maximo 5)</p>
                                     <div class="form-control">
-                                        <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto1" name="foto1">
+                                        @foreach($anuncio->fotos as $foto)
+                                        <img src="{{$foto->enlace}}" alt="" style="width:100px; height: 100px; display: block; object-fit: cover">
+                                        @endforeach
+                                        <?php $numFotos = $anuncio->fotos->count(); ?>
+                                        @if($numFotos < 5) @for ($i=$numFotos; $i <=(5-$numFotos); $i++) <div class="py-1">
+                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto{{$i}}" name="foto{{$i}}" accept="image/*">
                                             <x-input-error :messages="$errors->get('foto1')" class="mt-2" />
-                                        </div>
-                                        <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto2" name="foto2">
-                                            <x-input-error :messages="$errors->get('foto2')" class="mt-2" />
-                                        </div>
-                                        <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto3" name="foto3">
-                                            <x-input-error :messages="$errors->get('foto3')" class="mt-2" />
-                                        </div>
-                                        <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto4" name="foto4">
-                                            <x-input-error :messages="$errors->get('foto4')" class="mt-2" />
-                                        </div>
-                                        <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto5" name="foto5">
-                                            <x-input-error :messages="$errors->get('foto5')" class="mt-2" />
-                                        </div>
                                     </div>
+                                    @endfor
+                                    @endif
                                 </div>
                             </div>
-
                         </div>
-                        <!-- bottones del formulario -->
-                        <div class="row justify-content-center">
-                            <div class="col-2">
-                                <input type="submit" name="enviar" value="Guardar cambios" class="btn  w-100 active text-uppercase font-weight-bold"> <!-- class btn-danger -->
-                            </div>
-                            <div class="col-2">
-                                <a href="{{route('user.anuncios.index',Auth::user()->id)}}" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">Salir sin cambios</a>
-                            </div>
-                        </div>
-                    </form>
                 </div>
+                <!-- bottones del formulario -->
+                <div class="row justify-content-center">
+                    <div class="col-2">
+                        <input type="submit" name="enviar" value="Guardar cambios" class="btn  w-100 active text-uppercase font-weight-bold"> <!-- class btn-danger -->
+                    </div>
+                    <div class="col-2">
+                        <a href="{{route('user.anuncios.index',Auth::user()->id)}}" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">Salir sin cambios</a>
+                    </div>
+                </div>
+                </form>
+            </div>
 </x-app-layout>
 <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
 <script src="{{asset('storage/js/editOferta.js')}}"></script>
-<script src="{{asset('storage/js/of-lista.js')}}"></script>
+<!-- <script src="{{asset('storage/js/of-lista.js')}}"></script> -->
 
 @endif
 @endauth

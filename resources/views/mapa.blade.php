@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>MiLorito</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,11 +16,14 @@
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <?php $backgrounImg = Storage::url('images/hojas-fondo1.svg'); ?>
+<style>
+    .leaflet-tile {
+        z-index: -1;
+    }
+</style>
 
 <body class="antialiased mt-0">
     <!-- Page Heading - resources/views/components/header.blade.php -->
@@ -30,7 +32,7 @@
     </header>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block" style="z-index:10;">
             <div class="align-self-center">
                 @guest
                 <a type="button" class="nav-botton red-brillante-boton mr-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a>
@@ -98,7 +100,6 @@
                                             <option value="todo">Seleccione provincia ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
-
                                     </div>
                                 </div>
                                 <div class="col">
@@ -109,7 +110,6 @@
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="col">
                                     <select name="raza" id="raza" class="border rounded h-100 w-100 p-2">
                                         <option value="todo">Todas razas</option>
@@ -123,7 +123,7 @@
                                         <option value="otros">otros</option>
                                     </select>
                                 </div>
-                                <div class="col ">
+                                <div class="col">
                                     <select name="genero" id="genero" class="border rounded h-100 w-100 p-2">
                                         <option value="todo">Genero no importa</option>
                                         <option value="macho">macho</option>
@@ -134,66 +134,65 @@
                                     <button id="buscar-botton" type="submit" class="btn btn-sm btn-outline-secondary text-uppercase h-100 w-100">BUSCAR</button>
                                 </div>
                             </div>
+                        </form>
                     </div>
-                    </form>
-                    <!--   Block para anuncios de ofertas   -->
-            <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height: 25vh;">
-
-<?php
-if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
-    $comunidad = $_GET['comunidad'];
-} else {
-    $comunidad = " toda España <br>";
-} ?>
-<h2 class="p-2 my-4 text-center">Ofertas en <span class="text-capitalize"><?php echo $comunidad; ?></span>
-
-</h2>
-
-@if($ofertas == "ofertas not found")
-<div class="text-center">
-    <p>Lo sentimos, este momento no hemos encontrado ofertas en <span class="text-capitalize"><?php echo $comunidad ?></span></p>
-    <p>Consulta ofertas sin filtros (para toda España) o intenta más tarde.</p>
-    <div class="row d-flex justify-content-center align-content-center m-3">
-        <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
-    </div>
-</div>
-@else
-<div class="align-items-center d-flex justify-content-center p-2">
-    <div class="btn-group row w-50 mb-1">
-        <a id="linkFilter" class="btn btn-sm btn-outline-secondary col-3">Lista</a>
-        <a id="mapaFilter" class="btn btn-sm btn-outline-secondary active col-3">Ver en mapa</a>
-    </div>
-</div>
-@if( $ofertas!=null && $ofertas->count()>0)
-<div class="m-1">
-    <div class=" p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-        <div class="justify-center ">
-            <div id="map" class="w-100" style="height:100vh"></div>
-        </div>
-    </div>
-</div>
-@elseif($status=='error')
-<h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
-@else
-<h4 class="text-center">Disculpa, no hemos encontrado anuncios con estés parámetros pero...<br>
-    ¡seguro que alguno pequeño pajarito te esta esperando. <br>Cambia parametros de busqueda para encontrarlo!</h4>
-@endif
-@endif
+                    <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height: 25vh; z-index:1;">
+                        <?php
+                        if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
+                            $comunidad = $_GET['comunidad'];
+                        } else {
+                            $comunidad = " toda España <br>";
+                        } ?>
+                        <h2 class="p-2 my-4 text-center">Loritos en <span class="text-capitalize"><?php echo $comunidad; ?></span></h2>
+                        
+                        
+                        @if($ofertas == "ofertas not found")
+                        <div class="text-center">
+                            <p>Lo sentimos, este momento no hemos encontrado loritos en <span class="text-capitalize"><?php echo $comunidad ?></span></p>
+                            <p>Consulta ofertas sin filtros (para toda España) o intenta más tarde.</p>
+                            <div class="row d-flex justify-content-center align-content-center m-3">
+                                <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
+                            </div>
+                        </div>
+                        @else
+                        <div class="align-items-center d-flex justify-content-center p-2" style="z-index:1;">
+                            <div class="btn-group row w-50 mb-1">
+                                <a id="linkFilter" class="btn btn-sm btn-outline-secondary col-3">Lista</a>
+                                <a id="mapaFilter" class="btn btn-sm btn-outline-secondary active col-3">Ver en mapa</a>
+                            </div>
+                        </div>
+                        @if( $ofertas!=null && $ofertas->count()>0)
+                        <script>
+                            var ofertas_json = <?php echo $ofertas; ?>;
+                            //console.log(ofertas_json);
+                        </script>
+                        <!--   Block para mapa   -->
+                        <div class="m-1">
+                            <div class=" p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                                <div class="justify-center">
+                                    <div id="map" class="w-100" style="height:100vh; z-index:0;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        @elseif($status=='error')
+                        <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
+                        @else
+                        <h4 class="text-center">Disculpa, no hemos encontrado anuncios con estés parámetros pero...<br>
+                            ¡seguro que alguno pequeño pajarito te esta esperando. <br>Cambia parametros de busqueda para encontrarlo!</h4>
+                        @endif
+                        @endif
+                    </div>
                 </div>
-
-            </div>
-            
             </div>
         </div>
     </div>
-    </div>
-    </div>
+
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
     <script src="{{asset('storage/js/of-lista.js')}}"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-
-    <script>
+    <script src="{{asset('storage/js/mapa.js')}}"></script>
+    <!-- <script>
         window.onload = function() {
             var map = L.map('map').setView([40.416775, -3.703790], 6.8);
 
@@ -202,7 +201,7 @@ if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
         };
-    </script>
+    </script> -->
 </body>
 
 </html>

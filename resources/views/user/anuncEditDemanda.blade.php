@@ -33,7 +33,7 @@ $user_id = Auth::user()->id; ?>
                 <div id="demandas-block" class="mt-8 p-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <?php
                     $url_update="/user/".$user_id."/anuncios-demanda/".$anuncio->id ?>
-                        <form method="post" enctype="multipart/form-data" action="{{$url_update}}" id="create-demanda">
+                        <form method="post" enctype="multipart/form-data" action="{{$url_update}}" id="edit-demanda">
                             @csrf
                             @method('PUT')
                             <div class="row">
@@ -41,7 +41,6 @@ $user_id = Auth::user()->id; ?>
                                     <!-- titulo del anuncio -->
                                     <div class="py-2">
                                         <label for="titulo" class="form-label">Titulo del anuncio</label>
-
                                         <input type="text" class="border rounded h-100 w-100 p-2" id="titulo" name="titulo" value="{{$anuncio->titulo}}" required min=10 max=100>
                                         <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
                                     </div>

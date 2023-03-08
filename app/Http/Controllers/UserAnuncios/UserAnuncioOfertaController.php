@@ -116,7 +116,7 @@ class UserAnuncioOfertaController extends Controller
      */
     public function edit($id, $id_anuncio)
     {
-        $anuncio = AnuncioOferta::find($id_anuncio); 
+        $anuncio = AnuncioOferta::find($id_anuncio);
         return view('user.anuncEditOferta', ['user' => Auth::user()->id, 'anuncios_ofertum' => $id, 'anuncio' => $anuncio]);
     }
 
@@ -127,22 +127,47 @@ class UserAnuncioOfertaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $id_anuncio)
     {
-        /* $demanda = AnuncioDemanda::find($id_anuncio);
-        if ($request->tipo_anuncio == 'demanda') {
+        $oferta = AnuncioOferta::find($id_anuncio);
+        $fotos = $oferta->fotos();
             $entrada = $request->validate(
                 [
                     'titulo' => 'required|min:10|max:100',
-                    'descripcion' => 'required|min:10|max:300'
+                    'descripcion' => 'required|min:10|max:300',
+                    'raza' => 'required|not_regex:/^todo$/',
+                    'genero' => 'required|not_regex:/^todo$/',
+                    'fecha_nac' => 'required|date',
+                    'comunidad' => 'required|not_regex:/^todo$/',
+                    'provincia' => 'required|not_regex:/^todo$/',
+                    'poblacion' => 'required|not_regex:/^todo$/',
+                    'lat' => 'required',
+                    'lon' => 'required',
+                    'foto1' => 'required|image',
+                    'foto2' => 'image',
+                    'foto3' => 'image',
+                    'foto4' => 'image',
+                    'foto5' => 'image'
                 ]
             );
-            $demanda->titulo = $request->titulo;
-            $demanda->descripcion = $request->descripcion;
-            $demanda->save();
+           /*  $entrada['user_id'] = $id;
+            $entrada['estado'] = 'active';
+            $entrada['tipo'] = 'oferta'; */
+            $oferta->save();
 
-            return Redirect::route('user.anuncios.index', ['user' => $id]);
-        } */
+            $fotos_user = array();
+            for ($i = 1; $i <= 5; $i++) {
+                $string = 'foto' . $i;
+                if ($request->file($string)) {
+                    $fotos_user[] = $request->file($string);
+                }
+            }
+            foreach ($fotos_user as $key => $foto) {
+                //guardo ficheros validados en servidor 
+                $fichero = $this->cargarFichero($foto, $id, $entrada['id'], 'foto' . $key);
+                Foto::create($fichero); //insert to database - tabla "fotos"
+            }
+            return Redirect::route('user.anuncios.index', ['user' => $id]);  
     }
 
     /**
@@ -164,8 +189,8 @@ class UserAnuncioOfertaController extends Controller
                 unlink($fileToDelete);
             }
         }
-          $anuncio->delete();
-          return Redirect::route('user.anuncios.index', ['user' => $id]);
+        $anuncio->delete();
+        return Redirect::route('user.anuncios.index', ['user' => $id]);
     }
 
     /**

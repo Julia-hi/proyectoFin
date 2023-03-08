@@ -151,34 +151,34 @@
                                     <p>Cargar fotos (minimo una, maximo 5)</p>
                                     <div class="form-control">
                                         <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto1" name="foto1">
+                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto1" name="foto1" accept="image/*" required>
                                             <x-input-error :messages="$errors->get('foto1')" class="mt-2" />
                                         </div>
                                         <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto2" name="foto2">
+                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto2" name="foto2" accept="image/*">
                                             <x-input-error :messages="$errors->get('foto2')" class="mt-2" />
                                         </div>
                                         <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto3" name="foto3">
+                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto3" name="foto3" accept="image/*">
                                             <x-input-error :messages="$errors->get('foto3')" class="mt-2" />
                                         </div>
                                         <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto4" name="foto4">
+                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto4" name="foto4" accept="image/*">
                                             <x-input-error :messages="$errors->get('foto4')" class="mt-2" />
                                         </div>
                                         <div class="py-1">
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto5" name="foto5">
+                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto5" name="foto5" accept="image/*">
                                             <x-input-error :messages="$errors->get('foto5')" class="mt-2" />
                                         </div>
                                     </div>
                                 </div>
                                 <!-- checker mostrar telefono -->
-                                <div class="py-2">
+                               <!--  <div class="py-2">
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" id="mostrarTel" checked>
                                         <label class="form-check-label" for="mostrarTel">mostrar mi numero en anuncio</label>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
 

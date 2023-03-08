@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
+$user = Auth::user();
 $logoUrl = Storage::url('logo.png');
 
 ?>
@@ -42,7 +43,6 @@ $logoUrl = Storage::url('logo.png');
     <!-- Page Heading - resources/views/components/header.blade.php -->
 
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
-
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @guest
@@ -82,7 +82,7 @@ $logoUrl = Storage::url('logo.png');
             @endauth
             @guest
             <div id="draggable" class="w-25 rounded border shadow p-2">
-                <p class="pb-2">No estas logueado, por favor, inicia sesión. Nosotros respetamos privacidad de los 
+                <p class="pb-2">No estas logueado, por favor, inicia sesión. Nosotros respetamos privacidad de los
                     usuarios, por este motivo uso de mansajeria disponibile solo para usuarios registrados.</p>
                 <div class="d-flex justify-content-between w-100 ">
                     <a type="button" href="/login" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">Identificate</a>
@@ -147,20 +147,54 @@ $logoUrl = Storage::url('logo.png');
                                             <!-- FIN SLIDER -->
                                             @endif
                                         </div>
-
                                         <div class="col-md-6">
-                                            <h1 class="text-uppercase pb-2">{{ $oferta->titulo }}</h1>
+                                            <div class="d-flex flex-row w-100 justify-content-between align-items-center">
+                                                <h1 class="text-uppercase pb-2">{{ $oferta->titulo }}</h1>
+                                                @auth
+                                                @if($user->id != $autor->id)
+                                                <div class="position-relative">
+                                                    @if(!$oferta->anuncio->esFavorito(Auth::user(), $oferta->anuncio))
+                                                    <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
+                                                        @csrf
+                                                        <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
+                                                        <input type="hidden" name="user_id" value="{{ $user_id }}">
+                                                        <button type="submit" title="Añadir a favoritos"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                    </form>
+                                                    @else
+                                                    <?php $favorito = $oferta->favoritos->first(); ?>
+                                                    <!-- formulario para Eeiminar favorito de la lista -->
+                                                    <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" title="Eliminar de favoritos"><img src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                    </form>
+                                                    @endif
+
+                                                </div>
+                                                @endif
+                                                @endauth
+                                            </div>
                                             <h2>Raza: <span class="text-capitalize">{{ $oferta->raza }}</span></h2>
                                             <h2>Genero: <span class="text-capitalize">{{ $oferta->genero }}</span></h2>
                                             <h2>Nacido: <span class="text-capitalize">{{ $oferta->fecha_nac }}</span></h2>
-                                            <h2>Localidad: <span class="text-capitalize">{{ $oferta->comunidad }}</span></h2>
+                                            <h2>Localidad: <span class="text-capitalize">{{$oferta->poblacion}}, {{$oferta->provincia}}({{ $oferta->comunidad }})</span></h2>
                                             <div class="mt-3 h-50">
                                                 <h2 class="mb-1">Descripción: </h2>
                                                 <p class="card-text my-1">{{ $oferta->descripcion }}</p>
                                             </div>
-                                            <div class="w-100 d-flex justify-content-between align-items-center">
+                                            <div class="w-100 d-flex flex-row justify-content-between align-items-center">
                                                 <div class="">
+                                                    @guest
+                                                    <p>Para enviar mensaje y ver telefono inicia session</p>
+                                                    @endguest
+                                                    @auth
+                                                    @if($autor->id!= Auth::user()->id)
                                                     <button id="crearMensaje" type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
+                                                    @endif
+                                                    <div class="d-flex flex-row"><img src="<?php echo Storage::url('images/icons/square-phone-flip-solid.svg'); ?>" style="width:1.2em;" class="mr-2">
+                                                        <span>{{$autor->telefono}}</span>
+                                                    </div>
+                                                    @endauth
                                                 </div>
                                                 <div class="align-self-baseline">
                                                     <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
@@ -173,7 +207,6 @@ $logoUrl = Storage::url('logo.png');
                             </div>
                         </div>
                     </div>
-
                     <!-- FIN del bloque de uno Anuncio demanda -->
                     @elseif($status=='error')
                     <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
