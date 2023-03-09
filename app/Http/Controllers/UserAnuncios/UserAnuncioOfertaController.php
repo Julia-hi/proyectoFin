@@ -152,7 +152,7 @@ class UserAnuncioOfertaController extends Controller
         );
         $oferta->titulo = $request->titulo;
         $oferta->descripcion = $request->descripcion;
-        $oferta->raza = $request->raza; 
+        $oferta->raza = $request->raza;
         $oferta->genero = $request->genero;
         $oferta->fecha_nac = $request->fecha_nac;
         $oferta->comunidad = $request->comunidad;

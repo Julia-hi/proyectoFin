@@ -9,9 +9,10 @@ use App\Http\Controllers\Anuncios\OfertasController;
 use App\Http\Controllers\Anuncios\DemandasController;
 use App\Http\Controllers\Anuncios\MapaController;
 use App\Http\Controllers\Anuncios\BuscarOfertasController; 
-use App\Http\Controllers\UserAnuncios\UserAnunciosController; //UserAnuncioOfertaController
+use App\Http\Controllers\UserAnuncios\UserAnunciosController; 
 use App\Http\Controllers\UserAnuncios\UserAnuncioOfertaController;
 use App\Http\Controllers\UserAnuncios\UserAnuncioDemandaController;
+use App\Http\Controllers\UserAnuncios\FotosController;
 use App\Http\Controllers\UserFavoritosController;
 use App\Http\Controllers\UserMensajesController; //EnviarMensajeController
 use App\Http\Controllers\EnviarMensajeController;
@@ -46,6 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user.anuncios', UserAnunciosController::class);
+    Route::resource('user.fotos', FotosController::class);
     Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class);
     Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class);
     Route::resource('user.favoritos', UserFavoritosController::class);
@@ -60,5 +62,9 @@ Route::resource('ofertas', OfertasController::class)->only('index','show');
 Route::get('/ofertas/filter', [OfertasController::class, 'filter'])->name('ofertas.filter');
 Route::resource('mapa', MapaController::class)->only('index','show');
 Route::resource('demandas', DemandasController::class)->only('index','show');
+
+Route::fallback(function(){
+    return "Pagina no existe.";
+});
 
 require __DIR__.'/auth.php';
