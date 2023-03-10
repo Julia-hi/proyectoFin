@@ -18,6 +18,7 @@ class Foto extends Model
     protected $table = 'fotos';
 
     protected $fillable = [
+        'id',
         'nombre_originale',
         'enlace',
         'anuncio_id'

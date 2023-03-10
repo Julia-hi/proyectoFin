@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user.anuncios', UserAnunciosController::class);
-    Route::resource('user.fotos', FotosController::class);
+    Route::resource('oferta.fotos', FotosController::class);
     Route::resource('user.anuncios-oferta', UserAnuncioOfertaController::class);
     Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class);
     Route::resource('user.favoritos', UserFavoritosController::class);

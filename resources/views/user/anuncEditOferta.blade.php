@@ -143,10 +143,8 @@
                                 </div>
                             </form>
                             <!-- FIN del formulario -->
-
                         </div>
                         <div class="col-4">
-
                             <!-- Campo de Fotos -->
                             <div class="py-2">
                                 <p>Cargar fotos (minimo una, maximo 5)</p>
@@ -158,41 +156,42 @@
                                         </div>
                                         <div class="col">
                                             @if($i!=0)
-                                            <form method="POST" action="{{ route('user.fotos.destroy', [$user, $foto->id]) }}">
+                                            <!-- Metodo delete eccepto primera foto (required, no se puede eliminar) -->
+                                            <form method="POST" action="{{ route('oferta.fotos.destroy', ['ofertum'=>$anuncio->id, 'foto'=>$foto->id]) }}">
                                                 @csrf
                                                 @method('DELETE')
                                                 <input type="submit" name="enviar" value="Eliminar foto" class="btn w-auto active text-uppercase font-weight-bold m-1">
                                             </form>
                                             @endif
+                                            <?php $url_put = 'oferta/{{$anuncio->id}}/fotos/{{$foto->id}}' ?>
                                             <div>
-                                                <?php $url_put = 'user/{user}/fotos/{foto} ' ?>
-                                                <form class="modificarFoto" method="POST" action="<?php echo $url_put; ?>">
+                                                <form class="" method="POST" action="{{ route('oferta.fotos.update', ['ofertum'=>$anuncio->id, 'foto'=>$foto->id]) }}" enctype="multipart/form-data">
                                                     @csrf
                                                     @method('PUT')
-                                                    <!-- <button type="submit">Sustituir foto</button> -->
-                                                    <input type="file" class="h-100 w-100 p-2" id="foto{{$i}}" name="foto{{$i}}" accept="image/*">
+                                                    <input type="file" class="h-100 w-100 p-2" id="foto{{$i}}" name="foto{{$i}}" accept="image/*" required>
                                                     <x-input-error :messages="$errors->get('foto1')" class="mt-2" />
+                                                    <button type="submit" class="btn w-75 active text-uppercase font-weight-bold">modificar foto</button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
-                                    <?php $numFotos = $anuncio->fotos->count(); ?>
-                                    @if($numFotos < 5) @for ($i=($numFotos-1); $i <=(5-$numFotos); $i++) <div class="py-1">
-                                        <form class="crearFoto" method="post" action="{{ route('user.fotos.create', [$user, $foto]) }}" id="crearFoto">
-                                            @csrf
-                                            <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto{{$i}}" name="foto{{$i}}" accept="image/*">
-                                            <x-input-error :messages="$errors->get('foto{{$i}}')" class="mt-2" />
-                                            <!-- bottones del formulario -->
-                                        </form>
-                                </div>
-                                @endfor
+                                        @endforeach
+                                        <?php $numFotos = $anuncio->fotos->count(); ?>
+                                        @if($numFotos < 5) 
+                                        <div>
+                                            <p>Puedes añadir {{5-$numFotos}} fotos más</p>
+                                            <form method="post" action="{{ route('oferta.fotos.store', ['ofertum'=>$anuncio->id]) }}" enctype="multipart/form-data">
+                                                @csrf
+                                                @for ($i=($numFotos); $i <5; $i++) <div class="py-1">
+                                                    <input type="file" class="form-control border rounded h-100 w-100 p-2" id="foto{{$i}}" name="foto{{$i}}" accept="image/*">
+                                                    <x-input-error :messages="$errors->get('foto{{$i}}')" class="mt-2" />
+                                                @endfor
+                                                <button type="submit" class="btn w-75 active text-uppercase font-weight-bold">Añadir fotos</button>
+                                            </form>
+                                        </div>
                                 @endif
                             </div>
-                            <div class="row justify-content-center m-2">
-                                <!--  <input type="submit" name="enviar" value="Guardar fotos" class="btn w-75 active text-uppercase font-weight-bold"> -->
-                                <button id="submit-both-forms" class="btn w-75 active text-uppercase font-weight-bold">Submit Both Forms</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -210,12 +209,12 @@
 <script>
     $(document).ready(function() {
         $('#submit-both-forms').click(function() {
-            $('.modificarFoto').each((ind, elemento) => {
-                console.log(elemento);
-                 $(elemento).submit();
+            $('.modificarFoto').each((ind, modificar) => {
+                console.log(modificar);
+                $(modificar).submit();
             })
             $('.crearFoto').each((ind, elemento) => {
-                  $(elemento).submit();
+                $(elemento).submit();
             })
         });
     });

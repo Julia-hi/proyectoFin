@@ -162,7 +162,7 @@ class UserAnuncioOfertaController extends Controller
         $oferta->lon = $request->lon;
         $oferta->save();
 
-        /*   $fotos_user = array();
+          $fotos_user = array();
             for ($i = 1; $i <= 5; $i++) {
                 $string = 'foto' . $i;
                 if ($request->file($string)) {
@@ -173,7 +173,7 @@ class UserAnuncioOfertaController extends Controller
                 //guardo ficheros validados en servidor 
                 $fichero = $this->cargarFichero($foto, $id, $entrada['id'], 'foto' . $key);
                 Foto::create($fichero); //insert to database - tabla "fotos"
-            } */
+            }
            
         return Redirect::route('user.anuncios.index', ['user' => $id]);
     }
