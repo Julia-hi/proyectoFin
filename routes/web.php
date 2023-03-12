@@ -52,7 +52,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('user.anuncios-demanda', UserAnuncioDemandaController::class);
     Route::resource('user.favoritos', UserFavoritosController::class);
     Route::resource('user.mensajes', UserMensajesController::class);
-    Route::post('/user/{id}/mensaje', [EnviarMensajeController:: class, 'sendMessage'])->name('enviarMensaje');
+    Route::post('/user/{user_id}/mensaje', [EnviarMensajeController:: class, 'sendMessage'])->name('enviarMensaje');
     Route::resource('admin.users', AdminUsersController::class);
     Route::get('admin-dashboard',[AdminController::class,'index'])->name('admin');;
 });

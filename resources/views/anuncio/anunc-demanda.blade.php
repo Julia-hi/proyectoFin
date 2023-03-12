@@ -2,49 +2,57 @@
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
-
-$logoUrl = Storage::url('logo.png');
 ?>
-<!-- 
-###
-###   Vista del anuncio demanda elegido 
-### 
--->
+@auth
+<?php
+try {
+    $user = Auth::user();
+} catch (Exception $ex) {
+    $user = null;
+    $status = "error";
+}
 
+if ($user != null) {
+    $user_name = $user->name;
+    $user_id = $user->id;
+}
+?>
+@endauth
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>MiLorito</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
+    <link rel="stylesheet" href="{{asset('storage/css/mi_estilo.css')}}">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<?php $backgrounImg = Storage::url('images/hojas-fondo1.svg'); ?>
 
 <body class="antialiased">
-    <!-- Page Heading - resources/views/components/header.blade.php -->
-
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
-
         @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+        <div class="fixed top-0 right-0 px-6 py-4 sm:block">
             @guest
-            <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a>
+            <a type="button" class="red-brillante-boton mr-1 p-2 text-center" href="{{ Auth::check() ? '/user/' . $user_id . '/anuncios-oferta/create' : '/login?redirect_to=' . Request::path() }}" tabindex="0"><span>Publicar anuncio</span></a>
             @endguest
             @auth
-            <?php $user_name = Auth::user()->name;
-            $user_id = Auth::user()->id; ?>
-            <a type="button" class="red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
-            <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a>
+            <div class="row">
+                <div class="col m-0">
+                    <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
+                </div>
+                <div class="col m-0">
+                    @if($user!=null)
+                    @include('layouts.navigation-welcome')
+                    @endif
+                </div>
+            </div>
             @else
             <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
             @if (Route::has('register'))
@@ -56,68 +64,70 @@ $logoUrl = Storage::url('logo.png');
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8 ">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height: 150px;">
-                    <a href="/"></a><img src="<?php echo Storage::url('images/logo.svg'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1"></a>
+                    <img src="{{asset('storage/images/logo.svg')}}" alt="Logo MiLorito" class="h-75 mt-3 mb-1" onclick="location.href='/'" style="cursor: pointer;">
                 </div>
+                <!-- Anuncio demanda -->
+                <div id="demandas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3">
 
-                <div class="m-2">
-                    <!-- Anuncio demanda -->
-                    <div id="ofertas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg  p-3">
-
-                        <div class="row d-flex justify-content-center align-content-center m-3">
-                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url()->previous() }}">VOLVER</a>
-                        </div>
-                        <div class="row">
-                            @if($demanda!=null)
-                            <div class="col-md-6">
-                                <div class="card mb-4 " style="height: 200px;">
-                                    <div class="card-body">
-                                        <h3 class="text-uppercase pb-2">{{ $demanda->titulo}}</h3>
-                                        <p class="card-text py-2">{{ $demanda->descripcion }}</p>
-                                        <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
-                                                </div>
-                                                <div>
-                                                    <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>
-                                                    <p>Anunciante: {{ $autor->name }}</p>
-                                                </div>
-                                            </div>
+                    <div class="row d-flex justify-content-center align-content-center m-3">
+                        <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url()->previous() }}">VOLVER</a>
+                    </div>
+                    <div class="row" style="min-height: 200px;">
+                        @if($demanda!=null)
+                        <div class="col-md-6">
+                            <div class="card mb-4 p-2 h-100">
+                                <h3 class="text-uppercase pb-2">{{ $demanda->titulo}}</h3>
+                                <p class="card-text py-2">{{ $demanda->descripcion }}</p>
+                                <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex flex-row">
+                                            @auth
+                                            <img src="{{asset('storage/images/icons/square-phone-flip-solid.svg')}}" style="width:1.2em;" class="mr-2">
+                                            <span>{{$autor->telefono}}</span>
+                                            @endauth
+                                        </div>
+                                        <div>
+                                            <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>
+                                            <p>Anunciante: {{ $autor->name }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- section enviar mensaje -->
-                            <div hidden class="col-md-6">
-                                <h3>Enviar mensaje a </h3>
-                                <form action="" method="post">
+                        </div>
+                        <!-- section enviar mensaje -->
+                        <div class="col-md-6">
+                            <div class=" border rounded mb-4 p-2 h-100" style="min-height: 200px;">
+                                @guest
+                                <p class="text-center p-2"><a href="/login"><b>Inicia seccion</b></a> para enviar mensaje y ver telefono del anunciante.</p>
+                                @endguest
+                                @auth
+                                <h3 class="p-2">Enviar mensaje a {{ $autor->name }}:</h3>
+                                <form method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
                                     @csrf
-                                    <label for="tema_mensaje">Tema</label>
-                                    <input type="text" name="tema_mensaje">
-                                    <label for="body_mensaje">Tema</label>
-                                    <input type="textarea" name="body_mensaje">
-                                    <!-- bottones del formulario -->
-                                    <div class="row justify-content-center">
-                                        <div class="col-2">
-                                            <input type="submit" name="enviar" value="Enviar mensaje" class="btn btn-danger w-100 active text-uppercase font-weight-bold">
-                                        </div>
-                                        <div class="col-2">
-                                            <input type="reset" name="limpiar" value="Limpiar" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">
-                                        </div>
+                                    <textarea class="form-control" id="mensaje" rows="5" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
+                                    <x-input-error :messages="$errors->get('texto')" class="mt-2" />
+                                    <input hidden name="anuncio_id" type="text" value="{{ $demanda->id }}" />
+                                    <input hidden name="user_id" type="text" value="{{ Auth::user()->id }}" />
+                                    <div class="d-flex items-center justify-content-between my-4">
+                                        <x-primary-button class="ml-3">
+                                            {{ __('Enviar') }}
+                                        </x-primary-button>
+                                        <input type="reset" class="btn btn-sm btn-outline-secondary text-uppercase" value="Limpiar">
                                     </div>
                                 </form>
+                                @endauth
                             </div>
-                            <!-- FIN del bloque de uno Anuncio demanda -->
-                            @elseif($status=='error')
-                            <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
-                            @else
-                            <div class="text-center">Disculpa, este anuncio ya no está disponible.</div>
-                            @endif
                         </div>
+                        @elseif($status=='error')
+                        <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
+                        @else
+                        <div class="text-center">Disculpa, este anuncio ya no está disponible.</div>
+                        @endif
                     </div>
-                </div>
+                </div> <!-- fin demandas block -->
             </div>
-        </div>
+        </div> <!-- fin container -->
     </div>
 </body>
+
 </html>

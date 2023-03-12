@@ -143,11 +143,11 @@ class UserAnuncioOfertaController extends Controller
                 'poblacion' => 'required|not_regex:/^todo$/',
                 'lat' => 'required',
                 'lon' => 'required',
+                'foto0' => 'required|image',
                 'foto1' => 'image',
                 'foto2' => 'image',
                 'foto3' => 'image',
-                'foto4' => 'image',
-                'foto5' => 'image'
+                'foto4' => 'image'
             ]
         );
         $oferta->titulo = $request->titulo;

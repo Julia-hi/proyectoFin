@@ -81,6 +81,13 @@ class FotosController extends Controller
      */
     public function update(Request $request, $anuncio_id, $foto)
     {
+        $request->validate([
+            'foto0' => 'image',
+            'foto1' => 'image',
+            'foto2' => 'image',
+            'foto3' => 'image',
+            'foto4' => 'image',
+        ]);
         $foto_sustituir = Foto::find($foto);
 
         $fileToUpdate = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] . $foto_sustituir->enlace);
@@ -94,7 +101,6 @@ class FotosController extends Controller
             $fichero = $this->cargarFichero($nuevoFotoInput, Auth::user()->id, $anuncio_id, $matches[0]);
             $foto_sustituir->nombre_originale = $fichero['nombre_originale'];
             $foto_sustituir->enlace = $fichero['enlace'];
-
             $foto_sustituir->save();
         }
 
@@ -124,7 +130,7 @@ class FotosController extends Controller
             //obtener string de enlace 'file0' - 'file1' - ... - 'file4'
             $key = preg_match('/foto(\d+)/', $fileToUpdate, $matches);
             // modificar enlace en database y cambiar nombre del archivo para eliminar huecos 
-            // ordener fotos cuando usuario elimina una foto del medio
+            // ordener fotos  cuando usuario elimina una foto del medio
             if ($matches[0] != $i) {
                 $nuevaEnlace = str_replace($matches[0], 'foto' . $i, $enlace);
                 $nuevoFile = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] . $nuevaEnlace);
@@ -139,13 +145,11 @@ class FotosController extends Controller
         return redirect()->back();
     }
 
-
-
     /**
      * cargar fichero con nombre cambiado
      * 
-     * Cambiar nombre del archivo en formato <anuncio_id>-<user_id>-<foto>.<extencion>
-     * y guardar fotos validos 
+     * Cambiar nombre del archivo en formato <anuncio_id>-<user_id>-<'foto'><numero>.<extencion>
+     * y guardar fotos 
      * en servidor carpeta /storage/app/usersImages
      * 
      * @param File $miFichero

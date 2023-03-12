@@ -151,7 +151,6 @@
                         </div>
                     </div>
                     @else
-
                     <div>
                         <div class="row">
                             @if( $ofertas!=null && $ofertas->count()>0)
@@ -161,67 +160,29 @@
                                     <a id="mapaFilter" class="btn btn-sm btn-outline-secondary col-3">Ver en mapa</a>
                                 </div>
                             </div>
-                            @foreach ($ofertas as $oferta)
+                            @foreach ($ofertas as $ind=>$oferta)
                             <div class="col-sm col-lg-4 col-md-6">
                                 <div class="card mb-4" style="height: 500px;">
                                     <div class="card-body">
                                         <?php $fotos = $oferta->fotos; ?>
-
-                                        <div class="carousel slide" data-ride="carousel">
-                                            <div class="carousel-inner">
+                                        <div id="carouselControl{{$oferta->id}}" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner carousel-inner{{$ind}}">
                                                 @foreach($fotos as $foto)
                                                 <div class="carousel-item active">
                                                     <img class="d-block w-100" style="height: 300px; width: 100%; display: block; object-fit: cover" src="<?php echo ($foto->enlace); ?>" alt="First slide">
                                                 </div>
                                                 @endforeach
                                             </div>
-                                            <a id="prev" onclick="plusSlides(-1)" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <a id="prev"  class="carousel-control-prev" href="#carouselControl{{$oferta->id}}" role="button" data-slide="prev">
                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
+                                                <span class="sr-only">Previo</span>
                                             </a>
-                                            <a id="next" onclick="plusSlides(1)" class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <a id="next"  class="carousel-control-next" href="#carouselControl{{$oferta->id}}" role="button" data-slide="next">
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
+                                                <span class="sr-only">Siguiente</span>
                                             </a>
                                         </div>
-                                        <script>
-                                            let slideIndex = 1;
-                                            showSlides(slideIndex);
-                                           
-                                            // Next/previous controls
-                                            function plusSlides(n) {
-                                                showSlides(slideIndex += n);
-                                            }
-
-                                            // Thumbnail image controls
-                                            function currentSlide(n) {
-                                                showSlides(slideIndex = n);
-                                            }
-
-                                            function showSlides(n) {
-                                                let i;
-                                                let slides = document.getElementsByClassName("carousel-item");
-
-                                                if (n > slides.length) {
-                                                    slideIndex = 1
-                                                }
-                                                if (n < 1) {
-                                                    slideIndex = slides.length
-                                                }
-                                                for (i = 0; i < slides.length; i++) {
-                                                    slides[i].style.display = "none";
-                                                }
-                                                
-                                                slides[slideIndex - 1].style.display = "block";
-                                                dots[slideIndex - 1].className += " active";
-                                            }
-                                        </script>
-                                        <!--  <div style="height: 70%;">
-                                            <img class="card-img-top" src="<?php echo ($foto->enlace); ?>" alt="" style="height: 300px; width: 100%; display: block; object-fit: cover" data-holder-rendered="true">
-                                        </div> -->
-
-
-
+                                        
                                         <div class="" style="height: 30%;">
                                             <h3 class="text-uppercase pb-2">{{ $oferta->titulo}}</h3>
                                             <div class="descripcion d-flex align-items-stretch" style="line-height:1.2em; max-height: 3.6em; overflow: hidden;">
@@ -250,7 +211,7 @@
                                                         @csrf
                                                         <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
                                                         <input type="hidden" name="user_id" value="{{ $user_id }}">
-                                                        <button type="submit" data-title="Guardar como favorito"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                        <button type="submit" data-title="Guardar como favorito"><img src="{{asset('storage/images/icons/heart-regular.svg')}}" style="width:1.5em;" class="mx-2"></button>
                                                     </form>
                                                     @else
                                                     <?php $favorito = $oferta->favoritos->first(); ?>
@@ -258,13 +219,13 @@
                                                     <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit"><img data-title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                        <button type="submit"><img data-title="Eliminar de favoritos" src="{{asset('storage/images/icons/heart-solid.svg')}}" style="width:1.5em;" class="mx-2"></button>
                                                     </form>
                                                     @endif
                                                     @endif
                                                     @endauth
                                                     @guest
-                                                    <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
+                                                    <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="{{asset('storage/images/icons/heart-regular.svg')}}" style="width:1.5em;" class="mx-2"></a>
                                                     @endguest
                                                 </div>
                                                 <div>
@@ -294,6 +255,7 @@
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
     <script src="{{asset('storage/js/of-lista.js')}}"></script>
+    <script src="{{asset('storage/js/slider.js')}}"></script>
 </body>
 
 </html>

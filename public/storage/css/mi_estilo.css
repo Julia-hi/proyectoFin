@@ -103,3 +103,15 @@
     display: block;
     /* Show the div when the button is pressed */
 }
+
+/* Bloque draggable (formulario para enviar mensaje desde vista del anuncio */
+#draggable {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-color: white;
+    z-index: 3;
+    max-width: 80%;
+    padding: 20px;
+    cursor: move;
+}

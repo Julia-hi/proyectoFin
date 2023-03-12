@@ -7,7 +7,7 @@
     <textarea class="form-control" id="mensaje" rows="10" name="texto"></textarea>
     <x-input-error :messages="$errors->get('texto')" class="mt-2" />
     <input hidden name="anuncio_id" type="text" value="{{ $oferta->id }}" />
-    <input hidden name="user_id" type="text" value="{{ Auth::user()->id }}" />
+    <input hidden name="remitente_id" type="text" value="{{ Auth::user()->id }}" />
     <div class="d-flex items-center justify-content-between my-4">
         <x-primary-button class="ml-3">
             {{ __('Enviar') }}

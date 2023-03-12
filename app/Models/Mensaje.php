@@ -12,7 +12,8 @@ class Mensaje extends Model
     protected $fillable = [
         'id',
         'anuncio_id',
-        'user_id', // usuario autor del mensaje
+        'remitente_id', // usuario autor del mensaje
+        'recipiente_id',
         'texto',
         'created_at'
     ];
@@ -37,10 +38,18 @@ class Mensaje extends Model
      * Obtener id del usuario autor del mensaje
      * @return User
      */
-    public function usuario()
+    public function remitente()
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class,'remitente_id');
     }
 
+    /**
+     * Obtener id del usuario autor del mensaje
+     * @return User
+     */
+    public function recipiente()
+    {
+        return $this->belongsTo(User::class,'recipiente_id');
+    }
     
 }

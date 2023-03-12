@@ -44,36 +44,19 @@ class AnuncioController extends Controller
      */
     public function store(Request $request)
     {
-        /* $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'telefono' => ['required', 'string', 'max:255'],
-        ]);
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'telefono' => $request->telefono,
-        ]); */
-
-        $entrada = $request->validate([
-            /* 'user_id'=>'numeric|min:1',
-            'cine_id'=> 'numeric|min:1',
-            'fecha_id'=> 'min:1',
-            'entradas'=>'required|numeric|max:10|min:1', */
-            
-        ]);
+      //validar request
+        /* $entrada = $request->validate([
        
-        AnuncioDemanda::create([
+        ]); */
+       
+    /*     AnuncioDemanda::create([
             'titulo' => $request->titulo,
             'descripcion' => $request->descripcion,
             'id_usuario' => $request->id_usuario,
             'fecha' => date("H:i:s"),
             'tipo' => 'tipo-anuncio',
         ]);
-        return redirect()->route('/dashboard'); // return redirect()->route('item.index');
+        return redirect()->route('/dashboard'); // return redirect()->route('item.index'); */
         
     }
 

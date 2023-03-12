@@ -38,7 +38,7 @@ class Anuncio extends Model
      */
     function autor()
     {
-        return $this->hasOne(User::class,'id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     /**

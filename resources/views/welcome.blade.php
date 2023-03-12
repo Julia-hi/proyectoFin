@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
-
-$scriptUrl = Storage::url('welcome.js'); ?>
+?>
 @auth
 <?php
 try {
@@ -32,12 +31,11 @@ if ($user != null) {
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
+    <link rel="stylesheet" href="{{asset('storage/css/mi_estilo.css')}}">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<?php $backgrounImg = Storage::url('images/hojas-fondo1.svg'); ?>
 
 <body class="antialiased">
     @if($status=='error')
@@ -45,7 +43,7 @@ if ($user != null) {
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8 ">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height: 150px;">
-                    <img src="<?php echo Storage::url('images/logo.svg'); ?>" alt="Logo MiLorito" class="h-75 mt-3 mb-1">
+                    <img src="{{asset('storage/images/logo.svg')}}" alt="Logo MiLorito" class="h-75 mt-3 mb-1">
                 </div>
                 <div class="my-0">
                     <div class="mt-6 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">

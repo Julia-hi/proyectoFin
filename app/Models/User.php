@@ -74,7 +74,7 @@ class User extends Authenticatable
      */
     public function anunciosOferta()
     {
-        return $this->hasMany(AnuncioOferta::class);
+        return $this->hasMany(AnuncioOferta::class, 'user_id');
     }
 
     /**
@@ -90,7 +90,7 @@ class User extends Authenticatable
      */
     public function mensajes()
     {
-        return $this->hasMany(Mensaje::class);
+        return $this->hasMany(Mensaje::class, 'user_id');
     }
 
     /**
@@ -102,10 +102,7 @@ class User extends Authenticatable
     }
 
     public function esAutor(User $user)
-    {
-
-        //mensaje->anuncio->usuario - autor del anuncio
-        //  return $this->mensajes()->anuncio->usuario->id->where('user_id', $user->id)->exists();    
+    {  
         return $this->anuncios()->where('user_id', $user->id)->exists();
     }
 }
