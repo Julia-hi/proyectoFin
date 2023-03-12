@@ -21,24 +21,17 @@ class UserMensajesController extends Controller
      */
     public function index($user_id)
     {
-
-        /*  $user = User::find($user_id);
-        echo $user->name."<br>";
-        $mensajes = $user->mensajes; // array de id de mensajes
-        foreach ($mensajes as $mens_id) {
-           // $mensaje = Mensaje::get($mens_id);
-            echo $mens_id;
-        }
-        $anuncios = $user->anuncios;
-        foreach ($anuncios as $anuncio) {
-         //   echo $anuncio;
-        } */
-
-        // $dialogos = DB::table('mensajes')->where('user_id', $user)->groupBy('anuncio_id')->get();
-
         $user = User::find($user_id);
+        $messages = Mensaje::where('remitente_id', '=', $user_id)->
+          orWhere('recipiente_id', '=',$user_id)->get();
+         // if($user->id == $autor->id)
+       //   $grouped_messages = $messages->groupBy(['anuncio_id', 'recipiente_id']);
+        $grouped_messages = $messages->groupBy('anuncio_id');
+        foreach($grouped_messages as $dialogo){
+           $dialogos[]=$dialogo; 
+        }
         //obtener id de todos anuncios a quales usuario ha enviado mensajes
-        $anuncios_id = DB::table('mensajes')
+        /* $anuncios_id = DB::table('mensajes')
             ->select('anuncio_id')
             //  ->where('remitente_id', '=', $user_id)
             ->groupBy('anuncio_id')
@@ -74,7 +67,7 @@ class UserMensajesController extends Controller
                 }
                 $dialogos[] = $dialogo; // añadir dialogo al array
             }
-        }
+        } */
         return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);
     }
 
@@ -103,7 +96,7 @@ class UserMensajesController extends Controller
         );
         $entrada['anuncio_id'] = $request->anuncio_id;
         $entrada['remitente_id'] = $request->remitente_id;
-        $entrada['recipiente_id'] = Anuncio::find($request->anuncio_id)->autor->id;
+        $entrada['recipiente_id'] = $request->recipiente_id;
         $message = Mensaje::create($entrada); // insertar mensaje a database
 
         return back();
@@ -119,7 +112,7 @@ class UserMensajesController extends Controller
                 'remitente_id'=>'required'
             ]
         );
-        $entrada['user_id'] = $request->remitente_id;
+       // $entrada['user_id'] = $request->remitente_id;
         $entrada['anuncio_id'] = $request->anuncio_id;
         $entrada['remitente_id'] = $request->remitente_id;
         $entrada['recipiente_id'] = $request->recipiente_id;

@@ -14,13 +14,13 @@ window.addEventListener("load", () => {
     const elements = document.querySelectorAll('.mostrarChatBoton');
     // Asignar event listener para cada elemento de clase "mostrarChatBoton"
     elements.forEach(element => {
-        if(userId ==$("#user1").html()){
+      /*   if(userId ==$("#user1").html()){
             remitente = $("#user1").html();
             recipiente =$("#user2").html();
         }else{
             remitente = $("#user2").html();
             recipiente =$("#user1").html();
-        }
+        } */
        
         element.addEventListener('click', function () {
             var id = element.getAttribute('id');
@@ -51,11 +51,16 @@ function mostrarChat(id) {
         $('#' + idChat).addClass('hidden');
         $('#message_form').remove();
     })
+    $(".cerrar_form").on('click', function () {
+        $('#' + idChat).addClass('hidden');
+        $('#message_form').remove();
+    })
     $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
     // crear formulario
-    createForm(numChat, idChat);
-
+   // createForm(numChat, idChat);
+}
     //evento para submit formulario
+    function addEventformulario(idChat){
     $('#message_form').submit(function (event) {
         event.preventDefault();
         
@@ -138,7 +143,9 @@ function createForm(id, idChat) {
     anuncio_id = $('#'+idChat).children().first().html();
     // Crear nuevo elemento <form>
     var form = $('<form>').attr({
-        id: 'message_form'
+        id: 'message_form',
+        method:'post',
+        action:"/user/"+remitente+"/mensajes"
     });
 
     // Añadir CSRF token al formulario
@@ -221,5 +228,6 @@ function createForm(id, idChat) {
 
     // Añadir formulario despues bloque del chat
     $('#chat_body' + id).after(form);
+  //  addEventformulario(idChat);
 }
 

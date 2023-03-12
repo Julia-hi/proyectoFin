@@ -29,24 +29,24 @@ use App\Models\Anuncio; ?>
                         <div class="text-center">todavia no tienes mensajes</div>
                         @else
                         <div>Tienes {{ count($dialogos) }} conversaciones</div>
+
                         @foreach($dialogos as $key=>$dialogo)
-
                         <?php $anuncio = Anuncio::find($dialogo[$key]->anuncio_id) ?>
-
 
                         <div class="row p-2 w-100">
                             <div class=" col-1 text-left"><span>id: </span><span id="{{'anuncio'.$key}}">{{$anuncio->id}}</span></div>
                             <div class="col-1 text-left">autor: {{ $anuncio->autor->name }}</div>
                             @if($anuncio->tipo =='oferta')
-                            <div class="col-1 text-left"><img style="height: 80px; width: 80px; display: block; object-fit: cover" src="{{ $dialogo[0]->anuncio->anuncioOferta->fotos[0]->enlace }}" alt="{{ $dialogo[0]->anuncio->anuncioOferta->titulo }}"> </div>
-
+                            <div class="col-1 text-left">
+                                <img style="height: 80px; width: 80px; display: block; object-fit: cover" src="{{ $dialogo[0]->anuncio->anuncioOferta->fotos[0]->enlace }}" alt="{{ $dialogo[0]->anuncio->anuncioOferta->titulo }}">
+                            </div>
                             <div class="col text-left">{{ $anuncio->tipo }}: {{ $anuncio->anuncioOferta->titulo }}</div>
                             @elseif($anuncio->tipo =='demanda')
                             <div class="col text-left">{{ $anuncio->tipo }}: {{ $anuncio->anuncioDemanda->titulo }}</div>
                             @endif
                             <div class="col-3 text-left">
                                 <?php $id_chat = "chat" . $key;  ?>
-                                <p>Chat id: {{ $id_chat}}</p>
+                                <!-- <p>Chat id: {{ $id_chat}}</p> -->
                                 <div class="btn-group d-flex align-items-center">
                                     @if($anuncio->tipo =='oferta')
                                     <a href="/ofertas/{{$anuncio->id}}" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver anuncio</a>
@@ -59,7 +59,6 @@ use App\Models\Anuncio; ?>
                         </div>
 
                         <div id="<?php echo $id_chat; ?>" class="chat hidden  position-relative mx-auto w-100" title="">
-                            <span hidden>{{$anuncio->id}}</span>
                             <div id="<?php echo ('chat_body' . $key); ?>" class="border" style="min-height:25%; max-height:50%; background-color: #D8F3DC; overflow-y: scroll;overflow-x: hidden;">
                                 <!-- Flecha para cerrar ventana del chat -->
                                 <div id="cruce" data-title="Cerrar" class="cruce bg-white position-sticky top-0 start-0" style="width:25px; height:25px; z-index:30; cursor:pointer;">
@@ -69,44 +68,54 @@ use App\Models\Anuncio; ?>
                                 </div>
                                 <?php $user1 = $dialogo[0]->remitente_id;
                                 $user2 = $dialogo[0]->recipiente_id ?>
-                                
-                                <span id="user1" hidden>{{ $user1 }}</span>
-                                <span id="user2" hidden>{{ $user2 }}</span>
-                               
-                                @foreach($dialogo as $mensaje)
-                                @if($mensaje->remitente->id == Auth::user()->id)
-                                <div class="row flex justify-content-end">
-                                    <div class="col-lg-8 mx-3">
-                                        <ul class="list-group">
 
-                                            <!-- <li class="d-flex justify-content-end w-100">Yo:</li> -->
-                                            <li class="d-flex justify-content-end w-100 mb-2 mt-0">
-                                                <div class="bg-white rounded px-3 py-2">{{ $mensaje->texto }}</div>
-                                            </li>
-                                        </ul>
+                                <!--  <span id="user1" hidden>{{ $user1 }}</span>
+                                <span id="user2" hidden>{{ $user2 }}</span> -->
+                                
+                                @foreach($dialogo as $mensaje)
+
+                                @if($mensaje->remitente->id == Auth::user()->id)
+                                <div class="row flex justify-content-end mx-3 my-1">
+                                    <div class="bg-white rounded px-3 p-2 w-auto max-w-75 ">
+                                        <p class="text-right">{{ $mensaje->texto }}</p>
                                     </div>
                                 </div>
-                                @else
-                                <div class="row flex justify-content-start">
-                                    <div class="col-lg-8">
-                                        <ul class="list-group">
-                                            <li class="d-flex justify-content-start w-100">{{ $mensaje->remitente->name}}:</li>
-
-                                            <li class="d-flex justify-content-start w-100 mb-2 mt-0">
-                                                <div class="bg-white rounded px-3 py-2">{{ $mensaje->texto }}</div>
-                                            </li>
-                                        </ul>
+                                @elseif($mensaje->remitente->id != Auth::user()->id)
+                                <div class="row flex justify-content-start mx-3 my-1">
+                                    <div class="bg-white rounded p-2 w-auto max-w-75 ">
+                                        <p class="text-right">{{ $mensaje->texto }}</p>
                                     </div>
                                 </div>
                                 @endif
-                                @endforeach
-                                <div class="row flex justify-content-end">
-                                    <div class="col-lg-8 mx-3">
-                                        <ul class="list-group" id="<?php echo ('ultimo_mensaje' . $key) ?>">
 
-                                        </ul>
+                                @endforeach
+
+                            </div>
+                            <?php if (Auth::user()->id == $user1) {
+                                $remitente = $user1;
+                                $recipiente = $user2;
+                            } else {
+                                $recipiente = $user1;
+                                $remitente = $user2;
+                            } ?>
+                            <div>
+                                <form method="POST" action="{{ route('user.mensajes.store',$remitente) }}">
+                                    @csrf
+                                    <textarea class="form-control" id="mensaje" rows="2" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
+                                    <x-input-error :messages="$errors->get('texto')" class="mt-2" />
+                                    <input hidden name="anuncio_id" type="text" value="{{ $anuncio->id }}" />
+                                    <input hidden name="recipiente_id" type="text" value="{{ $recipiente }}" />
+                                    <input hidden name="remitente_id" type="text" value="{{ $remitente }}" />
+                                    <div class="d-flex items-center justify-content-end my-4">
+                                        <x-primary-button class="ml-3">
+                                            {{ __('Enviar') }}
+                                        </x-primary-button>
+                                        <x-reset-button class="ml-3">
+                                            {{ __('Limpiar') }}
+                                            </x-primary-button>
+                                            <button id="cerrar_dragable" type="button" class="cerrar_form btn">Cerrar chat</button>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                         @endforeach

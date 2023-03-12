@@ -80,7 +80,7 @@ if ($user != null) {
                     <textarea class="form-control" id="mensaje" rows="10" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
                     <x-input-error :messages="$errors->get('texto')" class="mt-2" />
                     <input hidden name="anuncio_id" type="text" value="{{ $oferta->id }}" />
-                    <input hidden name="user_id" type="text" value="{{ Auth::user()->id }}" />
+                    <input hidden name="remitente_id" type="text" value="{{ Auth::user()->id }}" />
                     <div class="d-flex items-center justify-content-between my-4">
                         <x-primary-button class="ml-3">
                             {{ __('Enviar') }}
@@ -138,30 +138,32 @@ if ($user != null) {
                                             <div class="col-md-6 col-sm-12 p-2 min-h-100">
                                                 <div class="d-flex flex-column w-100 justify-content-between h-100">
                                                     <div>
-                                                        <h1 class="text-uppercase pb-2">{{ $oferta->titulo }}</h1>
-                                                        @auth
-                                                        @if($user->id != $autor->id)
-                                                        <div class="position-relative">
-                                                            @if(!$oferta->anuncio->esFavorito(Auth::user(), $oferta->anuncio))
-                                                            <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
-                                                                @csrf
-                                                                <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
-                                                                <input type="hidden" name="user_id" value="{{ $user_id }}">
-                                                                <button type="submit" title="Añadir a favoritos"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                            </form>
-                                                            @else
-                                                            <?php $favorito = $oferta->favoritos->first(); ?>
-                                                            <!-- formulario para Eeiminar favorito de la lista -->
-                                                            <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" title="Eliminar de favoritos"><img src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                            </form>
+                                                        <div class="d-flex flex-row justify-content-between">
+                                                            <h1 class="text-uppercase pb-2">{{ $oferta->titulo }}</h1>
+                                                            @auth
+                                                            @if($user->id != $autor->id)
+                                                            <div class="position-relative">
+                                                                @if(!$oferta->anuncio->esFavorito(Auth::user(), $oferta->anuncio))
+                                                                <!-- formulario para Eñadir a favoritos -->
+                                                                <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
+                                                                    @csrf
+                                                                    <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
+                                                                    <input type="hidden" name="user_id" value="{{ $user_id }}">
+                                                                    <button type="submit" title="Añadir a favoritos"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                                </form>
+                                                                @else
+                                                                <?php $favorito = $oferta->favoritos->first(); ?>
+                                                                <!-- formulario para Eliminar favorito de la lista -->
+                                                                <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit" title="Eliminar de favoritos"><img src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                                </form>
+                                                                @endif
+                                                            </div>
                                                             @endif
+                                                            @endauth
                                                         </div>
-                                                        @endif
-                                                        @endauth
-
                                                         <h2>Raza: <span class="text-capitalize">{{ $oferta->raza }}</span></h2>
                                                         <h2>Genero: <span class="text-capitalize">{{ $oferta->genero }}</span></h2>
                                                         <h2>Nacido: <span class="text-capitalize">{{ $oferta->fecha_nac }}</span></h2>
