@@ -1,10 +1,15 @@
-/*autor: Yulia Tropin Tropina, 3DAWd
-    Proyecto fin del curso "Mi lorito"*/
+/**
+ * autor: Yulia Tropin Tropina, 3DAWd IES "Trassierra"
+ * Proyecto fin del curso "Mi lorito"
+ * 
+ * jQuery required
+ * */
 
 "use strict";
 
 let anuncio;
 let xmlHttp;
+
 /**
  * Datos de la comunidad seleccionada (json)
  * @var Object
@@ -14,7 +19,7 @@ let datos;
 window.addEventListener("load", () => {
     //obtener valores actuales del anuncio (string)
     anuncio = JSON.parse($("#anuncio_actuale").text());
-    console.log(anuncio);
+    setTitulo(anuncio);
     setRaza(anuncio);
     setGenero(anuncio);
     setFecha(anuncio);
@@ -25,6 +30,26 @@ window.addEventListener("load", () => {
     }
     $("#comunidad").on("change", mostrarProvincias);
 })
+
+/**
+ * Titulo actual del anuncio
+ * @param {Object} anuncio 
+ */
+function setTitulo(anuncio) {
+    var titulo = $('#titulo_actual').val(anuncio.titulo);
+    $("#titulo").on("change", function () {
+        $("#titulo_nuevo").val($("#titulo_actual").val());
+        anuncio_editado['titulo'] = ($("#titulo_actual").val());
+    });
+}
+
+/**
+ * Descripcion actual del anuncio
+ * @param {Object} anuncio 
+ */
+function setDescripcion(anuncio) {
+    var optionsRaza = $('#descripcion').val(anuncio.descripcion);
+}
 
 /**
  * Raza elegida inicialmente
@@ -136,8 +161,19 @@ let mostrarPoblaciones = (datos) => {
                         value: innerItem.Poblacion,
                         text: innerItem.Poblacion
                     }));
-                    lat = innerItem.Latitud;
-                    lon = innerItem.Longitud;
+                    //valor of latitud de la poblacion
+                    $('#poblacion').append($('<span>', {
+                        value: innerItem.Latitud,
+                        text: innerItem.Latitud,
+                        id: 'lat_' + innerItem.Poblacion
+                    }));
+                    //valor of longitud de la poblacion
+                    $('#poblacion').append($('<span>', {
+                        value: innerItem.Longitud,
+                        text: innerItem.Longitud,
+                        id: 'lon_' + innerItem.Poblacion
+                    }));
+
                     //obtener opciones de poblacion select
                     let optionsPueblo = $("#poblacion").find('option');
                     //añadir atributo "selected" para opcion seleccionada anteriormente
@@ -151,11 +187,24 @@ let mostrarPoblaciones = (datos) => {
         });
 
         //set latitude y longitude del pueblo elegido -> para mostrar marker del ubicación en mapa
+        var selectedPueblo = $("#poblacion option:selected").val();
+        lat = $("#lat_" + selectedPueblo).text();
+        lon = $("#lon_" + selectedPueblo).text();
+        $("#lat_pueblo").text(lat);
+        $("#lat_pueblo").val(lat);
+        $("#lon_pueblo").text(lon);
+        $("#lon_pueblo").val(lon);
         $('#poblacion').on("change", function () {
+            var selectedPueblo = $("#poblacion option:selected").val();
+            lat = $("#lat_" + selectedPueblo).text();
+            lon = $("#lon_" + selectedPueblo).text();
+            $("#lat_pueblo").text(lat);
             $("#lat_pueblo").val(lat);
+            $("#lon_pueblo").text(lon);
             $("#lon_pueblo").val(lon);
         });
     }
+
 }
 
 /**
@@ -182,7 +231,7 @@ let cargarProvincias = (com) => {
             // var selectedProv = $("#provincia").val();
             //  $('#provincia option[value="' + selectedProv + '"]').attr('selected', 'selected');
             var optionsProvincia = $("#provincia").find('option');
-            
+
             optionsProvincia.each(function () {
                 let selectedProv;
                 if ($(this).text() == anuncio.provincia) {

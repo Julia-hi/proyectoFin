@@ -1,5 +1,5 @@
 /**
- * autor: Yulia Tropin Tropina, 3DAWd
+ * autor: Yulia Tropin Tropina, 3DAWd IES "Trassierra"
  * Proyecto fin del curso "Mi lorito"
  * 
  * jQuery required

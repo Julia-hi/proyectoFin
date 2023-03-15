@@ -19,7 +19,7 @@
                 <div class="p-6 text-gray-900">
                     <p class="text-center">Hola, {{ Auth::user()->name }}!</p>
                     <p>Aqui puedes publicar nuevos anuncios gestionar tus anuncios, ver lista de tus favoritos,
-                         enviar mensajes y gestional tu perfil.</p>
+                         enviar mensajes y gestionar tu perfil.</p>
                 </div>
             </div>
         </div>
