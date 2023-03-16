@@ -80,7 +80,6 @@ class AdminController extends Controller
         } else {
             $status = 'error';
         } 
-
         return view('admin.dashboard', ['status'=>$status, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData]);
     }
 

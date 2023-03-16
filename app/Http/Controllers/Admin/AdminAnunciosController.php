@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Anuncio;
+use Illuminate\Support\Facades\Auth;
 use App\Models\AnuncioOferta;
 use App\Models\AnuncioDemanda;
 
@@ -17,8 +18,22 @@ class AdminAnunciosController extends Controller
      */
     public function index()
     {
-        $anuncios = Anuncio::all();
-        return view('admin/admin_anuncios', ['anuncios'=>$anuncios]);
+        //todos anuncios de oferta activos
+        $ofertasActive = Anuncio::where('tipo','oferta')->where('estado','active')->get();
+        //todos anuncios de oferta desactivados
+        $ofertasNoActive = Anuncio::where('tipo','oferta')->where('estado','inactive')->get();
+
+        //anuncios de demanda activos
+        $demandasActive = Anuncio::where('tipo','demanda')->where('estado','active')->get();
+        //todos anuncios de demanda desactivados
+        $ofertasNoActive = Anuncio::where('tipo','demanda')->where('estado','inactive')->get();
+
+        if (Auth::check() && Auth::user()->rol=="admin") {
+            $status = 'ok';
+        } else {
+            $status = 'error';
+        } 
+        return view('admin/admin_anuncios', ['status'=>$status,'ofertasAct'=>$ofertasActive, 'ofertasDesact'=>$ofertasNoActive, 'demandasAct'=> $demandasActive,'demandasDesact'=>$ofertasNoActive]);
     }
 
     /**

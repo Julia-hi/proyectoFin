@@ -17,26 +17,14 @@ class AdminUsersController extends Controller
      */
     public function index($id)
     {
-        $user = User::where('id', $id)->get();
-        try {
-            $user = User::where('id', $id)->get();
-        } catch (Exception $ex) {
-            //error se no hay conexion con la BD
-            $status = "error";
-            return view('welcome', ['demandas' => null, 'ofertas' => null, 'status' => $status]);
-        }
-        if ($user->rol == "admin") {
-            $users = User::all();
-            $status = "ok";
-            return view('admin.admin_users', ['admin_id' => $id, 'users' => $users, 'status' => $status]);
+        $usersActive = User::where('rol','user')->where('status','active')->get();
+        $usersBloqueados = User::where('rol','user')->where('status','blocked')->get();
+        if (Auth::check() && Auth::user()->rol=="admin") {
+            $status = 'ok';
         } else {
-            //return to welcome with status ok
-            $demandas = AnuncioDemanda::limit(12)->get();
-            $ofertas = AnuncioOferta::limit(12)->get();
-            $status = "ok";
-             return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas,'status' => $status]);
-            //return Redirect::route('/');
-        }
+            $status = 'error';
+        } 
+        return view('admin/admin_users', ['status'=>$status,'usAct'=>$usersActive,'usBloq'=>$usersBloqueados]);
     }
 
     /**
