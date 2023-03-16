@@ -15,9 +15,10 @@ class UserController extends Controller
      */
     public function index()
     {
-
         if (Auth::check() && Auth::user()->rol == "user") {
             return view('dashboard');
+        }elseif(Auth::check() && Auth::user()->rol == "admin"){
+            return view('admin.dashboard');
         } else {
             return redirect()->back()->with('Ha producido un error.');
         }

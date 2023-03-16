@@ -129,10 +129,10 @@ class UserAnuncioOfertaController extends Controller
      */
     public function update(Request $request, $id, $id_anuncio)
     {
-         echo "Update anuncio";
+        echo "Update anuncio";
         $oferta = AnuncioOferta::findOrFail($id_anuncio);
         $fotos = $oferta->fotos();
-        $rules = 
+        $rules =
             [
                 'titulo' => 'required|min:10|max:100',
                 'descripcion' => 'required|min:10|max:300',
@@ -144,42 +144,42 @@ class UserAnuncioOfertaController extends Controller
                 'poblacion' => 'required|not_regex:/^todo$/',
                 'lat' => 'required',
                 'lon' => 'required'
-               // 'foto0' => 'required|image',
-               // 'foto1' => 'image',
-               // 'foto2' => 'image',
-               // 'foto3' => 'image',
-               // 'foto4' => 'image'
+                // 'foto0' => 'required|image',
+                // 'foto1' => 'image',
+                // 'foto2' => 'image',
+                // 'foto3' => 'image',
+                // 'foto4' => 'image'
             ];
-            if ($oferta->titulo === $request->titulo) {
-                $rules['titulo'] = 'sometimes';
-            }
-            if ($oferta->descripcion === $request->descripcion) {
-                $rules['descripcion'] = 'sometimes';
-            }
-            if ($oferta->raza === $request->raza) {
-                $rules['raza'] = 'sometimes';
-            }
-            if ($oferta->genero === $request->genero) {
-                $rules['genero'] = 'sometimes';
-            }
-            if ($oferta->fecha_nac === $request->fecha_nac) {
-                $rules['fecha_nac'] = 'sometimes';
-            }
-            if ($oferta->comunidad === $request->comunidad) {
-                $rules['comunidad'] = 'sometimes';
-            }
-            if ($oferta->provincia === $request->provincia) {
-                $rules['provincia'] = 'sometimes';
-            }
-            if ($oferta->poblacion === $request->poblacion) {
-                $rules['poblacion'] = 'sometimes';
-            }
-            if ($oferta->lat === $request->lat) {
-                $rules['lat'] = 'sometimes';
-            }
-            if ($oferta->lon === $request->lon) {
-                $rules['lon'] = 'sometimes';
-            }
+        if ($oferta->titulo === $request->titulo) {
+            $rules['titulo'] = 'sometimes';
+        }
+        if ($oferta->descripcion === $request->descripcion) {
+            $rules['descripcion'] = 'sometimes';
+        }
+        if ($oferta->raza === $request->raza) {
+            $rules['raza'] = 'sometimes';
+        }
+        if ($oferta->genero === $request->genero) {
+            $rules['genero'] = 'sometimes';
+        }
+        if ($oferta->fecha_nac === $request->fecha_nac) {
+            $rules['fecha_nac'] = 'sometimes';
+        }
+        if ($oferta->comunidad === $request->comunidad) {
+            $rules['comunidad'] = 'sometimes';
+        }
+        if ($oferta->provincia === $request->provincia) {
+            $rules['provincia'] = 'sometimes';
+        }
+        if ($oferta->poblacion === $request->poblacion) {
+            $rules['poblacion'] = 'sometimes';
+        }
+        if ($oferta->lat === $request->lat) {
+            $rules['lat'] = 'sometimes';
+        }
+        if ($oferta->lon === $request->lon) {
+            $rules['lon'] = 'sometimes';
+        }
 
         $oferta->titulo = $request->titulo;
         $oferta->descripcion = $request->descripcion;
@@ -192,21 +192,7 @@ class UserAnuncioOfertaController extends Controller
         $oferta->lat = $request->lat;
         $oferta->lon = $request->lon;
         $oferta->save();
-
-         /*  $fotos_user = array();
-            for ($i = 1; $i <= 5; $i++) {
-                $string = 'foto' . $i;
-                if ($request->file($string)) {
-                    $fotos_user[] = $request->file($string);
-                }
-            }
-            foreach ($fotos_user as $key => $foto) {
-                //guardo ficheros validados en servidor 
-                $fichero = $this->cargarFichero($foto, $id, $entrada['id'], 'foto' . $key);
-                Foto::create($fichero); //insert to database - tabla "fotos"
-            } */
-           
-      //  return Redirect::route('user.anuncios.index', ['user' => $id]);
+        return Redirect::route('user.anuncios.index', ['user' => $id]);
     }
 
     /**

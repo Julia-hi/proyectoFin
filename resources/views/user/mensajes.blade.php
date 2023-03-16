@@ -71,25 +71,29 @@ use App\Models\Anuncio; ?>
 
                                 <!--  <span id="user1" hidden>{{ $user1 }}</span>
                                 <span id="user2" hidden>{{ $user2 }}</span> -->
-                                
+
                                 @foreach($dialogo as $mensaje)
 
                                 @if($mensaje->remitente->id == Auth::user()->id)
-                                <div class="row flex justify-content-end mx-3 my-1">
-                                    <div class="bg-white rounded px-3 p-2 w-auto max-w-75 ">
-                                        <p class="text-right">{{ $mensaje->texto }}</p>
+                                <div class="row justify-content-end mx-3 my-1">
+                                    <div class="col-8 bg-white rounded px-3 py-2 w-auto max-w-75 justify-content-end">
+                                        <div class="flex justify-content-end">
+                                            <p class="text-right pr-0">{{ $mensaje->texto }}</p>
+                                        </div>
+                                        <div class="flex justify-content-end"><small class="text-muted text-right">{{ $mensaje->created_at->format('d-m-Y H:i') }}</small></div>
                                     </div>
                                 </div>
                                 @elseif($mensaje->remitente->id != Auth::user()->id)
                                 <div class="row flex justify-content-start mx-3 my-1">
-                                    <div class="bg-white rounded p-2 w-auto max-w-75 ">
-                                        <p class="text-right">{{ $mensaje->texto }}</p>
+                                    <small class="text-left">{{ $mensaje->remitente->name }}:</small>
+                                    <div class="bg-white rounded p-2 w-auto max-w-75">
+                                        <p class="text-left">{{ $mensaje->texto }} <br>
+                                            <small class="text-muted">{{ $mensaje->created_at->format('d-m-Y H:i') }}</small>
+                                        </p>
                                     </div>
                                 </div>
                                 @endif
-
                                 @endforeach
-
                             </div>
                             <?php if (Auth::user()->id == $user1) {
                                 $remitente = $user1;
@@ -119,7 +123,6 @@ use App\Models\Anuncio; ?>
                             </div>
                         </div>
                         @endforeach
-
                         @endif
                     </div>
                 </div>

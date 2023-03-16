@@ -54,7 +54,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('user.mensajes', UserMensajesController::class);
     Route::post('/user/{user_id}/mensaje', [EnviarMensajeController:: class, 'sendMessage'])->name('enviarMensaje');
     Route::resource('admin.users', AdminUsersController::class);
-    Route::get('admin-dashboard',[AdminController::class,'index'])->name('admin');;
+    Route::resource('admin.anuncios', AdminAnunciosController::class);
+    Route::get('admin-dashboard',[AdminController::class,'index'])->name('admin');
 });
 
 Route::get('/ofertas-filter', [BuscarOfertasController::class, 'index'])->name('filter.index');

@@ -7,20 +7,16 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('admin.anuncios.index',$user_id)" :active="request()->routeIs('user.anuncios.index',$user_id)">
-                    <img src="<?php echo Storage::url('images/icons/receipt-solid.svg');?>" style="width:1em;" class="mr-2">
+                    <x-nav-link :href="route('admin.users.index',$user_id)" :active="request()->routeIs('user.anuncios.index',$user_id)">
+                    <img src="" style="width:1em;" class="mr-2">
                     {{ __('Usuarios') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('user.favoritos.index', $user_id)" :active="request()->routeIs('user.favoritos.index',$user_id)">
-                        <img src="<?php echo Storage::url('images/icons/heart-solid.svg');?>" style="width:1em;" class="mr-2">
+                    <x-nav-link :href="route('admin.anuncios.index', $user_id)" :active="request()->routeIs('user.favoritos.index',$user_id)">
+                        <img src="" style="width:1em;" class="mr-2">
                         {{ __('Anuncios') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('user.mensajes.index', $user_id)" :active="request()->routeIs('user.mensajes.index',$user_id)">
-                    <img src="<?php echo Storage::url('images/icons/comment-regular.svg');?>" style="width:1em;" class="mr-2">
-                    {{ __('Estadísticas') }}
+                    </x-nav-link>  
                 </div>
             </div>
-
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
@@ -104,7 +100,6 @@
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Cerrar sesión') }}

@@ -18,6 +18,7 @@ class AdminAnunciosController extends Controller
     public function index()
     {
         $anuncios = Anuncio::all();
+        return view('admin/admin_anuncios', ['anuncios'=>$anuncios]);
     }
 
     /**

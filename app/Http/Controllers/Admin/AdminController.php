@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Anuncio;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -15,80 +17,72 @@ class AdminController extends Controller
      */
     public function index()
     {
-       // echo (Auth::user()->rol);
-/* 
+        $anunciosData=[];
+        $numOfertasTotal = Anuncio::where('tipo','oferta')->count();
+        $anunciosData['ofTotal'] = $numOfertasTotal;
+        $numOfertas30dias = Anuncio::where('tipo','oferta')->whereBetween('created_at', [
+            Carbon::now()->subDays(30)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $anunciosData['of30dias'] = $numOfertas30dias;
+        $numOfertas365dias = Anuncio::where('tipo','oferta')->whereBetween('created_at', [
+            Carbon::now()->subDays(365)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $anunciosData['of365dias'] = $numOfertas365dias;
+
+        $numDemandasTotal = Anuncio::where('tipo','demanda')->count();
+        $anunciosData['demTotal'] = $numDemandasTotal;
+        $numDemandas30dias = Anuncio::where('tipo','demanda')->whereBetween('created_at', [
+            Carbon::now()->subDays(30)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $anunciosData['dem30dias'] = $numDemandas30dias;
+        $numOfertas365dias = Anuncio::where('tipo','demanda')->whereBetween('created_at', [
+            Carbon::now()->subDays(365)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $anunciosData['dem365dias'] = $numOfertas365dias;
+
+        $usuariosData=[];
+        $numActiveTotal = User::where('rol','user')->where('status','active')->count();
+        $usuariosData['activeTotal'] = $numActiveTotal;
+
+        $numActive30dias = User::where('rol','user')->where('status','active')->whereBetween('created_at', [
+            Carbon::now()->subDays(30)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $usuariosData['active30dias'] = $numActive30dias;
+
+        $numActive365dias = User::where('rol','user')->where('status','active')->whereBetween('created_at', [
+            Carbon::now()->subDays(365)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $usuariosData['active365dias'] = $numActive365dias;
+
+        $numBloqueadosTotal = User::where('rol','user')->where('status','blocked')->count();
+        $usuariosData['bloqueadosTotal'] = $numBloqueadosTotal;
+
+        $numBloqueados30dias = User::where('rol','user')->where('status','blocked')->whereBetween('created_at', [
+            Carbon::now()->subDays(30)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $usuariosData['bloqueados30dias'] = $numBloqueados30dias;
+
+        $numBloqueados365dias = User::where('rol','user')->where('status','blocked')->whereBetween('created_at', [
+            Carbon::now()->subDays(365)->startOfDay(),
+            Carbon::now()->endOfDay()
+        ])->count();
+        $usuariosData['bloquados365dias'] = $numBloqueados365dias;
+
         if (Auth::check() && Auth::user()->rol=="admin") {
-            
+            $status = 'ok';
         } else {
-            return view('admin.login');
-        } */
-       // return redirect()->intended(RouteServiceProvider::ADMIN);
-        return view('admin.dashboard');
+            $status = 'error';
+        } 
+
+        return view('admin.dashboard', ['status'=>$status, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
-    {
-        return view('admin.dashboard');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }

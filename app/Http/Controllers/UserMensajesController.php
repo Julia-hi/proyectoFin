@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\DB;
 
 class UserMensajesController extends Controller
 {
-
-
     /**
      * Display a listing of the resource.
      *
@@ -22,53 +20,17 @@ class UserMensajesController extends Controller
     public function index($user_id)
     {
         $user = User::find($user_id);
+        if($user->rol=="admin"){
+            return redirect()->route('/admin-dashboard');
+        }else{
         $messages = Mensaje::where('remitente_id', '=', $user_id)->
           orWhere('recipiente_id', '=',$user_id)->get();
-         // if($user->id == $autor->id)
-       //   $grouped_messages = $messages->groupBy(['anuncio_id', 'recipiente_id']);
+
         $grouped_messages = $messages->groupBy('anuncio_id');
         foreach($grouped_messages as $dialogo){
            $dialogos[]=$dialogo; 
         }
-        //obtener id de todos anuncios a quales usuario ha enviado mensajes
-        /* $anuncios_id = DB::table('mensajes')
-            ->select('anuncio_id')
-            //  ->where('remitente_id', '=', $user_id)
-            ->groupBy('anuncio_id')
-            ->get();
-
-        foreach ($anuncios_id as $id) {
-            $anuncio = Anuncio::find($id->anuncio_id); //anuncio
-            $autor = $anuncio->autor; //autor del anuncio
-            if ($user->id == $autor->id) {
-                $remitentes = DB::table('mensajes')
-                    ->select('remitente_id')
-                    ->where('anuncio_id', '=', $anuncio->id)
-                    ->groupBy('remitente_id')
-                    ->get();
-                foreach ($remitentes as $rem) {
-                    //mensajes propios del user actual pertenecentes al anuncio concreto
-                    $mensajes = Mensaje::where('anuncio_id', $id->anuncio_id)->where('remitente_id', $rem->remitente_id)->get();
-                    foreach ($mensajes as $mensaje) {
-                        $dialogo[] = $mensaje;
-                    }
-                    $dialogos[] = $dialogo; // añadir dialogo al array
-                }
-            } else {
-                //mensajes propios del user actual pertenecentes al anuncio concreto
-                $mensajesEnviados = Mensaje::where('anuncio_id', $id->anuncio_id)->where('remitente_id', $user->id)->where('recipiente_id', $autor->id)->get();
-                foreach ($mensajesEnviados as $mensaje) {
-                    $dialogo[] = $mensaje;
-                }
-                //mensajes recibidos
-                $mensajesRecibidos = Mensaje::where('anuncio_id', $id->anuncio_id)->where('remitente_id', $autor->id)->where('recipiente_id', $user->id)->get();
-                foreach ($mensajesRecibidos as $mensaje) {
-                    $dialogo[] = $mensaje;
-                }
-                $dialogos[] = $dialogo; // añadir dialogo al array
-            }
-        } */
-        return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);
+        return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);}
     }
 
     /**
