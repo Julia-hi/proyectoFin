@@ -33,7 +33,7 @@
                 <div class="justify-center px-6">
                     <div class=" mt-4 p-2 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
                         <div id="anuncios" class="my-3 p-3">
-                            <h2 class="text-center p-2">Anuncios</h2>
+                            <h2 class="text-center py-2 text-uppercase fs-4">Anuncios</h2>
                             <div class="row bg-success">
                                 <div class="col"></div>
                                 <div class="col border text-white font-weight-bold">Total</div>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div id="usuarios" class="my-3 p-3">
-                            <h2 class="text-center p-2">Usuarios</h2>
+                            <h2 class="text-center py-2 text-uppercase fs-4">Usuarios</h2>
                             <div class="row bg-success">
                                 <div class="col"></div>
                                 <div class="col border text-white font-weight-bold">Total</div>

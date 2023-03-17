@@ -6,7 +6,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Mensaje;
 use Exception;
+use Illuminate\Support\Facades\Redirect;
 
 class AdminUsersController extends Controller
 {
@@ -17,36 +19,16 @@ class AdminUsersController extends Controller
      */
     public function index($id)
     {
-        $usersActive = User::where('rol','user')->where('status','active')->get();
-        $usersBloqueados = User::where('rol','user')->where('status','blocked')->get();
-        if (Auth::check() && Auth::user()->rol=="admin") {
+        $usersActive = User::where('rol', 'user')->where('estado', 'active')->get();
+        $usersBloqueados = User::where('rol', 'user')->where('estado', 'blocked')->get();
+        if (Auth::check() && Auth::user()->rol == "admin") {
             $status = 'ok';
         } else {
             $status = 'error';
-        } 
-        return view('admin/admin_users', ['status'=>$status,'usAct'=>$usersActive,'usBloq'=>$usersBloqueados]);
+        }
+        return view('admin/admin_users', ['status' => $status, 'usAct' => $usersActive, 'usBloq' => $usersBloqueados]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -54,42 +36,39 @@ class AdminUsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_admin, $id_user)
     {
-        //
+        try {
+            $user = User::findOrFail($id_user);
+            $anuncios = $user->anuncios;
+            $mensajes = Mensaje::where('remitente_id', $id_user)->get();
+            $status = 'ok';
+        } catch (Exception $e) {
+            $status = 'error';
+            $anuncios=null;
+            $user = null;
+            $mensajes = null;
+        }
+
+        return view('/admin/user_data', ['status' => $status, 'user' => $user, 'anuncios' => $anuncios, 'mensajes' => $mensajes]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $user_id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $user = User::findOrFail($user_id);
+        if ($user->rol != 'admin') {
+            $user->estado = $request->estado;
+            $user->save();
+        }
+        return Redirect::route('admin.users.index', ['admin' => $id]);
     }
 }

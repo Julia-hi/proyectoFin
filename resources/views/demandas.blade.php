@@ -57,12 +57,12 @@
 
                     </div>
                     <!--   Block para anuncios de demanda   -->
-                    <div class="mt-8 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                    <div class="mt-8 p-2 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                         <?php
                         if ($demandas == null) { ?>
                             <div class="text-center">
                                 <div class="row d-flex justify-content-center align-content-center m-3">
-                                    <a type="button" class="btn btn-sm btn-outline-secondary col-3" href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Volver</a>
+                                    <a type="button" class="green-brillante-boton w-50" href="{{ url()->previous() }}"><strong>VOLVER</strong></a>
                                 </div>
                             </div>
                             <div>

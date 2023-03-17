@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('anuncios_oferta', function (Blueprint $table) {
             $table->foreignId('id');
             $table->foreign('id')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('titulo', 100)->collation('utf8mb4_unicode_ci');
+            $table->string('titulo', 30)->collation('utf8mb4_unicode_ci');
             $table->mediumText('descripcion', 300)->collation('utf8mb4_unicode_ci');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

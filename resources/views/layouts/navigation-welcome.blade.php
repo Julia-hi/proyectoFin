@@ -17,7 +17,8 @@
                         </button>
                     </x-slot>
 
-                    <x-slot name="content">
+                    <x-slot name="content" >
+                        <div>
                         <x-dropdown-link :href="route('user.anuncios.index',$user_id)">
                             {{ __('Mis anuncios') }}
                         </x-dropdown-link>

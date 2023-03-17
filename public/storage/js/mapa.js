@@ -36,36 +36,6 @@ function mostrarMarcadores(map) {
     }
 }
 
-/*  function getGeoJson() {
-    xmlHttp.open("GET", "/storage/comunidades/spain-communities.geojson", true);
-    xmlHttp.onreadystatechange = () => {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-            datosGeoJson = JSON.parse(xmlHttp.responseText);
-            console.log(datosGeoJson);
-            var coordinados = setLayer(datosGeoJson);
-           // console.log(coordinados[0]);
-            mostrarComunidad(coordinados[0]);
-        }
-
-    };
-    xmlHttp.send(); //comienza la petición de respuesta al servidor
-}
-
-function setLayer(datosGeoJson) {
-    let coordinados = [];
-    $(datosGeoJson.features).each((ind, elemento) => {
-        console.log(elemento.properties.name);
-        var comunidad = elemento.properties.name;
-        if (comunidad.toLowerCase() == ofertas_json[0].comunidad) {
-            coordinados = elemento.geometry.coordinates[0];
-            console.log(elemento.properties.name); 
-        }
-    });
-    
-    return coordinados;
-} */
-
-
 function mostrarComunidad(coordinados) {
    // console.log("mostrar comunidad");
    console.log(Object.keys(coordinados).length);

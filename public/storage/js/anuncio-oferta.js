@@ -64,31 +64,3 @@ function showFormulario() {
     }
 }
 
-/* function showFormulario() {
-
-    document.getElementById('crearMensaje').addEventListener('click', function() {
-        // Open a new window with the form
-        var messageWindow = window.open('', 'messageWindow', 'width=400,height=400');
-
-        // Create the form elements
-        var form = messageWindow.document.createElement('form');
-        var label = messageWindow.document.createElement('label');
-        var input = messageWindow.document.createElement('input');
-        var submit = messageWindow.document.createElement('input');
-
-        // Set attributes for the form elements
-        form.setAttribute('method', 'post');
-        form.setAttribute('action', 'submit-form.php');
-        label.innerHTML = 'Message:';
-        input.setAttribute('type', 'text');
-        input.setAttribute('name', 'message');
-        submit.setAttribute('type', 'submit');
-        submit.setAttribute('value', 'Send');
-
-        // Add the form elements to the form and the form to the window
-        form.appendChild(label);
-        form.appendChild(input);
-        form.appendChild(submit);
-        messageWindow.document.body.appendChild(form);
-    })
-} */

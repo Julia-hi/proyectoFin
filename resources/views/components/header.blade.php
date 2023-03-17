@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Storage;
 ?>
-<div class="bg-white shadow" style="background-image: url('<?php $fondo =Storage::url('images/hojas-fondo.svg'); echo($fondo); ?>'); ">
+<div class="bg-white" style="background-image: url('<?php $fondo =Storage::url('images/hojas-fondo.svg'); echo($fondo); ?>'); ">
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">

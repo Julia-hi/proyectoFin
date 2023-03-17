@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Anuncio;
@@ -11,7 +10,7 @@ use Carbon\Carbon;
 class AdminController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Mostrar estadistica en area privada del administrador
      *
      * @return \Illuminate\Http\Response
      */
@@ -45,31 +44,31 @@ class AdminController extends Controller
         $anunciosData['dem365dias'] = $numOfertas365dias;
 
         $usuariosData=[];
-        $numActiveTotal = User::where('rol','user')->where('status','active')->count();
+        $numActiveTotal = User::where('rol','user')->where('estado','active')->count();
         $usuariosData['activeTotal'] = $numActiveTotal;
 
-        $numActive30dias = User::where('rol','user')->where('status','active')->whereBetween('created_at', [
+        $numActive30dias = User::where('rol','user')->where('estado','active')->whereBetween('created_at', [
             Carbon::now()->subDays(30)->startOfDay(),
             Carbon::now()->endOfDay()
         ])->count();
         $usuariosData['active30dias'] = $numActive30dias;
 
-        $numActive365dias = User::where('rol','user')->where('status','active')->whereBetween('created_at', [
+        $numActive365dias = User::where('rol','user')->where('estado','active')->whereBetween('created_at', [
             Carbon::now()->subDays(365)->startOfDay(),
             Carbon::now()->endOfDay()
         ])->count();
         $usuariosData['active365dias'] = $numActive365dias;
 
-        $numBloqueadosTotal = User::where('rol','user')->where('status','blocked')->count();
+        $numBloqueadosTotal = User::where('rol','user')->where('estado','blocked')->count();
         $usuariosData['bloqueadosTotal'] = $numBloqueadosTotal;
 
-        $numBloqueados30dias = User::where('rol','user')->where('status','blocked')->whereBetween('created_at', [
+        $numBloqueados30dias = User::where('rol','user')->where('estado','blocked')->whereBetween('created_at', [
             Carbon::now()->subDays(30)->startOfDay(),
             Carbon::now()->endOfDay()
         ])->count();
         $usuariosData['bloqueados30dias'] = $numBloqueados30dias;
 
-        $numBloqueados365dias = User::where('rol','user')->where('status','blocked')->whereBetween('created_at', [
+        $numBloqueados365dias = User::where('rol','user')->where('estado','blocked')->whereBetween('created_at', [
             Carbon::now()->subDays(365)->startOfDay(),
             Carbon::now()->endOfDay()
         ])->count();
@@ -82,6 +81,4 @@ class AdminController extends Controller
         } 
         return view('admin.dashboard', ['status'=>$status, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData]);
     }
-
-    
 }

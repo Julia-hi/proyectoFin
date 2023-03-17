@@ -26,7 +26,7 @@ class AnuncioDemanda extends Model
     ];
 
     public function anuncio() {
-		return $this->belongsTo(Anuncio::class, 'id');
+		return $this->hasOne(Anuncio::class, 'id');
 	}
 
      /**

@@ -37,7 +37,7 @@
 
                     <x-slot name="content">
                     <x-dropdown-link :href="route('admin', $user_id)" :active="request()->routeIs('admin',$user_id)">
-                            {{ __('Estadísticas') }}
+                            {{ __('Estadística') }}
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('admin.users.index',$user_id)" :active="request()->routeIs('admin.users.index',$user_id)">
                             {{ __('Usuarios') }}
@@ -56,7 +56,6 @@
                     </x-slot>
                 </x-dropdown>
             </div>
-
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
@@ -68,19 +67,14 @@
             </div>
         </div>
     </div>
-
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        
-
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
             </div>
-
             <div class="mt-3 space-y-1">
-
                 <x-responsive-nav-link :href="route('admin',$user_id)">
                     {{ __('Estadísticas') }}
                 </x-responsive-nav-link>

@@ -45,7 +45,7 @@
                         </button>
                     </x-slot>
 
-                    <x-slot name="content">
+                    <x-slot name="content" >
                         <x-dropdown-link :href="route('user.anuncios.index',$user_id)">
                             {{ __('Mis anuncios') }}
                         </x-dropdown-link>
@@ -104,7 +104,7 @@
             <div class="mt-3 space-y-1">
 
                 <x-responsive-nav-link :href="route('user.anuncios.index',$user_id)">
-                    {{ __('Mis anuncios') }}
+                    {{ __('Mis anuncioso') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('user.favoritos.index', $user_id)">
                     {{ __('Mis favoritos') }}

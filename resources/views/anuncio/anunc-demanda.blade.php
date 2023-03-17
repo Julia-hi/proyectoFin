@@ -20,6 +20,7 @@ if ($user != null) {
 @endauth
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -67,16 +68,16 @@ if ($user != null) {
                     <img src="{{asset('storage/images/logo.svg')}}" alt="Logo MiLorito" class="h-75 mt-3 mb-1" onclick="location.href='/'" style="cursor: pointer;">
                 </div>
                 <!-- Anuncio demanda -->
-                <div id="demandas-block" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3">
+                <div id="demandas-block" class="mt-8 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3">
 
                     <div class="row d-flex justify-content-center align-content-center m-3">
-                        <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url()->previous() }}">VOLVER</a>
+                        <a type="button" class="green-brillante-boton w-50" href="{{ url()->previous() }}"><strong>VOLVER</strong></a>
                     </div>
                     <div class="row" style="min-height: 200px;">
                         @if($demanda!=null)
                         <div class="col-md-6">
                             <div class="card mb-4 p-2 h-100">
-                                <h3 class="text-uppercase pb-2">{{ $demanda->titulo}}</h3>
+                                <h1 class="text-uppercase pb-2 h2 text-dark-green">{{ $demanda->titulo}}</h1>
                                 <p class="card-text py-2">{{ $demanda->descripcion }}</p>
                                 <div class="position-absolute bottom-0 left-0 w-100 mb-2 p-2">
                                     <div class="d-flex justify-content-between align-items-center">
@@ -96,11 +97,14 @@ if ($user != null) {
                         </div>
                         <!-- section enviar mensaje -->
                         <div class="col-md-6">
-                            <div class=" border rounded mb-4 p-2 h-100" style="min-height: 200px;">
+                            <div class="border bg-white rounded mb-4 p-2 h-100" style="min-height: 200px;">
                                 @guest
-                                <p class="text-center p-2"><a href="/login"><b>Inicia seccion</b></a> para enviar mensaje y ver telefono del anunciante.</p>
+                                <p class="text-left py-2">No estas logueado, por favor, <a href="/login"><b>inicia seccion</b></a> para enviar mensaje y ver telefono del anunciante. Nosotros respetamos privacidad de los
+                                    usuarios, por este motivo uso de mansajeria disponibile solo para usuarios registrados.
+                                </p>
                                 @endguest
                                 @auth
+                                @if($user->id != $autor->id && $user->rol!='admin')
                                 <h3 class="p-2">Enviar mensaje a {{ $autor->name }}:</h3>
                                 <form method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
                                     @csrf
@@ -115,6 +119,10 @@ if ($user != null) {
                                         <input type="reset" class="btn btn-sm btn-outline-secondary text-uppercase" value="Limpiar">
                                     </div>
                                 </form>
+                                @else
+                                <p class="text-center p-3">Autor del anuncio o administrador no puede enviar mensaje desde este campo.
+                                </p>
+                                @endif
                                 @endauth
                             </div>
                         </div>

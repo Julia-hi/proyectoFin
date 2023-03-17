@@ -32,42 +32,63 @@ $user_id = Auth::user()->id; ?>
                 <!-- Anuncios DEMANDA -->
                 <div id="demandas-block" class="mt-8 p-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <?php
-                    $url_update="/user/".$user_id."/anuncios-demanda/".$anuncio->id ?>
-                        <form method="post" enctype="multipart/form-data" action="{{$url_update}}" id="edit-demanda">
-                            @csrf
-                            @method('PUT')
-                            <div class="row">
-                                <div class="col-8">
-                                    <!-- titulo del anuncio -->
-                                    <div class="py-2">
-                                        <label for="titulo" class="form-label">Titulo del anuncio</label>
-                                        <input type="text" class="border rounded h-100 w-100 p-2" id="titulo" name="titulo" value="{{$anuncio->titulo}}" required min=10 max=100>
-                                        <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
-                                    </div>
-                                    <div class="py-2">
-                                        <!-- Descripcion -->
-                                        <label for="descripcion" class="form-label">Descripción</label>
-                                        <textarea class="form-control" id="descripcion" rows="10" name="descripcion" required min=10 max=300>{{$anuncio->descripcion}}</textarea>
-                                        <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
-                                    </div>
+                    $url_update = "/user/" . $user_id . "/anuncios-demanda/" . $anuncio->id ?>
+                    <form method="post" enctype="multipart/form-data" action="{{$url_update}}" id="edit-demanda">
+                        @csrf
+                        @method('PUT')
+                        <div class="row">
+                            <div class="col-8">
+                                <!-- titulo del anuncio -->
+                                <div class="py-2">
+                                    <label for="titulo" class="form-label">Titulo del anuncio</label>
+                                    <input type="text" class="border rounded h-100 w-100 p-2" id="titulo" name="titulo" value="{{$anuncio->titulo}}" required min=10 max=100>
+                                    <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
+                                </div>
+                                <div class="py-2">
+                                    <!-- Descripcion -->
+                                    <label for="descripcion" class="form-label">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" rows="10" name="descripcion" required min=10 max=300>{{$anuncio->descripcion}}</textarea>
+                                    <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
                                 </div>
                             </div>
-                            <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo_anuncio" name="tipo_anuncio" value="demanda">
-                            <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user_id" name="user_id" value="<?php echo $user_id; ?>">
-                            <!-- bottones del formulario -->
-                            <div class="row justify-content-center">
-                                <div class="col-2">
-                                    <input type="submit" name="enviar" value="Guardar cambios" class="btn btn-danger w-100 active text-uppercase font-weight-bold">
-                                </div>
-                                <div class="col-2">
-                                    <a href="{{route('user.anuncios.index',Auth::user()->id)}}" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">Salir sin cambios</a>
-                                </div>
+                        </div>
+                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="tipo_anuncio" name="tipo_anuncio" value="demanda">
+                        <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user_id" name="user_id" value="<?php echo $user_id; ?>">
+                        <!-- bottones del formulario -->
+                        <div class="row justify-content-center">
+                            <div class="col-2">
+                                <input type="submit" name="enviar" value="Guardar cambios" class="boton_modificar btn btn-danger w-100 active text-uppercase font-weight-bold">
                             </div>
-                        </form>
+                            <div class="col-2">
+                                <a href="{{route('user.anuncios.index',Auth::user()->id)}}" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">Salir sin cambios</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 </x-app-layout>
 <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
+<script>
+    $(document).ready(function() {
+        $('.boton_modificar').on('click', function(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: '¿Estas seguro?',
+                icon: 'warning',
+                iconColor: '#FC4B3B',
+                showCancelButton: true,
+                confirmButtonColor: '#76A728',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, guardar cambios!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // se envia la peticion si usuario ha confirmado
+                    $(event.target).closest('form').submit();
+                }
+            });
+        });
+    });
+</script>
 @endif
 @endauth

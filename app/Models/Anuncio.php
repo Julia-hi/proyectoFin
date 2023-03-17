@@ -30,6 +30,7 @@ class Anuncio extends Model
         'estado',
         'tipo',
         'created_at',
+        'updated_at'
     ];
 
     /**

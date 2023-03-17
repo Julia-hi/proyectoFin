@@ -14,16 +14,6 @@ use Illuminate\Support\Facades\Redirect;
 class UserAnuncioDemandaController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        // no tiene
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -48,7 +38,7 @@ class UserAnuncioDemandaController extends Controller
         if ($request->tipo_anuncio == 'demanda') {
             $entrada = $request->validate(
                 [
-                    'titulo' => 'required|min:10|max:100',
+                    'titulo' => 'required|min:5|max:30',
                     'descripcion' => 'required|min:10|max:300'
                 ]
             );
@@ -65,17 +55,6 @@ class UserAnuncioDemandaController extends Controller
             $usersOfertas = AnuncioOferta::where('user_id', $user->id);
             return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
         }
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -106,7 +85,7 @@ class UserAnuncioDemandaController extends Controller
         if ($request->tipo_anuncio == 'demanda') {
             $entrada = $request->validate(
                 [
-                    'titulo' => 'required|min:10|max:100',
+                    'titulo' => 'required|min:5|max:30',
                     'descripcion' => 'required|min:10|max:300'
                 ]
             );

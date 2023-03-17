@@ -12,21 +12,9 @@ use App\Models\Anuncio;
 use App\Models\Foto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class UserAnuncioOfertaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        // no tiene index
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -34,9 +22,7 @@ class UserAnuncioOfertaController extends Controller
      */
     public function create($id)
     {
-
         $tipoAnunc = 'oferta';
-
         return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);
     }
 
@@ -53,7 +39,7 @@ class UserAnuncioOfertaController extends Controller
         //validar entrada del request
         $entrada = $request->validate(
             [
-                'titulo' => 'required|min:10|max:100',
+                'titulo' => 'required|min:5|max:30',
                 'descripcion' => 'required|min:10|max:300',
                 'raza' => 'required|not_regex:/^todo$/',
                 'genero' => 'required|not_regex:/^todo$/',
@@ -98,17 +84,6 @@ class UserAnuncioOfertaController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -129,12 +104,11 @@ class UserAnuncioOfertaController extends Controller
      */
     public function update(Request $request, $id, $id_anuncio)
     {
-        echo "Update anuncio";
         $oferta = AnuncioOferta::findOrFail($id_anuncio);
         $fotos = $oferta->fotos();
         $rules =
             [
-                'titulo' => 'required|min:10|max:100',
+                'titulo' => 'required|min:5|max:30',
                 'descripcion' => 'required|min:10|max:300',
                 'raza' => 'required|not_regex:/^todo$/',
                 'genero' => 'required|not_regex:/^todo$/',
@@ -144,11 +118,6 @@ class UserAnuncioOfertaController extends Controller
                 'poblacion' => 'required|not_regex:/^todo$/',
                 'lat' => 'required',
                 'lon' => 'required'
-                // 'foto0' => 'required|image',
-                // 'foto1' => 'image',
-                // 'foto2' => 'image',
-                // 'foto3' => 'image',
-                // 'foto4' => 'image'
             ];
         if ($oferta->titulo === $request->titulo) {
             $rules['titulo'] = 'sometimes';

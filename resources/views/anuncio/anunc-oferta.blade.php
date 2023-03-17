@@ -58,8 +58,10 @@ if ($user != null) {
                     <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
                 <div class="col m-0">
-                    @if($user!=null)
+                    @if($user!=null && $user->rol=='user')
                     @include('layouts.navigation-welcome')
+                    @elseif($user!=null && $user->rol=='admin')
+                    @include('layouts.navigation-welcome-admin')
                     @endif
                 </div>
             </div>
@@ -90,112 +92,109 @@ if ($user != null) {
                 </form>
                 @endauth
             </div>
-
             <div class="justify-center sm:px-6 lg:px-8 h-auto">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height:20vh; max-height: 150px;">
                     <img src="{{asset('storage/images/logo.svg')}}" alt="Logo MiLorito" class="h-75 mt-3 mb-1" onclick="location.href='/'" style="cursor: pointer;">
                 </div>
-                <div class="m-2 h-auto">
+                <div class="m-2 h-auto  ">
                     <!-- Anuncio oferta -->
-                    <div id="" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg  p-3">
-                        <div class="row d-flex justify-content-center align-content-center m-3">
-                            <a type="button" class="btn btn-sm btn-outline-secondary w-50" href="{{ url()->previous() }}">VOLVER</a>
+                    <div id="" class="mt-8 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3">
+                        <div class="row d-flex justify-content-center align-content-center m-3 ">
+                            <a type="button" class="green-brillante-boton w-50" href="{{ url()->previous() }}"><strong>VOLVER</strong></a>
                         </div>
                         <div class="row h-auto">
                             @if($oferta!=null)
-                            <div class="border rounded" style="min-height: 500px;">
+                            <div class="border rounded bg-white" style="min-height: 500px;">
                                 <div class="card-body">
                                     <div class="row">
-                                        @if($fotos->count()<=1) <div style="height: auto;">
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="h-100 p-2">
-                                                    <img src="<?php echo $fotos->first()->enlace; ?>" alt="" style="max-height:450px; min-width:400px; object-fit: cover;" data-holder-rendered="true">
+                                        @if($fotos->count()<=1) <div class="col-md-6 col-sm-12 md:px-5 sm:px-1">
+                                            <div class="h-100 p-2">
+                                                <img src="<?php echo $fotos->first()->enlace; ?>" alt="" style="max-height:450px; width:auto; min-width:400px; object-fit: cover;" data-holder-rendered="true">
+                                            </div>
+                                    </div>
+                                    @else
+                                    <div class="col-md-6 col-sm-12 md:px-5 sm:px-1">
+                                        <?php $fotos = $oferta->fotos; ?>
+                                        <div id="carouselControl" class="carousel slide position-relative" data-ride="carousel">
+                                            <div class="carousel-inner carousel-inner0">
+                                                @foreach($fotos as $foto)
+                                                <div class="carousel-item active p-3 ">
+                                                    <img class="d-block w-100" style="height: 450px; width: auto; display: block; object-fit: cover" src="<?php echo ($foto->enlace); ?>" alt="First slide">
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                            <a id="prev" class="carousel-control-prev" href="#carouselControl" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previo</span>
+                                            </a>
+                                            <a id="next" class="carousel-control-next" href="#carouselControl" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Siguiente</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- FIN SLIDER -->
+                                    @endif
+                                    <div class="col p-2 max-h-100">
+                                        <div class="d-flex flex-column w-100 justify-content-between h-100">
+                                            <div>
+                                                <div class="d-flex flex-row justify-content-between">
+                                                    <h1 class="text-uppercase pb-2 h2 text-dark-green">{{ $oferta->titulo }}</h1>
+                                                    @auth
+                                                    @if($user->id != $autor->id && $user->rol!='admin')
+                                                    <div class="position-relative">
+                                                        @if(!$oferta->anuncio->esFavorito(Auth::user(), $oferta->anuncio))
+                                                        <!-- formulario para Eñadir a favoritos -->
+                                                        <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
+                                                            @csrf
+                                                            <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
+                                                            <input type="hidden" name="user_id" value="{{ $user_id }}">
+                                                            <button type="submit" title="Añadir a favoritos"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                        </form>
+                                                        @else
+                                                        <?php $favorito = $oferta->favoritos->first(); ?>
+                                                        <!-- formulario para Eliminar favorito de la lista -->
+                                                        <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" title="Eliminar de favoritos"><img src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
+                                                        </form>
+                                                        @endif
+                                                    </div>
+                                                    @endif
+                                                    @endauth
+                                                </div>
+                                                <h2 class="py-1"><b>Raza</b>: <span class="text-capitalize">{{ $oferta->raza }}</span></h2>
+                                                <h2 class="py-1"><b>Genero</b>: <span class="text-capitalize">{{ $oferta->genero }}</span></h2>
+                                                <h2 class="py-1"><b>Nacido</b>: <span class="text-capitalize">{{ $oferta->fecha_nac }}</span></h2>
+                                                <h2 class="py-1"><b>Localidad</b>: <span class="text-capitalize">{{$oferta->poblacion}}, {{$oferta->provincia}}({{ $oferta->comunidad }})</span></h2>
+                                            </div>
+                                            <div class="mt-1 min-h-50">
+                                                <b class="pb-1">Descripción: </b>
+                                                <p class="my-1">{{ $oferta->descripcion }}</p>
+                                            </div>
+                                            <div>
+                                                <div class="w-100 d-flex flex-row justify-content-between align-items-center">
+                                                    @guest
+                                                    <p class="text-left py-2">No estas logueado, por favor, <a href="/login"><b>inicia seccion</b></a> para enviar mensaje y ver telefono del anunciante. Nosotros respetamos privacidad de los
+                                                        usuarios, por este motivo uso de mansajeria disponibile solo para usuarios registrados.
+                                                    </p>
+                                                    @endguest
+                                                    @auth
+                                                    @if($autor->id!= Auth::user()->id && Auth::user()->rol !='admin')
+                                                    <button id="crearMensaje" type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
+                                                    @endif
+                                                    <div class="d-flex flex-row"><img src="{{asset('storage/images/icons/square-phone-flip-solid.svg')}}" style="width:1.2em;" class="mr-2">
+                                                        <span>{{$autor->telefono}}</span>
+                                                    </div>
+                                                    @endauth
+                                                </div>
+                                                <div class="align-self-baseline ">
+                                                    <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
+                                                    <p><b>Anunciante</b>: {{ $autor->name }}</p>
                                                 </div>
                                             </div>
-                                            @else
-                                            <div class="col-md-6 col-sm-12 md:px-5 sm:px-1">
-                                                <?php $fotos = $oferta->fotos; ?>
-                                                <div id="carouselControl" class="carousel slide position-relative" data-ride="carousel">
-                                                    <div class="carousel-inner carousel-inner0">
-                                                        @foreach($fotos as $foto)
-                                                        <div class="carousel-item active p-3 ">
-                                                            <img class="d-block w-100" style="height: 450px; width: auto; display: block; object-fit: cover" src="<?php echo ($foto->enlace); ?>" alt="First slide">
-                                                        </div>
-                                                        @endforeach
-                                                    </div>
-                                                    <a id="prev" class="carousel-control-prev" href="#carouselControl" role="button" data-slide="prev">
-                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Previo</span>
-                                                    </a>
-                                                    <a id="next" class="carousel-control-next" href="#carouselControl" role="button" data-slide="next">
-                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Siguiente</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <!-- FIN SLIDER -->
-                                            @endif
-                                            <div class="col-md-6 col-sm-12 p-2 min-h-100">
-                                                <div class="d-flex flex-column w-100 justify-content-between h-100">
-                                                    <div>
-                                                        <div class="d-flex flex-row justify-content-between">
-                                                            <h1 class="text-uppercase pb-2">{{ $oferta->titulo }}</h1>
-                                                            @auth
-                                                            @if($user->id != $autor->id)
-                                                            <div class="position-relative">
-                                                                @if(!$oferta->anuncio->esFavorito(Auth::user(), $oferta->anuncio))
-                                                                <!-- formulario para Eñadir a favoritos -->
-                                                                <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
-                                                                    @csrf
-                                                                    <input type="hidden" name="anuncio_id" value="{{ $oferta->id }}">
-                                                                    <input type="hidden" name="user_id" value="{{ $user_id }}">
-                                                                    <button type="submit" title="Añadir a favoritos"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                                </form>
-                                                                @else
-                                                                <?php $favorito = $oferta->favoritos->first(); ?>
-                                                                <!-- formulario para Eliminar favorito de la lista -->
-                                                                <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" title="Eliminar de favoritos"><img src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                                </form>
-                                                                @endif
-                                                            </div>
-                                                            @endif
-                                                            @endauth
-                                                        </div>
-                                                        <h2>Raza: <span class="text-capitalize">{{ $oferta->raza }}</span></h2>
-                                                        <h2>Genero: <span class="text-capitalize">{{ $oferta->genero }}</span></h2>
-                                                        <h2>Nacido: <span class="text-capitalize">{{ $oferta->fecha_nac }}</span></h2>
-                                                        <h2>Localidad: <span class="text-capitalize">{{$oferta->poblacion}}, {{$oferta->provincia}}({{ $oferta->comunidad }})</span></h2>
-                                                    </div>
-                                                    <div class="mt-3 max-h-50">
-                                                        <h2 class="mb-1">Descripción: </h2>
-                                                        <p class="card-text my-1">{{ $oferta->descripcion }}</p>
-                                                    </div>
-                                                    <div>
-                                                        <div class="w-100 d-flex flex-row justify-content-between align-items-center">
-                                                            @guest
-                                                            <p class="text-left py-2">No estas logueado, por favor, <a href="/login"><b>inicia seccion</b></a> para enviar mensaje y ver telefono del anunciante. Nosotros respetamos privacidad de los
-                                                                usuarios, por este motivo uso de mansajeria disponibile solo para usuarios registrados.</p>
-
-                                                            @endguest
-                                                            @auth
-                                                            @if($autor->id!= Auth::user()->id)
-                                                            <button id="crearMensaje" type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje a {{ $autor->name }}</button>
-                                                            @endif
-                                                            <div class="d-flex flex-row"><img src="{{asset('storage/images/icons/square-phone-flip-solid.svg')}}" style="width:1.2em;" class="mr-2">
-                                                                <span>{{$autor->telefono}}</span>
-                                                            </div>
-                                                            @endauth
-                                                        </div>
-                                                        <div class="align-self-baseline ">
-                                                            <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>
-                                                            <p>Anunciante: {{ $autor->name }}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -204,12 +203,13 @@ if ($user != null) {
                 </div>
             </div>
         </div>
-        <!-- FIN del bloque de uno Anuncio demanda -->
-        @elseif($status=='error')
-        <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
-        @else
-        <div class="text-center">Disculpa, este anuncio ya no está disponible.</div>
-        @endif
+    </div>
+    <!-- FIN del bloque de uno Anuncio demanda -->
+    @elseif($status=='error')
+    <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
+    @else
+    <div class="text-center">Disculpa, este anuncio ya no está disponible.</div>
+    @endif
     </div>
 
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
