@@ -73,30 +73,34 @@ if ($user != null) {
             @endauth
         </div>
         @endif
-        <div class="container">
-            <div id="draggable" class="w-25 rounded border shadow hidden">
-                <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
-                @auth
-                <form method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
-                    @csrf
-                    <textarea class="form-control" id="mensaje" rows="10" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
-                    <x-input-error :messages="$errors->get('texto')" class="mt-2" />
-                    <input hidden name="anuncio_id" type="text" value="{{ $oferta->id }}" />
-                    <input hidden name="remitente_id" type="text" value="{{ Auth::user()->id }}" />
-                    <div class="d-flex items-center justify-content-between my-4">
-                        <x-primary-button class="ml-3">
-                            {{ __('Enviar') }}
-                        </x-primary-button>
-                        <button id="cerrar_dragable" type="button" class="cerrar_dragable btn">Cerrar</button>
-                    </div>
-                </form>
-                @endauth
+        <div id="draggable"class=" rounded border shadow hidden">
+                <div class="">
+                    <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
+                    @auth
+                    <form id="enviar_mens_form" method="POST" action="{{ route('user.mensajes.store',$autor->id) }}" class="w-100">
+                        @csrf
+                        <textarea class="border border-green rounded" id="mensaje" rows="10" name="texto" placeholder="Escribe mensaje aquí..." class="w-100"></textarea>
+                        <x-input-error :messages="$errors->get('texto')" class="mt-2" />
+                        <input name="anuncio_id" type="hidden" value="{{ $oferta->id }}" />
+                        <input name="remitente_id" type="hidden" value="{{ Auth::user()->id }}" />
+                        <input name="recipiente_id" type="hidden" value="{{ $autor->id }}" />
+                        <div class="d-flex items-center justify-content-between my-4">
+                            <x-primary-button class="ml-3" id="enviar_mensaje">
+                                {{ __('Enviar') }}
+                            </x-primary-button>
+                            <button id="cerrar_dragable" type="button" class="cerrar_dragable btn">Cerrar</button>
+                        </div>
+                    </form>
+                    @endauth
+                </div>
             </div>
+        <div class="container">
+            
             <div class="justify-center sm:px-6 lg:px-8 h-auto">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height:20vh; max-height: 150px;">
                     <img src="{{asset('storage/images/logo.svg')}}" alt="Logo MiLorito" class="h-75 mt-3 mb-1" onclick="location.href='/'" style="cursor: pointer;">
                 </div>
-                <div class="m-2 h-auto  ">
+                <div class="m-2 h-auto ">
                     <!-- Anuncio oferta -->
                     <div id="" class="mt-8 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3">
                         <div class="row d-flex justify-content-center align-content-center m-3 ">
@@ -106,20 +110,20 @@ if ($user != null) {
                             @if($oferta!=null)
                             <div class="border rounded bg-white" style="min-height: 500px;">
                                 <div class="card-body">
-                                    <div class="row">
+                                    <div class="row justify-content-center">
                                         @if($fotos->count()<=1) <div class="col-md-6 col-sm-12 md:px-5 sm:px-1">
                                             <div class="h-100 p-2">
                                                 <img src="<?php echo $fotos->first()->enlace; ?>" alt="" style="max-height:450px; width:auto; min-width:400px; object-fit: cover;" data-holder-rendered="true">
                                             </div>
                                     </div>
                                     @else
-                                    <div class="col-md-6 col-sm-12 md:px-5 sm:px-1">
+                                    <div class="col-lg-6 col-xs-12 lg:px-5 xs:px-1 py-2">
                                         <?php $fotos = $oferta->fotos; ?>
                                         <div id="carouselControl" class="carousel slide position-relative" data-ride="carousel">
                                             <div class="carousel-inner carousel-inner0">
                                                 @foreach($fotos as $foto)
-                                                <div class="carousel-item active p-3 ">
-                                                    <img class="d-block w-100" style="height: 450px; width: auto; display: block; object-fit: cover" src="<?php echo ($foto->enlace); ?>" alt="First slide">
+                                                <div class="carousel-item active p-3 text-center">
+                                                    <img class="d-block w-100" style="height: 500px; width: auto; display: block; object-fit: cover" src="<?php echo ($foto->enlace); ?>" alt="First slide">
                                                 </div>
                                                 @endforeach
                                             </div>
@@ -135,7 +139,7 @@ if ($user != null) {
                                     </div>
                                     <!-- FIN SLIDER -->
                                     @endif
-                                    <div class="col p-2 max-h-100">
+                                    <div class="col-lg-6 col-xs-12 lg:px-5 xs:px-1 py-2 max-h-100">
                                         <div class="d-flex flex-column w-100 justify-content-between h-100">
                                             <div>
                                                 <div class="d-flex flex-row justify-content-between">
@@ -215,9 +219,29 @@ if ($user != null) {
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('storage/js/anuncio-oferta.js')}}"></script>
     <script src="{{asset('storage/js/slider.js')}}"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            //evento para confirmar envio del mensaje
+            $('#enviar_mensaje').on('click', function(event) {
+                event.preventDefault();
+                Swal.fire({
+                    title: '¿Estas seguro? Queres Enviar mensaje?',
+                    icon: 'warning',
+                    iconColor: '#FC4B3B',
+                    showCancelButton: true,
+                    confirmButtonColor: '#76A728',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si! enviar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // se envia la peticion si usuario ha confirmado
+                        $("#enviar_mens_form").submit();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

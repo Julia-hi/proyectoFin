@@ -19,7 +19,7 @@
                     <img src="<?php echo Storage::url('images/icons/comment-regular.svg');?>" style="width:1em;" class="mr-2">
                     {{ __('Mensajes') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('user.anuncios-oferta.create', $user_id)" :active="request()->routeIs('user.anuncios.create', $user_id)">
+                    <x-nav-link :href="route('user.anuncios-oferta.create', $user_id)" :active="request()->routeIs('user.anuncios-oferta.create', $user_id)">
                     <img src="<?php echo Storage::url('images/icons/bullhorn-solid.svg');?>" style="width:1em;" class="mr-2">
                     {{ __('Publicar anuncio') }}
                     </x-nav-link>

@@ -19,18 +19,22 @@ class UserMensajesController extends Controller
      */
     public function index($user_id)
     {
+        $dialogos=[];
         $user = User::find($user_id);
-        if($user->rol=="admin"){
+        if ($user->rol == "admin") {
             return redirect()->route('/admin-dashboard');
-        }else{
-        $messages = Mensaje::where('remitente_id', '=', $user_id)->
-          orWhere('recipiente_id', '=',$user_id)->get();
-
-        $grouped_messages = $messages->groupBy('anuncio_id');
-        foreach($grouped_messages as $dialogo){
-           $dialogos[]=$dialogo; 
+        } else {
+            $messages = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
+            if ($messages->count() == 0) {
+               
+            } else {
+                $grouped_messages = $messages->groupBy('anuncio_id');
+                foreach ($grouped_messages as $dialogo) {
+                    $dialogos[] = $dialogo;
+                }
+            }
+            return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);
         }
-        return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);}
     }
 
     /**
@@ -59,6 +63,7 @@ class UserMensajesController extends Controller
         $entrada['anuncio_id'] = $request->anuncio_id;
         $entrada['remitente_id'] = $request->remitente_id;
         $entrada['recipiente_id'] = $request->recipiente_id;
+        $entrada['chat_id'] = $request->chat_id;
         $message = Mensaje::create($entrada); // insertar mensaje a database
 
         return back();
@@ -71,15 +76,16 @@ class UserMensajesController extends Controller
         $entrada = $request->validate(
             [
                 'texto' => 'required|min:5|max:300',
-                'remitente_id'=>'required'
+                'remitente_id' => 'required'
             ]
         );
-       // $entrada['user_id'] = $request->remitente_id;
+        // $entrada['user_id'] = $request->remitente_id;
         $entrada['anuncio_id'] = $request->anuncio_id;
         $entrada['remitente_id'] = $request->remitente_id;
         $entrada['recipiente_id'] = $request->recipiente_id;
+        $entrada['chat_id'] = $request->chat_id;
         Mensaje::create($entrada); // insert a database
-       
+
         return response()->json([
             'success' => true,
             'message' => $entrada

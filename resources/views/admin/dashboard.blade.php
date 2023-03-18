@@ -90,6 +90,9 @@
                 </div>
             </div>
         </main>
+        <footer>
+            <x-footer />
+        </footer>
     </div>
     @else
     <div>

@@ -47,10 +47,10 @@
             </div>
         </div>
         @endif
-        <div class="container" >
+        <div class="container">
             <div class="justify-center xs:px-1 sm:px-6 lg:px-8">
                 <div>
-                <div class="p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg position-sticky" style="top:5px; z-index:5;">
+                    <div class="p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg position-sticky" style="top:5px; z-index:5;">
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
                         <form id="filter_form" method="get" action="{{ route('mapa.index') }}">
                             <div class="row p-3 g-3">
@@ -131,8 +131,8 @@
                     <!--   Block para anuncios de ofertas   -->
                     <div class="position-relative p-2 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height:500px;">
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
-                        <div class="w-100" style="top:0;" >
-                           
+                        <div class="w-100" style="top:0;">
+
                         </div>
                         <?php
                         if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
@@ -197,10 +197,9 @@
                                                             <a href="<?php echo $url; ?>" class="btn btn-sm btn-outline-success">
                                                                 <span class="text-center">Detalles</span>
                                                             </a>
-                                                           
                                                         </div>
                                                         @auth
-                                                        
+
                                                         @if($oferta->autor->id!=Auth::user()->id)
                                                         <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
                                                         si no es favorito - mostra borón para añadir a favoritos -->
@@ -251,7 +250,9 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <x-footer />
+    </footer>
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
     <script src="{{asset('storage/js/of-lista.js')}}"></script>

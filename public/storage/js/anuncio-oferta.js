@@ -4,8 +4,6 @@ $(document).ready(function () {
 
     $("#crearMensaje").on("click", showFormulario);
 
-    // showFormulario();
-    // showDiv();
     var draggable = document.getElementById('draggable');
     var isDragging = false;
     var dragX, dragY;

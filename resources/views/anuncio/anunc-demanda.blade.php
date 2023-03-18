@@ -106,17 +106,16 @@ if ($user != null) {
                                 @auth
                                 @if($user->id != $autor->id && $user->rol!='admin')
                                 <h3 class="p-2">Enviar mensaje a {{ $autor->name }}:</h3>
-                                <form method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
+                                <form id="enviar_mens_form" method="POST" action="{{ route('user.mensajes.store',$autor->id) }}">
                                     @csrf
-                                    <textarea class="form-control" id="mensaje" rows="5" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
+                                    <textarea class="border rounded border-green w-100" id="mensaje" rows="5" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
                                     <x-input-error :messages="$errors->get('texto')" class="mt-2" />
-                                    <input hidden name="anuncio_id" type="text" value="{{ $demanda->id }}" />
-                                    <input hidden name="user_id" type="text" value="{{ Auth::user()->id }}" />
-                                    <div class="d-flex items-center justify-content-between my-4">
-                                        <x-primary-button class="ml-3">
-                                            {{ __('Enviar') }}
-                                        </x-primary-button>
-                                        <input type="reset" class="btn btn-sm btn-outline-secondary text-uppercase" value="Limpiar">
+                                    <input name="anuncio_id" type="hidden" value="{{ $demanda->id }}" />
+                                    <input name="remitente_id" type="hidden" value="{{ Auth::user()->id }}" />
+                                    <input name="recipiente_id" type="hidden" value="{{ $autor->id }}" />
+                                    <div class="d-flex items-center justify-content-between m-4">
+                                        <button id="submit_form_mensaje" type="submit" class=" btn btn-sm btn-outline-success text-uppercase px-4 active">Enviar</button>
+                                        <button type="reset" class="btn btn-sm btn-outline-danger text-uppercase px-4">Limpiar</button>
                                     </div>
                                 </form>
                                 @else
@@ -136,6 +135,31 @@ if ($user != null) {
             </div>
         </div> <!-- fin container -->
     </div>
+    <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            //evento para confirmar envio del mensaje
+            $('#submit_form_mensaje').on('click', function(event) {
+                event.preventDefault();
+                Swal.fire({
+                    title: '¿Estas seguro? Queres Enviar mensaje?',
+                    text:'Puedes ver todos mensajes en tu area privada',
+                    icon: 'warning',
+                    iconColor: '#FC4B3B',
+                    showCancelButton: true,
+                    confirmButtonColor: '#76A728',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si! enviar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // se envia la peticion si usuario ha confirmado
+                        $("#enviar_mens_form").submit();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

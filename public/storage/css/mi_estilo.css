@@ -2,14 +2,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-h1, h2, h3, b, strong{
+h1,
+h2,
+h3,
+b,
+strong {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
-p,span, small{
+
+p,
+span,
+small {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
+
 .red-brillante-boton {
     position: relative !important;
     display: inline-block !important;
@@ -150,11 +158,11 @@ p,span, small{
 /* Bloque draggable (formulario para enviar mensaje desde vista del anuncio */
 #draggable {
     position: absolute;
-    top: 30%;
-    left: 40%;
+    top: 40vh;
     background-color: white;
     z-index: 3;
-    max-width: 80%;
+    min-width: 75vw;
+    max-width: 80vw;
     padding: 20px;
     cursor: move;
 }
@@ -176,9 +184,18 @@ p,span, small{
     background-color: rgba(252, 236, 151, 0.3);
 }
 
+.bg-green{
+    background-color: #76A728;
+}
+
 .btn-green:hover {
     background-color: #273A0E !important;
     color: #76A728 !important;
+}
+
+.border-green {
+    border-width: 1px !important;
+    border-color: #76A728 !important;
 }
 
 /* -------- */

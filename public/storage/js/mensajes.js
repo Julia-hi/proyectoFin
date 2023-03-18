@@ -9,28 +9,49 @@ let recipiente;
 let remitente;
 let userId = window.location.href.match(/\/user\/(\d+)/)[1];
 var anuncio_id;
-console.log(userId);
+
 window.addEventListener("load", () => {
+    if (window.location.hash != '') {
+        var chat_id = window.location.hash.substring(1);
+        console.log(chat_id);
+        mostrarOpenedChat(chat_id);
+    }
     const elements = document.querySelectorAll('.mostrarChatBoton');
     // Asignar event listener para cada elemento de clase "mostrarChatBoton"
     elements.forEach(element => {
-      /*   if(userId ==$("#user1").html()){
-            remitente = $("#user1").html();
-            recipiente =$("#user2").html();
-        }else{
-            remitente = $("#user2").html();
-            recipiente =$("#user1").html();
-        } */
-       
         element.addEventListener('click', function () {
             var id = element.getAttribute('id');
             mostrarChat(id);
         });
     })
-})
+}
+)
 
 /**
- * Mostrar chat
+ * Mostrar chat se chat era abierto
+ * 
+ * @param {String} idchat
+ */
+function mostrarOpenedChat(idChat) {
+    var numChat = idChat.replace('chat', '');
+    // var idChat = 'chat' + numChat; //'chat1', 'chat2' ...
+
+    $('#' + idChat).removeClass('hidden'); //muestra bloque del chat elegido
+    $(".cruce").on('click', function () {
+        $('#' + idChat).addClass('hidden');
+        $('#message_form').remove();
+        window.location.hash = ""; // eliminar valor hash
+    })
+    $(".cerrar_form").on('click', function () {
+        $('#' + idChat).addClass('hidden');
+        $('#message_form').remove();
+        window.location.hash = ""; // eliminar valor hash
+    })
+    $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
+}
+
+/**
+ * Mostrar chat al pulsar boton
  * 
  * @param {String} id 
  */
@@ -46,33 +67,32 @@ function mostrarChat(id) {
     var numChat = id.replace('_', '');
     var idChat = 'chat' + numChat; //'chat1', 'chat2' ...
 
-    $('#' + idChat).removeClass('hidden'); //muestra bloque del dialogo elegido
+    $('#' + idChat).removeClass('hidden'); //muestra bloque del chat elegido
     $(".cruce").on('click', function () {
         $('#' + idChat).addClass('hidden');
         $('#message_form').remove();
+        window.location.hash = ""; // eliminar valor hash
     })
     $(".cerrar_form").on('click', function () {
         $('#' + idChat).addClass('hidden');
         $('#message_form').remove();
+        window.location.hash = ""; // eliminar valor hash
     })
     $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
-    // crear formulario
-   // createForm(numChat, idChat);
 }
-    //evento para submit formulario
-    function addEventformulario(idChat){
+//evento para submit formulario
+function addEventformulario(idChat) {
     $('#message_form').submit(function (event) {
         event.preventDefault();
-        
-        var user_id = remitente;// $("#user_id").val(); //id del autor del mansaje desde formulario
-        
-       // anuncio_id = $("#anuncio_id").val(); //anuncio id desde formulario
+
+        var user_id = remitente;//id del autor del mansaje desde formulario
+
         var mensaje = $("#texto").val(); //texto del mensaje desde formulario
-        anuncio_id = $('#'+idChat).children().first().html();
+        anuncio_id = $('#' + idChat).children().first().html();
 
         var url = "/user/" + user_id + "/mensaje"; //route para post request (Controller enviarMensajeController.php)
-        console.log("Remitente: -"+remitente);
-       console.log("Recipiente: -"+recipiente);
+        console.log("Remitente: -" + remitente);
+        console.log("Recipiente: -" + recipiente);
         //obtener respuesta 
         fetch(url, {
             method: 'POST',
@@ -138,14 +158,14 @@ function mostrarUltimo(data, idChat) {
  * @param {String} idChat 
  */
 function createForm(id, idChat) {
-    console.log("Remitente: -"+remitente);
-       console.log("Recipiente: -"+recipiente);
-    anuncio_id = $('#'+idChat).children().first().html();
+    console.log("Remitente: -" + remitente);
+    console.log("Recipiente: -" + recipiente);
+    anuncio_id = $('#' + idChat).children().first().html();
     // Crear nuevo elemento <form>
     var form = $('<form>').attr({
         id: 'message_form',
-        method:'post',
-        action:"/user/"+remitente+"/mensajes"
+        method: 'post',
+        action: "/user/" + remitente + "/mensajes"
     });
 
     // Añadir CSRF token al formulario
@@ -171,9 +191,9 @@ function createForm(id, idChat) {
         id: 'anuncio_id',
         value: anuncio_id
     }));
-   
-     // Añadir input campo para remitente_id 
-     form.append($('<input>').attr({
+
+    // Añadir input campo para remitente_id 
+    form.append($('<input>').attr({
         type: 'hidden',
         name: 'user_id',
         id: 'user_id',
@@ -187,8 +207,8 @@ function createForm(id, idChat) {
         id: 'remitente_id',
         value: remitente
     }));
-    
-   
+
+
     // Añadir input campo para remitente_id 
     form.append($('<input>').attr({
         type: 'hidden',
@@ -228,6 +248,6 @@ function createForm(id, idChat) {
 
     // Añadir formulario despues bloque del chat
     $('#chat_body' + id).after(form);
-  //  addEventformulario(idChat);
+    //  addEventformulario(idChat);
 }
 

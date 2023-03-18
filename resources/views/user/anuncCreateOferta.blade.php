@@ -30,6 +30,9 @@
             <div class="m-2">
                 <!-- Anuncios oferta -->
                 <div id="ofertas-block" class="mt-8 mb-8 p-3 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg ">
+                    <div class="w-100 row d-flex justify-content-center align-content-center mb-2">
+                        <button class="green-brillante-boton w-50 text-uppercase" onclick="window.location='{{ '/'}}';">a la pagina principal</button>
+                    </div>
                     <h3 class="text-center p-2 h5">Formulario para publicar anuncio si queres VENDER / REGALAR / INTERCAMBIAR tu loro</h3>
                     <p><b class="text-danger">Importante</b>: uno anuncio para uno lorito. Si tienes más loros - publica varios anuncios.</p>
                     <form method="post" enctype="multipart/form-data" action="{{route('user.anuncios-oferta.store',$user_id)}}" id="create_oferta">
@@ -39,13 +42,13 @@
                                 <!-- titulo del anuncio -->
                                 <div class="py-2">
                                     <label for="titulo" class="form-label">Titulo del anuncio:</label>
-                                    <input type="text" class="border border-success rounded h-100 w-100 p-2" id="titulo" name="titulo" required minlength = "10" maxlength="30">
+                                    <input type="text" class="border border-success rounded h-100 w-100 p-2" id="titulo" name="titulo" required minlength="10" maxlength="30">
                                     <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
                                 </div>
                                 <div class="py-2">
                                     <!-- Descripcion -->
                                     <label for="descripcion" class="form-label">Descripción:</label>
-                                    <textarea class="form-control border border-success" id="descripcion" rows="10" name="descripcion" required  minlength = "10" maxlength="300"></textarea>
+                                    <textarea class="form-control border border-success" id="descripcion" rows="10" name="descripcion" required minlength="10" maxlength="300"></textarea>
                                     <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
                                 </div>
                                 <div class="py-2">
@@ -175,7 +178,7 @@
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
                             <div class="col-2">
-                                <input id="crear-anuncio" type="submit" name="enviar" value="Crear anuncio" class=" btn btn-green w-100 active text-uppercase font-weight-bold"> <!-- class btn-danger -->
+                                <input id="crear-anuncio" type="submit" name="enviar" value="Crear anuncio" class="btn btn-green w-100 active text-uppercase font-weight-bold">
                             </div>
                             <div class="col-2">
                                 <input type="reset" name="limpiar" value="Limpiar" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">
@@ -183,33 +186,33 @@
                         </div>
                     </form>
                 </div>
-                <div style="height:300px;"> footer</div>
+
 </x-app-layout>
 <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
 <script src="{{asset('storage/js/create-oferta.js')}}"></script>
 <script>
-        $(document).ready(function() {
-            //evento para confirmar bloqueo al pulsar boton bloquear
-            $('#crear-anuncio').on('click', function(event) {
-                event.preventDefault(); 
-                Swal.fire({
-                    title: '¿Estas seguro?',
-                    icon: 'warning',
-                    iconColor:'#FC4B3B' ,
-                    showCancelButton: true,
-                    confirmButtonColor: '#76A728',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si! Publicar anuncio!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        // se envia la peticion si usuario ha confirmado
-                        $('#create_oferta').submit();
-                    }
-                });
+    $(document).ready(function() {
+        //evento para confirmar bloqueo al pulsar boton bloquear
+        $('#crear-anuncio').on('click', function(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: '¿Estas seguro?',
+                icon: 'warning',
+                iconColor: '#FC4B3B',
+                showCancelButton: true,
+                confirmButtonColor: '#76A728',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si! Publicar anuncio!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // se envia la peticion si usuario ha confirmado
+                    $('#create_oferta').submit();
+                }
             });
-            
         });
-    </script>
+
+    });
+</script>
 @endif
 @endauth

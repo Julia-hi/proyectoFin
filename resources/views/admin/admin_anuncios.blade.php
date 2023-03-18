@@ -25,7 +25,11 @@
     </head>
     <div class="min-h-screen bg-gray-100">
         @auth
+        @if(Auth::user()->rol =="admin")
         @include('layouts.navigation-admin')
+        @else
+        <p>Accesso denegado.</p>
+        @endif
         @endauth
         <!-- Page Content -->
         <main>
@@ -60,7 +64,7 @@
                                         @method('PUT')
                                         <input type="hidden" name="estado" value="blocked">
                                         <input type="hidden" name="razon" value="desactivado - admin {{Auth::user()->id}}">
-                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75" >desactivar</button>
+                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75">desactivar</button>
                                     </form>
                                 </div>
                             </div>
@@ -97,7 +101,7 @@
                                         @method('PUT')
                                         <input type="hidden" name="estado" value="blocked">
                                         <input type="hidden" name="razon" value="desactivado - admin {{Auth::user()->id}}">
-                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75" >desactivar</button>
+                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75">desactivar</button>
                                     </form>
                                 </div>
                             </div>
@@ -169,7 +173,7 @@
                                         @method('PUT')
                                         <input type="hidden" name="estado" value="active">
                                         <input type="hidden" name="razon" value="activado - admin {{Auth::user()->id}}">
-                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75" >activar</button>
+                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75">activar</button>
                                     </form>
                                 </div>
                             </div>

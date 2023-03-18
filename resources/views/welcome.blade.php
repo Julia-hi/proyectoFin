@@ -83,14 +83,14 @@ if ($user != null) {
         </div>
         @endif
         <div class="container">
-            <div class="justify-center sm:px-2 lg:px-4 "> 
+            <div class="justify-center sm:px-2 lg:px-4 ">
                 <div class="d-flex flex-row justify-content-center align-items-end position-static" style="height: 150px;">
                     <img src="{{asset('storage/images/logo.svg')}}" alt="Logo MiLorito" class="h-75 mt-3 mb-1">
                 </div>
-                <div class="my-0" >
+                <div class="my-0">
                     <div class="mt-6 p-2 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg" style="z-index:0;">
                         <h2 class="p-2 my-3 text-center h3">Espacio para amantes de loros</h2>
-                        <p class="text-center">Bienvenidos, amigo! Si te encantan loros, eres criador o buscas pagaritos, estas en sitio correcto! 
+                        <p class="text-center">Bienvenidos, amigo! Si te encantan loros, eres criador o buscas pagaritos, estas en sitio correcto!
                             Aquí puedes encontrar crías de loros disponibles en toda España! Crea tu cuenta para poder conectar con anunciantes - es gratis.
                             Click "ofertas" para encontrar tu amigo! Si eres criador, click "demandas" para encontrar nueva familia para tus crias. </p>
                         <div class="justify-center ">
@@ -104,24 +104,24 @@ if ($user != null) {
                     </div>
                 </div>
                 <!-- Anuncios oferta -->
-                <div id="ofertas-block" class="mt-8 mx-0 px-0 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3 " >
-                    <div class="row d-flex justify-content-center align-content-center m-3" >
+                <div id="ofertas-block" class="mt-8 mx-0 px-0 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3 ">
+                    <div class="row d-flex justify-content-center align-content-center m-3">
                         <form action="{{ route('filter.index') }}">
                             <input hidden type="text" name="comunidad" id="comunidad" value="todo">
                             <input hidden type="text" name="provincia" id="provincia" value="todo">
                             <input hidden type="text" name="poblacion" id="poblacion" value="todo">
                             <input hidden type="text" name="raza" id="raza" value="todo">
                             <input hidden type="text" name="genero" id="genero" value="todo">
-                            <div class="w-100 row d-flex justify-content-center align-content-center" >
+                            <div class="w-100 row d-flex justify-content-center align-content-center">
                                 <button type="submit" class="green-brillante-boton w-50">VER TODAS OFERTAS</button>
                             </div>
                         </form>
                     </div>
                     <!-- anuncio oferta particular -->
                     @if( $ofertas!=null && $ofertas->count()>0)
-                    <div class="row m-0 p-1" >
+                    <div class="row m-0 p-1">
                         @foreach ($ofertas as $oferta)
-                        <?php 
+                        <?php
                         $fotos = $oferta->fotos; ?>
                         <div class="col-md-6 col-lg-4 col-xl-3 position-relative" style="max-width: 400px; height: 400px; cursor: pointer; z-index:0;" onclick="window.location='{{ '/ofertas/' . $oferta->id }}';">
                             <div class="p-1 w-100 h-100">
@@ -226,6 +226,9 @@ if ($user != null) {
 
         </div>
     </div>
+    <footer>
+        <x-footer />
+    </footer>
     <script src="{{asset('storage/js/welcome.js')}}"></script>
     @endif
 </body>
