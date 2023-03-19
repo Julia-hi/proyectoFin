@@ -38,7 +38,7 @@
                     <form method="post" enctype="multipart/form-data" action="{{route('user.anuncios-oferta.store',$user_id)}}" id="create_oferta">
                         @csrf
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-lg-8 col-xs-12">
                                 <!-- titulo del anuncio -->
                                 <div class="py-2">
                                     <label for="titulo" class="form-label">Titulo del anuncio:</label>
@@ -114,7 +114,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-lg-4 col-xs-12">
                                 <!-- elegir raza -->
                                 <div class="py-2">
                                     <select name="raza" id="raza" class="border rounded border-success h-100 w-100 p-2">
@@ -177,10 +177,10 @@
                         </div>
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
-                            <div class="col-2">
+                            <div class="col-lg-3 col-sm-12 mt-2">
                                 <input id="crear-anuncio" type="submit" name="enviar" value="Crear anuncio" class="btn btn-green w-100 active text-uppercase font-weight-bold">
                             </div>
-                            <div class="col-2">
+                            <div class="col-lg-3 col-sm-12 mt-2">
                                 <input type="reset" name="limpiar" value="Limpiar" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">
                             </div>
                         </div>

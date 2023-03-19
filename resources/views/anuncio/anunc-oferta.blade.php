@@ -73,29 +73,29 @@ if ($user != null) {
             @endauth
         </div>
         @endif
-        <div id="draggable"class=" rounded border shadow hidden">
-                <div class="">
-                    <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
-                    @auth
-                    <form id="enviar_mens_form" method="POST" action="{{ route('user.mensajes.store',$autor->id) }}" class="w-100">
-                        @csrf
-                        <textarea class="border border-green rounded" id="mensaje" rows="10" name="texto" placeholder="Escribe mensaje aquí..." class="w-100"></textarea>
-                        <x-input-error :messages="$errors->get('texto')" class="mt-2" />
-                        <input name="anuncio_id" type="hidden" value="{{ $oferta->id }}" />
-                        <input name="remitente_id" type="hidden" value="{{ Auth::user()->id }}" />
-                        <input name="recipiente_id" type="hidden" value="{{ $autor->id }}" />
-                        <div class="d-flex items-center justify-content-between my-4">
-                            <x-primary-button class="ml-3" id="enviar_mensaje">
-                                {{ __('Enviar') }}
-                            </x-primary-button>
-                            <button id="cerrar_dragable" type="button" class="cerrar_dragable btn">Cerrar</button>
-                        </div>
-                    </form>
-                    @endauth
-                </div>
+        <div id="draggable" class="col-sm-10 col-lg-6 rounded border shadow hidden">
+            <div class="">
+                <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
+                @auth
+                <form id="enviar_mens_form" method="POST" action="{{ route('user.mensajes.store',$autor->id) }}" class="w-100">
+                    @csrf
+                    <textarea class="border border-green rounded w-100" id="mensaje" rows="10" name="texto" placeholder="Escribe mensaje aquí..." class="w-100"></textarea>
+                    <x-input-error :messages="$errors->get('texto')" class="mt-2" />
+                    <input name="anuncio_id" type="hidden" value="{{ $oferta->id }}" />
+                    <input name="remitente_id" type="hidden" value="{{ Auth::user()->id }}" />
+                    <input name="recipiente_id" type="hidden" value="{{ $autor->id }}" />
+                    <div class="d-flex items-center justify-content-between my-4">
+                        <x-primary-button class="ml-3" id="enviar_mensaje">
+                            {{ __('Enviar') }}
+                        </x-primary-button>
+                        <button id="cerrar_dragable" type="button" class="cerrar_dragable btn">Cerrar</button>
+                    </div>
+                </form>
+                @endauth
             </div>
+        </div>
         <div class="container">
-            
+
             <div class="justify-center sm:px-6 lg:px-8 h-auto">
                 <div class="d-flex flex-row justify-content-center align-items-end" style="height:20vh; max-height: 150px;">
                     <img src="{{asset('storage/images/logo.svg')}}" alt="Logo MiLorito" class="h-75 mt-3 mb-1" onclick="location.href='/'" style="cursor: pointer;">
@@ -165,6 +165,9 @@ if ($user != null) {
                                                         </form>
                                                         @endif
                                                     </div>
+                                                    @endif
+                                                    @if($oferta->anuncio->estado == "blocked")
+                                                    <button class="btn btn-sm btn-danger active" type="button" title="Anuncio bloqueado"><b>anuncio bloqueado!</b></button>
                                                     @endif
                                                     @endauth
                                                 </div>

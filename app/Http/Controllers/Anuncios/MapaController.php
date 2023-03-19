@@ -39,7 +39,13 @@ class MapaController extends Controller
                     $query->where('genero', $genero);
                 }
             })
-                ->get();
+            ->whereHas('anuncio', function ($query) {
+                $query->where('estado', 'active')
+                      ->whereHas('autor', function ($query) {
+                          $query->where('estado', 'active');
+                      });
+            })
+            ->get();
             $status = "ok";
         } catch (Exeption $ex) {
             $ofertas = "ofertas not found";

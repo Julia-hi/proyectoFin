@@ -59,7 +59,7 @@
                                     <form method="post" action="{{ route('admin.users.update', ['user' => $user->id, 'admin' => Auth::user()->id]) }}">
                                         @csrf
                                         @method('PUT')
-                                        <input type="hidden" name="estado" value="active">
+                                        <input type="hidden" name="estado" value="blocked">
                                         <input type="hidden" name="razon" value="activado - admin {{Auth::user()->id}}">
                                         <button type="submit" class="boton_bloq border bg-success text-white px-2 py-1 my-1 rounded w-75">bloquear</button>
                                     </form>

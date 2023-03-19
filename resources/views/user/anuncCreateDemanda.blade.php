@@ -53,7 +53,7 @@
                                     <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
                                 </div>
                             </div>
-                            <div class="col-lg-4 d-none d-xs-none d-md-none align-self-center">
+                            <div class="col-lg-4 d-none d-xs-none d-md-none d-lg-block align-self-center">
                                 <div class="d-flex justify-content-center">
                                     <img class="w-75" src="{{asset('storage/images/periquitos.png')}}" alt="" >
                                 </div>
@@ -63,10 +63,10 @@
                         <input hidden type="text" class="border rounded h-100 w-100 p-2" id="user_id" name="user_id" value="<?php echo $user_id; ?>">
                         <!-- bottones del formulario -->
                         <div class="row justify-content-center">
-                            <div class="col-2">
+                            <div class="col-lg-3 col-sm-12 mt-2">
                                 <input id="crear-anuncio" type="submit" name="enviar" value="Crear anuncio" class="btn btn-green w-100 active text-uppercase font-weight-bold">
                             </div>
-                            <div class="col-2">
+                            <div class="col-lg-3 col-sm-12 mt-2">
                                 <input type="reset" name="limpiar" value="Limpiar" class="btn btn-outline-danger w-100 text-uppercase font-weight-bold">
                             </div>
                         </div>

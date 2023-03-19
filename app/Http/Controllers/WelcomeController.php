@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\AnuncioDemanda;
 use App\Models\AnuncioOferta;
+use App\Models\Anuncio;
 use Exception;
 
 class WelcomeController extends Controller
@@ -15,18 +16,36 @@ class WelcomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
         try {
-            $demandas = AnuncioDemanda::limit(12)->get();
-            $ofertas = AnuncioOferta::limit(12)->get();
-            
+            // obtener anuncios demanda no bloqueados
+            $anuncDemandas = Anuncio::where('tipo', 'demanda')->where('estado', 'active')
+            ->whereHas('autor', function ($query) {
+                $query->where('estado', 'active');
+            })->limit(12)->get();
+            $demandas = collect([]);
+            foreach ($anuncDemandas as $anuncio) {
+                if ($anuncio->anuncioDemanda) {
+                    $demandas->push($anuncio->anuncioDemanda);
+                }
+            }
+            //obtener anuncios oferta demanda no bloqueados
+            $anuncOfertas = Anuncio::where('tipo', 'oferta')->where('estado', 'active')
+            ->whereHas('autor', function ($query) {
+                $query->where('estado', 'active');
+            })->limit(12)->get();
+            $ofertas = collect([]);
+            foreach ($anuncOfertas as $anuncio) {
+                if ($anuncio->anuncioOferta) {
+                    $ofertas->push($anuncio->anuncioOferta);
+                }
+            }
             $status = 'ok';
         } catch (Exception $er) {
-            // throw new Exception('conneción fallida');
+            // throw new Exception('error de la base de datos');
             $demandas = null;
             $ofertas = null;
             $status = 'error';
-            return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas,'status' => $status]);
         }
         return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'status' => $status]);
     }

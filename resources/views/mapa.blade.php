@@ -1,3 +1,18 @@
+@auth
+<?php
+try {
+    $user = Auth::user();
+} catch (Exception $ex) {
+    $user = null;
+    $status = "error";
+}
+
+if ($user != null) {
+    $user_name = $user->name;
+    $user_id = $user->id;
+}
+?>
+@endauth
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -43,9 +58,7 @@
                     <div class="col m-0">
                         <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                     </div><!-- <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a> -->
-                    <div class="col m-0">
-                        @include('layouts.navigation-welcome')
-                    </div>
+                   
                 </div>
                 @else
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
@@ -138,6 +151,15 @@
                         </form>
                     </div>
                     <div class="mt-8 p-3 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height: 25vh; z-index:1;">
+                        <div class="row w-100 justify-content-end">
+                            <div class="col-lg-2 col-xs-6 m-0">
+                                @if($user!=null && $user->rol=='user')
+                                @include('layouts.navigation-welcome')
+                                @elseif($user!=null && $user->rol=='admin')
+                                @include('layouts.navigation-welcome-admin')
+                                @endif
+                            </div>
+                        </div>
                         <?php
                         if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
                             $comunidad = $_GET['comunidad'];
@@ -179,7 +201,7 @@
                         @else
                         <h4 class="text-center">Disculpa, no hemos encontrado anuncios con estés parámetros pero...<br>
                             ¡seguro que alguno pequeño pajarito te esta esperando. <br>Cambia parametros de busqueda para encontrarlo!</h4>
-                            <div class="w-100 d-flex justify-content-center mt-4"> <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt=""></div>
+                        <div class="w-100 d-flex justify-content-center mt-4"> <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt=""></div>
                         @endif
                         @endif
                     </div>
@@ -191,18 +213,9 @@
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
     <script src="{{asset('storage/js/of-lista.js')}}"></script>
+    <!-- libreria Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="{{asset('storage/js/mapa.js')}}"></script>
-    <!-- <script>
-        window.onload = function() {
-            var map = L.map('map').setView([40.416775, -3.703790], 6.8);
-
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-        };
-    </script> -->
 </body>
 
 </html>

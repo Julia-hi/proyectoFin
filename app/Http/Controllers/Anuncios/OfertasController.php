@@ -24,8 +24,18 @@ class OfertasController extends Controller
     public function index()
     {
         try {
-            if ($ofertas = AnuncioOferta::get()) {
-            } else {
+            //obtener anuncios oferta demanda no bloqueados
+            $anuncOfertas = Anuncio::where('tipo', 'oferta')->where('estado', 'active')
+                ->whereHas('autor', function ($query) {
+                    $query->where('estado', 'active');
+                })->limit(12)->get();
+            $ofertas = collect([]);
+            foreach ($anuncOfertas as $anuncio) {
+                if ($anuncio->anuncioOferta) {
+                    $ofertas->push($anuncio->anuncioOferta);
+                }
+            }
+            if ($ofertas->count < 10) {
                 $ofertas = "ofertas not found";
             }
             $status = "ok";

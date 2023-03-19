@@ -23,7 +23,7 @@
             <x-text-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono')" required />
             <x-input-error :messages="$errors->get('telefono')" class="mt-2" />
         </div>
-
+        <input type="hidden" name="estado" value="active">
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Contraseña')" />

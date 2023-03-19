@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@auth
+<?php
+try {
+    $user = Auth::user();
+} catch (Exception $ex) {
+    $user = null;
+    $status = "error";
+}
+
+if ($user != null) {
+    $user_name = $user->name;
+    $user_id = $user->id;
+}
+?>
+@endauth
 
 <head>
     <meta charset="utf-8">
@@ -24,19 +39,14 @@
     </header>
     <div class="flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+        <div class="hidden fixed top-0 px-6 py-4 sm:block " style="right:60px;">
             <div class="align-self-center">
                 @guest
                 <a type="button" class="nav-botton red-brillante-boton mr-2 text-center" href="{{ url('/login')}}" tabindex="0" style="z-index:10;"><span>Publicar anuncio</span></a>
                 @endguest
                 @auth
-                <div class="row">
-                    <div class="col m-0">
-                        <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/{{Auth::user()->id}}/anuncios-oferta/create" tabindex="0" style="z-index:10;"><span>Publicar anuncio</span></a>
-                    </div>
-                    <div class="col m-0 position relative">
-                        @include('layouts.navigation-welcome')
-                    </div>
+                <div class="col m-0">
+                    <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/{{Auth::user()->id}}/anuncios-oferta/create" tabindex="0" style="z-index:10;"><span>Publicar anuncio</span></a>
                 </div>
                 @else
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
@@ -52,17 +62,17 @@
                 <div>
                     <div class="p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg position-sticky" style="top:5px; z-index:5;">
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
-                        <form id="filter_form" method="get" action="{{ route('mapa.index') }}">
+                        <form id="filter_form" method="get" action="{{ route('filter.index') }}" class="">
                             <div class="row p-3 g-3">
-                                <div class="col">
-                                    <div class="row h-100 border rounded-left border-success">
+                                <div class="col-xs-12 col-lg-2" style="height:40px;">
+                                    <div class="row h-100 border rounded-left border-success w-100 m-0">
                                         <div class="col-2 p-1 bg-white rounded-left">
-                                            <svg style="max-height: 50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <svg style="height: 30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" fill="red" clip-rule="evenodd" d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm2-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"></path>
                                                 <path fill-rule="evenodd" fill="red" clip-rule="evenodd" d="M21 10.986c0 4.628-4.972 8.753-7.525 10.567a2.528 2.528 0 0 1-2.95 0C7.972 19.739 3 15.613 3 10.986 3 5.576 7.03 2 12 2s9 3.576 9 8.986Zm-2 0c0 1.613-.886 3.348-2.328 5.043-1.411 1.659-3.144 3.034-4.355 3.893a.529.529 0 0 1-.634 0c-1.21-.86-2.944-2.234-4.354-3.893C5.886 14.334 5 12.599 5 10.986 5 6.748 8.065 4 12 4s7 2.748 7 6.986Z"></path>
                                             </svg>
                                         </div>
-                                        <select name="comunidad" id="comunidad" class="col-10 border-0" aria-label=".form-select-lg example">
+                                        <select name="comunidad" id="comunidad" class="col-10 border-0 h-100" aria-label=".form-select-lg example" style="height:40px;">
                                             <option value="todo" selected>Seleccione Región ...</option>
                                             <option value="andalucia">Andalucía</option>
                                             <option value="aragon">Aragón</option>
@@ -86,24 +96,24 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col">
-                                    <div class="row border border-success h-100">
+                                <div class="col-xs-12 col-lg-2">
+                                    <div class="row border border-success h-100 w-100 m-0">
                                         <select name="provincia" id="provincia" class="border-0" aria-label=".form-select-lg example">
                                             <option value="todo">Seleccione provincia ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col">
-                                    <div class="row h-100">
-                                        <select name="poblacion" id="poblacion" class="border border-success rounded-right" aria-label=".form-select-lg example">
+                                <div class="col-xs-12 col-lg-2">
+                                    <div class="row h-100 w-100 m-0">
+                                        <select name="poblacion" id="poblacion" class="border border-success rounded-right" aria-label=".form-select-lg example" style="height:40px;">
                                             <option value="todo">Seleccione población ...</option>
                                             <!-- opciones insertarán desde script of-lista.js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col">
-                                    <select name="raza" id="raza" class="border border-success rounded h-100 w-100 p-2">
+                                <div class="col-xs-12 col-lg-2">
+                                    <select name="raza" id="raza" class="border border-success rounded h-100 w-100 p-2 " style="height:40px;">
                                         <option value="todo">Todas razas</option>
                                         <option value="agapornis">agapornis</option>
                                         <option value="ara">ara</option>
@@ -115,14 +125,14 @@
                                         <option value="otros">otros</option>
                                     </select>
                                 </div>
-                                <div class="col ">
+                                <div class="col-xs-12 col-lg-2">
                                     <select name="genero" id="genero" class="border border-success rounded h-100 w-100 p-2">
                                         <option value="todo">Genero no importa</option>
                                         <option value="macho">macho</option>
                                         <option value="embra">embra</option>
                                     </select>
                                 </div>
-                                <div class="col">
+                                <div class="col-xs-12 col-lg-2">
                                     <button id="buscar-botton" type="submit" class="green-brillante-boton active text-uppercase h-100 w-100"><strong>BUSCAR</strong></button>
                                 </div>
                             </div>
@@ -130,10 +140,24 @@
                     </div>
                     <!--   Block para anuncios de ofertas   -->
                     <div class="position-relative p-2 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height:500px;">
-                        <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
-                        <div class="w-100" style="top:0;">
-
+                        @auth
+                        <div class="row w-100 justify-content-end">
+                            <div class="col-lg-2 col-xs-6 m-0">
+                                @if($user!=null && $user->rol=='user')
+                                @include('layouts.navigation-welcome')
+                                @elseif($user!=null && $user->rol=='admin')
+                                @include('layouts.navigation-welcome-admin')
+                                @endif
+                            </div>
                         </div>
+                        @else
+                        <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
+                        @endif
+                        @endauth
+                        <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
+
                         <?php
                         if (isset($_GET['comunidad']) && $_GET['comunidad'] != "todo") {
                             $comunidad = $_GET['comunidad'];

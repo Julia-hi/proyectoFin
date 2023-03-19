@@ -64,7 +64,7 @@
                                         @method('PUT')
                                         <input type="hidden" name="estado" value="blocked">
                                         <input type="hidden" name="razon" value="desactivado - admin {{Auth::user()->id}}">
-                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75">desactivar</button>
+                                        <button type="submit" class="boton_bloq border bg-success text-white px-2 py-1 my-1 rounded w-75">desactivar</button>
                                     </form>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                             </div>
                             @foreach($demandasAct as $demanda)
                             <div class="row">
-                                <div class="col border py-2 text-center" data-title="ver detalles"><a href="/admin/{{Auth::user()->id}}/anuncios/{{$demanda->id}}" class="border bg-success text-white p-2 rounded" style="width:50px;">{{$oferta->id}}</a></div>
+                                <div class="col border py-2 text-center" data-title="ver detalles"><a href="/admin/{{Auth::user()->id}}/anuncios/{{$demanda->id}}" class="border bg-success text-white p-2 rounded" style="width:50px;">{{$demanda->id}}</a></div>
                                 <div class="col border py-2">{{$demanda->user_id}}</div>
                                 <div class="col border py-2">{{$demanda->estado}}</div>
                                 <div class="col border py-2">{{$demanda->anuncioDemanda->titulo}}</div>
@@ -101,7 +101,7 @@
                                         @method('PUT')
                                         <input type="hidden" name="estado" value="blocked">
                                         <input type="hidden" name="razon" value="desactivado - admin {{Auth::user()->id}}">
-                                        <button type="submit" class="boton_desbloq border bg-success text-white px-2 py-1 my-1 rounded w-75">desactivar</button>
+                                        <button type="submit" class="boton_bloq border bg-success text-white px-2 py-1 my-1 rounded w-75">desactivar</button>
                                     </form>
                                 </div>
                             </div>

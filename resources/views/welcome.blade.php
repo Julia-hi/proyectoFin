@@ -49,6 +49,9 @@ if ($user != null) {
                     <div class="mt-6 p-2 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg bg-success">
                         <h2 class="p-2 my-4 text-center">Espacio para amantes de loros</h2>
                         <div class="text-center my-3">Disculpa, la conexión fallida, intenta más tarde por favor...</div>
+                        <div class="w-100 d-flex justify-content-center mt-4">
+                            <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +65,7 @@ if ($user != null) {
             <a type="button" class="red-brillante-boton mr-1 p-2 text-center" href="{{ Auth::check() ? '/user/' . $user_id . '/anuncios-oferta/create' : '/login?redirect_to=' . Request::path() }}" tabindex="0"><span>Publicar anuncio</span></a>
             @endguest
             @auth
-            <div class="row">
+            <div class="row ">
                 <div class="col m-0">
                     <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
@@ -104,19 +107,21 @@ if ($user != null) {
                     </div>
                 </div>
                 <!-- Anuncios oferta -->
-                <div id="ofertas-block" class="mt-8 mx-0 px-0 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3 ">
+                <div id="ofertas-block" class="mt-8 mx-0 px-0 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg p-3 " style="min-height:400px;">
+                    @if( $ofertas!=null && $ofertas->count()>0)
                     <div class="row d-flex justify-content-center align-content-center m-3">
                         <form action="{{ route('filter.index') }}">
-                            <input hidden type="text" name="comunidad" id="comunidad" value="todo">
-                            <input hidden type="text" name="provincia" id="provincia" value="todo">
-                            <input hidden type="text" name="poblacion" id="poblacion" value="todo">
-                            <input hidden type="text" name="raza" id="raza" value="todo">
-                            <input hidden type="text" name="genero" id="genero" value="todo">
+                            <input type="hidden" name="comunidad" id="comunidad" value="todo">
+                            <input type="hidden" name="provincia" id="provincia" value="todo">
+                            <input type="hidden" name="poblacion" id="poblacion" value="todo">
+                            <input type="hidden" name="raza" id="raza" value="todo">
+                            <input type="hidden" name="genero" id="genero" value="todo">
                             <div class="w-100 row d-flex justify-content-center align-content-center">
                                 <button type="submit" class="green-brillante-boton w-50">VER TODAS OFERTAS</button>
                             </div>
                         </form>
                     </div>
+                    @endif
                     <!-- anuncio oferta particular -->
                     @if( $ofertas!=null && $ofertas->count()>0)
                     <div class="row m-0 p-1">
@@ -142,9 +147,15 @@ if ($user != null) {
                     @elseif($status=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
+                    <div class="w-100 d-flex justify-content-center mt-4">
+                        <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt="">
+                    </div>
                     @else
                     <!-- Este mensaje muestra cuando conexion con hay anuncios de oferta en la base de datos -->
                     <h4 class="text-center">Disculpa, no hemos encontrado anuncios...</h4>
+                    <div class="w-100 d-flex justify-content-center mt-4">
+                        <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt="">
+                    </div>
                     @endif
                 </div>
             </div>
@@ -173,7 +184,7 @@ if ($user != null) {
                                             $user = Auth::user();
                                             ?>
                                             <!-- Muestra boton de favoritos solo si usuario no es autor del anuncio -->
-                                            @if($oferta->autor->id!=$user->id)
+                                            @if($demanda->autor->id!=$user->id)
                                             <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
                                                         si no es favorito - mostra borón para añadir a favoritos -->
                                             @if(!$demanda->anuncio->esFavorito($user, $demanda->anuncio))
@@ -217,9 +228,15 @@ if ($user != null) {
                     @elseif($status=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
+                    <div class="w-100 d-flex justify-content-center mt-4">
+                        <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt="">
+                    </div>
                     @else
                     <!-- Este mensaje muestra cuando conexion con hay anuncios de demanda en la base de datos -->
                     <div class="text-center">Disculpa, no hemos encontrado anuncios...</div>
+                    <div class="w-100 d-flex justify-content-center mt-4">
+                        <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt="">
+                    </div>
                     @endif
                 </div>
             </div>

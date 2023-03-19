@@ -122,6 +122,9 @@ if ($user != null) {
                                 <p class="text-center p-3">Autor del anuncio o administrador no puede enviar mensaje desde este campo.
                                 </p>
                                 @endif
+                                @if($demanda->anuncio->estado == "blocked")
+                                <button class="btn btn-sm btn-danger active" type="button" title="Anuncio bloqueado"><b>anuncio bloqueado!</b></button>
+                                @endif
                                 @endauth
                             </div>
                         </div>
@@ -144,7 +147,7 @@ if ($user != null) {
                 event.preventDefault();
                 Swal.fire({
                     title: '¿Estas seguro? Queres Enviar mensaje?',
-                    text:'Puedes ver todos mensajes en tu area privada',
+                    text: 'Puedes ver todos mensajes en tu area privada',
                     icon: 'warning',
                     iconColor: '#FC4B3B',
                     showCancelButton: true,
