@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Mensaje;
 use App\Models\User;
-use App\Models\Anuncio;
-
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class UserMensajesController extends Controller
 {
@@ -21,8 +19,8 @@ class UserMensajesController extends Controller
     {
         $dialogos=[];
         $user = User::find($user_id);
-        if ($user->rol == "admin") {
-            return redirect()->route('/admin-dashboard');
+        if (Auth::user()->rol == "admin") {
+            return redirect()->route('admin');
         } else {
             $messages = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
             if ($messages->count() == 0) {

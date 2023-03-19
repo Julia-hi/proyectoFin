@@ -194,6 +194,9 @@ if ($user != null) {
                                                     <div class="d-flex flex-row"><img src="{{asset('storage/images/icons/square-phone-flip-solid.svg')}}" style="width:1.2em;" class="mr-2">
                                                         <span>{{$autor->telefono}}</span>
                                                     </div>
+                                                    @if($user->id != $autor->id && $user->rol!='admin')
+                                                    <button class="btn btn-danger active" type="button">Denunciar</button>
+                                                    @endif
                                                     @endauth
                                                 </div>
                                                 <div class="align-self-baseline ">

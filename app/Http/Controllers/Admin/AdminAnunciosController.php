@@ -104,7 +104,7 @@ class AdminAnunciosController extends Controller
             $anuncio = null;
             $status = 'error';
         }
-      //  return Redirect::route('admin.anuncios.index', ['status'=>$status,'admin' => $id]);
+     
       return Redirect::back();
     }
 

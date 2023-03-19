@@ -20,10 +20,13 @@ class UserAnunciosController extends Controller
      */
     public function index($id)
     {
-        $usersDemandas = AnuncioDemanda::where('user_id', Auth::user()->id)->get();
-        $usersOfertas= AnuncioOferta::where('user_id', Auth::user()->id)->get();
-    
-        return view('user.user-anuncios', ['user' => Auth::user()->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
+        if (Auth::user()->rol == "admin") {
+            return redirect()->route('admin');
+        } else {
+            $usersDemandas = AnuncioDemanda::where('user_id', Auth::user()->id)->get();
+            $usersOfertas = AnuncioOferta::where('user_id', Auth::user()->id)->get();
+            return view('user.user-anuncios', ['user' => Auth::user()->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
+        }
     }
 
     /**
@@ -66,10 +69,10 @@ class UserAnunciosController extends Controller
      */
     public function edit($id)
     {
-        $anuncio = Anuncio::where('id',$id);
-        if($anuncio->tipo =="oferta"){
+        $anuncio = Anuncio::where('id', $id);
+        if ($anuncio->tipo == "oferta") {
             return view('user.anuncUpdateOferta', ['user' => $id, 'tipoAnunc' => 'oferta']);
-        }elseif($anuncio->tipo =="demanda"){
+        } elseif ($anuncio->tipo == "demanda") {
             return view('user.anuncUpdateDemanda', ['user' => $id, 'tipoAnunc' => 'demanda']);
         }
     }

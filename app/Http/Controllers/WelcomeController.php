@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AnuncioDemanda;
-use App\Models\AnuncioOferta;
 use App\Models\Anuncio;
 use Exception;
 

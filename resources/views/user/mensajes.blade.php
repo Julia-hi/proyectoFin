@@ -1,13 +1,14 @@
 <?php
-
-use App\Models\Anuncio; ?>
-@auth
-@if(Auth::user()->rol=="admin")
-return redirect()->route('admin',Auth::user()->id);
+use App\Models\Anuncio;
 ?>
-@else
-
 <x-app-layout>
+@auth
+@if(Auth::user()->rol == "admin")
+ADMIN NO TIENE ACCESSO TO MENSAJERIA
+<div class="w-100 row d-flex justify-content-center align-content-center mb-2">
+    <button class="btn btn-success active w-50 text-uppercase" onclick="window.location='{{ '/admin-dashboard'}}';">ADMIN PAGE</button>
+</div>
+@else
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Mis mensajes') }}
@@ -18,16 +19,16 @@ return redirect()->route('admin',Auth::user()->id);
         <div class="max-w-7xl mx-auto sm:px-4 lg:px-6">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-center bg-yellow" style="min-height:500px;">
-                <div class="w-100 row d-flex justify-content-center align-content-center mb-2">
+                    <div class="w-100 row d-flex justify-content-center align-content-center mb-2">
                         <button class="green-brillante-boton w-50 text-uppercase" onclick="window.location='{{ '/'}}';">a la pagina principal</button>
                     </div>
                     <h2 class="h3 text-uppercase mt-4">Mis mensajes</h2>
                     <div class="pt-3">
                         @if($dialogos == null || count($dialogos)==0)
                         <div class="text-center ">
-                            <p>Todavia no tienes mensajes. Inicia chat con anunciantes desde campo del anuncio. 
+                            <p>Todavia no tienes mensajes. Inicia chat con anunciantes desde campo del anuncio.
                                 Despues todos mensajes seran disponibles aqui.</p>
-                            <div class="w-100 d-flex justify-content-center mt-4"> 
+                            <div class="w-100 d-flex justify-content-center mt-4">
                                 <img class="w-25" src="{{asset('storage/images/periquitos.png')}}" alt="">
                             </div>
                         </div>

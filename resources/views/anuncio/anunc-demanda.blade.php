@@ -125,6 +125,9 @@ if ($user != null) {
                                 @if($demanda->anuncio->estado == "blocked")
                                 <button class="btn btn-sm btn-danger active" type="button" title="Anuncio bloqueado"><b>anuncio bloqueado!</b></button>
                                 @endif
+                                @if($user->id != $autor->id && $user->rol!='admin')
+                                <button class="btn btn-danger active" type="button">Denunciar</button>
+                                @endif
                                 @endauth
                             </div>
                         </div>

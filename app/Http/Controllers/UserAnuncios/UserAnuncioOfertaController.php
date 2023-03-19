@@ -22,8 +22,11 @@ class UserAnuncioOfertaController extends Controller
      */
     public function create($id)
     {
+        if (Auth::user()->rol == "admin") {
+            return redirect()->route('admin');
+        } else {
         $tipoAnunc = 'oferta';
-        return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);
+        return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);}
     }
 
     /**

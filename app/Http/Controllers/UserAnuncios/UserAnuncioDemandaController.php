@@ -21,8 +21,12 @@ class UserAnuncioDemandaController extends Controller
     public function create()
     {
         $user_id = Auth::user()->id;
-        $tipoAnunc = 'demanda';
-        return view('user.anuncCreateDemanda', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]);
+        if (Auth::user()->rol == "admin") {
+            return redirect()->route('admin');
+        } else {
+            $tipoAnunc = 'demanda';
+            return view('user.anuncCreateDemanda', ['user' => $user_id, 'tipoAnunc' => $tipoAnunc]);
+        }
     }
 
     /**
@@ -50,7 +54,7 @@ class UserAnuncioDemandaController extends Controller
             $entrada['id'] = $ult_anuncio->id;
 
             AnuncioDemanda::create($entrada); // insert to database - tabla "anuncios_odemanda"
-            
+
             $usersDemandas = AnuncioDemanda::where('user_id', $user->id);
             $usersOfertas = AnuncioOferta::where('user_id', $user->id);
             return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
