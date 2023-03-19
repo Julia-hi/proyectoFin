@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Mensaje;
 use App\Models\User;
-use Illuminate\Support\Facades\Redirect;
+use App\Models\Anuncio;
 
 class UserMensajesController extends Controller
 {
@@ -17,23 +17,56 @@ class UserMensajesController extends Controller
      */
     public function index($user_id)
     {
-        $dialogos=[];
+        $dialogos_autor = [];
+        $dialogos = [];
         $user = User::find($user_id);
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
-        } else {
-            $messages = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
-            if ($messages->count() == 0) {
-               
-            } else {
-                $grouped_messages = $messages->groupBy('anuncio_id');
-                foreach ($grouped_messages as $dialogo) {
-                    $dialogos[] = $dialogo;
+        }
+        if (Auth::user()->rol == "user") {
+            $anuncios = Mensaje::distinct('anuncio_id')->pluck('anuncio_id');
+            foreach ($anuncios as $id) {
+                $autor = Anuncio::find($id)->user_id; //autor del anuncio
+
+                if ($autor == $user_id) {
+                    $dialogo_autor = [];
+                    //select mensajes recibidos por autor
+                    $mensajes = Mensaje::where('anuncio_id', $id)->where('remitente_id', $autor)->orWhere('recipiente_id', $user_id)->get();
+
+                    if ($mensajes->count() > 0) {
+                        $remitentesId = Mensaje::where('anuncio_id', $id)->distinct('remitente_id')->pluck('remitente_id');
+                        foreach ($remitentesId as $id_rem) {
+                            $dialogo_autor = [];
+                            if ($id_rem != $autor) {
+                                $recibidos = Mensaje::where('anuncio_id', $id)->where('remitente_id', $id_rem)->where('recipiente_id', $autor)->get();
+                                $enviados = Mensaje::where('anuncio_id', $id)->where('remitente_id', $autor)->where('recipiente_id', $id_rem)->get();
+                                foreach ($recibidos as $recibido) {
+                                    $dialogo_autor[] = $recibido;
+                                }
+                                foreach ($enviados as $enviado) {
+                                    $dialogo_autor[] = $enviado;
+                                }
+                                //sort
+                                $dialogo_autor = collect($dialogo_autor)->sortBy('created_at')->values()->all();
+                                $dialogos_autor[] = $dialogo_autor;
+                            } 
+                        }  
+                    }
+                } else {
+                    $mensajes = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
+                    if ($mensajes->count() > 0) {
+                        $grouped_messages = $mensajes->groupBy('anuncio_id');
+                        foreach ($grouped_messages as $dialogo) {
+                            $dialogos[] = $dialogo;
+                        }
+                    }
                 }
             }
-            return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'status' => 'ok']);
         }
+
+        return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'dialogos_autor' => $dialogos_autor, 'status' => 'ok']);
     }
+
 
     /**
      * Show the form for creating a new resource.

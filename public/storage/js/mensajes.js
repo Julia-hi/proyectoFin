@@ -9,12 +9,13 @@ let recipiente;
 let remitente;
 let userId = window.location.href.match(/\/user\/(\d+)/)[1];
 var anuncio_id;
+var chat_id
 
 window.addEventListener("load", () => {
     if (window.location.hash != '') {
-        var chat_id = window.location.hash.substring(1);
+        chat_id = window.location.hash.substring(1);
         console.log(chat_id);
-        mostrarOpenedChat(chat_id);
+       // mostrarOpenedChat(chat_id);
     }
     const elements = document.querySelectorAll('.mostrarChatBoton');
     // Asignar event listener para cada elemento de clase "mostrarChatBoton"
@@ -32,7 +33,7 @@ window.addEventListener("load", () => {
  * 
  * @param {String} idchat
  */
-function mostrarOpenedChat(idChat) {
+/* function mostrarOpenedChat(idChat) {
     var numChat = idChat.replace('chat', '');
     // var idChat = 'chat' + numChat; //'chat1', 'chat2' ...
 
@@ -48,7 +49,7 @@ function mostrarOpenedChat(idChat) {
         window.location.hash = ""; // eliminar valor hash
     })
     $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
-}
+} */
 
 /**
  * Mostrar chat al pulsar boton
@@ -64,7 +65,8 @@ function mostrarChat(id) {
             $(this).addClass('hidden');
         }
     });
-    var numChat = id.replace('_', '');
+    var numChat = chat_id.replace('chat', '');
+    console.log(numChat);
     var idChat = 'chat' + numChat; //'chat1', 'chat2' ...
 
     $('#' + idChat).removeClass('hidden'); //muestra bloque del chat elegido
@@ -78,7 +80,7 @@ function mostrarChat(id) {
         $('#message_form').remove();
         window.location.hash = ""; // eliminar valor hash
     })
-    $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
+   // $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
 }
 //evento para submit formulario
 function addEventformulario(idChat) {
