@@ -22,7 +22,7 @@ if ($user != null) {
     <title>MiLorito</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
