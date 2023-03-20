@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '2089385ae1d44dfd081e695ee85a9425ec84e946',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -16,15 +16,6 @@
             'reference' => '459f2781e1a08d52ee56b0b1444086e038561e3f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../brick/math',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'components/jquery' => array(
-            'pretty_version' => '3.6.0',
-            'version' => '3.6.0.0',
-            'reference' => '6cf38ee1fd04b6adf8e7dda161283aa35be818c3',
-            'type' => 'component',
-            'install_path' => __DIR__ . '/../components/jquery',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -358,6 +349,15 @@
                 0 => 'v9.43.0',
             ),
         ),
+        'intervention/image' => array(
+            'pretty_version' => '2.7.2',
+            'version' => '2.7.2.0',
+            'reference' => '04be355f8d6734c826045d02a1079ad658322dad',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/image',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -383,9 +383,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '2089385ae1d44dfd081e695ee85a9425ec84e946',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
