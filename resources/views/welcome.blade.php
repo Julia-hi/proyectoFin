@@ -71,9 +71,9 @@ if ($user != null) {
                 </div>
                 <div class="col m-0">
                     @if($user!=null && $user->rol=='user')
-                    @include('layouts.navigation-welcome')
+                        @include('layouts.navigation-welcome')
                     @elseif($user!=null && $user->rol=='admin')
-                    @include('layouts.navigation-welcome-admin')
+                        @include('layouts.navigation-welcome-admin')
                     @endif
                 </div>
             </div>
