@@ -52,18 +52,23 @@ class UserMensajesController extends Controller
                             }
                         }
                     }
-                } else {
+                } elseif ($autor != $user_id) {
+                    $grouped_messages1 = [];
+                    //todoa mensajes del usuario actual
                     $mensajes = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
                     if ($mensajes->count() > 0) {
-                        $grouped_messages = $mensajes->groupBy('anuncio_id');
-                        foreach ($grouped_messages as $dialogo) {
-                            $dialogos[] = $dialogo;
-                        }
+                        //todos mensajes del usuario actual agrupados por anuncio
+                        $grouped_messages1 = $mensajes->groupBy('anuncio_id');
                     }
                 }
             }
+            foreach ($grouped_messages1 as $dialogo) {
+                //seleccionamos solo dialogos iniciados por usuario actual (no es autor)
+                if ($dialogo[0]->remitente_id == $user_id) {
+                    $dialogos[] = $dialogo;
+                }
+            }
         }
-
         return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'dialogos_autor' => $dialogos_autor, 'status' => 'ok']);
     }
 

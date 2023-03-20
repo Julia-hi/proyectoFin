@@ -39,7 +39,7 @@ use App\Models\Anuncio;
 
                         <!-- Dialogos con autor del anuncio -->
                         @foreach($dialogos as $key=>$dialogo)
-                        <?php $anuncio = Anuncio::find($dialogo[$key]->anuncio_id) ?>
+                        <?php $anuncio = Anuncio::find($dialogo[0]->anuncio_id) ?>
 
                         <div class="row p-2 w-100">
                             <div class=" col-1 text-left"><strong>id: </strong><span id="{{'anuncio'.$key}}">{{$anuncio->id}}</span></div>
@@ -132,7 +132,7 @@ use App\Models\Anuncio;
 
                             <div>Tienes {{ count($dialogos_autor)}} conversaciones</div>
                             @foreach($dialogos_autor as $key=>$dialogo)
-                            <?php $anuncio = Anuncio::find($dialogo[$key]['anuncio_id']) ?>
+                            <?php $anuncio = Anuncio::find($dialogo[0]['anuncio_id']) ?>
 
                             <div class="row p-2 w-100">
                                 <div class=" col-1 text-left"><strong>id: </strong><span id="{{'anuncio'.$anuncio->id}}">{{$anuncio->id}}</span></div>
@@ -146,28 +146,28 @@ use App\Models\Anuncio;
                                 <div class="col text-left">{{ $anuncio->tipo }}: {{ $anuncio->anuncioDemanda->titulo }}</div>
                                 @endif
                                 <div class="col-3 text-left">
-                                    <?php $id_chat = "chat" . $dialogo[$key]['remitente_id'] . $anuncio->id;  ?>
+                                    <?php $id_chat = "chat" . $dialogo[0]['remitente_id'] . $anuncio->id;  ?>
                                     <div class="btn-group d-flex align-items-center">
                                         @if($anuncio->tipo =='oferta')
                                         <a href="/ofertas/{{$anuncio->id}}" role="button" class="btn btn-sm btn-outline-success text-uppercase"><strong>Ver anuncio</strong></a>
                                         @elseif($anuncio->tipo =='demanda')
                                         <a href="/demandas/{{$anuncio->id}}" role="button" class="btn btn-sm btn-outline-success text-uppercase"><strong>Ver anuncio</strong></a>
                                         @endif
-                                        <a id="_{{ $dialogo[$key]['remitente_id'].$anuncio->id }}" href="#<?php echo $id_chat; ?>" class="mostrarChatBoton btn btn-sm btn-outline-success text-uppercase"><strong>Mostrar chat</strong></a>
+                                        <a id="_{{ $dialogo[0]['remitente_id'].$anuncio->id }}" href="#<?php echo $id_chat; ?>" class="mostrarChatBoton btn btn-sm btn-outline-success text-uppercase"><strong>Mostrar chat</strong></a>
                                     </div>
                                 </div>
                             </div>
 
                             <div id="<?php echo $id_chat; ?>" class="chat hidden position-relative mx-auto w-100 " title="">
-                                <div id="<?php echo ('chat_body' . $dialogo[$key]['remitente_id'] . $anuncio->id); ?>" class="border border-green" style="min-height:25%; max-height:300px; background-color: #D8F3DC; overflow-y: scroll;overflow-x: hidden;">
+                                <div id="<?php echo ('chat_body' . $dialogo[0]['remitente_id'] . $anuncio->id); ?>" class="border border-green" style="min-height:25%; max-height:300px; background-color: #D8F3DC; overflow-y: scroll;overflow-x: hidden;">
                                     <!-- Flecha para cerrar ventana del chat -->
                                     <div id="cruce" data-title="Cerrar" class="cruce bg-white position-sticky top-0 start-0" style="width:25px; height:25px; z-index:30; cursor:pointer;">
                                         <svg style="z-index:35;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16">
                                             <path fill="#273A0E" d="M11.414 4.586a2 2 0 0 0-2.828 0L8 5.172 6.414 3.586a2 2 0 1 0-2.828 2.828L5.172 8l-1.586 1.586a2 2 0 1 0 2.828 2.828L8 10.828l1.586 1.586a2 2 0 1 0 2.828-2.828L10.828 8l1.586-1.586a2 2 0 0 0 0-2.828z" />
                                         </svg>
                                     </div>
-                                    <?php $user1 = $dialogo[$key]['remitente_id'];
-                                    $user2 = $dialogo[$key]['recipiente_id']; ?>
+                                    <?php $user1 = $dialogo[0]['remitente_id'];
+                                    $user2 = $dialogo[0]['recipiente_id']; ?>
 
                                     @foreach($dialogo as $mensaje)
 
