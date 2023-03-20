@@ -1,4 +1,5 @@
 <x-guest-layout>
+<link rel="stylesheet" href="{{asset('storage/css/mi_estilo.css')}}">
     <div class="text-center"><b class="text-uppercase h3">Regístrate</b></div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
