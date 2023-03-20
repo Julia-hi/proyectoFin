@@ -15,7 +15,7 @@ return new class extends Migration
     {
         $this->down();
         Schema::create('anuncios_demanda', function (Blueprint $table) {
-            $table->foreignId('id');
+            $table->id('id');
             $table->foreign('id')->references('id')->on('anuncios')->onUpdate('cascade')->onDelete('cascade');
             $table->string('titulo', 30);
             $table->mediumText('descripcion', 300);
