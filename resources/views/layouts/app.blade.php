@@ -1,6 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\Storage; ?>
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
