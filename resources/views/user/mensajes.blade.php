@@ -107,7 +107,7 @@ use App\Models\Anuncio;
                                 $remitente = $user2;
                             } ?>
                             <div class="pb-1">
-                                <form id="enviar-mensaje" method="POST" action="{{ route('user.mensajes.store',$remitente) }}">
+                                <form method="POST" action="{{ route('user.mensajes.store',$remitente) }}">
                                     @csrf
                                     <textarea class="form-control border-green" id="mensaje" rows="2" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
                                     <x-input-error :messages="$errors->get('texto')" class="mt-2" />
@@ -116,7 +116,7 @@ use App\Models\Anuncio;
                                     <input hidden name="remitente_id" type="text" value="{{ $remitente }}" />
                                     <input hidden name="id_chat" type="text" value="{{ $id_chat }}" />
                                     <div class="d-flex items-center justify-content-end my-4">
-                                        <button type="submit" class="enviar-form btn btn-green active text-uppercase font-weight-bold ml-3" style="width:100px;height:40px;">Enviar</button>
+                                        <button type="submit" class="enviar-mensaje btn btn-green active text-uppercase font-weight-bold ml-3" style="width:100px;height:40px;">Enviar</button>
                                         <button type="reset" class="limpiar-form btn btn-danger active text-uppercase font-weight-bold ml-3" style="width:100px;height:40px;">Limpiar</button>
                                         <button id="cerrar_dragable" type="button" style="width:150px; height:40px;" class="cerrar_form btn btn-outline-warning active text-uppercase font-weight-bold ml-3">Cerrar chat</button>
                                     </div>
@@ -129,7 +129,7 @@ use App\Models\Anuncio;
                         <!-- dialogos pertenecentes al anuncio si usuario es autor -->
                         <div class="pt-3">
                             @if($dialogos_autor != null && count($dialogos_autor)>0 )
-                           
+
                             <div>Tienes {{ count($dialogos_autor)}} conversaciones</div>
                             @foreach($dialogos_autor as $key=>$dialogo)
                             <?php $anuncio = Anuncio::find($dialogo[$key]['anuncio_id']) ?>
@@ -146,20 +146,20 @@ use App\Models\Anuncio;
                                 <div class="col text-left">{{ $anuncio->tipo }}: {{ $anuncio->anuncioDemanda->titulo }}</div>
                                 @endif
                                 <div class="col-3 text-left">
-                                    <?php $id_chat = "chat" . $dialogo[$key]['remitente_id'].$anuncio->id;  ?>
+                                    <?php $id_chat = "chat" . $dialogo[$key]['remitente_id'] . $anuncio->id;  ?>
                                     <div class="btn-group d-flex align-items-center">
                                         @if($anuncio->tipo =='oferta')
                                         <a href="/ofertas/{{$anuncio->id}}" role="button" class="btn btn-sm btn-outline-success text-uppercase"><strong>Ver anuncio</strong></a>
                                         @elseif($anuncio->tipo =='demanda')
                                         <a href="/demandas/{{$anuncio->id}}" role="button" class="btn btn-sm btn-outline-success text-uppercase"><strong>Ver anuncio</strong></a>
                                         @endif
-                                        <a id='_{{$anuncio->id}}' href="#<?php echo $id_chat; ?>" class="mostrarChatBoton btn btn-sm btn-outline-success text-uppercase"><strong>Mostrar chat</strong></a>
+                                        <a id="_{{ $dialogo[$key]['remitente_id'].$anuncio->id }}" href="#<?php echo $id_chat; ?>" class="mostrarChatBoton btn btn-sm btn-outline-success text-uppercase"><strong>Mostrar chat</strong></a>
                                     </div>
                                 </div>
                             </div>
 
                             <div id="<?php echo $id_chat; ?>" class="chat hidden position-relative mx-auto w-100 " title="">
-                                <div id="<?php echo ('chat_body' . $dialogo[$key]['remitente_id'].$anuncio->id); ?>" class="border border-green" style="min-height:25%; max-height:300px; background-color: #D8F3DC; overflow-y: scroll;overflow-x: hidden;">
+                                <div id="<?php echo ('chat_body' . $dialogo[$key]['remitente_id'] . $anuncio->id); ?>" class="border border-green" style="min-height:25%; max-height:300px; background-color: #D8F3DC; overflow-y: scroll;overflow-x: hidden;">
                                     <!-- Flecha para cerrar ventana del chat -->
                                     <div id="cruce" data-title="Cerrar" class="cruce bg-white position-sticky top-0 start-0" style="width:25px; height:25px; z-index:30; cursor:pointer;">
                                         <svg style="z-index:35;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16">
@@ -200,7 +200,7 @@ use App\Models\Anuncio;
                                     $remitente = $user2;
                                 } ?>
                                 <div class="pb-1">
-                                    <form id="enviar-mensaje" method="POST" action="{{ route('user.mensajes.store',$remitente) }}">
+                                    <form method="POST" action="{{ route('user.mensajes.store',$remitente) }}">
                                         @csrf
                                         <textarea class="form-control border-green" id="mensaje" rows="2" name="texto" placeholder="Escribe mensaje aquí..."></textarea>
                                         <x-input-error :messages="$errors->get('texto')" class="mt-2" />
@@ -209,7 +209,7 @@ use App\Models\Anuncio;
                                         <input hidden name="remitente_id" type="text" value="{{ $remitente }}" />
                                         <input hidden name="id_chat" type="text" value="{{ $id_chat }}" />
                                         <div class="d-flex items-center justify-content-end my-4">
-                                            <button type="submit" class="enviar-form btn btn-green active text-uppercase font-weight-bold ml-3" style="width:100px;height:40px;">Enviar</button>
+                                            <button type="submit" class="enviar-mensaje btn btn-green active text-uppercase font-weight-bold ml-3" style="width:100px;height:40px;">Enviar</button>
                                             <button type="reset" class="limpiar-form btn btn-danger active text-uppercase font-weight-bold ml-3" style="width:100px;height:40px;">Limpiar</button>
                                             <button id="cerrar_dragable" type="button" style="width:150px; height:40px;" class="cerrar_form btn btn-outline-warning active text-uppercase font-weight-bold ml-3">Cerrar chat</button>
                                         </div>
@@ -232,39 +232,23 @@ use App\Models\Anuncio;
 <script src="{{asset('storage/js/mensajes.js')}}"></script>
 <script>
     $(document).ready(function() {
-        //evento para confirmar envio del mensaje
-        $('#enviar_mensaje').on('click', function(event) {
-            event.preventDefault();
-            Swal.fire({
-                title: '¿Estas seguro? Queres Enviar mensaje?',
-                icon: 'warning',
-                iconColor: '#FC4B3B',
-                showCancelButton: true,
-                confirmButtonColor: '#76A728',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Si! enviar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // se envia la peticion si usuario ha confirmado
-                    $.ajax({
-                        type: "POST",
-                        url: "{{ route('user.mensajes.store', ['user'=>Auth::user()->id]) }}",
-                        data: $("#enviar_mens_form").serialize(),
-                        success: function(response) {
-                            // mostrar una alerta con la respuesta del servidor
-                            Swal.fire({
-                                title: '¡Mensaje enviado!',
-                                text: response.message,
-                                icon: 'success',
-                                confirmButtonColor: '#76A728'
-                            });
-                        },
-                        error: function(xhr) {
-                            // manejar errores si es necesario
-                        }
-                    });
-                }
-            });
+    //evento para confirmar envio del mensaje
+    $('.enviar-mensaje').on('click', function(event) {
+        event.preventDefault();
+        Swal.fire({
+            title: '¿Enviar mensaje?',
+            icon: 'warning',
+            iconColor: '#FC4B3B',
+            showCancelButton: true,
+            confirmButtonColor: '#76A728',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, enviar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // se envia la peticion si usuario ha confirmado
+                $(event.target).closest('form').submit();
+            }
         });
     });
+    })
 </script>

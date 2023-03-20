@@ -49,8 +49,8 @@ class UserMensajesController extends Controller
                                 //sort
                                 $dialogo_autor = collect($dialogo_autor)->sortBy('created_at')->values()->all();
                                 $dialogos_autor[] = $dialogo_autor;
-                            } 
-                        }  
+                            }
+                        }
                     }
                 } else {
                     $mensajes = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
@@ -96,8 +96,9 @@ class UserMensajesController extends Controller
         $entrada['recipiente_id'] = $request->recipiente_id;
         $entrada['chat_id'] = $request->chat_id;
         $message = Mensaje::create($entrada); // insertar mensaje a database
-
-        return back();
+        $hash = $request->id_chat;
+        //   manda a la pagina con chat actual abierto
+        return redirect()->to(url()->previous() . '#' . $hash);
     }
     /**
      * Insert nuevo mensaje via Ajax (desde zona privada del usuario)

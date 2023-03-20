@@ -9,13 +9,13 @@ let recipiente;
 let remitente;
 let userId = window.location.href.match(/\/user\/(\d+)/)[1];
 var anuncio_id;
-var chat_id
+var chat_id;
 
 window.addEventListener("load", () => {
     if (window.location.hash != '') {
         chat_id = window.location.hash.substring(1);
         console.log(chat_id);
-       // mostrarOpenedChat(chat_id);
+        mostrarOpenedChat(chat_id);
     }
     const elements = document.querySelectorAll('.mostrarChatBoton');
     // Asignar event listener para cada elemento de clase "mostrarChatBoton"
@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
  * 
  * @param {String} idchat
  */
-/* function mostrarOpenedChat(idChat) {
+function mostrarOpenedChat(idChat) {
     var numChat = idChat.replace('chat', '');
     // var idChat = 'chat' + numChat; //'chat1', 'chat2' ...
 
@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
         window.location.hash = ""; // eliminar valor hash
     })
     $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
-} */
+}
 
 /**
  * Mostrar chat al pulsar boton
@@ -65,8 +65,7 @@ function mostrarChat(id) {
             $(this).addClass('hidden');
         }
     });
-    var numChat = chat_id.replace('chat', '');
-    console.log(numChat);
+    var numChat = id.replace('_', '');
     var idChat = 'chat' + numChat; //'chat1', 'chat2' ...
 
     $('#' + idChat).removeClass('hidden'); //muestra bloque del chat elegido
@@ -80,7 +79,7 @@ function mostrarChat(id) {
         $('#message_form').remove();
         window.location.hash = ""; // eliminar valor hash
     })
-   // $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
+    $('#chat_body' + numChat).scrollTop($('#chat_body' + numChat)[0].scrollHeight);
 }
 //evento para submit formulario
 function addEventformulario(idChat) {
@@ -93,8 +92,6 @@ function addEventformulario(idChat) {
         anuncio_id = $('#' + idChat).children().first().html();
 
         var url = "/user/" + user_id + "/mensaje"; //route para post request (Controller enviarMensajeController.php)
-        console.log("Remitente: -" + remitente);
-        console.log("Recipiente: -" + recipiente);
         //obtener respuesta 
         fetch(url, {
             method: 'POST',
@@ -151,105 +148,4 @@ function mostrarUltimo(data, idChat) {
     }
 }
 
-/**
- * Crear formulario 
- * Se crea nuevo formulario cada vez cuando se abre el bloque del dialogo
- * para poder enviar nuevo mensaje desde area privada del usuario
- * 
- * @param {int} id 
- * @param {String} idChat 
- */
-function createForm(id, idChat) {
-    console.log("Remitente: -" + remitente);
-    console.log("Recipiente: -" + recipiente);
-    anuncio_id = $('#' + idChat).children().first().html();
-    // Crear nuevo elemento <form>
-    var form = $('<form>').attr({
-        id: 'message_form',
-        method: 'post',
-        action: "/user/" + remitente + "/mensajes"
-    });
-
-    // Añadir CSRF token al formulario
-    form.append($('<input>').attr({
-        type: 'hidden',
-        name: '_token',
-        value: '{{ csrf_token() }}'
-    }));
-
-    // Añadir textarea campo al formulario
-    form.append($('<textarea>').attr({
-        id: 'texto',
-        name: 'texto',
-        placeholder: 'Escribe mensaje aqui...',
-        class: 'form-control',
-        rows: '2'
-    }));
-
-    // Añadir input campo para anuncio_id 
-    form.append($('<input>').attr({
-        type: 'hidden',
-        name: 'anuncio_id',
-        id: 'anuncio_id',
-        value: anuncio_id
-    }));
-
-    // Añadir input campo para remitente_id 
-    form.append($('<input>').attr({
-        type: 'hidden',
-        name: 'user_id',
-        id: 'user_id',
-        value: remitente
-    }));
-
-    // Añadir input campo para remitente_id 
-    form.append($('<input>').attr({
-        type: 'hidden',
-        name: 'remitente_id',
-        id: 'remitente_id',
-        value: remitente
-    }));
-
-
-    // Añadir input campo para remitente_id 
-    form.append($('<input>').attr({
-        type: 'hidden',
-        name: 'recipiente_id',
-        id: 'recipiente_id',
-        value: recipiente
-    }));
-
-
-    // Añadir input campo para anuncio_id  chat_id 
-    form.append($('<input>').attr({
-        type: 'hidden',
-        name: 'chat_id',
-        id: 'chat_id',
-        value: idChat
-    }));
-
-    // Crear <div> para botones
-    var buttons = $('<div>').attr({
-        class: 'd-flex items-center justify-content-end my-2'
-    });
-
-    // Añadir reset button para formulario
-    buttons.append($('<button>').attr({
-        type: 'reset',
-        class: 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'
-    }).text('Limpiar'));
-
-    // Añadir submit button para formulario
-    buttons.append($('<button>').attr({
-        type: 'submit',
-        class: 'inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150'
-    }).text('Enviar'));
-
-    // Añadir buttons div al formulario
-    form.append(buttons);
-
-    // Añadir formulario despues bloque del chat
-    $('#chat_body' + id).after(form);
-    //  addEventformulario(idChat);
-}
 
