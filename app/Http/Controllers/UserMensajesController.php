@@ -19,6 +19,12 @@ class UserMensajesController extends Controller
     {
         $dialogos_autor = [];
         $dialogos = [];
+        $dialogo_autor = [];
+        $mensajes = null;
+        $recibidos = null;
+        $enviados = null;
+        $grouped_messages1 = [];
+        $mensajes1 = null;
         $user = User::find($user_id);
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
@@ -29,12 +35,7 @@ class UserMensajesController extends Controller
                 $autor = Anuncio::find($id)->user_id; //autor del anuncio
 
                 if ($autor == $user_id) {
-                    $dialogo_autor = [];
-                    $mensajes = null;
-                    $recibidos = null;
-                    $enviados = null;
-                    $grouped_messages1 = [];
-                    $mensajes1 = null;
+
                     //select mensajes recibidos por autor
                     $mensajes = Mensaje::where('anuncio_id', $id)->where('remitente_id', $autor)->orWhere('recipiente_id', $user_id)->get();
 

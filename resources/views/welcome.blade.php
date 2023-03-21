@@ -133,7 +133,7 @@ if ($user != null) {
                                 <img class="border border-1 border-success rounded w-100 h-100 m-1" src="<?php echo $fotos[0]->enlace; ?>" alt="" style="display: block; object-fit: cover;z-index:0;" data-holder-rendered="true">
                                 <div class="position-absolute bottom-0 row bg-yellow w-100 p-2" style="height:60px;">
                                     <div class="col-6 text-left">
-                                        <h3 class="text-uppercase align-items-center p-0 m-0"><strong>{{ $oferta->titulo}}</strong></h3>
+                                        <h3 class="text-uppercase align-items-center p-0 m-0 h-4"><strong>{{ $oferta->titulo}}</strong></h3>
                                     </div>
                                     <div class="col-6 d-flex justify-content-end">
                                         <small class="">Publicado: {{ $oferta->created_at->format('M j, Y') }}</small>
@@ -178,44 +178,10 @@ if ($user != null) {
                                             <?php $url = '/demandas/' . $demanda->id; ?>
                                             <a href="<?php echo $url; ?>" class="btn-green rounded text-center" style="min-width:50px; height:30px;">
                                                 <strong class="text-center align-middle px-2">Detalles</strong>
-                                            </a>
-                                            @auth
-                                            <?php $user_id = Auth::user()->id;
-                                            $user = Auth::user();
-                                            ?>
-                                            <!-- Muestra boton de favoritos solo si usuario no es autor del anuncio -->
-                                            @if($demanda->autor->id!=$user->id)
-                                            <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
-                                                        si no es favorito - mostra borón para añadir a favoritos -->
-                                            @if(!$demanda->anuncio->esFavorito($user, $demanda->anuncio))
-                                            <form method="POST" action="{{ route('user.favoritos.store',['user' => $user->id]) }}">
-                                                @csrf
-                                                <input type="hidden" name="anuncio_id" value="{{ $demanda->id }}">
-                                                <input type="hidden" name="user_id" value="{{ $user_id }}">
-                                                <!-- botton para añadir a favoritos -->
-                                                <button type="submit" data-title="Guardar a favoritos">
-                                                    <img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="h-auto mx-2 py-1">
-                                                </button>
-                                            </form>
-                                            @else
-                                            <?php $favorito = $demanda->anuncio->favoritos->first(); ?>
-                                            <!-- formulario para Eeiminar favorito de la lista -->
-                                            <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <!-- botton para elliminar de favoritos -->
-                                                <button type="submit" data-title="Eliminar de favoritos">
-                                                    <img src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="h-auto mx-2 py-1">
-                                                </button>
-                                            </form>
-                                            @endif
-                                            @endif
-                                            @endauth
-                                            @guest
-                                            <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
-                                            @endguest
+                                            </a> 
                                         </div>
                                         <div>
+                                            <p>anunciante: {{$demanda->autor->name}}</p>
                                             <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>
                                         </div>
                                     </div>

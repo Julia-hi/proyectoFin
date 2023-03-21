@@ -119,7 +119,7 @@ if ($user != null) {
                                         <option value="agapornis">agapornis</option>
                                         <option value="ara">ara</option>
                                         <option value="amazona">amazona</option>
-                                        <option value="cocatúa">cocatúa</option>
+                                        <option value="cacatúa">cacatúa</option>
                                         <option value="ninfa">ninfa</option>
                                         <option value="periquito">periquito</option>
                                         <option value="yaco">yaco</option>
@@ -151,11 +151,6 @@ if ($user != null) {
                                 @endif
                             </div>
                         </div>
-                        @else
-                        <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
-                        @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-                        @endif
                         @endauth
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
 

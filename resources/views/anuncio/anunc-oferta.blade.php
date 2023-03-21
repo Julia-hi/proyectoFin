@@ -170,7 +170,9 @@ if ($user != null) {
                                                     @if($oferta->anuncio->estado == "blocked")
                                                     <button class="btn btn-sm btn-danger active" type="button" title="Anuncio bloqueado"><b>anuncio bloqueado!</b></button>
                                                     @endif
-                                                    @endauth
+                                                    @guest
+                                                    <a href="{{ route('login') }}" class="btn "><img title="Guardar como favorito" src="{{asset('storage/images/icons/heart-regular.svg')}}" style="width:1.5em;" class="m-2"></a>
+                                                    @endguest
                                                 </div>
                                                 <h2 class="py-1"><b>Raza</b>: <span class="text-capitalize">{{ $oferta->raza }}</span></h2>
                                                 <h2 class="py-1"><b>Genero</b>: <span class="text-capitalize">{{ $oferta->genero }}</span></h2>

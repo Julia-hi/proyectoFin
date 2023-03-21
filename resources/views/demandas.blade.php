@@ -84,32 +84,7 @@
                                                         <div class="btn-group">
                                                             <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                                             <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
-                                                            @auth
-                                                            <?php $user_id = Auth::user()->id;
-                                                            $user = Auth::user();
-                                                            ?>
-                                                            <!-- si anuncio ya añadido a favoritos mostra botón para eliminar de favoritos, 
-                                                        si no es favorito - mostra borón para añadir a favoritos -->
-                                                            @if(!$demanda->anuncio->esFavorito($user, $demanda->anuncio))
-                                                            <form method="POST" action="{{ route('user.favoritos.store',['user' => $user_id]) }}">
-                                                                @csrf
-                                                                <input type="hidden" name="anuncio_id" value="{{ $demanda->id }}">
-                                                                <input type="hidden" name="user_id" value="{{ $user_id }}">
-                                                                <button type="submit" data-title="Guardar como favorito"><img src="<?php echo Storage::url('images/icons/heart-regular.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                            </form>
-                                                            @else
-                                                            <?php $favorito = $demanda->favoritos->first(); ?>
-                                                            <!-- formulario para Eeiminar favorito de la lista -->
-                                                            <form method="POST" action="{{ route('user.favoritos.destroy', [$user, $favorito]) }}">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit"><img data-title="Eliminar de favoritos" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></button>
-                                                            </form>
-                                                            @endif
-                                                            @endauth
-                                                            @guest
-                                                            <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary"><img title="Guardar como favorito" src="<?php echo Storage::url('images/icons/heart-solid.svg'); ?>" style="width:1.5em;" class="mx-2"></a>
-                                                            @endguest
+                                                        
                                                         </div>
                                                         <div>
                                                             <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>

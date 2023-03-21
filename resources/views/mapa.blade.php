@@ -153,11 +153,13 @@ if ($user != null) {
                     <div class="mt-8 p-3 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height: 25vh; z-index:1;">
                         <div class="row w-100 justify-content-end">
                             <div class="col-lg-2 col-xs-6 m-0">
+                                @auth
                                 @if($user!=null && $user->rol=='user')
                                 @include('layouts.navigation-welcome')
                                 @elseif($user!=null && $user->rol=='admin')
                                 @include('layouts.navigation-welcome-admin')
                                 @endif
+                                @endauth
                             </div>
                         </div>
                         <?php
