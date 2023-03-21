@@ -55,7 +55,6 @@
                                 <div class="col">
                                     <div>
                                         @if($anuncio->tipo=='oferta')
-                                        
                                             <p><b>Titulo</b>: Anuncio {{$anuncio->anuncioOferta->titulo}}</p>
                                             <p><b>Descripción</b>: {{$anuncio->anuncioOferta->descripcion}}</p>
                                             <p><b>Localidad</b>: {{$anuncio->anuncioOferta->poblacion}}({{$anuncio->anuncioOferta->provincia}}, <span class="text-capitalize">{{$anuncio->anuncioOferta->comunidad}})</span></p>
@@ -66,8 +65,6 @@
                                                 <li>foto {{$ind+1}}: <a href="{{$foto->enlace}}">{{$foto->enlace}}</a></li>
                                                 @endforeach
                                             </ul>
-
-                                        
                                         @elseif($anuncio->tipo=='demanda')
                                         <ul>
                                             <li><b>Titulo</b>: $anuncio->anuncioDemanda->titulo</li>
