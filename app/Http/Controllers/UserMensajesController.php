@@ -30,6 +30,10 @@ class UserMensajesController extends Controller
 
                 if ($autor == $user_id) {
                     $dialogo_autor = [];
+                    $mensajes = null;
+                    $recibidos = null;
+                    $enviados = null;
+
                     //select mensajes recibidos por autor
                     $mensajes = Mensaje::where('anuncio_id', $id)->where('remitente_id', $autor)->orWhere('recipiente_id', $user_id)->get();
 
@@ -62,10 +66,12 @@ class UserMensajesController extends Controller
                     }
                 }
             }
-            foreach ($grouped_messages1 as $dialogo) {
-                //seleccionamos solo dialogos iniciados por usuario actual (no es autor)
-                if ($dialogo[0]->remitente_id == $user_id) {
-                    $dialogos[] = $dialogo;
+            if (count($grouped_messages1) > 0) {
+                foreach ($grouped_messages1 as $dialogo) {
+                    //seleccionamos solo dialogos iniciados por usuario actual (no es autor)
+                    if ($dialogo[0]->remitente_id == $user_id) {
+                        $dialogos[] = $dialogo;
+                    }
                 }
             }
         }
