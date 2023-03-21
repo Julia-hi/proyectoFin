@@ -33,7 +33,8 @@ class UserMensajesController extends Controller
                     $mensajes = null;
                     $recibidos = null;
                     $enviados = null;
-
+                    $grouped_messages1 = [];
+                    $mensajes1 = null;
                     //select mensajes recibidos por autor
                     $mensajes = Mensaje::where('anuncio_id', $id)->where('remitente_id', $autor)->orWhere('recipiente_id', $user_id)->get();
 
@@ -57,12 +58,12 @@ class UserMensajesController extends Controller
                         }
                     }
                 } elseif ($autor != $user_id) {
-                    $grouped_messages1 = [];
+
                     //todoa mensajes del usuario actual
-                    $mensajes = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
-                    if ($mensajes->count() > 0) {
+                    $mensajes1 = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
+                    if ($mensajes1->count() > 0) {
                         //todos mensajes del usuario actual agrupados por anuncio
-                        $grouped_messages1 = $mensajes->groupBy('anuncio_id');
+                        $grouped_messages1 = $mensajes1->groupBy('anuncio_id');
                     }
                 }
             }
