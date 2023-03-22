@@ -35,7 +35,7 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerate();
             if (Auth::user()->rol =="admin") {
                 $stat = 'ok';
-              return redirect()->route(['admin','stat'=>$stat]);
+              return redirect()->route('admin',['stat'=>$stat]);
             } else {
                 $stat = 'ok';
               return redirect()->back()->with(['stat'=>$stat]);
