@@ -3,9 +3,14 @@
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
-    $user = Auth::user();
-    $user_name = $user->name;
+    if(Auth::user()){
+        $user=Auth::user();
+        $user_name = $user->name;
     $user_id = $user->id;
+    }else{
+        $user=null;
+    }
+    
 ?>
 
 <!DOCTYPE html>
