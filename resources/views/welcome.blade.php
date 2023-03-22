@@ -5,17 +5,9 @@ use Illuminate\Support\Facades\Auth;
 ?>
 @auth
 <?php
-try {
     $user = Auth::user();
-    $stat='ok';
-} catch (Exception $ex) {
-    $user = null;
-    $stat = "error";
-}
-if ($user != null) {
     $user_name = $user->name;
     $user_id = $user->id;
-}
 ?>
 @endauth
 <!DOCTYPE html>
@@ -23,7 +15,6 @@ if ($user != null) {
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <title>MiLorito</title>
@@ -145,7 +136,7 @@ if ($user != null) {
                         @endforeach
                     </div>
                     <!-- FIN del bloque de uno Anuncio oferta -->
-                    @elseif($stat=='error')
+                    @elseif($status=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                     <div class="w-100 d-flex justify-content-center mt-4">
@@ -192,7 +183,7 @@ if ($user != null) {
                     </div>
                     @endforeach
                     <!-- FIN del bloque de uno Anuncio demanda -->
-                    @elseif($stat=='error')
+                    @elseif($status=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
                     <div class="w-100 d-flex justify-content-center mt-4">
