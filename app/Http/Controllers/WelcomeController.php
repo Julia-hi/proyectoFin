@@ -38,14 +38,14 @@ class WelcomeController extends Controller
                     $ofertas->push($anuncio->anuncioOferta);
                 }
             }
-            $status = 'ok';
+            $stat = 'ok';
         } catch (Exception $er) {
             // throw new Exception('error de la base de datos');
             $demandas = null;
             $ofertas = null;
-            $status = 'error';
+            $stat = 'error';
         }
-        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'stat' => $status]);
+        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'stat' => $stat]);
     }
 
     /**
