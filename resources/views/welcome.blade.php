@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Auth;
 <?php
 try {
     $user = Auth::user();
+    $stat='ok';
 } catch (Exception $ex) {
     $user = null;
-    $status = "error";
+    $stat = "error";
 }
-
 if ($user != null) {
     $user_name = $user->name;
     $user_id = $user->id;
@@ -39,7 +39,7 @@ if ($user != null) {
 </head>
 
 <body class="antialiased">
-    @if($status=='error')
+    @if($stat=='error')
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 " style="z-index:10;">
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8 ">
@@ -145,7 +145,7 @@ if ($user != null) {
                         @endforeach
                     </div>
                     <!-- FIN del bloque de uno Anuncio oferta -->
-                    @elseif($status=='error')
+                    @elseif($stat=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                     <div class="w-100 d-flex justify-content-center mt-4">
@@ -192,7 +192,7 @@ if ($user != null) {
                     </div>
                     @endforeach
                     <!-- FIN del bloque de uno Anuncio demanda -->
-                    @elseif($status=='error')
+                    @elseif($stat=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
                     <div class="w-100 d-flex justify-content-center mt-4">
