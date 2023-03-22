@@ -83,7 +83,7 @@ class UserAnuncioOfertaController extends Controller
         }
         $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
         $usersOfertas = AnuncioOferta::where('user_id', $user->id)->get();
-        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'status' => 'ok']);
+        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'stat' => 'ok']);
     }
 
     /**

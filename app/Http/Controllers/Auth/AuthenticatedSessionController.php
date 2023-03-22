@@ -19,7 +19,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        return view('auth.login');
+        return view('auth.login')->with(['stat'=>'ok']);
     }
 
     /**
@@ -42,7 +42,7 @@ class AuthenticatedSessionController extends Controller
             }
         }catch(Exception $e){
             $stat = 'error';
-            return redirect()->back()->with(['stat'=>$stat]);
+            return redirect('/')->with(['stat'=>$stat]);
         }
        
     }
