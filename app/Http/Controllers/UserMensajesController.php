@@ -19,6 +19,7 @@ class UserMensajesController extends Controller
     {
         $dialogos_autor = [];
         $dialogos = [];
+        $grouped_messages1 = [];
         $user = User::find($user_id);
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
@@ -53,7 +54,7 @@ class UserMensajesController extends Controller
                         }
                     }
                 } elseif ($autor != $user_id) {
-                    $grouped_messages1 = [];
+                    
                     //todoa mensajes del usuario actual
                     $mensajes = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
                     if ($mensajes->count() > 0) {
@@ -62,12 +63,15 @@ class UserMensajesController extends Controller
                     }
                 }
             }
-            foreach ($grouped_messages1 as $dialogo) {
-                //seleccionamos solo dialogos iniciados por usuario actual (no es autor)
-                if ($dialogo[0]->remitente_id == $user_id) {
-                    $dialogos[] = $dialogo;
+            if(count($grouped_messages1)>0){
+                foreach ($grouped_messages1 as $dialogo) {
+                    //seleccionamos solo dialogos iniciados por usuario actual (no es autor)
+                    if ($dialogo[0]->remitente_id == $user_id) {
+                        $dialogos[] = $dialogo;
+                    }
                 }
             }
+            
         }
         return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'dialogos_autor' => $dialogos_autor, 'stat' => 'ok']);
     }
