@@ -30,21 +30,19 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        try{
+        
             $request->authenticate();
             $request->session()->regenerate();
             if (Auth::user()->rol =="admin") {
                 $stat = 'ok';
               return redirect()->route('admin',['stat'=>$stat]);
-            } else {
+            } elseif(Auth::user()->rol =="user") {
                 $stat = 'ok';
               return redirect()->back()->with(['stat'=>$stat]);
-            }
-        }catch(Exception $e){
-            $stat = 'error';
-            return redirect('/')->with(['stat'=>$stat]);
-        }
-       
+            }else{
+                $stat = 'error';
+                return redirect('/')->with(['stat'=>$stat]);
+            }  
     }
 
     /**
