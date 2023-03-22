@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,16 +30,21 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->authenticate();
-
-        $request->session()->regenerate();
-        if (Auth::user()->rol =="admin") {
-          return redirect()->route('admin');
-        } else {
-           // return redirect()->intended(RouteServiceProvider::HOME);
-          // return redirect()->route('user.anuncios.index',['user' =>Auth::user()->id ]);
-          return redirect()->back();
+        try{
+            $request->authenticate();
+            $request->session()->regenerate();
+            if (Auth::user()->rol =="admin") {
+                $status = 'ok';
+              return redirect()->route(['admin','status'=>$status]);
+            } else {
+                $status = 'ok';
+              return redirect()->back(['status'=>$status]);
+            }
+        }catch(Exception $e){
+            $status = 'error';
+            return redirect()->back();
         }
+       
     }
 
     /**

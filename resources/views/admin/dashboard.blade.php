@@ -19,7 +19,6 @@
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
     @if($status == 'ok')
-
     <head>
         <x-header />
     </head>
