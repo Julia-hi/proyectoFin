@@ -181,7 +181,7 @@ use Illuminate\Support\Facades\Auth;
                     </div>
                     @endforeach
                     <!-- FIN del bloque de uno Anuncio demanda -->
-                    @elseif($status=='error')
+                    @elseif($stat=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
                     <div class="w-100 d-flex justify-content-center mt-4">
