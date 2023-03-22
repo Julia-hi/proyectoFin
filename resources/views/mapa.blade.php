@@ -2,9 +2,10 @@
 <?php
 try {
     $user = Auth::user();
+    $stat = "ok";
 } catch (Exception $ex) {
     $user = null;
-    $status = "error";
+    $stat = "error";
 }
 
 if ($user != null) {
@@ -198,7 +199,7 @@ if ($user != null) {
                                 </div>
                             </div>
                         </div>
-                        @elseif($status=='error')
+                        @elseif($stat=='error')
                         <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                         @else
                         <h4 class="text-center">Disculpa, no hemos encontrado anuncios con estés parámetros pero...<br>

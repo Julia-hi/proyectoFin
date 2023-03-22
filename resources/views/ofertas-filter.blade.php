@@ -4,9 +4,10 @@
 <?php
 try {
     $user = Auth::user();
+    $stat = "ok";
 } catch (Exception $ex) {
     $user = null;
-    $status = "error";
+    $stat = "error";
 }
 
 if ($user != null) {
@@ -254,7 +255,7 @@ if ($user != null) {
                                     </div>
                                 </div>
                                 @endforeach
-                                @elseif($status=='error')
+                                @elseif($stat=='error')
                                 <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                                 @else
                                 <!-- Este mensaje muestra cuando conexion con hay anuncios de oferta en la base de datos -->

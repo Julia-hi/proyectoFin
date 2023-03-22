@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Auth;
 <?php
 try {
     $user = Auth::user();
-    $status = "ok";
+    $stat = "ok";
 } catch (Exception $ex) {
     $user = null;
-    $status = "error";
+    $stat = "error";
 }
 
 if ($user != null) {

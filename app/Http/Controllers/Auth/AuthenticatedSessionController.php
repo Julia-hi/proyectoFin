@@ -42,7 +42,7 @@ class AuthenticatedSessionController extends Controller
             }
         }catch(Exception $e){
             $stat = 'error';
-            return redirect()->back();
+            return redirect()->back()->with(['stat'=>$stat]);
         }
        
     }
