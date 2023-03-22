@@ -74,7 +74,7 @@ class AdminController extends Controller
         ])->count();
         $usuariosData['bloquados365dias'] = $numBloqueados365dias;
 
-        if (Auth::check() && Auth::user()->rol=="admin") {
+        if (Auth::user()->rol=="admin") {
             $stat = 'ok';
         } else {
             $stat = 'error';
