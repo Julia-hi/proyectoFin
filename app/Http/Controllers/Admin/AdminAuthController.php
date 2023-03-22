@@ -16,9 +16,7 @@ class AdminAuthController extends Controller
         }
 
         return redirect()->back()->withInput()->withErrors(['email' => 'These credentials do not match our records.']);
-        /* if (! $request->expectsJson()) {
-            return view('admin.login');
-        } */
+   
     
     }
 

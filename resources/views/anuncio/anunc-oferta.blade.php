@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 <?php
 try {
     $user = Auth::user();
+    $status = "ok";
 } catch (Exception $ex) {
     $user = null;
     $status = "error";
@@ -220,7 +221,7 @@ if ($user != null) {
         </div>
     </div>
     <!-- FIN del bloque de uno Anuncio demanda -->
-    @elseif($status=='error')
+    @elseif($stat=='error')
     <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
     @else
     <div class="text-center">Disculpa, este anuncio ya no está disponible.</div>

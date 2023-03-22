@@ -51,7 +51,7 @@ class MapaController extends Controller
             $ofertas = "ofertas not found";
             $status = "error";
         }
-        return view('mapa', ['ofertas' => $ofertas, 'status' => $status]);
+        return view('mapa', ['ofertas' => $ofertas, 'stat' => $status]);
     }
 
     /**

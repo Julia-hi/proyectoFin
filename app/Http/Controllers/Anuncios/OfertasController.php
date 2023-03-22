@@ -42,7 +42,7 @@ class OfertasController extends Controller
         } catch (Exeption $ex) {
             $status = "error";
         }
-        return view('ofertas-lista', ['ofertas' => $ofertas, 'status' => $status]);
+        return view('ofertas-lista', ['ofertas' => $ofertas, 'stat' => $status]);
     }
 
     /**
@@ -60,7 +60,7 @@ class OfertasController extends Controller
             $oferta = null;
             $fotos = null;
         }
-        return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'autor' => $autor, 'fotos' => $fotos, 'status' => 'ok']);
+        return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'autor' => $autor, 'fotos' => $fotos, 'stat' => 'ok']);
     }
 
 

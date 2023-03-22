@@ -9,12 +9,13 @@ try {
     $user = Auth::user();
 } catch (Exception $ex) {
     $user = null;
-    $status = "error";
+    $stat = "error";
 }
 
 if ($user != null) {
     $user_name = $user->name;
     $user_id = $user->id;
+    $stat='ok';
 }
 ?>
 @endauth
@@ -132,7 +133,7 @@ if ($user != null) {
                                 @endauth
                             </div>
                         </div>
-                        @elseif($status=='error')
+                        @elseif($stat=='error')
                         <div class="text-center">Disculpa, la conexion fallida, intenta más tarde...</div>
                         @else
                         <div class="text-center">Disculpa, este anuncio ya no está disponible.</div>

@@ -48,6 +48,6 @@ class BuscarOfertasController extends Controller
             $status = "error";
         }
 
-        return view('ofertas-filter', ['ofertas' => $ofertas, 'status' => $status]);
+        return view('ofertas-filter', ['ofertas' => $ofertas, 'stat' => $status]);
     }
 }

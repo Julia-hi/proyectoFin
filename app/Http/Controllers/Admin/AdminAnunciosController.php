@@ -33,7 +33,7 @@ class AdminAnunciosController extends Controller
         } else {
             $status = 'error';
         }
-        return view('admin/admin_anuncios', ['status' => $status, 'ofertasAct' => $ofertasActive, 'ofertasDesact' => $ofertasNoActive, 'demandasAct' => $demandasActive, 'demandasDesact' => $demandasNoActive]);
+        return view('admin/admin_anuncios', ['stat' => $status, 'ofertasAct' => $ofertasActive, 'ofertasDesact' => $ofertasNoActive, 'demandasAct' => $demandasActive, 'demandasDesact' => $demandasNoActive]);
     }
 
     /**
@@ -72,19 +72,10 @@ class AdminAnunciosController extends Controller
             $status = 'error';
             $anuncio = null;
         }
-        return view('/admin/anuncio_data', ['status' => $status, 'anuncio' => $anuncio]);
+        return view('/admin/anuncio_data', ['stat' => $status, 'anuncio' => $anuncio]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
@@ -105,17 +96,7 @@ class AdminAnunciosController extends Controller
             $status = 'error';
         }
      
-      return Redirect::back();
+      return Redirect::back()->with(['stat'=>$status,, 'anuncio' => $anuncio]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-}
+

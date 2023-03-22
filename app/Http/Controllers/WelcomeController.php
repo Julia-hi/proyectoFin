@@ -45,7 +45,7 @@ class WelcomeController extends Controller
             $ofertas = null;
             $status = 'error';
         }
-        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'status' => $status]);
+        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'stat' => $status]);
     }
 
     /**

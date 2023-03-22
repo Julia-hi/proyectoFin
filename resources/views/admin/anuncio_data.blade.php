@@ -19,8 +19,7 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
-    @if($status == 'ok')
-
+    @if($stat == 'ok')
     <head>
         <x-header />
     </head>

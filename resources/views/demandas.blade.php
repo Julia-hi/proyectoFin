@@ -94,7 +94,7 @@
                                         </div>
                                     </div>
                                     @endforeach
-                                    @elseif($status=='error')
+                                    @elseif($stat=='error')
                                     <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                                     @else
                                     <h4 class="text-center">Disculpa, no hemos encontrado anuncios...</h4>

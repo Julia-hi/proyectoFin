@@ -26,7 +26,7 @@ class AdminUsersController extends Controller
         } else {
             $status = 'error';
         }
-        return view('admin/admin_users', ['status' => $status, 'usAct' => $usersActive, 'usBloq' => $usersBloqueados]);
+        return view('admin/admin_users', ['stat' => $status, 'usAct' => $usersActive, 'usBloq' => $usersBloqueados]);
     }
 
 
@@ -50,7 +50,7 @@ class AdminUsersController extends Controller
             $mensajes = null;
         }
 
-        return view('/admin/user_data', ['status' => $status, 'user' => $user, 'anuncios' => $anuncios, 'mensajes' => $mensajes]);
+        return view('/admin/user_data', ['stat' => $status, 'user' => $user, 'anuncios' => $anuncios, 'mensajes' => $mensajes]);
     }
 
 

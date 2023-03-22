@@ -26,7 +26,7 @@ class DemandasController extends Controller
         } catch (Exeption $ex) {
             $status = "error";
         }
-        return view('demandas', ['demandas' => $demandas, 'status' => $status]);
+        return view('demandas', ['demandas' => $demandas, 'stat' => $status]);
     }
 
     /**
@@ -63,7 +63,7 @@ class DemandasController extends Controller
         } else {
             $demanda = null;
         }
-        return view('anuncio.anunc-demanda', ['demanda' => $demanda,'autor' => $autor, 'status'=>'ok']);
+        return view('anuncio.anunc-demanda', ['demanda' => $demanda,'autor' => $autor, 'stat'=>'ok']);
     }
 
     /**
