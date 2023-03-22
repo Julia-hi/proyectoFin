@@ -2,14 +2,12 @@
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
-?>
-@auth
-<?php
+
     $user = Auth::user();
     $user_name = $user->name;
     $user_id = $user->id;
 ?>
-@endauth
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -136,7 +134,7 @@ use Illuminate\Support\Facades\Auth;
                         @endforeach
                     </div>
                     <!-- FIN del bloque de uno Anuncio oferta -->
-                    @elseif($status=='error')
+                    @elseif($stat=='error')
                     <!-- Este mensaje muestra cuando conexion con la base de datos falla -->
                     <h4 class="text-center">Disculpa, la conexion fallida, intenta más tarde...</h4>
                     <div class="w-100 d-flex justify-content-center mt-4">
