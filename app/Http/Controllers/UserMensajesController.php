@@ -19,12 +19,6 @@ class UserMensajesController extends Controller
     {
         $dialogos_autor = [];
         $dialogos = [];
-        $dialogo_autor = [];
-        $mensajes = null;
-        $recibidos = null;
-        $enviados = null;
-        $grouped_messages1 = [];
-        $mensajes1 = null;
         $user = User::find($user_id);
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
@@ -35,7 +29,7 @@ class UserMensajesController extends Controller
                 $autor = Anuncio::find($id)->user_id; //autor del anuncio
 
                 if ($autor == $user_id) {
-
+                    $dialogo_autor = [];
                     //select mensajes recibidos por autor
                     $mensajes = Mensaje::where('anuncio_id', $id)->where('remitente_id', $autor)->orWhere('recipiente_id', $user_id)->get();
 
@@ -59,21 +53,19 @@ class UserMensajesController extends Controller
                         }
                     }
                 } elseif ($autor != $user_id) {
-
+                    $grouped_messages1 = [];
                     //todoa mensajes del usuario actual
-                    $mensajes1 = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
-                    if ($mensajes1->count() > 0) {
+                    $mensajes = Mensaje::where('remitente_id', '=', $user_id)->orWhere('recipiente_id', '=', $user_id)->get();
+                    if ($mensajes->count() > 0) {
                         //todos mensajes del usuario actual agrupados por anuncio
-                        $grouped_messages1 = $mensajes1->groupBy('anuncio_id');
+                        $grouped_messages1 = $mensajes->groupBy('anuncio_id');
                     }
                 }
             }
-            if (count($grouped_messages1) > 0) {
-                foreach ($grouped_messages1 as $dialogo) {
-                    //seleccionamos solo dialogos iniciados por usuario actual (no es autor)
-                    if ($dialogo[0]->remitente_id == $user_id) {
-                        $dialogos[] = $dialogo;
-                    }
+            foreach ($grouped_messages1 as $dialogo) {
+                //seleccionamos solo dialogos iniciados por usuario actual (no es autor)
+                if ($dialogo[0]->remitente_id == $user_id) {
+                    $dialogos[] = $dialogo;
                 }
             }
         }

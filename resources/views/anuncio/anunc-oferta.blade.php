@@ -30,7 +30,6 @@ if ($user != null) {
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <title>MiLorito</title>
@@ -170,6 +169,7 @@ if ($user != null) {
                                                     @if($oferta->anuncio->estado == "blocked")
                                                     <button class="btn btn-sm btn-danger active" type="button" title="Anuncio bloqueado"><b>anuncio bloqueado!</b></button>
                                                     @endif
+                                                    @endauth
                                                     @guest
                                                     <a href="{{ route('login') }}" class="btn "><img title="Guardar como favorito" src="{{asset('storage/images/icons/heart-regular.svg')}}" style="width:1.5em;" class="m-2"></a>
                                                     @endguest
@@ -201,6 +201,7 @@ if ($user != null) {
                                                     <button class="btn btn-danger active" type="button">Denunciar</button>
                                                     @endif
                                                     @endauth
+
                                                 </div>
                                                 <div class="align-self-baseline ">
                                                     <small class="text-muted">Publicato: {{ $oferta->created_at->format('M j, Y') }}</small>

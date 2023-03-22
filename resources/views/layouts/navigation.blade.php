@@ -112,9 +112,6 @@
                 <x-responsive-nav-link :href="route('user.mensajes.index', $user_id)">
                     {{ __('Mis mensajes') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('user.anuncios-oferta.create', $user_id)">
-                    {{ __('Publicar anuncio') }}
-                </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Perfil') }}
                 </x-responsive-nav-link>

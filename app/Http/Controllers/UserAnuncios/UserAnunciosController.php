@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\Anuncio;
 use App\Models\AnuncioDemanda;
 use App\Models\AnuncioOferta;
-use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class UserAnunciosController extends Controller
 {
@@ -19,16 +20,46 @@ class UserAnunciosController extends Controller
      */
     public function index($id)
     {
-        $user = User::find($id);
-        if ($user->rol == "admin") {
+        if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
         } else {
-            $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
-            $usersOfertas = AnuncioOferta::where('user_id', $user->id)->get();
-            return view('user.user-anuncios', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
+            $usersDemandas = AnuncioDemanda::where('user_id', Auth::user()->id)->get();
+            $usersOfertas = AnuncioOferta::where('user_id', Auth::user()->id)->get();
+            return view('user.user-anuncios', ['user' => Auth::user()->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
         }
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //anuncios se crean por separado 
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.

@@ -23,12 +23,12 @@ if ($user != null) {
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <title>MiLorito</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('storage/css/mi_estilo.css')}}">
@@ -71,9 +71,9 @@ if ($user != null) {
                 </div>
                 <div class="col m-0">
                     @if($user!=null && $user->rol=='user')
-                        @include('layouts.navigation-welcome')
+                    @include('layouts.navigation-welcome')
                     @elseif($user!=null && $user->rol=='admin')
-                        @include('layouts.navigation-welcome-admin')
+                    @include('layouts.navigation-welcome-admin')
                     @endif
                 </div>
             </div>
@@ -133,7 +133,7 @@ if ($user != null) {
                                 <img class="border border-1 border-success rounded w-100 h-100 m-1" src="<?php echo $fotos[0]->enlace; ?>" alt="" style="display: block; object-fit: cover;z-index:0;" data-holder-rendered="true">
                                 <div class="position-absolute bottom-0 row bg-yellow w-100 p-2" style="height:60px;">
                                     <div class="col-6 text-left">
-                                        <h3 class="text-uppercase align-items-center p-0 m-0 h-4"><strong>{{ $oferta->titulo}}</strong></h3>
+                                        <h3 class="text-uppercase align-items-center p-0 m-0 h-5"><strong>{{ $oferta->titulo}}</strong></h3>
                                     </div>
                                     <div class="col-6 d-flex justify-content-end">
                                         <small class="">Publicado: {{ $oferta->created_at->format('M j, Y') }}</small>
@@ -178,7 +178,7 @@ if ($user != null) {
                                             <?php $url = '/demandas/' . $demanda->id; ?>
                                             <a href="<?php echo $url; ?>" class="btn-green rounded text-center" style="min-width:50px; height:30px;">
                                                 <strong class="text-center align-middle px-2">Detalles</strong>
-                                            </a> 
+                                            </a>
                                         </div>
                                         <div>
                                             <p>anunciante: {{$demanda->autor->name}}</p>

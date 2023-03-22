@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'MiLorito') }}</title>
@@ -55,6 +54,7 @@
                                 <div class="col">
                                     <div>
                                         @if($anuncio->tipo=='oferta')
+                                        
                                             <p><b>Titulo</b>: Anuncio {{$anuncio->anuncioOferta->titulo}}</p>
                                             <p><b>Descripción</b>: {{$anuncio->anuncioOferta->descripcion}}</p>
                                             <p><b>Localidad</b>: {{$anuncio->anuncioOferta->poblacion}}({{$anuncio->anuncioOferta->provincia}}, <span class="text-capitalize">{{$anuncio->anuncioOferta->comunidad}})</span></p>
@@ -65,6 +65,8 @@
                                                 <li>foto {{$ind+1}}: <a href="{{$foto->enlace}}">{{$foto->enlace}}</a></li>
                                                 @endforeach
                                             </ul>
+
+                                        
                                         @elseif($anuncio->tipo=='demanda')
                                         <ul>
                                             <li><b>Titulo</b>: $anuncio->anuncioDemanda->titulo</li>

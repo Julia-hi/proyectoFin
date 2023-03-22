@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <title>MiLorito</title>
@@ -84,7 +83,7 @@
                                                         <div class="btn-group">
                                                             <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                                             <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
-                                                        
+                                                          
                                                         </div>
                                                         <div>
                                                             <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>
