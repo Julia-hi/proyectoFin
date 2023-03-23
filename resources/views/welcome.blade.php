@@ -9,7 +9,6 @@ try {
     $user = Auth::user();
 } catch (Exception $ex) {
     $user = null;
-    $status = "error";
 }
 
 if ($user != null) {
@@ -70,9 +69,9 @@ if ($user != null) {
                     <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
                 <div class="col m-0">
-                    @if($user!=null && $user->rol=='user')
+                    @if(Auth::user()->rol=='user')
                         @include('layouts.navigation-welcome')
-                    @elseif($user!=null && $user->rol=='admin')
+                    @elseif(Auth::user()->rol=='admin')
                         @include('layouts.navigation-welcome-admin')
                     @endif
                 </div>
