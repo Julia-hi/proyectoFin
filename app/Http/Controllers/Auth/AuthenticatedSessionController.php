@@ -36,8 +36,8 @@ class AuthenticatedSessionController extends Controller
           return redirect()->route('admin');
         } else {
            // return redirect()->intended(RouteServiceProvider::HOME);
-           return redirect()->route('user.anuncios.index',['user' =>Auth::user()->id ]);
-         // return redirect()->back();
+         //  return redirect()->route('user.anuncios.index',['user' =>Auth::user()->id ]);
+          return redirect()->back();
         }
     }
 
