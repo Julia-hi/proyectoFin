@@ -34,7 +34,7 @@ class AdminAnunciosController extends Controller
         } else {
             $status = 'error';
         }
-        echo "Admin id: ".$admin_id;
+        
         return view('admin/admin_anuncios', ['stat' => $status, 'ofertasAct' => $ofertasActive, 'ofertasDesact' => $ofertasNoActive, 'demandasAct' => $demandasActive, 'demandasDesact' => $demandasNoActive]);
     }
 
