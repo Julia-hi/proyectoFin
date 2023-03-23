@@ -59,9 +59,9 @@ if ($user != null) {
                     <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
                 <div class="col m-0">
-                    @if($user!=null && $user->rol=='user')
+                    @if($user->rol=='user')
                     @include('layouts.navigation-welcome')
-                    @elseif($user!=null && $user->rol=='admin')
+                    @elseif($user->rol=='admin')
                     @include('layouts.navigation-welcome-admin')
                     @endif
                 </div>
