@@ -19,3 +19,4 @@ yarn-error.log
 
 # NO ignorar los "debug.log"
 !debug.log
+!laravel.log
