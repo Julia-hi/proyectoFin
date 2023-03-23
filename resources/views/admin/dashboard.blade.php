@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -22,13 +20,14 @@
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
     @if(Auth::user()->rol == 'admin')
+
     <head>
         <x-header />
     </head>
     <div class="min-h-screen bg-gray-100">
-        @auth
+
         @include('layouts.navigation-admin')
-        @endauth
+
         <!-- Page Content -->
         <main>
             <div class="container">
@@ -44,7 +43,8 @@
                             </div>
                             <div class="row">
                                 <div class="col border">Total</div>
-                                <div class="col border">{{$anunciosData['ofTotal']+$anunciosData['demTotal']}}</div>
+                                <?php $sum = $anunciosData['ofTotal'] + $anunciosData['demTotal']; ?>
+                                <div class="col border">{{$sum}}</div>
                                 <div class="col border">{{$anunciosData['ofTotal']}}</div>
                                 <div class="col border">{{$anunciosData['demTotal']}}</div>
                             </div>
