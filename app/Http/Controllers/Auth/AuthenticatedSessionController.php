@@ -38,8 +38,8 @@ class AuthenticatedSessionController extends Controller
               return redirect()->route('admin',['stat'=>$stat]);
             } elseif(Auth::user()->rol =="user") {
                 $stat = 'ok';
-              return redirect()->back()->with(['stat'=>$stat]);
-              //return redirect()->route('dashboard',['stat'=>$stat]);
+             // return redirect()->back()->with(['stat'=>$stat]);
+              return redirect()->route('dashboard',['stat'=>$stat]);
              // return redirect()->route('user.anuncios.index',['user' =>Auth::user()->id, 'stat'=>$stat ]);
             }else{
                 $stat = 'error';

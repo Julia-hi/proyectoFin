@@ -50,7 +50,7 @@
             @auth
             <div class="row ">
                 <div class="col m-0">
-                    <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
+                    <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/{{Auth()::user->id}}/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
                 <div class="col m-0">
                     @if(Auth::user()->rol=='user')
