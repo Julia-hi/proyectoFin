@@ -17,16 +17,17 @@ class AdminUsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
         $usersActive = User::where('rol', 'user')->where('estado', 'active')->get();
         $usersBloqueados = User::where('rol', 'user')->where('estado', 'blocked')->get();
         if (Auth::user()->rol == "admin") {
-            $status = 'ok';
+           
+            return view('admin/admin_users', ['stat' => 'ok', 'usAct' => $usersActive, 'usBloq' => $usersBloqueados,'admin'=>Auth::user()->id]);
         } else {
-            $status = 'error';
+            return view('welcome');
         }
-        return view('admin/admin_users', ['stat' => $status, 'usAct' => $usersActive, 'usBloq' => $usersBloqueados,'admin'=>$id]);
+        
     }
 
 
@@ -38,12 +39,11 @@ class AdminUsersController extends Controller
      */
     public function show($id_admin, $id_user)
     {
-        try {
-            $user = User::findOrFail($id_user);
+        if($user = User::findOrFail($id_user)){
             $anuncios = $user->anuncios;
             $mensajes = Mensaje::where('remitente_id', $id_user)->get();
             $status = 'ok';
-        } catch (Exception $e) {
+        }else{
             $status = 'error';
             $anuncios=null;
             $user = null;

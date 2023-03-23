@@ -23,7 +23,7 @@ class DemandasController extends Controller
                 $demandas = "null";
             }
             $status = "ok";
-        } catch (Exeption $ex) {
+        } catch (Exception $ex) {
             $status = "error";
         }
         return view('demandas', ['demandas' => $demandas, 'stat' => $status]);

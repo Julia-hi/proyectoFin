@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Anuncios;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\AnuncioOferta;
+use App\Models\Anuncio;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -39,7 +40,7 @@ class OfertasController extends Controller
                 $ofertas = "ofertas not found";
             }
             $status = "ok";
-        } catch (Exeption $ex) {
+        } catch (Exception $ex) {
             $status = "error";
         }
         return view('ofertas-lista', ['ofertas' => $ofertas, 'stat' => $status]);
