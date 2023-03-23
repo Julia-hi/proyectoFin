@@ -1,3 +1,17 @@
+<?php
+
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+?>
+@auth
+<?php
+if (Auth::user() != null) {
+    $user = Auth::user();
+    $user_name = $user->name;
+    $user_id = $user->id;
+}
+?>
+@endauth
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
