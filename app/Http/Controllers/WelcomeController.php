@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Anuncio;
 use Exception;
+use Illuminate\Support\Facades\DB;
 
 class WelcomeController extends Controller
 {
@@ -16,6 +17,7 @@ class WelcomeController extends Controller
     public function index()
     { 
         try {
+             echo DB::connection()->getPDO();
             // obtener anuncios demanda no bloqueados
             $anuncDemandas = Anuncio::where('tipo', 'demanda')->where('estado', 'active')
             ->whereHas('autor', function ($query) {
@@ -45,7 +47,7 @@ class WelcomeController extends Controller
             $ofertas = null;
             $stat = 'error';
         }
-        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'stat' => $stat]);
+      //  return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'stat' => $stat]);
     }
 
     /**

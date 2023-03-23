@@ -42,7 +42,7 @@
     </div>
     @else
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
-        @if (Route::has('login'))
+       
         <div class="fixed top-0 right-0 px-6 py-4 sm:block">
             @guest
             <a type="button" class="red-brillante-boton mr-1 p-2 text-center" href="{{ Auth::check() ? '/user/' . $user_id . '/anuncios-oferta/create' : '/login?redirect_to=' . Request::path() }}" tabindex="0"><span>Publicar anuncio</span></a>
@@ -62,12 +62,12 @@
             </div>
             @else
             <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
-            @if (Route::has('register'))
+           
             <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-            @endif
+           
             @endauth
         </div>
-        @endif
+        
         <div class="container">
             <div class="justify-center sm:px-2 lg:px-4 ">
                 <div class="d-flex flex-row justify-content-center align-items-end position-static" style="height: 150px;">
