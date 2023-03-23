@@ -17,63 +17,115 @@ class AdminController extends Controller
     public function index()
     {
         $anunciosData=[];
-        $numOfertasTotal = Anuncio::where('tipo','oferta')->count();
-        $anunciosData['ofTotal'] = $numOfertasTotal;
-        $numOfertas30dias = Anuncio::where('tipo','oferta')->whereBetween('created_at', [
+        $ofertasTotal = Anuncio::where('tipo','oferta');
+        if($ofertasTotal!=null){
+            $anunciosData['ofTotal'] = $ofertasTotal->count();
+        }else{
+            $anunciosData['ofTotal']=0;
+        }
+        
+        $ofertas30dias = Anuncio::where('tipo','oferta')->whereBetween('created_at', [
             Carbon::now()->subDays(30)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $anunciosData['of30dias'] = $numOfertas30dias;
-        $numOfertas365dias = Anuncio::where('tipo','oferta')->whereBetween('created_at', [
+        ]);
+        if($ofertas30dias!=null){
+            $anunciosData['of30dias'] = $ofertas30dias->count();
+        }else{
+            $anunciosData['of30dias'] =0;
+        }
+        
+        $ofertas365dias = Anuncio::where('tipo','oferta')->whereBetween('created_at', [
             Carbon::now()->subDays(365)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $anunciosData['of365dias'] = $numOfertas365dias;
-
-        $numDemandasTotal = Anuncio::where('tipo','demanda')->count();
-        $anunciosData['demTotal'] = $numDemandasTotal;
-        $numDemandas30dias = Anuncio::where('tipo','demanda')->whereBetween('created_at', [
+        ]);
+        if($ofertas365dias!=null){
+            $anunciosData['of365dias'] = $ofertas365dias->count();
+        }else{
+            $anunciosData['of365dias'] = 0;
+        }
+        
+        $demandasTotal = Anuncio::where('tipo','demanda');
+        if($demandasTotal!=null){
+            $anunciosData['demTotal'] = $demandasTotal->count();
+        }else{
+            $anunciosData['demTotal'] =0;
+        }
+        
+        $demandas30dias = Anuncio::where('tipo','demanda')->whereBetween('created_at', [
             Carbon::now()->subDays(30)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $anunciosData['dem30dias'] = $numDemandas30dias;
-        $numOfertas365dias = Anuncio::where('tipo','demanda')->whereBetween('created_at', [
+        ]);
+        if($demandas30dias!=null){
+            $anunciosData['dem30dias'] = $demandas30dias->count();
+        }else{
+            $anunciosData['dem30dias'] =0;
+        }
+        
+        $demandas365dias = Anuncio::where('tipo','demanda')->whereBetween('created_at', [
             Carbon::now()->subDays(365)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $anunciosData['dem365dias'] = $numOfertas365dias;
-
+        ]);
+        if($ofertas365dias!=null){
+            $anunciosData['dem365dias'] = $demandas365dias->count();
+        }else{
+            $anunciosData['dem365dias'] = 0;
+        }
+        
         $usuariosData=[];
-        $numActiveTotal = User::where('rol','user')->where('estado','active')->count();
-        $usuariosData['activeTotal'] = $numActiveTotal;
-
-        $numActive30dias = User::where('rol','user')->where('estado','active')->whereBetween('created_at', [
+        $activeUsTotal = User::where('rol','user')->where('estado','active');
+        if($activeUsTotal!=null){
+            $usuariosData['activeTotal'] = $activeUsTotal->count();
+        }else{
+            $usuariosData['activeTotal'] = 0;
+        }
+        
+        $activeUs30dias = User::where('rol','user')->where('estado','active')->whereBetween('created_at', [
             Carbon::now()->subDays(30)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $usuariosData['active30dias'] = $numActive30dias;
-
-        $numActive365dias = User::where('rol','user')->where('estado','active')->whereBetween('created_at', [
+        ]);
+        if( $activeUs30dias!=null){
+            $usuariosData['active30dias'] = $activeUs30dias->count();
+        }else{
+            $usuariosData['active30dias']=0;
+        }
+        
+        $activeUs365dias = User::where('rol','user')->where('estado','active')->whereBetween('created_at', [
             Carbon::now()->subDays(365)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $usuariosData['active365dias'] = $numActive365dias;
+        ]);
+        if($activeUs365dias!=null){
+            $usuariosData['active365dias'] = $activeUs365dias->count();
+        }else{
+            $usuariosData['active365dias']=0;
+        }
 
-        $numBloqueadosTotal = User::where('rol','user')->where('estado','blocked')->count();
-        $usuariosData['bloqueadosTotal'] = $numBloqueadosTotal;
-
-        $numBloqueados30dias = User::where('rol','user')->where('estado','blocked')->whereBetween('created_at', [
+        $bloqueadosUsTotal = User::where('rol','user')->where('estado','blocked');
+        if($bloqueadosUsTotal!=null){
+            $usuariosData['bloqueadosTotal'] = $bloqueadosUsTotal->count();
+        }else{
+            $usuariosData['bloqueadosTotal'] = 0;
+        }
+        
+        $bloqueadosUs30dias = User::where('rol','user')->where('estado','blocked')->whereBetween('created_at', [
             Carbon::now()->subDays(30)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $usuariosData['bloqueados30dias'] = $numBloqueados30dias;
+        ]);
+        if($bloqueadosUs30dias!=null){
+            $usuariosData['bloqueados30dias'] = $bloqueadosUs30dias->count();
+        }else{
+            $usuariosData['bloqueados30dias'] = 0;
+        }
 
-        $numBloqueados365dias = User::where('rol','user')->where('estado','blocked')->whereBetween('created_at', [
+        $bloqueadosUs365dias = User::where('rol','user')->where('estado','blocked')->whereBetween('created_at', [
             Carbon::now()->subDays(365)->startOfDay(),
             Carbon::now()->endOfDay()
-        ])->count();
-        $usuariosData['bloquados365dias'] = $numBloqueados365dias;
-
+        ]);
+        if($bloqueadosUs365dias!=null){
+            $usuariosData['bloquados365dias'] = $bloqueadosUs365dias->count();
+        }else{
+            $usuariosData['bloquados365dias'] = 0;
+        }
+        
         if (Auth::check() && Auth::user()->rol=="admin") {
             $status = 'ok';
         } else {
