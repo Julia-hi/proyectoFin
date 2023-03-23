@@ -39,6 +39,7 @@ class AuthenticatedSessionController extends Controller
             } elseif(Auth::user()->rol =="user") {
                 $stat = 'ok';
               return redirect()->back()->with(['stat'=>$stat]);
+              //return redirect()->route('dashboard',['stat'=>$stat]);
             }else{
                 $stat = 'error';
                 return redirect('/')->with(['stat'=>$stat]);
