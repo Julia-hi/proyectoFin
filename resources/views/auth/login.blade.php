@@ -4,7 +4,7 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
     <div class="text-center"><b class="text-uppercase h4">Inicia sesión</b></div>
     <form method="POST" action="{{ route('login') }}">
-        @csrf
+    {{ csrf_field() }}
         <!-- Email  -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
