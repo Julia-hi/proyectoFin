@@ -30,21 +30,24 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        
+        try {
+            \DB::connection()->getPDO();
             $request->authenticate();
             $request->session()->regenerate();
+            $stat='ok';
             if (Auth::user()->rol =="admin") {
-                $stat = 'ok';
+                
               return redirect()->route('admin',['stat'=>$stat]);
             } elseif(Auth::user()->rol =="user") {
-                $stat = 'ok';
+                
              // return redirect()->back()->with(['stat'=>$stat]);
               return redirect()->route('dashboard',['stat'=>$stat]);
              // return redirect()->route('user.anuncios.index',['user' =>Auth::user()->id, 'stat'=>$stat ]);
-            }else{
-                $stat = 'error';
-                return redirect('/')->with(['stat'=>$stat]);
-            }  
+            }
+        } catch (\Exception $e) {
+            $stat = 'error';
+            return redirect('/')->with(['stat'=>$stat]);
+        } 
     }
 
     /**
