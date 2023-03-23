@@ -21,7 +21,7 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
-    @if($stat == 'ok')
+    @if(Auth::user()->rol == 'admin')
     <head>
         <x-header />
     </head>
