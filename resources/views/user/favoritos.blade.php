@@ -74,7 +74,6 @@
         </div>
     </div>
 </x-app-layout>
-@endif
 @endauth
 @guest
 <div>Para ver favoritos tienes que iniciar sesión</div>
