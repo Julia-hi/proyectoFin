@@ -19,19 +19,19 @@
 
                     <x-slot name="content" >
                         <div>
-                        <x-dropdown-link :href="route('user.anuncios.index',Auth::user()->id)">
+                        <x-dropdown-link :href="route('user.anuncios.index',$user_id)">
                             {{ __('Mis anuncios') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('user.favoritos.index', Auth::user()->id)">
+                        <x-dropdown-link :href="route('user.favoritos.index', $user_id)">
                             {{ __('Mis favoritos') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('user.mensajes.index', Auth::user()->id)">
+                        <x-dropdown-link :href="route('user.mensajes.index', $user_id)">
                             {{ __('Mis mensajes') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('user.anuncios-oferta.create', Auth::user()->id)">
+                        <x-dropdown-link :href="route('user.anuncios-oferta.create', $user_id)">
                             {{ __('Publicar anuncio') }}
                         </x-dropdown-link>
-                        <x-dropdown-link :href="route('profile.edit', Auth::user()->id)">
+                        <x-dropdown-link :href="route('profile.edit', $user_id)">
                             {{ __('Perfil') }}
                         </x-dropdown-link>
 
@@ -85,7 +85,7 @@
                 <x-responsive-nav-link :href="route('user.mensajes.index', $user_id)">
                     {{ __('Mis mensajes') }}
                 </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('profile.edit')">
+                <x-responsive-nav-link :href="route('profile.edit',$user_id)">
                     {{ __('Perfil') }}
                 </x-responsive-nav-link>
 
