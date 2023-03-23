@@ -127,11 +127,7 @@ class AdminController extends Controller
             $usuariosData['bloquados365dias'] = 0;
         }
         
-        if (Auth::check() && Auth::user()->rol=="admin") {
-            $status = 'ok';
-        } else {
-            $status = 'error';
-        } 
-        return view('admin.dashboard', ['status'=>$status, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData]);
+        
+        return view('admin.dashboard', ['anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData]);
     }
 }

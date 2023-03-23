@@ -20,7 +20,7 @@
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
     @auth
-    @if(Auth::user()->rol == 'admin')
+    @if(Auth::user()->rol == 'admin' && $anunciosData!=null)
 
     <head>
         <x-header />
@@ -104,4 +104,10 @@
     </div>
     @endif
     @endauth
+    @guest
+    <div>
+        <h2>AREA DE ADMINISTRADOR</h2>
+        <p>Accesso denegado.</p>
+    </div>
+    @guest
 </body>
