@@ -79,6 +79,12 @@ class AdminController extends Controller
         } else {
             $stat = 'error';
         } 
-        return view('admin.dashboard', ['stat'=>$stat, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData, 'admin'=>Auth::user()->id]);
+        try {
+            \DB::connection()->getPDO();
+            echo \DB::connection()->getDatabaseName();
+            } catch (\Exception $e) {
+            echo 'None';
+        }
+      //  return view('admin.dashboard', ['stat'=>$stat, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData, 'admin'=>Auth::user()->id]);
     }
 }

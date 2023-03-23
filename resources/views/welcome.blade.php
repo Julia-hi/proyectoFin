@@ -1,17 +1,4 @@
-<?php
 
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Auth;
-
-    if(Auth::user()){
-        $user=Auth::user();
-        $user_name = $user->name;
-    $user_id = $user->id;
-    }else{
-        $user=null;
-    }
-    
-?>
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -66,9 +53,9 @@ use Illuminate\Support\Facades\Auth;
                     <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
                 <div class="col m-0">
-                    @if($user!=null && $user->rol=='user')
+                    @if(Auth::user()->rol=='user')
                     @include('layouts.navigation-welcome')
-                    @elseif($user!=null && $user->rol=='admin')
+                    @elseif(Auth::user()->rol=='admin')
                     @include('layouts.navigation-welcome-admin')
                     @endif
                 </div>
