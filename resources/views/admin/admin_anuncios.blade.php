@@ -1,12 +1,10 @@
-
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'MiLorito') }}</title>
@@ -31,10 +29,8 @@
         @auth
         @if(Auth::user()->rol =="admin")
         @include('layouts.navigation-admin')
-        @else
-        <p>Accesso denegado.</p>
-        @endif
-        @endauth
+
+
         <!-- Page Content -->
         <main>
             <div class="container">
@@ -195,6 +191,13 @@
         <p>Accesso denegado.</p>
     </div>
     @endif
+    @endauth
+    @guest
+    <div>
+        <h2>AREA DE ADMINISTRADOR</h2>
+        <p>Accesso denegado.</p>
+    </div>
+    @endguest
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('storage/js/sweetalert2.all.min.js')}}"></script>
     <script>
