@@ -19,6 +19,7 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
+    @auth
     @if(Auth::user()->rol == 'admin')
 
     <head>
@@ -102,4 +103,5 @@
         <p>Accesso denegado.</p>
     </div>
     @endif
+    @endauth
 </body>
