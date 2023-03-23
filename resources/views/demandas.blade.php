@@ -42,12 +42,12 @@
                         @include('layouts.navigation-welcome')
                     </div>
                 </div>
+                @endauth
                 @else
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
                 @if (Route::has('register'))
                 <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-                @endif
-                @endauth
+                @endif   
             </div>
         </div>
         @endif

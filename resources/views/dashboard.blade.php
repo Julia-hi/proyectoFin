@@ -1,4 +1,18 @@
 @auth
+<?php
+try {
+    $user = Auth::user();
+} catch (Exception $ex) {
+    $user = null;
+    $status = "error";
+}
+
+if ($user != null) {
+    $user_name = $user->name;
+    $user_id = $user->id;
+}
+?>
+
 @if(Auth::user()->rol=="admin")
 <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
 <?php echo "I am admin";

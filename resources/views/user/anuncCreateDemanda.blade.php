@@ -1,5 +1,6 @@
-<?php $user_id = Auth::user()->id; ?>
+
 @auth
+<?php $user_id = Auth::user()->id; ?>
 @if(Auth::user()->rol=="admin")
 <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
 <?php echo "I am admin";
@@ -22,8 +23,8 @@
                     <div class="justify-center">
                         <div class="align-items-center d-flex justify-content-center p-3">
                             <div class="btn-group border d-flex justify-content-center">
-                                <a href="{{route('user.anuncios-oferta.create', $user_id)}}" title="publicar oferta" class="btn btn-sm btn-outline-success px-2 text-uppercase" id="ofertas" style="min-width:200px;"><strong>buscar nuevo dueño</strong></a>
-                                <a href="{{route('user.anuncios-demanda.create', $user_id)}}" title="publicar demanda" class="btn btn-sm btn-outline-success text-uppercase active" id="demandas" style="min-width:200px;"><strong>buscar LORO</strong></a>
+                                <a href="{{route('user.anuncios-oferta.create', ['user'=>$user_id])}}" title="publicar oferta" class="btn btn-sm btn-outline-success px-2 text-uppercase" id="ofertas" style="min-width:200px;"><strong>buscar nuevo dueño</strong></a>
+                                <a href="" title="publicar demanda" class="btn btn-sm btn-outline-success text-uppercase active" id="demandas" style="min-width:200px;"><strong>buscar LORO</strong></a>
                             </div>
                         </div>
                     </div>
