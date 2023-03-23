@@ -23,8 +23,8 @@ class UserAnunciosController extends Controller
         if ($user->rol == "admin") {
             return redirect()->route('admin');
         } else {
-            $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
-            $usersOfertas = AnuncioOferta::where('user_id', $user->id)->get();
+            $usersDemandas = AnuncioDemanda::where('user_id', $id)->get();
+            $usersOfertas = AnuncioOferta::where('user_id', $id)->get();
             return view('user.user-anuncios', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
         }
     }

@@ -19,15 +19,15 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
-    @if($status == 'ok')
+    @if(Auth::user()->rol=='admin')
 
     <head>
         <x-header />
     </head>
     <div class="min-h-screen bg-gray-100">
-        @auth
+       
         @include('layouts.navigation-admin')
-        @endauth
+        
         <!-- Page Content -->
         <main>
             <div class="container">
