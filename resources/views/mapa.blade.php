@@ -19,6 +19,7 @@ if ($user != null) {
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>MiLorito</title>
     <!-- Fonts -->
@@ -47,7 +48,7 @@ if ($user != null) {
         <x-header />
     </header>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        @if (Route::has('login'))
+       
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block" style="z-index:10;">
             <div class="align-self-center">
                 @guest
@@ -63,13 +64,13 @@ if ($user != null) {
                 </div>
                 @else
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
-                @if (Route::has('register'))
+                
                 <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-                @endif
+                
                 @endauth
             </div>
         </div>
-        @endif
+       
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8">
                 <div class="m-2">
@@ -155,9 +156,9 @@ if ($user != null) {
                         <div class="row w-100 justify-content-end">
                             <div class="col-lg-2 col-xs-6 m-0">
                                 @auth
-                                @if($user!=null && $user->rol=='user')
+                                @if($user->rol=='user')
                                 @include('layouts.navigation-welcome')
-                                @elseif($user!=null && $user->rol=='admin')
+                                @elseif($user->rol=='admin')
                                 @include('layouts.navigation-welcome-admin')
                                 @endif
                                 @endauth
