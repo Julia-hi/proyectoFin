@@ -96,7 +96,7 @@ class AdminAnunciosController extends Controller
             $status = 'error';
         }
      
-      return Redirect::back()->with(['stat'=>$status, 'anuncio' => $anuncio]);
+      return Redirect::back()->with(['stat'=>$status, 'anuncio' => $anuncio,'admin'=>Auth::user()->id]);
     }
 
 

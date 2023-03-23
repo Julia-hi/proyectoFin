@@ -79,6 +79,6 @@ class AdminController extends Controller
         } else {
             $stat = 'error';
         } 
-        return view('admin.dashboard', ['stat'=>$stat, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData]);
+        return view('admin.dashboard', ['stat'=>$stat, 'anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData, 'admin'=>Auth::user()->id]);
     }
 }

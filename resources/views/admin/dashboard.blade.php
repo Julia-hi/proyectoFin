@@ -1,3 +1,9 @@
+<?php
+if(Auth::user()){
+    $stat='ok';
+}else{
+    $stat = 'error';
+} ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 

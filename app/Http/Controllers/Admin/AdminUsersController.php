@@ -21,12 +21,12 @@ class AdminUsersController extends Controller
     {
         $usersActive = User::where('rol', 'user')->where('estado', 'active')->get();
         $usersBloqueados = User::where('rol', 'user')->where('estado', 'blocked')->get();
-        if (Auth::check() && Auth::user()->rol == "admin") {
+        if (Auth::user()->rol == "admin") {
             $status = 'ok';
         } else {
             $status = 'error';
         }
-        return view('admin/admin_users', ['stat' => $status, 'usAct' => $usersActive, 'usBloq' => $usersBloqueados]);
+        return view('admin/admin_users', ['stat' => $status, 'usAct' => $usersActive, 'usBloq' => $usersBloqueados,'admin'=>$id]);
     }
 
 
@@ -50,7 +50,7 @@ class AdminUsersController extends Controller
             $mensajes = null;
         }
 
-        return view('/admin/user_data', ['stat' => $status, 'user' => $user, 'anuncios' => $anuncios, 'mensajes' => $mensajes]);
+        return view('/admin/user_data', ['stat' => $status, 'user' => $id_user, 'anuncios' => $anuncios, 'mensajes' => $mensajes,'admin'=>$id_admin]);
     }
 
 
@@ -62,13 +62,13 @@ class AdminUsersController extends Controller
      * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id, $user_id)
+    public function update(Request $request, $id, $id_user)
     {
-        $user = User::findOrFail($user_id);
+        $user = User::findOrFail($id_user);
         if ($user->rol != 'admin') {
             $user->estado = $request->estado;
             $user->save();
         }
-        return Redirect::route('admin.users.index', ['admin' => $id]);
+        return Redirect::route('admin.users.index', ['admin' => $id,'user' => $id_user]);
     }
 }
