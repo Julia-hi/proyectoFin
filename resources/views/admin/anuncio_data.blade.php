@@ -1,3 +1,10 @@
+<?php
+if(Auth::user()->rol =='admin'){
+    $stat='ok';
+}else{
+    $stat = 'error';
+} ?>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
