@@ -20,17 +20,14 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
-    @if(Auth::user())
 
     <head>
         <x-header />
     </head>
+    @auth
+    @if(Auth::user()=="admin")
     <div class="min-h-screen bg-gray-100">
-        @auth
-        @if(Auth::user()->rol =="admin")
         @include('layouts.navigation-admin')
-
-
         <!-- Page Content -->
         <main>
             <div class="container">
@@ -185,7 +182,7 @@
             </div>
         </main>
     </div>
-    @else
+    @elseif(Auth::user()->rol=="user")
     <div>
         <h2>AREA DE ADMINISTRADOR</h2>
         <p>Accesso denegado.</p>
