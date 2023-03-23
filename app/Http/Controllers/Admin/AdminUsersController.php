@@ -50,7 +50,7 @@ class AdminUsersController extends Controller
             $mensajes = null;
         }
 
-        return view('/admin/user_data', ['stat' => $status, 'user' => $id_user, 'anuncios' => $anuncios, 'mensajes' => $mensajes,'admin'=>$id_admin]);
+        return view('/admin/user_data', ['stat' => $status, 'user' => $user, 'anuncios' => $anuncios, 'mensajes' => $mensajes,'admin'=>$id_admin]);
     }
 
 

@@ -1,9 +1,5 @@
-<?php
-if(Auth::user()->rol =='admin'){
-    $stat='ok';
-}else{
-    $stat = 'error';
-} ?>
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -32,8 +28,9 @@ if(Auth::user()->rol =='admin'){
     </head>
     <div class="min-h-screen bg-gray-100">
         @auth
+        @if(Auth::user()->rol=="admin")
         @include('layouts.navigation-admin')
-        @endauth
+        
         <!-- Page Content -->
         <main>
             <div class="container">
@@ -118,6 +115,8 @@ if(Auth::user()->rol =='admin'){
                 </div>
         </main>
     </div>
+    @endif
+    @endauth
     @else
     <div>
         <h2>AREA DE ADMINISTRADOR</h2>
