@@ -77,7 +77,7 @@ class UserMensajesController extends Controller
                 }
             }
         }
-        return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'dialogos_autor' => $dialogos_autor, 'status' => 'ok']);
+        return view('user.mensajes', ['user' =>$user_id, 'dialogos' => $dialogos, 'dialogos_autor' => $dialogos_autor]);
     }
 
 

@@ -16,18 +16,18 @@ class UserFavoritosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($user)
     {
-        $user = User::find($id);
+        $user = User::find($user);
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
         } else {
-            $favoritos = Favorito::where('user_id', $id)->get();
+            $favoritos = Favorito::where('user_id', Auth::user()->id)->get();
             if ($favoritos->count() < 1) {
                 $favoritos = null; // no encontrado favoritos
             }
-            $user = Auth::user()->name;
-            return view('user.favoritos', ['user' => $user, 'favoritos' => $favoritos]);
+          //  $user = Auth::user()->name;
+            return view('user.favoritos', ['user' => $user->id, 'favoritos' => $favoritos]);
         }
     }
 
@@ -59,27 +59,7 @@ class UserFavoritosController extends Controller
         return back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
