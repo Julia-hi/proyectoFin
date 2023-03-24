@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Auth;
 @auth
 <?php
 
-    if(Auth::user()){
-        $user = Auth::user();
-        $stat = "ok";
-    }else {
+if (Auth::user()) {
+    $user = Auth::user();
+    $stat = "ok";
+} else {
     $user = null;
     $stat = "error";
 }
@@ -34,7 +34,7 @@ if ($user != null) {
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <title>MiLorito</title>
@@ -50,9 +50,9 @@ if ($user != null) {
 </head>
 
 <body class="antialiased">
-
+@if($stat =="ok")
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
-       
+
         <div class="fixed top-0 right-0 px-6 py-4 sm:block">
             @guest
             <a type="button" class="red-brillante-boton mr-1 p-2 text-center" href="{{ Auth::check() ? '/user/' . $user_id . '/anuncios-oferta/create' : '/login?redirect_to=' . Request::path() }}" tabindex="0"><span>Publicar anuncio</span></a>
@@ -70,14 +70,15 @@ if ($user != null) {
                     @endif
                 </div>
             </div>
-            @else
-            <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
-           
-            <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-           
             @endauth
+            @guest
+            <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
+
+            <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
+            @endguest
+
         </div>
-      
+
         <div id="draggable" class="col-sm-10 col-lg-6 rounded border shadow hidden">
             <div class="">
                 <h3 class="p-2">Vas a enviar mensaje a {{ $autor->name }}</h3>
