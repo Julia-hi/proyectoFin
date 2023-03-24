@@ -32,9 +32,9 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request)
     {
             $request->authenticate();
-            $request->session('user_id')->put('user_id',Auth::user()->id);
-            $request->session()->regenerate();
             
+            $request->session()->regenerate();
+            session()->put('user_id',Auth::user()->id);
             $stat='ok';
             if (Auth::user()->rol =="admin") {
                 
