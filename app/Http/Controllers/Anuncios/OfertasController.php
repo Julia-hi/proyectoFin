@@ -60,6 +60,7 @@ class OfertasController extends Controller
         } else {
             $oferta = null;
             $fotos = null;
+            $autor =null;
         }
         return view('anuncio.anunc-oferta', ['oferta' => $oferta, 'autor' => $autor, 'fotos' => $fotos, 'stat' => 'ok']);
     }
