@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'MiLorito') }}</title>
@@ -19,21 +18,17 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
+    @if($status == 'ok')
+
     <head>
         <x-header />
     </head>
-    @auth
-    @if($user->rol == 'admin')
-    @include('layouts.navigation-admin')
-    @else
-    <div>
-        <h2>AREA DE ADMINISTRADOR</h2>
-        <p>Accesso denegado.</p>
-    </div>
-    @endif   
-    <!-- Page Content -->
-        <div class="min-h-screen bg-gray-100">
-
+    <div class="min-h-screen bg-gray-100">
+        @auth
+        @include('layouts.navigation-admin')
+        @endauth
+        <!-- Page Content -->
+        <main>
             <div class="container">
                 <div class="justify-center px-6">
                     <div class=" mt-4 p-2 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
@@ -47,8 +42,7 @@
                             </div>
                             <div class="row">
                                 <div class="col border">Total</div>
-
-                                <div class="col border">{{$sum}}</div>
+                                <div class="col border">{{$anunciosData['ofTotal']+$anunciosData['demTotal']}}</div>
                                 <div class="col border">{{$anunciosData['ofTotal']}}</div>
                                 <div class="col border">{{$anunciosData['demTotal']}}</div>
                             </div>
@@ -95,16 +89,16 @@
                     </div>
                 </div>
             </div>
-            @endauth
-            @guest
-            <div>
-                <h2>AREA DE ADMINISTRADOR</h2>
-                <p>Accesso denegado.</p>
-            </div>
-            @guest
-        </div>
-   
-
+        </main>
+        <footer>
+            <x-footer />
+        </footer>
+    </div>
+    @else
+    <div>
+        <h2>AREA DE ADMINISTRADOR</h2>
+        <p>Accesso denegado.</p>
+    </div>
+    @endif
 </body>
-
 </html>
