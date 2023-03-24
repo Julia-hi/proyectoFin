@@ -73,7 +73,7 @@ class UserMensajesController extends Controller
             }
             
         }
-        return view('user.mensajes', ['user' => $user, 'dialogos' => $dialogos, 'dialogos_autor' => $dialogos_autor, 'stat' => 'ok']);
+        return view('user.mensajes', ['user_id'=>$user_id,'user' => $user, 'dialogos' => $dialogos, 'dialogos_autor' => $dialogos_autor, 'stat' => 'ok']);
     }
 
 
@@ -84,7 +84,7 @@ class UserMensajesController extends Controller
      */
     public function create()
     {
-        return view('user.mensaje-create', ['user' => Auth::user()]);
+        return view('user.mensaje-create', ['user' => Auth::user(), 'user_id'=>Auth::user()->id]);
     }
 
     /**
@@ -133,48 +133,9 @@ class UserMensajesController extends Controller
         ])->header('Content-Type', 'application/json');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+ 
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+   
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }
