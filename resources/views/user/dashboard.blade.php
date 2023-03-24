@@ -1,5 +1,5 @@
-@auth
-@if(Auth::user()->rol=="admin")
+
+@if($user->rol=="admin")
 <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
 <?php echo "I am admin";
 //  return redirect()->route('admin/dashboard');
@@ -19,7 +19,7 @@
                     <div class="w-100 row d-flex justify-content-center align-content-center mb-2">
                         <a type="button" class="green-brillante-boton w-50" href="/"><strong>A LA PAGINA PRINCIPAL</strong></a>
                     </div>
-                    <p class="text-center mt-6">Hola, <b>{{ Auth::user()->name }}</b>!</p>
+                    <p class="text-center mt-6">Hola, <b>{{ $user->name }}</b>!</p>
                     <p>Aqui puedes publicar nuevos anuncios gestionar tus anuncios, ver lista de tus favoritos,
                         enviar mensajes y gestionar tu perfil.</p>
                 </div>

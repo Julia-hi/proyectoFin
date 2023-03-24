@@ -13,11 +13,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($user)
     {
-        if (Auth::user()->rol == "user") {
-            return view('user.dashboard')->with(['user_id'=>Auth::user()->id]);
-        }elseif(Auth::user()->rol == "admin"){
+        if ($user->rol == "user") {
+            return view('user.dashboard');
+        }elseif($user->rol == "admin"){
             return view('admin.dashboard');
         } else {
             return redirect()->back()->with('Ha producido un error.');

@@ -22,6 +22,11 @@
     @auth
     @if($user->rol == 'admin')
     @include('layouts.navigation-admin')
+    @else
+    <div>
+        <h2>AREA DE ADMINISTRADOR</h2>
+        <p>Accesso denegado.</p>
+    </div>
     @endif
 
     <head>
@@ -30,7 +35,7 @@
     <!-- Page Content -->
     <main>
         <div class="min-h-screen bg-gray-100">
-            @if($anunciosData!=null)
+
             <div class="container">
                 <div class="justify-center px-6">
                     <div class=" mt-4 p-2 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
@@ -44,7 +49,7 @@
                             </div>
                             <div class="row">
                                 <div class="col border">Total</div>
-                                <?php $sum = $anunciosData['ofTotal'] + $anunciosData['demTotal']; ?>
+
                                 <div class="col border">{{$sum}}</div>
                                 <div class="col border">{{$anunciosData['ofTotal']}}</div>
                                 <div class="col border">{{$anunciosData['demTotal']}}</div>
@@ -92,12 +97,6 @@
                     </div>
                 </div>
             </div>
-            @else
-            <div>
-                <h2>AREA DE ADMINISTRADOR</h2>
-                <p>Accesso denegado.</p>
-            </div>
-            @endif
             @endauth
             @guest
             <div>
@@ -109,4 +108,5 @@
     </main>
 
 </body>
+
 </html>
