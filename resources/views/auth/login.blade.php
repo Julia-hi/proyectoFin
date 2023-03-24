@@ -1,4 +1,5 @@
 <x-guest-layout>
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
     <div class="text-center"><b class="text-uppercase h4">Inicia sesión</b></div>

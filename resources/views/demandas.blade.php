@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <title>MiLorito</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -46,15 +46,16 @@
                         @endif
                     </div>
                 </div>
-                @else
+                @endauth
+                @guest
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
 
                 <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
+                @endguest
 
-                @endauth
             </div>
         </div>
-        @endif
+
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8">
                 <div class="m-2">

@@ -1,4 +1,5 @@
 <x-guest-layout>
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="text-center"><b class="text-uppercase h3">Regístrate</b></div>
     <form method="POST" action="{{ route('register') }}">
         @csrf

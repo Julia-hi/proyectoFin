@@ -1,4 +1,5 @@
 <x-guest-layout>
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <form method="POST" action="{{ route('password.store') }}">
         @csrf
 
