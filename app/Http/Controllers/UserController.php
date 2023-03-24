@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
 
 class UserController extends Controller
 {
@@ -14,15 +13,16 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($user_id)
+    public function index()
     {
-        $user = User::find($user_id);
-        if ($user->rol == "user") {
-            return redirect()->route('dashboard',['user_id'=>$user->id]);
-        }elseif($user->rol == "admin"){
+        if (Auth::user()->rol == "user") {
+            return redirect('dashboard',['user_id'=>Auth::user()->id]);
+        }elseif(Auth::user()->rol == "admin"){
             return view('admin.dashboard');
         } else {
             return redirect()->back()->with('Ha producido un error.');
         }
     }
+
+
 }
