@@ -8,7 +8,7 @@ use App\Providers\RouteServiceProvider;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Session\SessionManager;
+
 
 class AuthenticatedSessionController extends Controller
 {
@@ -32,8 +32,9 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request)
     {
             $request->authenticate();
+            $request->session('user_id')->put('user_id',Auth::user()->id);
             $request->session()->regenerate();
-            session('user_id')->put('user_id',Auth::user()->id);
+            
             $stat='ok';
             if (Auth::user()->rol =="admin") {
                 
