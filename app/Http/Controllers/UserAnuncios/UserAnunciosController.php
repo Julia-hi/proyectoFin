@@ -26,7 +26,7 @@ class UserAnunciosController extends Controller
         } else {
             $usersDemandas = AnuncioDemanda::where('user_id', Auth::user()->id)->get();
             $usersOfertas = AnuncioOferta::where('user_id', Auth::user()->id)->get();
-            return view('user.user-anuncios', ['user' => Auth::user()->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
+            return view('user.user-anuncios', ['user' => Auth::user()->id, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
         }
     }
 

@@ -90,7 +90,7 @@ class UserAnuncioOfertaController extends Controller
         }
         $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
         $usersOfertas = AnuncioOferta::where('user_id', $user->id)->get();
-        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'user_id', $user->id]);
+        return Redirect::route('user.anuncios.index', ['user' => $user->id, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
     }
 
     /**
@@ -104,7 +104,7 @@ class UserAnuncioOfertaController extends Controller
        
         $user = Auth::user();
         $anuncio = AnuncioOferta::find($id_anuncio);
-        return view('user.anuncEditOferta', ['user' => $user, 'anuncios_ofertum' => $id, 'anuncio' => $anuncio, 'user_id', $user->id]);
+        return view('user.anuncEditOferta', ['user' => $user->id, 'anuncios_ofertum' => $id, 'anuncio' => $anuncio]);
     }
 
     /**
@@ -196,6 +196,10 @@ class UserAnuncioOfertaController extends Controller
             if (file_exists($fileToDelete)) {
                 unlink($fileToDelete);
             }
+        }
+        $mensajes = Anuncio::find($id_anuncio)->mensajes()->get();
+        foreach($mensajes as $mensaje){
+            $mensaje->delete();
         }
         $anuncio->delete();
         return Redirect::route('user.anuncios.index', ['user' => $id]);
