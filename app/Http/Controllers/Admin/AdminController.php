@@ -128,6 +128,6 @@ class AdminController extends Controller
         }
         
         
-        return view('admin.dashboard', ['anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData]);
+        return view('admin.dashboard', ['anunciosData'=>$anunciosData, 'usuariosData'=>$usuariosData, 'user'=>Auth::user(), 'user_id'=>Auth::user()->id]);
     }
 }

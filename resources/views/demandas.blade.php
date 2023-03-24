@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
     <title>MiLorito</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,8 +15,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo Storage::url('css/mi_estilo.css') ?>">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <?php $backgrounImg = Storage::url('images/hojas-fondo1.svg'); ?>
@@ -25,27 +25,32 @@
         <x-header />
     </header>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        @if (Route::has('login'))
+
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             <div class="align-self-center">
                 @guest
                 <a type="button" class="nav-botton red-brillante-boton mr-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a>
                 @endguest
                 @auth
+
                 <?php $user_name = Auth::user()->name;
                 $user_id = Auth::user()->id; ?><div class="row">
                     <div class="col m-0">
                         <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-demanda/create" tabindex="0"><span>Publicar anuncio</span></a>
                     </div><!-- <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a> -->
                     <div class="col m-0">
+                        @if(Auth::user()->rol =="user")
                         @include('layouts.navigation-welcome')
+                        @elseif(Auth::user()->rol =="admin")
+                        @include('layouts.navigation-welcome-admin')
+                        @endif
                     </div>
                 </div>
                 @else
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
-                @if (Route::has('register'))
+
                 <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-                @endif
+
                 @endauth
             </div>
         </div>
@@ -83,7 +88,7 @@
                                                         <div class="btn-group">
                                                             <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
                                                             <button type="button" class="btn btn-sm btn-outline-secondary">Enviar mensaje</button>
-                                                          
+
                                                         </div>
                                                         <div>
                                                             <small class="text-muted">Publicato: {{ $demanda->created_at->format('M j, Y') }}</small>
