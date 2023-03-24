@@ -19,18 +19,19 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
-    @auth
-    @if(Auth::user()->rol == 'admin' && $anunciosData!=null)
+
 
     <head>
         <x-header />
     </head>
     <div class="min-h-screen bg-gray-100">
 
-        @include('layouts.navigation-admin')
 
         <!-- Page Content -->
         <main>
+            @auth
+            @if($user->rol == 'admin' && $anunciosData!=null)
+            @include('layouts.navigation-admin')
             <div class="container">
                 <div class="justify-center px-6">
                     <div class=" mt-4 p-2 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
@@ -92,22 +93,23 @@
                     </div>
                 </div>
             </div>
+            @else
+            <div>
+                <h2>AREA DE ADMINISTRADOR</h2>
+                <p>Accesso denegado.</p>
+            </div>
+            @endif
+            @endauth
+            @guest
+            <div>
+                <h2>AREA DE ADMINISTRADOR</h2>
+                <p>Accesso denegado.</p>
+            </div>
+            @guest
         </main>
         <footer>
             <x-footer />
         </footer>
     </div>
-    @else
-    <div>
-        <h2>AREA DE ADMINISTRADOR</h2>
-        <p>Accesso denegado.</p>
-    </div>
-    @endif
-    @endauth
-    @guest
-    <div>
-        <h2>AREA DE ADMINISTRADOR</h2>
-        <p>Accesso denegado.</p>
-    </div>
-    @guest
+
 </body>
