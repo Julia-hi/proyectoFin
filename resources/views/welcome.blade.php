@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
     <title>MiLorito</title>
     <!-- Fonts -->
@@ -22,6 +21,7 @@
 </head>
 
 <body class="antialiased">
+    @if($stat=='error')
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 " style="z-index:10;">
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8 ">
@@ -40,9 +40,9 @@
             </div>
         </div>
     </div>
-   
+    @else
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
-       
+        @if (Route::has('login'))
         <div class="fixed top-0 right-0 px-6 py-4 sm:block">
             @guest
             <a type="button" class="red-brillante-boton mr-1 p-2 text-center" href="{{ Auth::check() ? '/user/' . $user_id . '/anuncios-oferta/create' : '/login?redirect_to=' . Request::path() }}" tabindex="0"><span>Publicar anuncio</span></a>
@@ -50,7 +50,7 @@
             @auth
             <div class="row ">
                 <div class="col m-0">
-                    <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/{{Auth::user()->id}}/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
+                    <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/{{Auth()::user->id}}/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
                 <div class="col m-0">
                     @if(Auth::user()->rol=='user')
@@ -60,14 +60,14 @@
                     @endif
                 </div>
             </div>
-            
+            @else
             <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
-           
+            @if (Route::has('register'))
             <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-           
+            @endif
             @endauth
         </div>
-        
+        @endif
         <div class="container">
             <div class="justify-center sm:px-2 lg:px-4 ">
                 <div class="d-flex flex-row justify-content-center align-items-end position-static" style="height: 150px;">
@@ -196,7 +196,7 @@
         <x-footer />
     </footer>
     <script src="{{asset('storage/js/welcome.js')}}"></script>
-    
+    @endif
 </body>
 
 </html>
