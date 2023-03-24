@@ -3,7 +3,8 @@
 @auth
 <?php
 try {
-    $user = Auth::user();
+    $user_id = session()->get('user_id');
+     $user = User::find($user_id);
     $stat = "ok";
 } catch (Exception $ex) {
     $user = null;

@@ -42,17 +42,13 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerate();
 
             $user = Auth::user();
-            session()->put('user_id',$user->id);
+          //  session()->put('user_id',$user->id);
             if ($user->rol === 'admin') {
                 return redirect()->route('admin');
             } elseif ($user->rol === 'user') {
-                return redirect()->route('dashboard');
+                return redirect()->route('dashboard',['user_id'=>$user->id, 'user'=>$user]);
             }
-        }
-
-        throw ValidationException::withMessages([
-            'email' => __('auth.failed'),
-        ]);
+        };
     
             /* $request->authenticate();
             
