@@ -19,7 +19,8 @@ class UserAnunciosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($id)
-    {
+    { echo "user id ".$id;
+        echo "<br>Autenticated user: ".Auth::user()->id;
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
         } else {

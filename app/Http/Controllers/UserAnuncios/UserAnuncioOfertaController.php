@@ -23,13 +23,14 @@ class UserAnuncioOfertaController extends Controller
      */
     public function create($id)
     {
-        $user_id = session()->get('user_id');
-        $user = User::find($user_id);
+       // $user_id = session()->get('user_id');
+       // $user = User::find($user_id);
+       $user=Auth::user();
         if ($user->rol == "admin") {
             return redirect()->route('admin');
         } else {
             $tipoAnunc = 'oferta';
-            return view('user.anuncCreateOferta', ['user' => $user, 'tipoAnunc' => $tipoAnunc, 'user_id' => $user_id]);
+            return view('user.anuncCreateOferta', ['user' => $user, 'tipoAnunc' => $tipoAnunc, 'user_id' => $user->id]);
         }
     }
 

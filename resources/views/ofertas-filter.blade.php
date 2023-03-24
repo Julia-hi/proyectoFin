@@ -4,7 +4,7 @@
 <?php
 try {
     $user_id = session()->get('user_id');
-     $user = User::find($user_id);
+    $user = User::find($user_id);
     $stat = "ok";
 } catch (Exception $ex) {
     $user = null;
@@ -41,7 +41,7 @@ if ($user != null) {
         <x-header />
     </header>
     <div class="flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        @if (Route::has('login'))
+       
         <div class="hidden fixed top-0 px-6 py-4 sm:block " style="right:60px;">
             <div class="align-self-center">
                 @guest
@@ -59,7 +59,7 @@ if ($user != null) {
                 @endauth
             </div>
         </div>
-        @endif
+       
         <div class="container">
             <div class="justify-center xs:px-1 sm:px-6 lg:px-8">
                 <div>
