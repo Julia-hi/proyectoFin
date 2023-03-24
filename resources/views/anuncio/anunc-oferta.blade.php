@@ -50,7 +50,7 @@ if ($user != null) {
 </head>
 
 <body class="antialiased">
-@if($stat =="ok")
+    @if($stat =="ok")
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 ">
 
         <div class="fixed top-0 right-0 px-6 py-4 sm:block">
@@ -63,9 +63,9 @@ if ($user != null) {
                     <a type="button" class="nav-botton h-100 red-brillante-boton p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
                 </div>
                 <div class="col m-0">
-                    @if($user!=null && $user->rol=='user')
+                    @if(Auth::user()->rol=='user')
                     @include('layouts.navigation-welcome')
-                    @elseif($user!=null && $user->rol=='admin')
+                    @elseif(Auth::user()->rol=='admin')
                     @include('layouts.navigation-welcome-admin')
                     @endif
                 </div>
@@ -218,6 +218,7 @@ if ($user != null) {
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -230,7 +231,6 @@ if ($user != null) {
     @else
     <div class="text-center">Disculpa, este anuncio ya no está disponible.</div>
     @endif
-    </div>
 
     <script src="{{asset('storage/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('storage/js/anuncio-oferta.js')}}"></script>
