@@ -19,6 +19,9 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
+    <head>
+        <x-header />
+    </head>
     @auth
     @if($user->rol == 'admin')
     @include('layouts.navigation-admin')
@@ -27,13 +30,8 @@
         <h2>AREA DE ADMINISTRADOR</h2>
         <p>Accesso denegado.</p>
     </div>
-    @endif
-
-    <head>
-        <x-header />
-    </head>
+    @endif   
     <!-- Page Content -->
-    <main>
         <div class="min-h-screen bg-gray-100">
 
             <div class="container">
@@ -105,7 +103,7 @@
             </div>
             @guest
         </div>
-    </main>
+   
 
 </body>
 

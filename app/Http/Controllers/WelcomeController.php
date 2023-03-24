@@ -15,14 +15,17 @@ class WelcomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {
         try {
             DB::connection()->getPDO();
+            if (Auth::user()) {
+                $user = Auth::user();
+            } else ($user = null);
             // obtener anuncios demanda no bloqueados
             $anuncDemandas = Anuncio::where('tipo', 'demanda')->where('estado', 'active')
-            ->whereHas('autor', function ($query) {
-                $query->where('estado', 'active');
-            })->limit(12)->get();
+                ->whereHas('autor', function ($query) {
+                    $query->where('estado', 'active');
+                })->limit(12)->get();
             $demandas = collect([]);
             foreach ($anuncDemandas as $anuncio) {
                 if ($anuncio->anuncioDemanda) {
@@ -31,9 +34,9 @@ class WelcomeController extends Controller
             }
             //obtener anuncios oferta demanda no bloqueados
             $anuncOfertas = Anuncio::where('tipo', 'oferta')->where('estado', 'active')
-            ->whereHas('autor', function ($query) {
-                $query->where('estado', 'active');
-            })->limit(12)->get();
+                ->whereHas('autor', function ($query) {
+                    $query->where('estado', 'active');
+                })->limit(12)->get();
             $ofertas = collect([]);
             foreach ($anuncOfertas as $anuncio) {
                 if ($anuncio->anuncioOferta) {
@@ -47,9 +50,8 @@ class WelcomeController extends Controller
             $ofertas = null;
             $stat = 'error';
         }
-        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'stat' => $stat]);
+        return view('welcome', ['demandas' => $demandas, 'ofertas' => $ofertas, 'stat' => $stat, 'user'=>$user]);
     }
-
 
     /**
      * Comprobar conexion con database 

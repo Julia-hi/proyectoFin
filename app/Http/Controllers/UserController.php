@@ -18,7 +18,7 @@ class UserController extends Controller
     {
         $user = User::find($user_id);
         if ($user->rol == "user") {
-            return redirect()->route('dashboard',['user_id'=>$user->id]);;
+            return redirect()->route('dashboard',['user_id'=>$user->id]);
         }elseif($user->rol == "admin"){
             return view('admin.dashboard');
         } else {

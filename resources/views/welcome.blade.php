@@ -22,7 +22,6 @@
 </head>
 
 <body class="antialiased">
-    @if($stat=='error')
     <div class="hojas relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 py-4 sm:pt-0 " style="z-index:10;">
         <div class="container">
             <div class="justify-center sm:px-6 lg:px-8 ">
@@ -61,7 +60,7 @@
                     @endif
                 </div>
             </div>
-            @else
+            
             <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
            
             <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
@@ -197,7 +196,7 @@
         <x-footer />
     </footer>
     <script src="{{asset('storage/js/welcome.js')}}"></script>
-    @endif
+    
 </body>
 
 </html>
