@@ -107,7 +107,6 @@
             @guest
         </div>
     </main>
-    <footer>
-        <x-footer />
-    </footer>
+
 </body>
+</html>
