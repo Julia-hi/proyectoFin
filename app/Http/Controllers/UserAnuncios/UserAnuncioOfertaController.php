@@ -198,7 +198,7 @@ class UserAnuncioOfertaController extends Controller
             }
         }
         $anuncio->delete();
-        return Redirect::route('user.anuncios.index', ['user' => $user, 'user_id' => $user_id]);
+        return Redirect::route('user.anuncios.index', ['user' => $id]);
     }
 
     /**
