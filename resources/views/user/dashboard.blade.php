@@ -1,4 +1,5 @@
 @auth
+<?php $user = Auth::user(); ?>
 @if($user->rol=="admin")
 <!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
 <?php echo "I am admin";
