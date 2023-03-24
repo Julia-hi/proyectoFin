@@ -1,9 +1,8 @@
 @auth
 <?php $user = Auth::user(); ?>
 @if($user->rol=="admin")
-<!--  <a class="nav-link" href="{{ url('/home') }}">Panel de admin</a> -->
-<?php echo "I am admin";
-//  return redirect()->route('admin/dashboard');
+<?php 
+  return redirect()->route('admin',['user_id'=>$user->id, 'user'=>$user]);
 ?>
 @else
 

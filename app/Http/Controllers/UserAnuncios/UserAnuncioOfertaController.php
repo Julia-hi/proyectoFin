@@ -101,8 +101,8 @@ class UserAnuncioOfertaController extends Controller
      */
     public function edit($id, $id_anuncio)
     {
-        $user_id = session()->get('user_id');
-        $user = User::find($user_id);
+       
+        $user = Auth::user();
         $anuncio = AnuncioOferta::find($id_anuncio);
         return view('user.anuncEditOferta', ['user' => $user, 'anuncios_ofertum' => $id, 'anuncio' => $anuncio, 'user_id', $user->id]);
     }
@@ -116,8 +116,8 @@ class UserAnuncioOfertaController extends Controller
      */
     public function update(Request $request, $id, $id_anuncio)
     {
-       // $user_id = session()->get('user_id');
-        $user = User::find($id);
+       
+       $user = Auth::user();
         $oferta = AnuncioOferta::findOrFail($id_anuncio);
         $fotos = $oferta->fotos();
         $rules =
@@ -175,7 +175,7 @@ class UserAnuncioOfertaController extends Controller
         $oferta->lat = $request->lat;
         $oferta->lon = $request->lon;
         $oferta->save();
-        return Redirect::route('user.anuncios.index', ['user' => $user, 'user_id' => $user_id]);
+        return Redirect::route('user.anuncios.index', ['user' => $user, 'user_id' => $user->id]);
     }
 
     /**
