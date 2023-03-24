@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         if (Auth::user()->rol == "user") {
-            return view('dashboard');
+            return view('user.dashboard');
         }elseif(Auth::user()->rol == "admin"){
             return view('admin.dashboard');
         } else {
