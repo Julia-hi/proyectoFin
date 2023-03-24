@@ -3,12 +3,13 @@
 @auth
 <?php
 try {
-    $user_id = session()->get('user_id');
-    $user = User::find($user_id);
-    $stat = "ok";
+    // $user_id = session()->get('user_id');
+    //$user = User::find($user_id);
+    $user = Auth::user();
+    // $stat = "ok";
 } catch (Exception $ex) {
     $user = null;
-    $stat = "error";
+    // $stat = "error";
 }
 
 if ($user != null) {
@@ -41,25 +42,23 @@ if ($user != null) {
         <x-header />
     </header>
     <div class="flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-       
+
         <div class="hidden fixed top-0 px-6 py-4 sm:block " style="right:60px;">
             <div class="align-self-center">
                 @guest
                 <a type="button" class="nav-botton red-brillante-boton mr-2 text-center" href="{{ url('/login')}}" tabindex="0" style="z-index:10;"><span>Publicar anuncio</span></a>
+                <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
+
+                <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
                 @endguest
                 @auth
                 <div class="col m-0">
                     <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/{{Auth::user()->id}}/anuncios-oferta/create" tabindex="0" style="z-index:10;"><span>Publicar anuncio</span></a>
                 </div>
-                @else
-                <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-                @endif
                 @endauth
             </div>
         </div>
-       
+
         <div class="container">
             <div class="justify-center xs:px-1 sm:px-6 lg:px-8">
                 <div>
