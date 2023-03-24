@@ -46,7 +46,7 @@ class AuthenticatedSessionController extends Controller
             if ($user->rol === 'admin') {
                 return redirect()->route('admin',['user_id'=>$user->id, 'user'=>$user]);
             } elseif ($user->rol === 'user') {
-                return redirect()->route('dashboard',['user_id'=>$user->id, 'user'=>$user]);
+                return redirect()->route('dashboard',['user_id'=>$user->id]);
             }
         };
     
@@ -81,6 +81,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/',['user'=>null]);
     }
 }
