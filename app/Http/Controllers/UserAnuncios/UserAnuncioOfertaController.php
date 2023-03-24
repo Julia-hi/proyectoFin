@@ -41,9 +41,9 @@ class UserAnuncioOfertaController extends Controller
      */
     public function store(Request $request)
     {
-        // $user = Auth::user();
-        $user_id = session()->get('user_id');
-        $user = User::find($user_id);
+         $user = Auth::user();
+       // $user_id = session()->get('user_id');
+       // $user = User::find($user_id);
 
         //validar entrada del request
         $entrada = $request->validate(
@@ -115,8 +115,8 @@ class UserAnuncioOfertaController extends Controller
      */
     public function update(Request $request, $id, $id_anuncio)
     {
-        $user_id = session()->get('user_id');
-        $user = User::find($user_id);
+       // $user_id = session()->get('user_id');
+        $user = User::find($id);
         $oferta = AnuncioOferta::findOrFail($id_anuncio);
         $fotos = $oferta->fotos();
         $rules =

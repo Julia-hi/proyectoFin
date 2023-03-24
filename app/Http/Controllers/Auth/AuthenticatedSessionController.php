@@ -42,7 +42,7 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerate();
 
             $user = Auth::user();
-
+            session()->put('user_id',$user->id);
             if ($user->rol === 'admin') {
                 return redirect()->route('admin');
             } elseif ($user->rol === 'user') {
