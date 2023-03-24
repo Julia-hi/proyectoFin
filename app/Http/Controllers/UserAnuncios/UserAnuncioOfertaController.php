@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\AnuncioDemanda;
 use App\Models\AnuncioOferta;
 use App\Models\Anuncio;
+use App\Models\User;
 use App\Models\Foto;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -22,12 +23,14 @@ class UserAnuncioOfertaController extends Controller
      */
     public function create($id)
     {
-        if (Auth::user()->rol == "admin") {
+        $user_id = session()->get('user_id');
+        $user = User::find($user_id);
+        if ($user->rol == "admin") {
             return redirect()->route('admin');
         } else {
-        $tipoAnunc = 'oferta';
-        return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);
-    }
+            $tipoAnunc = 'oferta';
+            return view('user.anuncCreateOferta', ['user' => $user, 'tipoAnunc' => $tipoAnunc, 'user_id' => $user_id]);
+        }
     }
 
     /**
@@ -38,7 +41,9 @@ class UserAnuncioOfertaController extends Controller
      */
     public function store(Request $request)
     {
-        $user = Auth::user();
+        // $user = Auth::user();
+        $user_id = session()->get('user_id');
+        $user = User::find($user_id);
 
         //validar entrada del request
         $entrada = $request->validate(
@@ -84,7 +89,7 @@ class UserAnuncioOfertaController extends Controller
         }
         $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
         $usersOfertas = AnuncioOferta::where('user_id', $user->id)->get();
-        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
+        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'user_id', $user->id]);
     }
 
     /**
@@ -95,8 +100,10 @@ class UserAnuncioOfertaController extends Controller
      */
     public function edit($id, $id_anuncio)
     {
+        $user_id = session()->get('user_id');
+        $user = User::find($user_id);
         $anuncio = AnuncioOferta::find($id_anuncio);
-        return view('user.anuncEditOferta', ['user' => Auth::user()->id, 'anuncios_ofertum' => $id, 'anuncio' => $anuncio]);
+        return view('user.anuncEditOferta', ['user' => $user, 'anuncios_ofertum' => $id, 'anuncio' => $anuncio, 'user_id', $user->id]);
     }
 
     /**
@@ -108,6 +115,8 @@ class UserAnuncioOfertaController extends Controller
      */
     public function update(Request $request, $id, $id_anuncio)
     {
+        $user_id = session()->get('user_id');
+        $user = User::find($user_id);
         $oferta = AnuncioOferta::findOrFail($id_anuncio);
         $fotos = $oferta->fotos();
         $rules =
@@ -165,7 +174,7 @@ class UserAnuncioOfertaController extends Controller
         $oferta->lat = $request->lat;
         $oferta->lon = $request->lon;
         $oferta->save();
-        return Redirect::route('user.anuncios.index', ['user' => $id]);
+        return Redirect::route('user.anuncios.index', ['user' => $user, 'user_id' => $user_id]);
     }
 
     /**
@@ -188,7 +197,7 @@ class UserAnuncioOfertaController extends Controller
             }
         }
         $anuncio->delete();
-        return Redirect::route('user.anuncios.index', ['user' => $id]);
+        return Redirect::route('user.anuncios.index', ['user' => $user, 'user_id' => $user_id]);
     }
 
     /**

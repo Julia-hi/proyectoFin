@@ -33,6 +33,7 @@ class AuthenticatedSessionController extends Controller
        
             $request->authenticate();
             $request->session()->regenerate();
+            session('user_id')->put('user_id',Auth::user()->id);
             $stat='ok';
             if (Auth::user()->rol =="admin") {
                 
