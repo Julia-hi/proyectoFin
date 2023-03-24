@@ -1,6 +1,6 @@
-<?php if(!isset($user_id)){
+<?php 
 $user_id = Auth::user()->id;
-}
+
  ?>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->

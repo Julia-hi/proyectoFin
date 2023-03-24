@@ -19,8 +19,8 @@ class UserAnunciosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($id)
-    { echo "user id ".$id;
-        echo "<br>Autenticated user: ".Auth::user()->id;
+    { //echo "user id ".$id;
+        //echo "<br>Autenticated user: ".Auth::user()->id;
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
         } else {
@@ -28,38 +28,6 @@ class UserAnunciosController extends Controller
             $usersOfertas = AnuncioOferta::where('user_id', Auth::user()->id)->get();
             return view('user.user-anuncios', ['user' => Auth::user()->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
         }
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //anuncios se crean por separado 
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -78,26 +46,4 @@ class UserAnunciosController extends Controller
         }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

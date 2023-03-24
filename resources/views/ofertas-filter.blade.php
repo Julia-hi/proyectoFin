@@ -6,10 +6,10 @@ try {
     // $user_id = session()->get('user_id');
     //$user = User::find($user_id);
     $user = Auth::user();
-    // $stat = "ok";
+    $stat = "ok";
 } catch (Exception $ex) {
     $user = null;
-    // $stat = "error";
+    $stat = "error";
 }
 
 if ($user != null) {
@@ -46,15 +46,21 @@ if ($user != null) {
         <div class="hidden fixed top-0 px-6 py-4 sm:block " style="right:60px;">
             <div class="align-self-center">
                 @guest
-                <a type="button" class="nav-botton red-brillante-boton mr-2 text-center" href="{{ url('/login')}}" tabindex="0" style="z-index:10;"><span>Publicar anuncio</span></a>
+                <a type="button" class="nav-botton red-brillante-boton mr-2 text-center" href="{{ url('/login')}}" tabindex="0"><span>Publicar anuncio</span></a>
+                @endguest
+                @auth
+                <?php $user_name = Auth::user()->name;
+                $user_id = Auth::user()->id; ?><div class="row">
+                    <div class="col m-0">
+                        <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/<?php echo $user_id; ?>/anuncios-oferta/create" tabindex="0"><span>Publicar anuncio</span></a>
+                    </div><!-- <a href="{{ url('/dashboard') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline"><?php echo $user_name; ?></a> -->
+
+                </div>
+                @else
                 <a href="{{ route('login') }}" class="bg-light rounded p-2 text-sm text-gray-700 dark:text-gray-500 underline">Iniciar sesión</a>
 
                 <a href="{{ route('register') }}" class="bg-light rounded p-2 ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Crear cuenta</a>
-                @endguest
-                @auth
-                <div class="col m-0">
-                    <a type="button" class="nav-botton h-100 red-brillante-boton mr-2 p-2 text-center" href="/user/{{Auth::user()->id}}/anuncios-oferta/create" tabindex="0" style="z-index:10;"><span>Publicar anuncio</span></a>
-                </div>
+
                 @endauth
             </div>
         </div>
@@ -142,17 +148,19 @@ if ($user != null) {
                     </div>
                     <!--   Block para anuncios de ofertas   -->
                     <div class="position-relative p-2 bg-yellow dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg " style="min-height:500px;">
-                        @auth
+
                         <div class="row w-100 justify-content-end">
                             <div class="col-lg-2 col-xs-6 m-0">
-                                @if($user!=null && $user->rol=='user')
+                                @auth
+                                @if($user->rol=='user')
                                 @include('layouts.navigation-welcome')
-                                @elseif($user!=null && $user->rol=='admin')
+                                @elseif($user->rol=='admin')
                                 @include('layouts.navigation-welcome-admin')
                                 @endif
+                                @endauth
                             </div>
                         </div>
-                        @endauth
+
                         <!-- method="get" action="" -> para no cambiar ruta, solo añadir post parametros a ella e muestrar resultado de busquda -->
 
                         <?php

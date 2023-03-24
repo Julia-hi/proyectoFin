@@ -42,7 +42,7 @@
                                 <div class="btn-group border d-flex align-items-center justify-content-center">
                                     <a href="{{ '/ofertas/' . $fav->anuncio->anuncioOferta->id }}" role="button" class="btn btn-sm btn-outline-success active px-2 text-uppercase">Ver</a>
                                     <!-- formulario para Eeiminar favorito de la lista -->
-                                    <form action="{{ route('user.favoritos.destroy', [Auth::user()->id, $fav->id]) }}" method="POST">
+                                    <form action="{{ route('user.favoritos.destroy', [$user->id, $fav->id]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-outline-success text-uppercase"><strong>Eliminar de favoritos</strong></button>
@@ -62,7 +62,7 @@
                                     <a href="<?php echo $url; ?>" role="button" class="btn btn-sm btn-outline-secondary text-uppercase">Ver</a>
 
                                     <!-- formulario para Eeiminar favorito de la lista -->
-                                    <form action="{{ route('user.favoritos.destroy', [Auth::user()->id, $fav->id]) }}" method="POST">
+                                    <form action="{{ route('user.favoritos.destroy', [$user->id, $fav->id]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-outline-secondary text-uppercase">Eliminar de favoritos</button>
@@ -83,3 +83,6 @@
 </x-app-layout>
 @endif
 @endauth
+@guest
+<div>no eres logeado</div>
+@endguest
