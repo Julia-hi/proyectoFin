@@ -31,7 +31,30 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-            $request->authenticate();
+        $request->validate([
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials, $request->filled('remember'))) {
+            $request->session()->regenerate();
+
+            $user = Auth::user();
+
+            if ($user->rol === 'admin') {
+                return redirect()->route('admin');
+            } elseif ($user->rol === 'user') {
+                return redirect()->route('user.dashboard');
+            }
+        }
+
+        throw ValidationException::withMessages([
+            'email' => __('auth.failed'),
+        ]);
+    }
+            /* $request->authenticate();
             
             $request->session()->regenerate();
             session()->put('user_id',Auth::user()->id);
@@ -45,7 +68,7 @@ class AuthenticatedSessionController extends Controller
              // return redirect()->route('/dashboard',['stat'=>$stat]);
              // return redirect()->route('user.anuncios.index',['user' =>Auth::user()->id, 'stat'=>$stat ]);
              return redirect('/dashboard');
-            } 
+            }  */
     }
 
     /**
