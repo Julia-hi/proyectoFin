@@ -16,18 +16,18 @@ class UserFavoritosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($user_id)
     {
-        $user = User::find($id);
+        $user = User::find($user_id);
         if (Auth::user()->rol == "admin") {
             return redirect()->route('admin');
         } else {
-            $favoritos = Favorito::where('user_id', $id)->get();
+            $favoritos = Favorito::where('user_id', $user_id)->get();
             if ($favoritos->count() < 1) {
                 $favoritos = null; // no encontrado favoritos
             }
-            $user = Auth::user()->name;
-            return view('user.favoritos', ['user' => $user, 'favoritos' => $favoritos]);
+           // $user = Auth::user()->name;
+            return view('user.favoritos', ['user' => $user, 'favoritos' => $favoritos,'user_id'=>$user_id]);
         }
     }
 
@@ -49,6 +49,7 @@ class UserFavoritosController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
         $entrada['user_id'] = Auth::user()->id;
         $entrada['anuncio_id'] = $request->anuncio_id;
         //consultar la base de datos si existe anuncio
@@ -56,7 +57,7 @@ class UserFavoritosController extends Controller
         if ($anuncio->count() > 0) {
             Favorito::create($entrada); // insert to database - tabla "favoritos"  
         }
-        return back();
+        return back()->with(['user' => $user, 'user_id'=>$user->id]);
     }
 
     /**
@@ -101,9 +102,8 @@ class UserFavoritosController extends Controller
      */
     public function destroy(User $user, Favorito $favorito)
     {
-        // $fav=DB::table('favoritos')->where();
-        //  $fav = Favorito::find($favorito->id);
+        
         $favorito->delete();
-        return back();
+        return back()->with(['user_id'=>$user->id]);
     }
 }

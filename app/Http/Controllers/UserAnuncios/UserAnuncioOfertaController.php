@@ -26,7 +26,8 @@ class UserAnuncioOfertaController extends Controller
             return redirect()->route('admin');
         } else {
         $tipoAnunc = 'oferta';
-        return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);}
+        return view('user.anuncCreateOferta', ['user' => $id, 'tipoAnunc' => $tipoAnunc]);
+    }
     }
 
     /**
@@ -83,7 +84,7 @@ class UserAnuncioOfertaController extends Controller
         }
         $usersDemandas = AnuncioDemanda::where('user_id', $user->id)->get();
         $usersOfertas = AnuncioOferta::where('user_id', $user->id)->get();
-        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas, 'stat' => 'ok']);
+        return Redirect::route('user.anuncios.index', ['user' => $user->name, 'demandas' => $usersDemandas, 'ofertas' => $usersOfertas]);
     }
 
     /**
