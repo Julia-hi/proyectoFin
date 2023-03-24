@@ -46,14 +46,14 @@ class AuthenticatedSessionController extends Controller
             if ($user->rol === 'admin') {
                 return redirect()->route('admin');
             } elseif ($user->rol === 'user') {
-                return redirect()->route('user.dashboard');
+                return redirect()->route('dashboard');
             }
         }
 
         throw ValidationException::withMessages([
             'email' => __('auth.failed'),
         ]);
-    }
+    
             /* $request->authenticate();
             
             $request->session()->regenerate();
