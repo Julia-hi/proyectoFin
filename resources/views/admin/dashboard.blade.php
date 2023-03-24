@@ -19,15 +19,16 @@
 
 <body class="font-sans antialiased">
     <!-- Page Heading - resources/views/components/header.blade.php -->
-    @if(Auth::user()->rol == 'admin')
+    
 
     <head>
         <x-header />
     </head>
+    @if(Auth::user()->rol == 'admin')
     <div class="min-h-screen bg-gray-100">
-        @auth
+        
         @include('layouts.navigation-admin')
-        @endauth
+       
         <!-- Page Content -->
         <main>
             <div class="container">
@@ -90,10 +91,7 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-            <x-footer />
-        </footer>
+       
     </div>
     @else
     <div>

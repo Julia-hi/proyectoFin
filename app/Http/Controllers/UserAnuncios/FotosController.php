@@ -43,7 +43,7 @@ class FotosController extends Controller
 
         foreach ($fotos as $key => $foto) {
             $filename = $foto->getClientOriginalName();
-            echo ($key);
+           // echo ($key);
             $fichero = $this->cargarFichero($foto, Auth::user()->id, $ofertum, $key);
             Foto::create($fichero); //insert to database - tabla "fotos"
         }
